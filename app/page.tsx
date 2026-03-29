@@ -11,6 +11,7 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { useCart, type AddToCartInput } from "@/lib/cart-context";
 
 /* ─── placeholder helper ─── */
 const ph = (w: number, h: number, label: string) =>
@@ -239,7 +240,7 @@ function Stars() {
 }
 
 /* ─── Product card ─── */
-function ProductCard({ product, onAddToCart }: { product: Product; onAddToCart: (name: string) => void }) {
+function ProductCard({ product, onAddToCart }: { product: Product; onAddToCart: (p: AddToCartInput) => void }) {
   return (
     <div className="group flex flex-col rounded-xl border border-border bg-card overflow-hidden hover:shadow-md transition-shadow duration-200">
       <Link href={product.href} className="block overflow-hidden bg-muted aspect-square">
@@ -260,7 +261,7 @@ function ProductCard({ product, onAddToCart }: { product: Product; onAddToCart: 
         <Button
           size="sm"
           className="w-full gap-1.5 mt-auto bg-primary text-primary-foreground hover:bg-primary/90"
-          onClick={() => onAddToCart(product.name)}
+          onClick={() => onAddToCart(product)}
         >
           <ShoppingCart className="size-3.5" />
           Add to Cart
@@ -271,7 +272,7 @@ function ProductCard({ product, onAddToCart }: { product: Product; onAddToCart: 
 }
 
 /* ─── Section wrapper ─── */
-function SectionWrapper({ id, title, href, products, onAddToCart }: ProductSection & { onAddToCart: (n: string) => void }) {
+function SectionWrapper({ id, title, href, products, onAddToCart }: ProductSection & { onAddToCart: (p: AddToCartInput) => void }) {
   return (
     <section id={id} className="py-14 border-t border-border">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -289,7 +290,7 @@ function SectionWrapper({ id, title, href, products, onAddToCart }: ProductSecti
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {products.map((p) => (
-            <ProductCard key={p.href + p.name} product={p} onAddToCart={onAddToCart} />
+            <ProductCard key={p.href + p.name} product={p} onAddToCart={(prod) => onAddToCart(prod)} />
           ))}
         </div>
       </div>
@@ -299,6 +300,7 @@ function SectionWrapper({ id, title, href, products, onAddToCart }: ProductSecti
 
 /* ─────────────────────── PAGE ─────────────────────── */
 export default function HomePage() {
+  const { addToCart } = useCart();
   const [cartMsg, setCartMsg] = useState<string | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const total = heroSlides.length;
@@ -313,8 +315,9 @@ export default function HomePage() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  function addToCart(name: string) {
-    setCartMsg(`"${name}" added to cart`);
+  function handleAddToCart(product: AddToCartInput) {
+    addToCart(product);
+    setCartMsg(`"${product.name}" added to cart`);
     setTimeout(() => setCartMsg(null), 2500);
   }
 
@@ -374,7 +377,7 @@ export default function HomePage() {
                       <Button
                         size="lg"
                         className="gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8"
-                        onClick={() => addToCart(slide.name)}
+                        onClick={() => handleAddToCart({ name: slide.name, price: slide.price, image: slide.image, href: slide.href })}
                       >
                         <ShoppingCart className="size-5" />
                         Order Now
@@ -522,7 +525,7 @@ export default function HomePage() {
           PRODUCT SECTIONS
       ══════════════════════════════════════════════ */}
       {productSections.map((section) => (
-        <SectionWrapper key={section.id} {...section} onAddToCart={addToCart} />
+        <SectionWrapper key={section.id} {...section} onAddToCart={handleAddToCart} />
       ))}
 
       {/* ══════════════════════════════════════════════

@@ -4,10 +4,13 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ShoppingCart, Search, Menu, X, ChevronDown } from "lucide-react";
+import dynamic from "next/dynamic";
 import logo from "@/app/assets/Ramirez Logo 1.png";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+
+const CartBadge = dynamic(() => import("@/components/common/CartBadge"), { ssr: false });
 
 const productCategories = [
   {
@@ -110,7 +113,6 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const [desktopProductsOpen, setDesktopProductsOpen] = useState(false);
-  const [cartCount] = useState(0);
 
   return (
     <header
@@ -250,11 +252,7 @@ export default function Navbar() {
           <Button variant="ghost" size="icon" asChild className="relative shrink-0">
             <Link href="/cart" aria-label="Shopping cart">
               <ShoppingCart className="size-5" />
-              {cartCount > 0 && (
-                <span className="absolute -top-1 -right-1 flex size-4 items-center justify-center rounded-full bg-primary text-primary-foreground text-[10px] font-bold leading-none">
-                  {cartCount}
-                </span>
-              )}
+              <CartBadge />
             </Link>
           </Button>
         </div>
@@ -264,11 +262,7 @@ export default function Navbar() {
           <Button variant="ghost" size="icon" asChild className="relative shrink-0">
             <Link href="/cart" aria-label="Shopping cart">
               <ShoppingCart className="size-5" />
-              {cartCount > 0 && (
-                <span className="absolute -top-1 -right-1 flex size-4 items-center justify-center rounded-full bg-primary text-primary-foreground text-[10px] font-bold leading-none">
-                  {cartCount}
-                </span>
-              )}
+              <CartBadge />
             </Link>
           </Button>
           <Button
