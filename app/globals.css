@@ -1,26 +1,164 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@custom-variant dark (&:is(.dark *));
+
+/* ─────────────────────────────────────────────────────────────
+   PALETTE — single source of truth for all colour values.
+   Semantic tokens below must reference these vars only.
+   ───────────────────────────────────────────────────────────── */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    /* Neutrals */
+    --palette-true-white: oklch(1 0 0);
+    --palette-white: oklch(0.985 0 0);
+    --palette-gray-50: oklch(0.97 0 0);
+    --palette-gray-200: oklch(0.922 0 0);
+    --palette-gray-400: oklch(0.708 0 0);
+    --palette-gray-500: oklch(0.556 0 0);
+    --palette-black: oklch(0.145 0 0);
+    /* Dark surfaces */
+    --palette-dark-card: oklch(0.205 0 0);
+    --palette-dark-muted: oklch(0.269 0 0);
+    /* Dark-mode alpha overlays */
+    --palette-white-border: oklch(1 0 0 / 10%);
+    --palette-white-input: oklch(1 0 0 / 15%);
+    /* Sky blue scale */
+    --palette-sky: oklch(0.67 0.185 225);
+    --palette-sky-light: oklch(0.82 0.105 218);
+    --palette-sky-dark: oklch(0.50 0.19 230);
+    /* Destructive (red) */
+    --palette-destructive: oklch(0.577 0.245 27.325);
+    --palette-destructive-dk: oklch(0.704 0.191 22.216);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-sans);
+    --font-mono: var(--font-geist-mono);
+    --font-heading: var(--font-sans);
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+/* ─── Light mode semantic tokens ─── */
+
+:root {
+    --background: var(--palette-true-white);
+    --foreground: var(--palette-black);
+    --card: var(--palette-true-white);
+    --card-foreground: var(--palette-black);
+    --popover: var(--palette-true-white);
+    --popover-foreground: var(--palette-black);
+    --primary: var(--palette-sky);
+    --primary-foreground: var(--palette-true-white);
+    --secondary: var(--palette-gray-50);
+    --secondary-foreground: var(--palette-black);
+    --muted: var(--palette-gray-50);
+    --muted-foreground: var(--palette-gray-500);
+    --accent: var(--palette-sky-light);
+    --accent-foreground: var(--palette-black);
+    --destructive: var(--palette-destructive);
+    --border: var(--palette-gray-200);
+    --input: var(--palette-gray-200);
+    --ring: var(--palette-sky);
+    --chart-1: var(--palette-sky);
+    --chart-2: var(--palette-sky-light);
+    --chart-3: var(--palette-sky-dark);
+    --chart-4: var(--palette-gray-500);
+    --chart-5: var(--palette-black);
+    --radius: 0.625rem;
+    --sidebar: var(--palette-white);
+    --sidebar-foreground: var(--palette-black);
+    --sidebar-primary: var(--palette-sky);
+    --sidebar-primary-foreground: var(--palette-true-white);
+    --sidebar-accent: var(--palette-sky-light);
+    --sidebar-accent-foreground: var(--palette-black);
+    --sidebar-border: var(--palette-gray-200);
+    --sidebar-ring: var(--palette-sky);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+/* ─── Dark mode semantic tokens ─── */
+
+.dark {
+    --background: var(--palette-black);
+    --foreground: var(--palette-white);
+    --card: var(--palette-dark-card);
+    --card-foreground: var(--palette-white);
+    --popover: var(--palette-dark-card);
+    --popover-foreground: var(--palette-white);
+    --primary: var(--palette-sky);
+    --primary-foreground: var(--palette-black);
+    --secondary: var(--palette-dark-muted);
+    --secondary-foreground: var(--palette-white);
+    --muted: var(--palette-dark-muted);
+    --muted-foreground: var(--palette-gray-400);
+    --accent: var(--palette-dark-muted);
+    --accent-foreground: var(--palette-white);
+    --destructive: var(--palette-destructive-dk);
+    --border: var(--palette-white-border);
+    --input: var(--palette-white-input);
+    --ring: var(--palette-gray-500);
+    --chart-1: var(--palette-sky);
+    --chart-2: var(--palette-sky-light);
+    --chart-3: var(--palette-sky-dark);
+    --chart-4: var(--palette-gray-400);
+    --chart-5: var(--palette-dark-muted);
+    --sidebar: var(--palette-dark-card);
+    --sidebar-foreground: var(--palette-white);
+    --sidebar-primary: var(--palette-sky);
+    --sidebar-primary-foreground: var(--palette-white);
+    --sidebar-accent: var(--palette-dark-muted);
+    --sidebar-accent-foreground: var(--palette-white);
+    --sidebar-border: var(--palette-white-border);
+    --sidebar-ring: var(--palette-gray-500);
+}
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+    html {
+        @apply font-sans;
+    }
 }

@@ -1,0 +1,193 @@
+import Link from "next/link";
+import Image from "next/image";
+import { MapPin, Phone, Mail } from "lucide-react";
+
+/* ── Inline brand SVGs (lucide-react doesn't ship brand icons) ── */
+const FacebookIcon = () => (
+  <svg viewBox="0 0 24 24" className="size-4" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  </svg>
+);
+const InstagramIcon = () => (
+  <svg viewBox="0 0 24 24" className="size-4" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+    <circle cx="12" cy="12" r="4" />
+    <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+  </svg>
+);
+const XIcon = () => (
+  <svg viewBox="0 0 24 24" className="size-4" fill="currentColor" aria-hidden="true">
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
+const YoutubeIcon = () => (
+  <svg viewBox="0 0 24 24" className="size-4" fill="currentColor" aria-hidden="true">
+    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+    <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white" />
+  </svg>
+);
+import logo from "@/app/assets/Ramirez Logo 1.png";
+
+const productColumns = [
+  {
+    heading: "Print & Branding",
+    links: [
+      { label: "Banners", href: "/products/banners" },
+      { label: "Booklet Magazines", href: "/products/booklet-magazines" },
+      { label: "Branded Apparel", href: "/products/branded-apparel" },
+      { label: "Business Cards", href: "/products/business-cards" },
+      { label: "Digital Printing", href: "/products/digital-printing" },
+    ],
+  },
+  {
+    heading: "Events & More",
+    links: [
+      { label: "Election Printing", href: "/products/election-printing" },
+      { label: "Events Display", href: "/products/events-display" },
+      { label: "Flyers & Brochures", href: "/products/flyers" },
+      { label: "Posters", href: "/products/posters" },
+      { label: "Signages", href: "/products/signages" },
+    ],
+  },
+  {
+    heading: "Speciality",
+    links: [
+      { label: "Graphic Design", href: "/products/graphic-design" },
+      { label: "Mug & Drinkware Printing", href: "/products/mug-printing" },
+      { label: "Packaging", href: "/products/packaging" },
+      { label: "Photo Printing & Framing", href: "/products/photo-printing" },
+      { label: "Promotional Items", href: "/products/promotional-items" },
+      { label: "Stickers", href: "/products/stickers" },
+    ],
+  },
+];
+
+const socialLinks = [
+  { label: "Facebook", href: "https://facebook.com", icon: FacebookIcon },
+  { label: "Instagram", href: "https://instagram.com", icon: InstagramIcon },
+  { label: "Twitter / X", href: "https://twitter.com", icon: XIcon },
+  { label: "YouTube", href: "https://youtube.com", icon: YoutubeIcon },
+];
+
+const addresses = [
+  {
+    city: "Muhoroni, Kisumu",
+    lines: ["Muhoroni, Kisumu County", "Kenya"],
+    phone: "+254 700 000 000",
+    email: "info@ramirezventures.co.ke",
+  },
+];
+
+export default function Footer() {
+  const year = new Date().getFullYear();
+
+  return (
+    <footer className="w-full border-t border-border bg-background text-foreground">
+      {/* Main footer grid */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1fr_auto]">
+
+        {/* Brand column */}
+        <div className="flex flex-col gap-4 sm:col-span-2 lg:col-span-1">
+          <Link href="/" className="inline-flex">
+            <Image
+              src={logo}
+              alt="Ramirez Ventures"
+              height={44}
+              className="h-11 w-auto object-contain"
+            />
+          </Link>
+          <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
+            Your one-stop print &amp; branding partner. Quality you can see, service you can trust.
+          </p>
+
+          {/* Social links */}
+          <div className="flex items-center gap-3 mt-1">
+            {socialLinks.map(({ label, href, icon: Icon }) => (
+              <Link
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="flex size-8 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors duration-200 hover:border-primary hover:text-primary hover:bg-accent"
+              >
+                <Icon />
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Product columns */}
+        {productColumns.map((col) => (
+          <div key={col.heading}>
+            <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-foreground">
+              {col.heading}
+            </h3>
+            <ul className="flex flex-col gap-2">
+              {col.links.map(({ label, href }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className="text-sm text-muted-foreground transition-colors duration-150 hover:text-primary"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+
+        {/* Addresses */}
+        <div className="flex flex-col gap-6 sm:col-span-2 lg:col-span-1">
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-foreground">
+            Find Us
+          </h3>
+          {addresses.map((addr) => (
+            <div key={addr.city} className="flex flex-col gap-1.5">
+              <p className="text-sm font-semibold text-foreground">{addr.city}</p>
+              <address className="not-italic flex flex-col gap-1">
+                {addr.lines.map((line) => (
+                  <span key={line} className="flex items-start gap-1.5 text-xs text-muted-foreground">
+                    {addr.lines.indexOf(line) === 0 && (
+                      <MapPin className="size-3.5 mt-0.5 shrink-0 text-primary" />
+                    )}
+                    {addr.lines.indexOf(line) !== 0 && (
+                      <span className="w-3.5 shrink-0" />
+                    )}
+                    {line}
+                  </span>
+                ))}
+                <Link
+                  href={`tel:${addr.phone.replace(/\s/g, "")}`}
+                  className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors duration-150"
+                >
+                  <Phone className="size-3.5 shrink-0 text-primary" />
+                  {addr.phone}
+                </Link>
+                <Link
+                  href={`mailto:${addr.email}`}
+                  className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors duration-150"
+                >
+                  <Mail className="size-3.5 shrink-0 text-primary" />
+                  {addr.email}
+                </Link>
+              </address>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Bottom bar */}
+      <div className="border-t border-border">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-muted-foreground">
+          <span>&copy; {year} Ramirez Ventures. All rights reserved.</span>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy" className="hover:text-primary transition-colors duration-150">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-primary transition-colors duration-150">Terms of Service</Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
