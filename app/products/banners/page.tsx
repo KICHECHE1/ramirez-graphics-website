@@ -19,14 +19,16 @@ import { Separator } from "@/components/ui/separator";
 const ph = (w: number, h: number, label: string) =>
   `https://placehold.co/${w}x${h}/e0f2fe/0284c7?text=${encodeURIComponent(label)}`;
 
-/* ─── Sidebar banner categories ─── */
-const bannerCategories = [
-  { label: "All Banners", href: "/products/banners" },
-  { label: "Table Rollup Printing", href: "/products/banners/table-rollup" },
-  { label: "Adjustable Backdrop Banner", href: "/products/banners/backdrop-banner" },
-  { label: "Table Cloth Printing", href: "/products/banners/table-cloth" },
-  { label: "S-Banner Printing", href: "/products/banners/s-banner" },
-  { label: "PVC Wheel Cover", href: "/products/banners/pvc-wheel-cover" },
+/* ─── Sidebar: all 8 product categories from the navbar ─── */
+const productCategories = [
+  { label: "Banners", href: "/products/banners" },
+  { label: "Booklet Magazines", href: "/products/booklet-magazines" },
+  { label: "Branded Apparel", href: "/products/branded-apparel" },
+  { label: "Business Cards", href: "/products/business-cards" },
+  { label: "Digital Printing", href: "/products/digital-printing" },
+  { label: "Election Printing", href: "/products/election-printing" },
+  { label: "Events Display", href: "/products/events-display" },
+  { label: "Flyers", href: "/products/flyers" },
 ];
 
 /* ─── Banner products ─── */
@@ -204,12 +206,11 @@ export default function BannersPage() {
           <aside className="hidden lg:block w-56 shrink-0 sticky top-24">
             <div className="rounded-xl border border-border bg-card p-4 shadow-sm">
               <h2 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-3 px-2">
-                Banner Types
+                Product Categories
               </h2>
               <nav className="flex flex-col gap-0.5">
-                {bannerCategories.map((cat) => {
-                  const isActive =
-                    cat.href === "/products/banners";
+                {productCategories.map((cat) => {
+                  const isActive = cat.href === "/products/banners";
                   return (
                     <Link
                       key={cat.href}
@@ -242,7 +243,7 @@ export default function BannersPage() {
           <div className="flex-1 min-w-0 flex flex-col gap-16">
             {/* ── Mobile category pills ── */}
             <div className="flex gap-2 flex-wrap lg:hidden">
-              {bannerCategories.map((cat) => (
+              {productCategories.map((cat) => (
                 <Link
                   key={cat.href}
                   href={cat.href}
