@@ -33,6 +33,19 @@ const productCategories = [
   { label: "Flyers", href: "/products/flyers" },
 ];
 
+const moreCategories = [
+  { label: "Graphic Design", href: "/products/graphic-design" },
+  { label: "Mug Printing & Branded Drinkware", href: "/products/mug-printing" },
+  { label: "Packaging", href: "/products/packaging" },
+  { label: "Photo Printing and Framing", href: "/products/photo-printing" },
+  { label: "Posters", href: "/products/posters" },
+  { label: "Promotional Items", href: "/products/promotional-items" },
+  { label: "Signages", href: "/products/signages" },
+  { label: "Stationary", href: "/products/stationary" },
+  { label: "Stickers", href: "/products/stickers" },
+  { label: "T-shirts", href: "/products/t-shirts" },
+];
+
 /* ─── Products ─── */
 const digitalProducts = [
   {
@@ -188,6 +201,25 @@ export default function DigitalPrintingPage() {
                   );
                 })}
               </nav>
+
+              <Separator className="my-4" />
+
+              <h2 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-2 px-2">
+                More Categories
+              </h2>
+              <nav className="flex flex-col gap-0.5">
+                {moreCategories.map((cat) => (
+                  <Link
+                    key={cat.href}
+                    href={cat.href}
+                    className="flex items-center justify-between rounded-lg px-3 py-2 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors"
+                  >
+                    <span>{cat.label}</span>
+                    <ChevronRight className="size-3.5 opacity-50" />
+                  </Link>
+                ))}
+              </nav>
+
               <Separator className="my-4" />
               <div className="px-2 flex flex-col gap-2">
                 <p className="text-xs text-muted-foreground">Need a custom order?</p>

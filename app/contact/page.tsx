@@ -228,17 +228,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-      {/* ── Floating WhatsApp button — bottom-left ── */}
-      <Link
-        href={`https://wa.me/${addresses[0].whatsapp}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Chat with us on WhatsApp"
-        className="fixed bottom-6 left-6 z-50 flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25D366]"
-      >
-        <WhatsAppIcon />
-      </Link>
     </>
   );
 }
