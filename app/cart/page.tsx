@@ -1,11 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Minus, Plus, Trash2, ShoppingBag, ArrowLeft, Tag, ChevronRight } from "lucide-react";
+import { Minus, Plus, Trash2, ShoppingBag, ArrowLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { useCart } from "@/lib/cart-context";
@@ -13,32 +11,11 @@ import { useCart } from "@/lib/cart-context";
 const DELIVERY_FEE = 500;
 const FREE_DELIVERY_THRESHOLD = 10000;
 
-const VALID_COUPONS: Record<string, number> = {
-  RAMIREZ10: 0.10,
-  PRINT20: 0.20,
-};
-
 export default function CartPage() {
   const { items, updateQty, removeFromCart, clearCart, totalPrice } = useCart();
-  const [coupon, setCoupon] = useState("");
-  const [appliedCoupon, setAppliedCoupon] = useState<string | null>(null);
-  const [couponError, setCouponError] = useState("");
 
-  function applyCoupon() {
-    const code = coupon.trim().toUpperCase();
-    if (VALID_COUPONS[code]) {
-      setAppliedCoupon(code);
-      setCouponError("");
-    } else {
-      setAppliedCoupon(null);
-      setCouponError("Invalid coupon code.");
-    }
-  }
-
-  const discountRate = appliedCoupon ? VALID_COUPONS[appliedCoupon] : 0;
-  const discount = Math.round(totalPrice * discountRate);
   const deliveryFee = totalPrice >= FREE_DELIVERY_THRESHOLD ? 0 : DELIVERY_FEE;
-  const total = totalPrice - discount + deliveryFee;
+  const total = totalPrice + deliveryFee;
 
   const fmt = (n: number) =>
     new Intl.NumberFormat("en-KE", { style: "currency", currency: "KES", maximumFractionDigits: 0 }).format(n);
@@ -179,16 +156,6 @@ export default function CartPage() {
                 <span className="font-medium tabular-nums">{fmt(totalPrice)}</span>
               </div>
 
-              {discount > 0 && (
-                <div className="flex justify-between text-green-600 dark:text-green-400">
-                  <span className="flex items-center gap-1">
-                    <Tag className="size-3.5" />
-                    Coupon ({appliedCoupon}) &mdash; {Math.round(discountRate * 100)}% off
-                  </span>
-                  <span className="font-medium tabular-nums">−{fmt(discount)}</span>
-                </div>
-              )}
-
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Delivery</span>
                 {deliveryFee === 0 ? (
@@ -228,38 +195,7 @@ export default function CartPage() {
             </p>
           </div>
 
-          {/* Coupon */}
-          <div className="rounded-xl border border-border bg-card p-5 shadow-sm flex flex-col gap-3">
-            <h3 className="font-semibold text-sm text-foreground flex items-center gap-2">
-              <Tag className="size-4 text-primary" />
-              Coupon Code
-            </h3>
-            <div className="flex gap-2">
-              <Input
-                placeholder="Enter code…"
-                value={coupon}
-                onChange={(e) => {
-                  setCoupon(e.target.value);
-                  setCouponError("");
-                }}
-                onKeyDown={(e) => e.key === "Enter" && applyCoupon()}
-                aria-label="Coupon code"
-                className="flex-1"
-              />
-              <Button variant="outline" onClick={applyCoupon} className="shrink-0">
-                Apply
-              </Button>
-            </div>
-            {couponError && (
-              <p className="text-xs text-destructive">{couponError}</p>
-            )}
-            {appliedCoupon && (
-              <p className="text-xs text-green-600 dark:text-green-400">
-                ✓ Coupon applied — {Math.round(discountRate * 100)}% off!
-              </p>
-            )}
-            <p className="text-xs text-muted-foreground">Try: <code className="font-mono">RAMIREZ10</code></p>
-          </div>
+
         </div>
       </div>
     </div>
