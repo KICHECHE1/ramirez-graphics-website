@@ -116,7 +116,7 @@ export default function Navbar() {
 
   return (
     <header
-      className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+      className="sticky top-0 z-50 w-full border-b border-brand-surface-foreground/20 bg-brand-surface"
       onMouseLeave={() => setDesktopProductsOpen(false)}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8">
@@ -137,7 +137,7 @@ export default function Navbar() {
           {/* Home */}
           <Link
             href="/"
-            className="relative px-3 py-1.5 text-sm font-medium text-muted-foreground transition-colors duration-200 hover:text-primary after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:rounded-full after:bg-primary after:transition-[width] after:duration-200 hover:after:w-full"
+            className="relative px-3 py-1.5 text-sm font-medium text-brand-surface-foreground/80 transition-colors duration-200 hover:text-brand-surface-foreground after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:rounded-full after:bg-primary after:transition-[width] after:duration-200 hover:after:w-full"
           >
             Home
           </Link>
@@ -148,7 +148,7 @@ export default function Navbar() {
             onClick={() => setDesktopProductsOpen((p) => !p)}
             className={cn(
               "relative flex items-center gap-1 px-3 py-1.5 text-sm font-medium transition-colors duration-200",
-              desktopProductsOpen ? "text-primary" : "text-muted-foreground hover:text-primary"
+              desktopProductsOpen ? "text-brand-surface-foreground" : "text-brand-surface-foreground/80 hover:text-brand-surface-foreground"
             )}
           >
             Products
@@ -159,7 +159,7 @@ export default function Navbar() {
 
           {/* Search bar */}
           <div className="flex items-center w-48 lg:w-64 relative ml-2">
-            <Search className="absolute left-2.5 size-4 text-muted-foreground pointer-events-none" />
+            <Search className="absolute left-2.5 size-4 text-brand-surface-foreground/60 pointer-events-none" />
             <Input
               type="search"
               placeholder="Search products…"
@@ -249,7 +249,7 @@ export default function Navbar() {
             <Link href="/contact">Contact</Link>
           </Button>
 
-          <Button variant="ghost" size="icon" asChild className="relative shrink-0">
+          <Button variant="ghost" size="icon" asChild className="relative shrink-0 text-brand-surface-foreground">
             <Link href="/cart" aria-label="Shopping cart">
               <ShoppingCart className="size-5" />
               <CartBadge />
@@ -259,7 +259,7 @@ export default function Navbar() {
 
         {/* Mobile: cart + menu toggle */}
         <div className="flex md:hidden items-center gap-1">
-          <Button variant="ghost" size="icon" asChild className="relative shrink-0">
+          <Button variant="ghost" size="icon" asChild className="relative shrink-0 text-brand-surface-foreground">
             <Link href="/cart" aria-label="Shopping cart">
               <ShoppingCart className="size-5" />
               <CartBadge />
@@ -268,7 +268,7 @@ export default function Navbar() {
           <Button
             variant="ghost"
             size="icon"
-            className="shrink-0"
+            className="shrink-0 text-brand-surface-foreground"
             onClick={() => setMenuOpen((prev) => !prev)}
             aria-label="Toggle menu"
           >
@@ -280,14 +280,14 @@ export default function Navbar() {
       {/* Mobile dropdown */}
       <div
         className={cn(
-          "md:hidden overflow-hidden border-t border-border bg-background transition-all duration-200",
+          "md:hidden overflow-hidden border-t border-brand-surface-foreground/20 bg-brand-surface transition-all duration-200",
           menuOpen ? "max-h-[80vh] overflow-y-auto" : "max-h-0 border-t-0"
         )}
       >
         <div className="flex flex-col gap-1 px-4 py-3">
           {/* Mobile search */}
           <div className="relative mb-2">
-            <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 size-4 text-muted-foreground pointer-events-none" />
+            <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 size-4 text-brand-surface-foreground/60 pointer-events-none" />
             <Input
               type="search"
               placeholder="Search products…"
@@ -299,7 +299,7 @@ export default function Navbar() {
           <Link
             href="/"
             onClick={() => setMenuOpen(false)}
-            className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors duration-200 hover:text-primary hover:bg-accent"
+            className="rounded-md px-3 py-2 text-sm font-medium text-brand-surface-foreground/80 transition-colors duration-200 hover:text-brand-surface-foreground hover:bg-brand-surface-foreground/10"
           >
             Home
           </Link>
@@ -308,7 +308,7 @@ export default function Navbar() {
           <div>
             <button
               onClick={() => setMobileProductsOpen((p) => !p)}
-              className="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors duration-200 hover:text-primary hover:bg-accent"
+              className="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-brand-surface-foreground/80 transition-colors duration-200 hover:text-brand-surface-foreground hover:bg-brand-surface-foreground/10"
             >
               Products
               <ChevronDown
@@ -328,7 +328,7 @@ export default function Navbar() {
                     <Link
                       href={cat.href}
                       onClick={() => setMenuOpen(false)}
-                      className="text-sm font-semibold text-foreground hover:text-primary transition-colors duration-150 block mb-1"
+                      className="text-sm font-semibold text-brand-surface-foreground hover:text-primary transition-colors duration-150 block mb-1"
                     >
                       {cat.label}
                     </Link>
@@ -338,7 +338,7 @@ export default function Navbar() {
                           <Link
                             href={item.href}
                             onClick={() => setMenuOpen(false)}
-                            className="text-xs text-muted-foreground hover:text-primary transition-colors duration-150"
+                            className="text-xs text-brand-surface-foreground/70 hover:text-primary transition-colors duration-150"
                           >
                             {item.label}
                           </Link>
@@ -349,14 +349,14 @@ export default function Navbar() {
                 ))}
 
                 <div className="border-t border-border pt-2">
-                  <p className="text-xs text-muted-foreground mb-1 font-medium">More Categories</p>
+                  <p className="text-xs text-brand-surface-foreground/70 mb-1 font-medium">More Categories</p>
                   <div className="flex flex-wrap gap-1.5">
                     {moreCategories.map((cat) => (
                       <Link
                         key={cat.href}
                         href={cat.href}
                         onClick={() => setMenuOpen(false)}
-                        className="rounded-full border border-border px-2.5 py-0.5 text-xs text-muted-foreground hover:border-primary hover:text-primary transition-colors duration-150"
+                        className="rounded-full border border-brand-surface-foreground/30 px-2.5 py-0.5 text-xs text-brand-surface-foreground/70 hover:border-primary hover:text-primary transition-colors duration-150"
                       >
                         {cat.label}
                       </Link>

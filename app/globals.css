@@ -30,6 +30,12 @@
     /* Destructive (red) */
     --palette-destructive: oklch(0.577 0.245 27.325);
     --palette-destructive-dk: oklch(0.704 0.191 22.216);
+    /* Brand triad */
+    --palette-cyan: oklch(0.71 0.145 203);
+    --palette-cyan-dark: oklch(0.55 0.155 205);
+    --palette-magenta: oklch(0.62 0.26 328);
+    --palette-magenta-light: oklch(0.75 0.20 328);
+    --palette-golden-yellow: oklch(0.82 0.17 85);
 }
 
 @theme inline {
@@ -52,6 +58,9 @@
     --color-chart-2: var(--chart-2);
     --color-chart-1: var(--chart-1);
     --color-ring: var(--ring);
+    --color-brand-surface: var(--brand-surface);
+    --color-brand-surface-foreground: var(--brand-surface-foreground);
+    --color-heading: var(--heading);
     --color-input: var(--input);
     --color-border: var(--border);
     --color-destructive: var(--destructive);
@@ -86,7 +95,7 @@
     --card-foreground: var(--palette-black);
     --popover: var(--palette-true-white);
     --popover-foreground: var(--palette-black);
-    --primary: var(--palette-sky);
+    --primary: var(--palette-magenta);
     --primary-foreground: var(--palette-true-white);
     --secondary: var(--palette-gray-50);
     --secondary-foreground: var(--palette-black);
@@ -97,7 +106,7 @@
     --destructive: var(--palette-destructive);
     --border: var(--palette-gray-200);
     --input: var(--palette-gray-200);
-    --ring: var(--palette-sky);
+    --ring: var(--palette-magenta);
     --chart-1: var(--palette-sky);
     --chart-2: var(--palette-sky-light);
     --chart-3: var(--palette-sky-dark);
@@ -106,12 +115,15 @@
     --radius: 0.625rem;
     --sidebar: var(--palette-white);
     --sidebar-foreground: var(--palette-black);
-    --sidebar-primary: var(--palette-sky);
+    --sidebar-primary: var(--palette-magenta);
     --sidebar-primary-foreground: var(--palette-true-white);
     --sidebar-accent: var(--palette-sky-light);
     --sidebar-accent-foreground: var(--palette-black);
     --sidebar-border: var(--palette-gray-200);
-    --sidebar-ring: var(--palette-sky);
+    --sidebar-ring: var(--palette-magenta);
+    --brand-surface: var(--palette-cyan);
+    --brand-surface-foreground: var(--palette-true-white);
+    --heading: var(--palette-golden-yellow);
 }
 
 
@@ -124,8 +136,8 @@
     --card-foreground: var(--palette-white);
     --popover: var(--palette-dark-card);
     --popover-foreground: var(--palette-white);
-    --primary: var(--palette-sky);
-    --primary-foreground: var(--palette-black);
+    --primary: var(--palette-magenta);
+    --primary-foreground: var(--palette-true-white);
     --secondary: var(--palette-dark-muted);
     --secondary-foreground: var(--palette-white);
     --muted: var(--palette-dark-muted);
@@ -135,7 +147,7 @@
     --destructive: var(--palette-destructive-dk);
     --border: var(--palette-white-border);
     --input: var(--palette-white-input);
-    --ring: var(--palette-gray-500);
+    --ring: var(--palette-magenta-light);
     --chart-1: var(--palette-sky);
     --chart-2: var(--palette-sky-light);
     --chart-3: var(--palette-sky-dark);
@@ -143,12 +155,15 @@
     --chart-5: var(--palette-dark-muted);
     --sidebar: var(--palette-dark-card);
     --sidebar-foreground: var(--palette-white);
-    --sidebar-primary: var(--palette-sky);
-    --sidebar-primary-foreground: var(--palette-white);
+    --sidebar-primary: var(--palette-magenta);
+    --sidebar-primary-foreground: var(--palette-true-white);
     --sidebar-accent: var(--palette-dark-muted);
     --sidebar-accent-foreground: var(--palette-white);
     --sidebar-border: var(--palette-white-border);
-    --sidebar-ring: var(--palette-gray-500);
+    --sidebar-ring: var(--palette-magenta-light);
+    --brand-surface: var(--palette-cyan-dark);
+    --brand-surface-foreground: var(--palette-true-white);
+    --heading: var(--palette-golden-yellow);
 }
 
 @layer base {
@@ -157,6 +172,14 @@
     }
     body {
         @apply bg-background text-foreground;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: var(--heading);
     }
     html {
         @apply font-sans;

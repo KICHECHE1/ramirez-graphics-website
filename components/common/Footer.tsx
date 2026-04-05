@@ -82,7 +82,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="w-full border-t border-border bg-background text-foreground">
+    <footer className="w-full border-t border-brand-surface-foreground/20 bg-brand-surface text-brand-surface-foreground">
       {/* Main footer grid */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1fr_auto]">
 
@@ -96,7 +96,7 @@ export default function Footer() {
               className="h-11 w-auto object-contain"
             />
           </Link>
-          <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
+          <p className="text-sm text-brand-surface-foreground/80 leading-relaxed max-w-xs">
             Your one-stop print &amp; branding partner. Quality you can see, service you can trust.
           </p>
 
@@ -109,7 +109,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="flex size-8 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors duration-200 hover:border-primary hover:text-primary hover:bg-accent"
+                className="flex size-8 items-center justify-center rounded-full border border-brand-surface-foreground/30 text-brand-surface-foreground/70 transition-colors duration-200 hover:border-primary hover:text-primary hover:bg-brand-surface-foreground/10"
               >
                 <Icon />
               </Link>
@@ -120,7 +120,7 @@ export default function Footer() {
         {/* Product columns */}
         {productColumns.map((col) => (
           <div key={col.heading}>
-            <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-foreground">
+            <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-brand-surface-foreground">
               {col.heading}
             </h3>
             <ul className="flex flex-col gap-2">
@@ -128,7 +128,7 @@ export default function Footer() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-sm text-muted-foreground transition-colors duration-150 hover:text-primary"
+                    className="text-sm text-brand-surface-foreground/70 transition-colors duration-150 hover:text-primary"
                   >
                     {label}
                   </Link>
@@ -140,17 +140,17 @@ export default function Footer() {
 
         {/* Addresses */}
         <div className="flex flex-col gap-6 sm:col-span-2 lg:col-span-1">
-          <h3 className="text-xs font-semibold uppercase tracking-wider text-foreground">
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-brand-surface-foreground">
             Find Us
           </h3>
           {addresses.map((addr) => (
             <div key={addr.city} className="flex flex-col gap-1.5">
-              <p className="text-sm font-semibold text-foreground">{addr.city}</p>
+              <p className="text-sm font-semibold text-brand-surface-foreground">{addr.city}</p>
               <address className="not-italic flex flex-col gap-1">
                 {addr.lines.map((line) => (
-                  <span key={line} className="flex items-start gap-1.5 text-xs text-muted-foreground">
+                  <span key={line} className="flex items-start gap-1.5 text-xs text-brand-surface-foreground/70">
                     {addr.lines.indexOf(line) === 0 && (
-                      <MapPin className="size-3.5 mt-0.5 shrink-0 text-primary" />
+                      <MapPin className="size-3.5 mt-0.5 shrink-0 text-brand-surface-foreground" />
                     )}
                     {addr.lines.indexOf(line) !== 0 && (
                       <span className="w-3.5 shrink-0" />
@@ -160,16 +160,16 @@ export default function Footer() {
                 ))}
                 <Link
                   href={`tel:${addr.phone.replace(/\s/g, "")}`}
-                  className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors duration-150"
+                  className="flex items-center gap-1.5 text-xs text-brand-surface-foreground/70 hover:text-brand-surface-foreground transition-colors duration-150"
                 >
-                  <Phone className="size-3.5 shrink-0 text-primary" />
+                  <Phone className="size-3.5 shrink-0 text-brand-surface-foreground" />
                   {addr.phone}
                 </Link>
                 <Link
                   href={`mailto:${addr.email}`}
-                  className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors duration-150"
+                  className="flex items-center gap-1.5 text-xs text-brand-surface-foreground/70 hover:text-brand-surface-foreground transition-colors duration-150"
                 >
-                  <Mail className="size-3.5 shrink-0 text-primary" />
+                  <Mail className="size-3.5 shrink-0 text-brand-surface-foreground" />
                   {addr.email}
                 </Link>
               </address>
@@ -179,12 +179,12 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-border">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-muted-foreground">
+      <div className="border-t border-brand-surface-foreground/20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-brand-surface-foreground/70">
           <span>&copy; {year} Ramirez Ventures. All rights reserved.</span>
           <div className="flex items-center gap-4">
-            <Link href="/privacy" className="hover:text-primary transition-colors duration-150">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-primary transition-colors duration-150">Terms of Service</Link>
+            <Link href="/privacy" className="hover:text-brand-surface-foreground transition-colors duration-150">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-brand-surface-foreground transition-colors duration-150">Terms of Service</Link>
           </div>
         </div>
       </div>
