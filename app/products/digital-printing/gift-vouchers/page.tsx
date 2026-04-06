@@ -18,7 +18,7 @@ import { useCart } from "@/lib/cart-context";
 const ph = (w: number, h: number, label: string) =>
   `https://placehold.co/${w}x${h}/e0f2fe/0284c7?text=${encodeURIComponent(label)}`;
 
-const WHATSAPP = "254700000000";
+const WHATSAPP = "254706207037";
 
 const sizes = [
   { label: "DL · Single-sided",   dimensions: "99 × 210 mm, 1 side",  price: 1500 },

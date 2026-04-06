@@ -115,7 +115,7 @@ const features = [
     icon: Truck,
     title: "Nationwide Delivery",
     description:
-      "We deliver T-shirt and apparel orders across Kenya — from Muhoroni to Nairobi, Mombasa, Kisumu, and beyond. Free local delivery for orders within Muhoroni.",
+      "We deliver T-shirt and apparel orders across Kenya — from Muhoroni, Kenya to Mombasa, Kisumu, and beyond. Free local delivery for orders within Muhoroni.",
   },
   {
     icon: Palette,

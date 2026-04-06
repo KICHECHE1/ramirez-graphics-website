@@ -18,7 +18,7 @@ import { useCart } from "@/lib/cart-context";
 const ph = (w: number, h: number, label: string) =>
   `https://placehold.co/${w}x${h}/e0f2fe/0284c7?text=${encodeURIComponent(label)}`;
 
-const WHATSAPP = "254700000000";
+const WHATSAPP = "254706207037";
 
 const sizes = [
   { label: '25 mm — Small',   dimensions: "25 mm diameter, safety-pin back",  price: 3500 },
@@ -29,7 +29,7 @@ const sizes = [
 ];
 
 const materialNote =
-  "Prices shown are per 100 badges (MOQ). Full-colour print on 0.45 mm tin plate with mylar protective film, Pantone-accurate colours. Safety-pin back as standard; magnet back available on request. Bulk discounts apply for 500+ pieces.";
+  "Full-colour print on 0.45 mm tin plate with mylar protective film, Pantone-accurate colours. Safety-pin back as standard; magnet back available on request. Bulk discounts apply for 500+ pieces.";
 
 const faqs = [
   {

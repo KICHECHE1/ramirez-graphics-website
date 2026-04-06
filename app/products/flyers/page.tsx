@@ -118,7 +118,7 @@ const features = [
     icon: Truck,
     title: "Delivered Across Kenya",
     description:
-      "We deliver to Nairobi, Mombasa, Kisumu, Nakuru, Eldoret, and all major towns — fast, tracked, and reliable.",
+      "We deliver from Muhoroni, Kenya to Mombasa, Kisumu, Nakuru, Eldoret, and all major towns — fast, tracked, and reliable.",
   },
   {
     icon: Palette,
@@ -141,7 +141,7 @@ const features = [
 ];
 
 const PHONE = "+254 700 000 000";
-const WHATSAPP = "254700000000";
+const WHATSAPP = "254706207037";
 
 export default function FlyersPage() {
   return (
@@ -287,7 +287,7 @@ export default function FlyersPage() {
                 <div>
                   <h2 className="text-2xl font-bold text-foreground">Our Products</h2>
                   <p className="text-muted-foreground text-sm mt-1">
-                    Click any product to view full pricing and options
+                    Click any product to view details and options
                   </p>
                 </div>
                 <Badge variant="outline" className="hidden sm:inline-flex">

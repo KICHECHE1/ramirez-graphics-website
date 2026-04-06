@@ -115,7 +115,7 @@ const features = [
     icon: Truck,
     title: "Nationwide Delivery",
     description:
-      "We deliver across Kenya — from Muhoroni to Nairobi, Mombasa, Kisumu, Nakuru, and beyond. Free local delivery for orders within Muhoroni.",
+      "We deliver across Kenya — from Muhoroni, Kenya to Mombasa, Kisumu, Nakuru, and beyond. Free local delivery for orders within Muhoroni.",
   },
   {
     icon: Palette,

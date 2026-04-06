@@ -6,7 +6,6 @@ import Image from "next/image";
 import {
   ShoppingCart, Star, Truck, ShieldCheck, ThumbsUp,
   Printer, Palette, Clock, Award, ArrowRight, Phone,
-  ChevronLeft, ChevronRight,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -257,7 +256,6 @@ function ProductCard({ product, onAddToCart }: { product: Product; onAddToCart: 
           {product.name}
         </Link>
         <Stars />
-        <p className="text-base font-bold text-primary">KES {product.price.toLocaleString()}</p>
         <Button
           size="sm"
           className="w-full gap-1.5 mt-auto bg-primary text-primary-foreground hover:bg-primary/90"
@@ -305,12 +303,9 @@ export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const total = heroSlides.length;
 
-  const goPrev = () => setCurrentSlide((s) => (s - 1 + total) % total);
-  const goNext = () => setCurrentSlide((s) => (s + 1) % total);
-
   // Auto-advance every 5 seconds
   useEffect(() => {
-    const timer = setInterval(goNext, 5000);
+    const timer = setInterval(() => setCurrentSlide((s) => (s + 1) % total), 5000);
     return () => clearInterval(timer);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -344,7 +339,7 @@ export default function HomePage() {
             {heroSlides.map((slide, idx) => (
               <div
                 key={idx}
-                className={`[grid-area:1/1] transition-opacity duration-1000 ease-in-out ${
+                className={`[grid-area:1/1] transition-opacity duration-2000 ease-in-out ${
                   currentSlide === idx
                     ? "opacity-100 pointer-events-auto"
                     : "opacity-0 pointer-events-none"
@@ -366,12 +361,6 @@ export default function HomePage() {
                     <div className="flex items-center gap-3">
                       <Stars />
                       <span className="text-sm text-muted-foreground">(128 reviews)</span>
-                    </div>
-                    <div className="flex flex-col gap-1">
-                      <span className="text-xs uppercase tracking-widest text-muted-foreground font-medium">Starting from</span>
-                      <span className="text-4xl font-black text-primary">
-                        KES {slide.price.toLocaleString()}
-                      </span>
                     </div>
                     <div className="flex flex-wrap gap-3">
                       <Button
@@ -407,39 +396,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* ── Controls: prev · dots · next ── */}
-        <div className="mx-auto mt-10 max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center gap-3">
-            <button
-              onClick={goPrev}
-              aria-label="Previous slide"
-              className="flex size-9 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
-            >
-              <ChevronLeft className="size-5" />
-            </button>
 
-            {heroSlides.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCurrentSlide(idx)}
-                aria-label={`Go to slide ${idx + 1}`}
-                className={`rounded-full transition-all duration-300 ${
-                  currentSlide === idx
-                    ? "h-2.5 w-7 bg-primary"
-                    : "size-2.5 bg-primary/25 hover:bg-primary/50"
-                }`}
-              />
-            ))}
-
-            <button
-              onClick={goNext}
-              aria-label="Next slide"
-              className="flex size-9 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
-            >
-              <ChevronRight className="size-5" />
-            </button>
-          </div>
-        </div>
       </section>
 
       {/* ══════════════════════════════════════════════
@@ -556,19 +513,19 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════════
           CTA
       ══════════════════════════════════════════════ */}
-      <section className="py-20 bg-primary">
+      <section className="py-20 bg-background border-t border-border">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center gap-6">
-          <Printer className="size-12 text-primary-foreground opacity-80" />
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-primary-foreground max-w-2xl leading-tight">
+          <Printer className="size-12 text-primary opacity-80" />
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground max-w-2xl leading-tight">
             Ready to Bring Your Ideas to Print?
           </h2>
-          <p className="text-primary-foreground/80 max-w-lg text-lg">
+          <p className="text-muted-foreground max-w-lg text-lg">
             Get a free quote today. Whether it&apos;s 10 business cards or 10,000 branded T-shirts, we&apos;ve got you covered.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Button
               size="lg"
-              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-bold px-8"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold px-8"
               asChild
             >
               <Link href="/contact">Get a Free Quote</Link>
@@ -576,7 +533,7 @@ export default function HomePage() {
             <Button
               size="lg"
               variant="outline"
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 px-8"
+              className="border-primary text-primary hover:bg-primary/10 px-8"
               asChild
             >
               <Link href="/products">Browse Products</Link>

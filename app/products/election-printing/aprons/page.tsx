@@ -18,7 +18,7 @@ import { useCart } from "@/lib/cart-context";
 const ph = (w: number, h: number, label: string) =>
   `https://placehold.co/${w}x${h}/e0f2fe/0284c7?text=${encodeURIComponent(label)}`;
 
-const WHATSAPP = "254700000000";
+const WHATSAPP = "254706207037";
 
 const sizes = [
   { label: "Plain Apron · Front Print",     dimensions: "Standard adult size, 1 side",    price: 18000 },
@@ -28,7 +28,7 @@ const sizes = [
 ];
 
 const materialNote =
-  "Prices shown are per 50 aprons (MOQ 20). Fabric: 240 gsm poly-cotton blend (white or colour base). Print method: heat transfer vinyl (HTV) for sharp logos and text; dye-sublimation available for full-colour all-over prints. Bulk discounts for 100+ pcs.";
+  "Fabric: 240 gsm poly-cotton blend (white or colour base). Print method: heat transfer vinyl (HTV) for sharp logos and text; dye-sublimation available for full-colour all-over prints. Bulk discounts for 100+ pcs.";
 
 const faqs = [
   {

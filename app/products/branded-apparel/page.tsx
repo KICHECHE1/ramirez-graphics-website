@@ -102,7 +102,7 @@ const features = [
     icon: Truck,
     title: "Nationwide Delivery",
     description:
-      "We deliver branded apparel across Kenya — Nairobi, Mombasa, Kisumu, Nakuru, and beyond.",
+      "We deliver branded apparel across Kenya — from Muhoroni, Kenya to Mombasa, Kisumu, Nakuru, and beyond.",
   },
   {
     icon: Palette,
@@ -125,7 +125,7 @@ const features = [
 ];
 
 const PHONE = "+254 700 000 000";
-const WHATSAPP = "254700000000";
+const WHATSAPP = "254706207037";
 
 export default function BrandedApparelPage() {
   return (

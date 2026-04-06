@@ -95,7 +95,7 @@ const features = [
     icon: Truck,
     title: "Delivered Across Kenya",
     description:
-      "We deliver to Nairobi, Mombasa, Kisumu, Nakuru, and all major towns across Kenya — quickly and reliably.",
+      "We deliver from Muhoroni, Kenya to Mombasa, Kisumu, Nakuru, and all major towns across Kenya — quickly and reliably.",
   },
   {
     icon: Palette,
@@ -118,7 +118,7 @@ const features = [
 ];
 
 const PHONE = "+254 700 000 000";
-const WHATSAPP = "254700000000";
+const WHATSAPP = "254706207037";
 
 export default function DigitalPrintingPage() {
   return (

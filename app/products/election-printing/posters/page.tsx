@@ -18,7 +18,7 @@ import { useCart } from "@/lib/cart-context";
 const ph = (w: number, h: number, label: string) =>
   `https://placehold.co/${w}x${h}/e0f2fe/0284c7?text=${encodeURIComponent(label)}`;
 
-const WHATSAPP = "254700000000";
+const WHATSAPP = "254706207037";
 
 const sizes = [
   { label: "A3 Poster",    dimensions: "297 × 420 mm",  price: 4500 },
@@ -29,7 +29,7 @@ const sizes = [
 ];
 
 const materialNote =
-  "Prices shown are per 100 posters (MOQ 50). Printed on 150 gsm gloss art paper as standard; 200 gsm premium available on request. Full-colour, double-sided printing available. Outdoor waterproof vinyl printing also available for large-format banners.";
+  "Printed on 150 gsm gloss art paper as standard; 200 gsm premium available on request. Full-colour, double-sided printing available. Outdoor waterproof vinyl printing also available for large-format banners.";
 
 const faqs = [
   {

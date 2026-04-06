@@ -18,7 +18,7 @@ import { useCart } from "@/lib/cart-context";
 const ph = (w: number, h: number, label: string) =>
   `https://placehold.co/${w}x${h}/e0f2fe/0284c7?text=${encodeURIComponent(label)}`;
 
-const WHATSAPP = "254700000000";
+const WHATSAPP = "254706207037";
 
 const sizes = [
   { label: "A6 · Single-sided",  dimensions: "148 × 105 mm, 1 side, 130 gsm gloss", price: 2500 },
@@ -30,7 +30,7 @@ const sizes = [
 ];
 
 const materialNote =
-  "Printed full-colour on 130 gsm gloss art paper (standard). 100 gsm and 170 gsm options available on request. Matte and silk-coated finishes also available. Prices shown are per 500 flyers. Volume discounts apply at 1,000, 2,500, and 5,000+.";
+  "Printed full-colour on 130 gsm gloss art paper (standard). 100 gsm and 170 gsm options available on request. Matte and silk-coated finishes also available. Volume discounts apply at 1,000, 2,500, and 5,000+.";
 
 const faqs = [
   {

@@ -115,7 +115,7 @@ const features = [
     icon: Truck,
     title: "Nationwide Delivery & Installation",
     description:
-      "We deliver and install signage across Kenya — from Muhoroni to Nairobi, Mombasa, Kisumu, and beyond. Our installation team handles mounting, cabling, and finishing.",
+      "We deliver and install signage across Kenya — from Muhoroni, Kenya to Mombasa, Kisumu, and beyond. Our installation team handles mounting, cabling, and finishing.",
   },
   {
     icon: Palette,

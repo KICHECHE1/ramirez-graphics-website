@@ -100,7 +100,7 @@ const electionProducts: ElectionProduct[] = [
 ];
 
 const PHONE = "+254 700 000 000";
-const WHATSAPP = "254700000000";
+const WHATSAPP = "254706207037";
 
 export default function ElectionPrintingPage() {
   return (

@@ -119,7 +119,7 @@ const features = [
     icon: Truck,
     title: "Nationwide Delivery",
     description:
-      "We deliver across Kenya — Nairobi, Mombasa, Kisumu, Nakuru, and beyond. Free local delivery for orders in Muhoroni.",
+      "We deliver across Kenya — from Muhoroni to Mombasa, Kisumu, Nakuru, and beyond. Free local delivery for orders in Muhoroni.",
   },
   {
     icon: Palette,
@@ -140,13 +140,6 @@ const features = [
       "From startups and NGOs to government agencies and Fortune 500 companies, businesses across Kenya trust Ramirez Ventures.",
   },
 ];
-
-const fmt = (n: number) =>
-  new Intl.NumberFormat("en-KE", {
-    style: "currency",
-    currency: "KES",
-    maximumFractionDigits: 0,
-  }).format(n);
 
 export default function BannersPage() {
   return (
@@ -300,7 +293,7 @@ export default function BannersPage() {
               <div className="prose prose-sm sm:prose-base text-muted-foreground max-w-none space-y-4">
                 <p>
                   Looking for professional banner printing in Kenya? You have come to the right
-                  place. At Ramirez Ventures, we are Nairobi&apos;s most trusted large-format
+                  place. At Ramirez Ventures, we are Muhoroni, Kenya&apos;s most trusted large-format
                   printing company, offering a complete range of indoor and outdoor branding
                   solutions for businesses, events, churches, schools, and government institutions
                   across Kenya. Whether you need a single promotional display or a full event
@@ -310,7 +303,7 @@ export default function BannersPage() {
                   Banner printing remains one of the most cost-effective and high-impact marketing
                   tools available in Kenya. A well-printed, correctly positioned banner can generate
                   thousands of impressions daily — far more than digital advertising at a fraction
-                  of the recurring cost. From roadside vinyl banners in Nairobi CBD to elegant
+                  of the recurring cost. From roadside vinyl banners in Muhoroni, Kenya to elegant
                   fabric media walls at KICC press conferences, Ramirez Ventures delivers the right
                   display format to make all the difference for your brand.
                 </p>
@@ -354,20 +347,14 @@ export default function BannersPage() {
                     </Link>
 
                     {/* Info */}
-                    <div className="p-4 flex flex-col gap-2">
-                      <Link
-                        href={product.href}
-                        className="font-semibold text-foreground hover:text-primary transition-colors leading-snug"
-                      >
-                        {product.name}
-                      </Link>
                       <div>
-                        <span className="text-xs text-muted-foreground">From</span>
-                        <p className="text-lg font-bold text-primary tabular-nums">
-                          {fmt(product.price)}
-                        </p>
+                        <Link
+                          href={product.href}
+                          className="font-semibold text-foreground hover:text-primary transition-colors leading-snug"
+                        >
+                          {product.name}
+                        </Link>
                       </div>
-                    </div>
                   </div>
                 ))}
               </div>

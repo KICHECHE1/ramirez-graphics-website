@@ -115,7 +115,7 @@ const features = [
     icon: Truck,
     title: "Nationwide Delivery",
     description:
-      "We deliver sticker and label orders across Kenya — from Muhoroni to Nairobi, Mombasa, Kisumu, and beyond. Free local delivery for orders within Muhoroni.",
+      "We deliver sticker and label orders across Kenya — from Muhoroni, Kenya to Mombasa, Kisumu, and beyond. Free local delivery for orders within Muhoroni.",
   },
   {
     icon: Palette,

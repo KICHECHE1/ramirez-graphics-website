@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { MessageCircle } from "lucide-react";
 
-const WHATSAPP = "254700000000";
+const WHATSAPP = "254706207037";
 const MESSAGE = "Hi, I'd like to get a quote for printing services.";
 
 export default function WhatsAppButton() {

@@ -18,7 +18,7 @@ import { useCart } from "@/lib/cart-context";
 const ph = (w: number, h: number, label: string) =>
   `https://placehold.co/${w}x${h}/e0f2fe/0284c7?text=${encodeURIComponent(label)}`;
 
-const WHATSAPP = "254700000000";
+const WHATSAPP = "254706207037";
 
 const sizes = [
   { label: "A5 · Bi-fold",          dimensions: "A4 sheet folded to A5 (4 panels)",  price: 6500 },
@@ -29,7 +29,7 @@ const sizes = [
 ];
 
 const materialNote =
-  "Printed full-colour on 170 gsm gloss or matte art paper. Professionally scored and folded for a crisp, clean finish. Prices shown are per 250 brochures. Volume discounts apply at 500, 1,000, and 2,500+. Heavier 200 gsm stocks available on request.";
+  "Printed full-colour on 170 gsm gloss or matte art paper. Professionally scored and folded for a crisp, clean finish. Volume discounts apply at 500, 1,000, and 2,500+. Heavier 200 gsm stocks available on request.";
 
 const faqs = [
   {

@@ -18,7 +18,7 @@ import { useCart } from "@/lib/cart-context";
 const ph = (w: number, h: number, label: string) =>
   `https://placehold.co/${w}x${h}/e0f2fe/0284c7?text=${encodeURIComponent(label)}`;
 
-const WHATSAPP = "254700000000";
+const WHATSAPP = "254706207037";
 
 const sizes = [
   { label: "A4 · Black & White",    dimensions: "210 × 297 mm, B&W",      price: 10 },
@@ -29,7 +29,7 @@ const sizes = [
 ];
 
 const materialNote =
-  "Printed on 80 gsm bond paper (standard) or 90–100 gsm premium paper on request. Binding options include spiral, comb, and thermal binding. Laminated covers available. Prices shown are per page (single-sided); double-sided rates available.";
+  "Printed on 80 gsm bond paper (standard) or 90–100 gsm premium paper on request. Binding options include spiral, comb, and thermal binding. Laminated covers available. Double-sided rates available on request.";
 
 const faqs = [
   {

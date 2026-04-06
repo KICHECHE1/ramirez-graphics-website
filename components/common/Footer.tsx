@@ -73,8 +73,8 @@ const addresses = [
   {
     city: "Muhoroni, Kisumu",
     lines: ["Muhoroni, Kisumu County", "Kenya"],
-    phone: "+254 700 000 000",
-    email: "info@ramirezventures.co.ke",
+    phone: "+254 706 207 037",
+    email: "Ramirezentventures@gmail.com",
   },
 ];
 

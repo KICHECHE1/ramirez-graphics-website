@@ -19,7 +19,7 @@ const addresses = [
     city: "Muhoroni, Kisumu",
     lines: ["Muhoroni, Kisumu County", "Kenya"],
     phone: "+254 700 000 000",
-    whatsapp: "254700000000",
+    whatsapp: "254706207037",
     email: "info@ramirezventures.co.ke",
   },
 ];
