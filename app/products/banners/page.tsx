@@ -119,7 +119,7 @@ const features = [
     icon: Truck,
     title: "Nationwide Delivery",
     description:
-      "We deliver across Kenya — Nairobi, Mombasa, Kisumu, Nakuru, and beyond. Free delivery for orders in Nairobi CBD.",
+      "We deliver across Kenya — Nairobi, Mombasa, Kisumu, Nakuru, and beyond. Free local delivery for orders in Muhoroni.",
   },
   {
     icon: Palette,

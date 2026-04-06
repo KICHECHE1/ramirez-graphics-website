@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState, useCallback } from "react";
+import { createContext, useContext, useEffect, useRef, useState, useCallback } from "react";
 
 export interface CartItem {
   id: string;    // unique key — derived from href
@@ -33,18 +33,26 @@ const CartContext = createContext<CartContextValue | null>(null);
 const STORAGE_KEY = "ramirez_cart";
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
-  const [items, setItems] = useState<CartItem[]>(() => {
-    if (typeof window === "undefined") return [];
+  const [items, setItems] = useState<CartItem[]>([]);
+  const hydrated = useRef(false);
+
+  // Load from localStorage after mount so server and client agree on the initial render
+  useEffect(() => {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
-      return raw ? (JSON.parse(raw) as CartItem[]) : [];
+      const stored = raw ? (JSON.parse(raw) as CartItem[]) : [];
+      setTimeout(() => {
+        setItems(stored);
+        hydrated.current = true;
+      }, 0);
     } catch {
-      return [];
+      hydrated.current = true;
     }
-  });
+  }, []);
 
-  // Persist to localStorage whenever items change
+  // Persist to localStorage whenever items change (skip before hydration to avoid clearing stored data)
   useEffect(() => {
+    if (!hydrated.current) return;
     localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
   }, [items]);
 
