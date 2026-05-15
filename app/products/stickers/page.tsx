@@ -47,10 +47,10 @@ const moreCategories = [
 const products = [
   { id: "1", name: "Custom Cut Stickers", image: ph(400, 320, "Custom+Cut+Stickers") },
   { id: "2", name: "Roll Stickers & Labels", image: ph(400, 320, "Roll+Stickers") },
-  { id: "3", name: "Clear Transparent Stickers", image: ph(400, 320, "Clear+Stickers") },
+  { id: "3", name: "Clear UV Stickers", image: ph(400, 320, "Clear+Stickers") },
   { id: "4", name: "Bumper Stickers", image: ph(400, 320, "Bumper+Stickers") },
-  { id: "5", name: "Security & Void Stickers", image: ph(400, 320, "Security+Stickers") },
-  { id: "6", name: "QR Code Stickers", image: ph(400, 320, "QR+Code+Stickers") },
+  { id: "5", name: "Security & Warning Stickers", image: ph(400, 320, "Security+Stickers") },
+  { id: "6", name: " Phone Stickers", image: ph(400, 320, "QR+Code+Stickers") },
   { id: "7", name: "Product Labels", image: ph(400, 320, "Product+Labels") },
   { id: "8", name: "Die-Cut Stickers", image: ph(400, 320, "Die-Cut+Stickers") },
 ];
