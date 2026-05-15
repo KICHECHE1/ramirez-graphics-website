@@ -12,6 +12,10 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useCart, type AddToCartInput } from "@/lib/cart-context";
 
+/* ─── Asset imports ─── */
+import BusinessCards from "@/app/assets/Business Card.jpg";
+import ramirezLogo from "@/app/assets/Ramirez logo.png";
+
 /* ─── placeholder helper ─── */
 const ph = (w: number, h: number, label: string) =>
   `https://placehold.co/${w}x${h}/e0f2fe/0284c7?text=${encodeURIComponent(label)}`;
@@ -33,7 +37,7 @@ const heroSlides: HeroSlide[] = [
     description:
       "Make a lasting first impression with our premium Spot UV Business Cards — 400gsm card stock with a high-gloss UV coating for a luxurious tactile finish.",
     price: 2500,
-    image: ph(600, 500, "Business Cards"),
+    image: BusinessCards.src,
     href: "/products/business-cards/spot-uv",
   },
   {
@@ -74,7 +78,7 @@ const heroSlides: HeroSlide[] = [
   },
   {
     badge: "Quick Turnaround",
-    name: "A5 & A4 Flyers (Bulk Printing)",
+    name: "Flyer & Brochures Design & Printing",
     description:
       "Spread the word fast with our crisp, colourful flyers. Ideal for promotions, events, and announcements — same-day printing available for urgent orders.",
     price: 1500,
@@ -83,9 +87,9 @@ const heroSlides: HeroSlide[] = [
   },
   {
     badge: "Premium Finish",
-    name: "Tri-fold & DL Brochures",
+    name: "Brand Identity Design",
     description:
-      "Showcase your products and services in style with our glossy or matte-laminated tri-fold and DL brochures. Perfect for hotels, clinics, and retail.",
+      "We create professional and memorable brand identities that reflect your business values and personality.From Logos to colors and visual branding, we help your brand stand out and build customer trust.",
     price: 2000,
     image: ph(600, 500, "Brochures"),
     href: "/products/flyers/brochures",
@@ -101,9 +105,9 @@ const heroSlides: HeroSlide[] = [
   },
   {
     badge: "Affordable",
-    name: "Document & Photo Printing",
+    name: "Branded Promotional Items",
     description:
-      "Fast, reliable, and affordable document and photo printing. From single pages to bulk runs — laser-sharp quality on every sheet, ready when you are.",
+      "From branded pens to custom notebooks, our promotional items are perfect for giveaways, events, and corporate gifts. High-quality printing on a variety of products to suit your needs.",
     price: 50,
     image: ph(600, 500, "Documents"),
     href: "/products/digital-printing/documents",
@@ -125,7 +129,7 @@ const printingServices = [
   { label: "Flyers & Brochures", image: ph(300, 300, "Flyers"), href: "/products/flyers" },
   { label: "Booklets & Magazines", image: ph(300, 300, "Booklets"), href: "/products/booklet-magazines" },
   { label: "Branded T-Shirts", image: ph(300, 300, "T-Shirts"), href: "/products/branded-apparel" },
-  { label: "Business Cards", image: ph(300, 300, "Biz Cards"), href: "/products/business-cards" },
+  { label: "Business Cards", image: BusinessCards.src, href: "/products/business-cards" },
   { label: "Posters", image: ph(300, 300, "Posters"), href: "/products/posters" },
   { label: "Signages", image: ph(300, 300, "Signages"), href: "/products/signages" },
   { label: "Stickers", image: ph(300, 300, "Stickers"), href: "/products/stickers" },
@@ -241,8 +245,10 @@ function Stars() {
 /* ─── Product card ─── */
 function ProductCard({ product, onAddToCart }: { product: Product; onAddToCart: (p: AddToCartInput) => void }) {
   return (
-    <div className="group flex flex-col rounded-xl border border-border bg-card overflow-hidden hover:shadow-md transition-shadow duration-200">
-      <Link href={product.href} className="block overflow-hidden bg-muted aspect-square">
+    <div className="group flex flex-col rounded-xl border border-border overflow-hidden bg-background">
+      
+      {/* ✅ Image container - all visual effects stay HERE */}
+      <Link href={product.href} className="block relative overflow-hidden aspect-square">
         <Image
           src={product.image}
           alt={product.name}
@@ -250,8 +256,12 @@ function ProductCard({ product, onAddToCart }: { product: Product; onAddToCart: 
           height={400}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
+        {/* Optional: subtle hover overlay confined to image only */}
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 pointer-events-none" />
       </Link>
-      <div className="flex flex-col gap-2 p-3">
+      
+      {/* ✅ Content area - clean, no shadow/background bleed */}
+      <div className="flex flex-col gap-2 p-3 bg-background">
         <Link href={product.href} className="text-sm font-medium text-foreground hover:text-primary transition-colors line-clamp-2 leading-snug">
           {product.name}
         </Link>
@@ -265,6 +275,7 @@ function ProductCard({ product, onAddToCart }: { product: Product; onAddToCart: 
           Add to Cart
         </Button>
       </div>
+      
     </div>
   );
 }
@@ -460,7 +471,8 @@ export default function HomePage() {
                 href={svc.href}
                 className="group flex flex-col items-center gap-2"
               >
-                <div className="relative size-16 sm:size-20 rounded-full overflow-hidden border-2 border-border group-hover:border-primary transition-colors duration-200 bg-muted">
+                {/* ✅ Removed bg-muted to prevent background behind circular image */}
+                <div className="relative size-16 sm:size-20 rounded-full overflow-hidden border-2 border-border group-hover:border-primary transition-colors duration-200">
                   <Image
                     src={svc.image}
                     alt={svc.label}
