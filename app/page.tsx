@@ -14,7 +14,9 @@ import { useCart, type AddToCartInput } from "@/lib/cart-context";
 
 /* ─── Asset imports ─── */
 import BusinessCards from "@/app/assets/Business Card.jpg";
-import ramirezLogo from "@/app/assets/Ramirez logo.png";
+import Buttons from "@/app/assets/button + poster.jpg";
+import Tshirts from "@/app/assets/branded tshirt.jpg";
+import Rollup from "@/app/assets/Roll-Up Stand Banner.jpg";
 
 /* ─── placeholder helper ─── */
 const ph = (w: number, h: number, label: string) =>
@@ -46,7 +48,7 @@ const heroSlides: HeroSlide[] = [
     description:
       "Gear up your team with vibrant custom-branded T-shirts and uniforms. Premium fabric, durable screen printing, perfect for businesses, schools, and events.",
     price: 850,
-    image: ph(600, 500, "T-Shirts"),
+    image: Tshirts.src,
     href: "/products/branded-apparel/t-shirts",
   },
   {
@@ -55,7 +57,7 @@ const heroSlides: HeroSlide[] = [
     description:
       "Command attention at your next event with our high-resolution rollup and backdrop banners. Lightweight, portable, and printed on premium vinyl.",
     price: 4500,
-    image: ph(600, 500, "Banners"),
+    image: Rollup.src,
     href: "/products/events-display/table-rollup",
   },
   {
@@ -64,7 +66,7 @@ const heroSlides: HeroSlide[] = [
     description:
       "Win your campaign with bold, high-impact election posters and button badges. Fast turnaround, bulk pricing available, and vivid full-colour printing.",
     price: 600,
-    image: ph(600, 500, "Election"),
+    image: Buttons.src,
     href: "/products/election-printing/posters",
   },
   {

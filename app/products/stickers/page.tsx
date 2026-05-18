@@ -14,6 +14,15 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import Stickers from "@/app/assets/Die-Cut Stickers.jpg";
+import Product from "@/app/assets/Product Labels.jpg";
+import Phone from "@/app/assets/Phone Stickers.jpg";
+import Security from "@/app/assets/Security and Warning Stickers.jpg";
+import Bumper from "@/app/assets/Bumper Stickers.jpg";
+import Roll from "@/app/assets/Roll Stickers & Labels.jpg";
+import Clear from "@/app/assets/Clear Transparent Stickers.jpg";
+import CustomCut from "@/app/assets/Custom Cut Stickers.jpg";
+import Sticker from "@/app/assets/Custom Sticker Printing.jpg";
 
 const ph = (w: number, h: number, label: string) =>
   `https://placehold.co/${w}x${h}/e0f2fe/0284c7?text=${encodeURIComponent(label)}`;
@@ -45,14 +54,14 @@ const moreCategories = [
 ];
 
 const products = [
-  { id: "1", name: "Custom Cut Stickers", image: ph(400, 320, "Custom+Cut+Stickers") },
-  { id: "2", name: "Roll Stickers & Labels", image: ph(400, 320, "Roll+Stickers") },
-  { id: "3", name: "Clear UV Stickers", image: ph(400, 320, "Clear+Stickers") },
-  { id: "4", name: "Bumper Stickers", image: ph(400, 320, "Bumper+Stickers") },
-  { id: "5", name: "Security & Warning Stickers", image: ph(400, 320, "Security+Stickers") },
-  { id: "6", name: " Phone Stickers", image: ph(400, 320, "QR+Code+Stickers") },
-  { id: "7", name: "Product Labels", image: ph(400, 320, "Product+Labels") },
-  { id: "8", name: "Die-Cut Stickers", image: ph(400, 320, "Die-Cut+Stickers") },
+  { id: "1", name: "Custom Cut Stickers", image: CustomCut.src },
+  { id: "2", name: "Roll Stickers & Labels", image: Roll.src },
+  { id: "3", name: "Clear UV Stickers", image: Clear.src },
+  { id: "4", name: "Bumper Stickers", image: Bumper.src },
+  { id: "5", name: "Security & Warning Stickers", image: Security.src },
+  { id: "6", name: " Phone Stickers", image: Phone.src },
+  { id: "7", name: "Product Labels", image: Product.src },
+  { id: "8", name: "Die-Cut Stickers", image: Stickers.src },
 ];
 
 const productDescriptions = [
@@ -143,46 +152,73 @@ export default function StickersPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero */}
-      <section className="relative isolate overflow-hidden bg-gradient-to-br from-primary/90 via-primary to-primary/80">
-        <Image
-          src={ph(1400, 400, "Sticker+Printing+Kenya")}
-          alt="Sticker printing Kenya"
-          fill
-          className="object-cover opacity-20 mix-blend-overlay"
-          priority
-          unoptimized
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-transparent to-primary/40" />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-          <nav className="mb-6 flex items-center gap-1.5 text-sm text-primary-foreground/70 flex-wrap">
-            <Link href="/" className="hover:text-primary-foreground transition-colors">Home</Link>
-            <ChevronRight className="size-3.5" />
-            <Link href="/products" className="hover:text-primary-foreground transition-colors">Products</Link>
-            <ChevronRight className="size-3.5" />
-            <span className="text-primary-foreground font-medium">Stickers</span>
-          </nav>
-          <div className="max-w-2xl">
-            <Badge className="mb-4 bg-white/20 text-primary-foreground border-0 backdrop-blur-sm">
-              Vinyl Stickers &amp; Labels
-            </Badge>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight tracking-tight mb-4">
-              Custom Sticker Printing in Kenya
-            </h1>
-            <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
-              Die-cut, roll, clear, bumper, security, and QR code stickers — any shape,
-              any size, full colour, weatherproof, delivered across Kenya.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg" asChild>
-                <a href="#products">Shop Stickers</a>
-              </Button>
-              <Button size="lg" variant="outline" className="border-white/40 text-primary-foreground hover:bg-white/10" asChild>
-                <Link href="/contact">Get a Quote</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+  <section className="relative isolate overflow-hidden">
+  {/* Background Image */}
+  <Image
+    src={Sticker}
+    alt="Sticker printing Kenya"
+    fill
+    priority
+    unoptimized
+    className="object-cover object-center"
+  />
+
+  {/* Dark translucent overlay */}
+  <div className="absolute inset-0 bg-black/45 z-0" />
+
+  {/* Content */}
+  <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+    <nav className="mb-6 flex items-center gap-1.5 text-sm text-white/80 flex-wrap">
+      <Link href="/" className="hover:text-white transition-colors">
+        Home
+      </Link>
+
+      <ChevronRight className="size-3.5" />
+
+      <Link href="/products" className="hover:text-white transition-colors">
+        Products
+      </Link>
+
+      <ChevronRight className="size-3.5" />
+
+      <span className="text-white font-medium">Stickers</span>
+    </nav>
+
+    <div className="max-w-2xl">
+      <Badge className="mb-4 bg-white/20 text-white border-0 backdrop-blur-sm">
+        Vinyl Stickers &amp; Labels
+      </Badge>
+
+      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight mb-4">
+        Custom Sticker Printing in Kenya
+      </h1>
+
+      <p className="text-lg text-white/90 leading-relaxed mb-8">
+        Die-cut, roll, clear, bumper, security, and QR code stickers — any
+        shape, any size, full colour, weatherproof, delivered across Kenya.
+      </p>
+
+      <div className="flex flex-wrap gap-3">
+        <Button
+          size="lg"
+          className="bg-white text-black hover:bg-white/90 shadow-lg"
+          asChild
+        >
+          <a href="#products">Shop Stickers</a>
+        </Button>
+
+        <Button
+          size="lg"
+          variant="outline"
+          className="border-white text-black bg-white/90 hover:bg-white"
+          asChild
+        >
+          <Link href="/contact">Get a Quote</Link>
+        </Button>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Main layout */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
