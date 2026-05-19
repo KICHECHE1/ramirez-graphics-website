@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
 const CartBadge = dynamic(() => import("@/components/common/CartBadge"), { ssr: false });
+const ThemeToggle = dynamic(() => import("@/components/common/ThemeToggle"), { ssr: false });
 
 const productCategories = [
   {
@@ -240,6 +241,8 @@ export default function Navbar() {
 
         {/* Contact + Cart — desktop */}
         <div className="hidden md:flex items-center gap-2">
+          <ThemeToggle />
+
           <Button
             variant="outline"
             size="sm"
@@ -259,6 +262,8 @@ export default function Navbar() {
 
         {/* Mobile: cart + menu toggle */}
         <div className="flex md:hidden items-center gap-1">
+          <ThemeToggle />
+
           <Button variant="ghost" size="icon" asChild className="relative shrink-0 text-brand-surface-foreground">
             <Link href="/cart" aria-label="Shopping cart">
               <ShoppingCart className="size-5" />

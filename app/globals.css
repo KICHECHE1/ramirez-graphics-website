@@ -121,7 +121,7 @@
     --sidebar-accent-foreground: var(--palette-black);
     --sidebar-border: var(--palette-gray-200);
     --sidebar-ring: var(--palette-magenta);
-    --brand-surface: var(--palette-cyan);
+    --brand-surface: var(--palette-black);
     --brand-surface-foreground: var(--palette-true-white);
     --heading: var(--palette-golden-yellow);
 }
@@ -161,8 +161,8 @@
     --sidebar-accent-foreground: var(--palette-white);
     --sidebar-border: var(--palette-white-border);
     --sidebar-ring: var(--palette-magenta-light);
-    --brand-surface: var(--palette-cyan-dark);
-    --brand-surface-foreground: var(--palette-true-white);
+    --brand-surface: var(--palette-true-white);
+    --brand-surface-foreground: var(--palette-black);
     --heading: var(--palette-golden-yellow);
 }
 

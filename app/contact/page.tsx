@@ -23,10 +23,25 @@ const addresses = [
     email: "info@ramirezventures.co.ke",
   },
 ];
-
+const WHATSAPP = "254706207037";
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+
+  function buildWhatsAppMessage() {
+    return encodeURIComponent(
+      [
+        "Hello Ramirez Ventures,",
+        "",
+        `Name: ${form.name}`,
+        `Email: ${form.email}`,
+        `Phone: ${form.phone || "Not provided"}`,
+        `Subject: ${form.subject}`,
+        "",
+        form.message,
+      ].join("\n")
+    );
+  }
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -34,7 +49,7 @@ export default function ContactPage() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    // TODO: wire up to a real form endpoint
+    window.open(`https://wa.me/${WHATSAPP}?text=${buildWhatsAppMessage()}`, "_blank", "noopener,noreferrer");
     setSubmitted(true);
   }
 
@@ -218,11 +233,12 @@ export default function ContactPage() {
                     required
                   />
                 </div>
-
+              
                 <Button type="submit" className="w-full gap-2">
                   <Send className="size-4" />
                   Send Message
                 </Button>
+                
               </form>
             )}
           </div>
