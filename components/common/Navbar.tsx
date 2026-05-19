@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { ShoppingCart, Search, Menu, X, ChevronDown } from "lucide-react";
 import dynamic from "next/dynamic";
 import logo from "@/app/assets/Ramirez Logo 1.png";
@@ -110,15 +111,156 @@ const moreCategories = [
   { label: "T-shirts", href: "/products/t-shirts" },
 ];
 
+const serviceItems = [
+  { label: "Designing Courses", href: "/services/designing-courses" },
+  { label: "Printing Courses", href: "/services/printing-courses" },
+];
+
+const searchItems = [
+  ...productCategories.flatMap((cat) => [
+    { label: cat.label, href: cat.href, type: "Product Category", keywords: cat.label },
+    ...cat.items.map((item) => ({
+      label: item.label,
+      href: item.href,
+      type: cat.label,
+      keywords: `${item.label} ${cat.label}`,
+    })),
+  ]),
+  ...moreCategories.map((cat) => ({
+    label: cat.label,
+    href: cat.href,
+    type: "Product Category",
+    keywords: cat.label,
+  })),
+  { label: "Services", href: "/services", type: "Service", keywords: "services courses training" },
+  {
+    label: "Designing Courses",
+    href: "/services/designing-courses",
+    type: "Service",
+    keywords:
+      "designing courses logo flyer poster brochure image tracing photo editing brand identity social media design web design company profile business cards graphics",
+  },
+  {
+    label: "Printing Courses",
+    href: "/services/printing-courses",
+    type: "Service",
+    keywords:
+      "printing courses screen printing single color single colour multiple color multiple colour print flash print cmyk cymk discharge dicharge split color process puff print exposing screen washing screen emulsion acetate asitet alignment press setup exposure time stretching screen ink caring ink",
+  },
+];
+
 export default function Navbar() {
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [desktopProductsOpen, setDesktopProductsOpen] = useState(false);
+  const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchFocused, setSearchFocused] = useState(false);
+
+  const trimmedSearch = searchQuery.trim().toLowerCase();
+  const searchResults =
+    trimmedSearch.length > 0
+      ? searchItems
+          .filter((item) => `${item.label} ${item.keywords}`.toLowerCase().includes(trimmedSearch))
+          .slice(0, 8)
+      : [];
+
+  const closeSearch = () => {
+    setSearchFocused(false);
+    setSearchQuery("");
+  };
+
+  const goToSearchResult = (href: string) => {
+    closeSearch();
+    setMenuOpen(false);
+    setDesktopProductsOpen(false);
+    setDesktopServicesOpen(false);
+    router.push(href);
+  };
+
+  const handleSearchSubmit = () => {
+    if (searchResults[0]) {
+      goToSearchResult(searchResults[0].href);
+    }
+  };
+
+  const renderSearchBox = (mobile = false) => (
+    <div className={cn("relative", mobile ? "mb-2" : "ml-2 flex w-48 items-center lg:w-64")}>
+      <Search
+        className={cn(
+          "absolute left-2.5 size-4 text-brand-surface-foreground/60 pointer-events-none",
+          mobile && "top-1/2 -translate-y-1/2"
+        )}
+      />
+      <Input
+        type="search"
+        value={searchQuery}
+        onChange={(event) => {
+          setSearchQuery(event.target.value);
+          setSearchFocused(true);
+        }}
+        onFocus={() => {
+          setSearchFocused(true);
+          setDesktopProductsOpen(false);
+          setDesktopServicesOpen(false);
+        }}
+        onBlur={() => {
+          setTimeout(() => setSearchFocused(false), 120);
+        }}
+        onKeyDown={(event) => {
+          if (event.key === "Enter") {
+            event.preventDefault();
+            handleSearchSubmit();
+          }
+          if (event.key === "Escape") {
+            setSearchFocused(false);
+          }
+        }}
+        placeholder="Search products or services..."
+        className={cn(
+          "pl-8 h-9 border-brand-surface-foreground/20 bg-background text-foreground caret-primary placeholder:text-muted-foreground focus-visible:border-primary",
+          mobile && "w-full"
+        )}
+      />
+      {searchFocused && trimmedSearch.length > 0 && (
+        <div
+          className={cn(
+            "absolute left-0 right-0 top-full z-50 mt-2 overflow-hidden rounded-lg border border-border bg-popover text-popover-foreground shadow-lg",
+            mobile ? "max-h-72 overflow-y-auto" : "right-auto w-80"
+          )}
+        >
+          {searchResults.length > 0 ? (
+            <div className="p-1">
+              {searchResults.map((item) => (
+                <button
+                  key={item.href}
+                  type="button"
+                  onMouseDown={(event) => event.preventDefault()}
+                  onClick={() => goToSearchResult(item.href)}
+                  className="flex w-full flex-col rounded-md px-3 py-2 text-left transition-colors hover:bg-muted focus:bg-muted focus:outline-none"
+                >
+                  <span className="text-sm font-medium text-foreground">{item.label}</span>
+                  <span className="text-xs text-muted-foreground">{item.type}</span>
+                </button>
+              ))}
+            </div>
+          ) : (
+            <p className="px-3 py-3 text-sm text-muted-foreground">No matching product or service found.</p>
+          )}
+        </div>
+      )}
+    </div>
+  );
 
   return (
     <header
       className="sticky top-0 z-50 w-full border-b border-brand-surface-foreground/20 bg-brand-surface"
-      onMouseLeave={() => setDesktopProductsOpen(false)}
+      onMouseLeave={() => {
+        setDesktopProductsOpen(false);
+        setDesktopServicesOpen(false);
+      }}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8">
 
@@ -145,8 +287,14 @@ export default function Navbar() {
 
           {/* Products trigger */}
           <button
-            onMouseEnter={() => setDesktopProductsOpen(true)}
-            onClick={() => setDesktopProductsOpen((p) => !p)}
+            onMouseEnter={() => {
+              setDesktopProductsOpen(true);
+              setDesktopServicesOpen(false);
+            }}
+            onClick={() => {
+              setDesktopProductsOpen((p) => !p);
+              setDesktopServicesOpen(false);
+            }}
             className={cn(
               "relative flex items-center gap-1 px-3 py-1.5 text-sm font-medium transition-colors duration-200",
               desktopProductsOpen ? "text-brand-surface-foreground" : "text-brand-surface-foreground/80 hover:text-brand-surface-foreground"
@@ -158,15 +306,33 @@ export default function Navbar() {
             />
           </button>
 
-          {/* Search bar */}
-          <div className="flex items-center w-48 lg:w-64 relative ml-2">
-            <Search className="absolute left-2.5 size-4 text-brand-surface-foreground/60 pointer-events-none" />
-            <Input
-              type="search"
-              placeholder="Search products…"
-              className="pl-8 h-9"
-            />
+          {/* Services trigger */}
+          <div
+            onMouseEnter={() => {
+              setDesktopServicesOpen(true);
+              setDesktopProductsOpen(false);
+            }}
+            className="relative"
+          >
+            <Link
+              href="/services"
+              onClick={() => setDesktopServicesOpen(false)}
+              className={cn(
+                "relative flex items-center gap-1 px-3 py-1.5 text-sm font-medium transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:rounded-full after:bg-primary after:transition-[width] after:duration-200",
+                desktopServicesOpen
+                  ? "text-brand-surface-foreground after:w-full"
+                  : "text-brand-surface-foreground/80 hover:text-brand-surface-foreground after:w-0 hover:after:w-full"
+              )}
+            >
+              Services
+              <ChevronDown
+                className={cn("size-3.5 transition-transform duration-200", desktopServicesOpen && "rotate-180")}
+              />
+            </Link>
           </div>
+
+          {/* Search bar */}
+          {renderSearchBox()}
         </div>
 
         {/* Full-width mega-dropdown — anchored to header */}
@@ -236,6 +402,35 @@ export default function Navbar() {
           </div>
         </div>
 
+        {/* Services dropdown */}
+        <div
+          onMouseEnter={() => {
+            setDesktopServicesOpen(true);
+            setDesktopProductsOpen(false);
+          }}
+          className={cn(
+            "absolute left-0 top-full w-full bg-popover border-b border-border shadow-lg z-40 transition-all duration-200 origin-top hidden md:block",
+            desktopServicesOpen
+              ? "opacity-100 translate-y-0 pointer-events-auto"
+              : "opacity-0 -translate-y-2 pointer-events-none"
+          )}
+        >
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5">
+            <div className="grid max-w-xl grid-cols-1 gap-2 sm:grid-cols-2">
+              {serviceItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setDesktopServicesOpen(false)}
+                  className="rounded-md border border-border px-4 py-3 text-sm font-medium text-foreground transition-colors duration-150 hover:border-primary hover:text-primary"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* Spacer */}
         <div className="flex-1" />
 
@@ -291,14 +486,7 @@ export default function Navbar() {
       >
         <div className="flex flex-col gap-1 px-4 py-3">
           {/* Mobile search */}
-          <div className="relative mb-2">
-            <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 size-4 text-brand-surface-foreground/60 pointer-events-none" />
-            <Input
-              type="search"
-              placeholder="Search products…"
-              className="pl-8 h-9 w-full"
-            />
-          </div>
+          {renderSearchBox(true)}
 
           {/* Home */}
           <Link
@@ -368,6 +556,46 @@ export default function Navbar() {
                     ))}
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Services accordion */}
+          <div>
+            <button
+              onClick={() => setMobileServicesOpen((p) => !p)}
+              className="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-brand-surface-foreground/80 transition-colors duration-200 hover:text-brand-surface-foreground hover:bg-brand-surface-foreground/10"
+            >
+              Services
+              <ChevronDown
+                className={cn("size-4 transition-transform duration-200", mobileServicesOpen && "rotate-180")}
+              />
+            </button>
+
+            <div
+              className={cn(
+                "overflow-hidden transition-all duration-200",
+                mobileServicesOpen ? "max-h-48" : "max-h-0"
+              )}
+            >
+              <div className="pl-6 pr-2 pb-2 flex flex-col gap-1 pt-1">
+                <Link
+                  href="/services"
+                  onClick={() => setMenuOpen(false)}
+                  className="text-xs font-medium text-brand-surface-foreground/70 hover:text-primary transition-colors duration-150"
+                >
+                  View all Services
+                </Link>
+                {serviceItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="text-xs text-brand-surface-foreground/70 hover:text-primary transition-colors duration-150"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
