@@ -17,6 +17,27 @@ import BusinessCards from "@/app/assets/Business Card.jpg";
 import Buttons from "@/app/assets/button + poster.jpg";
 import Tshirts from "@/app/assets/branded tshirt.jpg";
 import Rollup from "@/app/assets/Roll-Up Stand Banner.jpg";
+import Company from "@/app/assets/company profile.jpg";
+import Brochure from "@/app/assets/brochure.jpg";
+import Brand from "@/app/assets/brand identity.jpg";
+import Magazine from "@/app/assets/event magazine.jpg";
+import Apron from "@/app/assets/apron.jpg";
+import Banner from "@/app/assets/banner.jpg";
+import Flyers from "@/app/assets/Flyer and brochure.jpg";
+import TShirts from "@/app/assets/T-Shirt.jpg";
+import Posters from "@/app/assets/Poster.jpg";
+import Signage from "@/app/assets/Signages.jpg";
+import Stickers from "@/app/assets/Sticker.jpg";
+import Funeral from "@/app/assets/funeral program.jpg";
+import School from "@/app/assets/school magz.jpg";
+import Hoodie from "@/app/assets/hoodie.jpg";
+import ReflectorJacket from "@/app/assets/reflector.jpg";
+import Jersey from "@/app/assets/club jersay.jpg";
+import Bookmark from "@/app/assets/bookmark cards.jpg";
+import Businesscard from "@/app/assets/Business Card - official.jpg";
+import Business from "@/app/assets/Business Card 2.1.jpg";
+import Gift from "@/app/assets/gift voucher.jpg";
+import Postcards from "@/app/assets/postcards.jpg";
 
 /* ─── placeholder helper ─── */
 const ph = (w: number, h: number, label: string) =>
@@ -75,7 +96,7 @@ const heroSlides: HeroSlide[] = [
     description:
       "Present your business professionally with our custom-designed and printed company profile booklets. Saddle-stitched or perfect-bound — we handle it all.",
     price: 3500,
-    image: ph(600, 500, "Company Profile"),
+    image: Company.src,
     href: "/products/booklet-magazines/booklets",
   },
   {
@@ -84,7 +105,7 @@ const heroSlides: HeroSlide[] = [
     description:
       "Spread the word fast with our crisp, colourful flyers. Ideal for promotions, events, and announcements — same-day printing available for urgent orders.",
     price: 1500,
-    image: ph(600, 500, "Flyers"),
+    image: Brochure.src,
     href: "/products/flyers/flyers",
   },
   {
@@ -93,7 +114,7 @@ const heroSlides: HeroSlide[] = [
     description:
       "We create professional and memorable brand identities that reflect your business values and personality.From Logos to colors and visual branding, we help your brand stand out and build customer trust.",
     price: 2000,
-    image: ph(600, 500, "Brochures"),
+    image: Brand.src,
     href: "/products/flyers/brochures",
   },
   {
@@ -102,7 +123,7 @@ const heroSlides: HeroSlide[] = [
     description:
       "Celebrate milestones with beautifully printed school yearbooks and event magazines. Full-colour pages, custom covers, and professional binding included.",
     price: 2800,
-    image: ph(600, 500, "Magazine"),
+    image: Magazine.src,
     href: "/products/booklet-magazines/booklets",
   },
   {
@@ -120,21 +141,21 @@ const heroSlides: HeroSlide[] = [
     description:
       "Keep your workforce visible and branded with our custom reflector jackets and printed aprons. Durable, safety-compliant, and tailored to your logo.",
     price: 3500,
-    image: ph(600, 500, "Jackets"),
+    image: Apron.src,
     href: "/products/branded-apparel/reflector-jackets",
   },
 ];
 
 /* ─── Printing services (circular grid) ─── */
 const printingServices = [
-  { label: "Banners & Displays", image: ph(300, 300, "Banners"), href: "/products/banners" },
-  { label: "Flyers & Brochures", image: ph(300, 300, "Flyers"), href: "/products/flyers" },
-  { label: "Booklets & Magazines", image: ph(300, 300, "Booklets"), href: "/products/booklet-magazines" },
-  { label: "Branded T-Shirts", image: ph(300, 300, "T-Shirts"), href: "/products/branded-apparel" },
+  { label: "Banners & Displays", image: Banner.src, href: "/products/banners" },
+  { label: "Flyers & Brochures", image: Flyers.src, href: "/products/flyers" },
+  { label: "Booklets & Magazines", image: Magazine.src, href: "/products/booklet-magazines" },
+  { label: "Branded T-Shirts", image: TShirts.src, href: "/products/branded-apparel" },
   { label: "Business Cards", image: BusinessCards.src, href: "/products/business-cards" },
-  { label: "Posters", image: ph(300, 300, "Posters"), href: "/products/posters" },
-  { label: "Signages", image: ph(300, 300, "Signages"), href: "/products/signages" },
-  { label: "Stickers", image: ph(300, 300, "Stickers"), href: "/products/stickers" },
+  { label: "Posters", image: Posters.src, href: "/products/posters" },
+  { label: "Signages", image: Signage.src, href: "/products/signages" },
+  { label: "Stickers", image: Stickers.src, href: "/products/stickers" },
 ];
 
 /* ─── Product sections ─── */
@@ -147,10 +168,10 @@ const productSections: ProductSection[] = [
     title: "Booklet Magazines",
     href: "/products/booklet-magazines",
     products: [
-      { name: "Funeral Program Booklet", price: 1800, image: ph(400, 400, "Funeral Program"), href: "/products/booklet-magazines/funeral-programs" },
-      { name: "Event Magazine", price: 2200, image: ph(400, 400, "Event Magazine"), href: "/products/booklet-magazines/booklets" },
-      { name: "Company Profile Booklet", price: 3500, image: ph(400, 400, "Company Profile"), href: "/products/booklet-magazines/booklets" },
-      { name: "School Magazine", price: 2800, image: ph(400, 400, "School Mag"), href: "/products/booklet-magazines/booklets" },
+      { name: "Funeral Program Booklet", price: 1800, image: Funeral.src, href: "/products/booklet-magazines/funeral-programs" },
+      { name: "Event Magazine", price: 2200, image: Magazine.src, href: "/products/booklet-magazines/booklets" },
+      { name: "Company Profile Booklet", price: 3500, image: Company.src, href: "/products/booklet-magazines/booklets" },
+      { name: "School Magazine", price: 2800, image: School.src, href: "/products/booklet-magazines/booklets" },
     ],
   },
   {
@@ -158,11 +179,11 @@ const productSections: ProductSection[] = [
     title: "Branded Apparel",
     href: "/products/branded-apparel",
     products: [
-      { name: "Branded T-Shirt", price: 850, image: ph(400, 400, "T-Shirt"), href: "/products/branded-apparel/t-shirts" },
-      { name: "Branded Hoodie", price: 2200, image: ph(400, 400, "Hoodie"), href: "/products/branded-apparel/hoodies" },
-      { name: "Reflector Jacket", price: 3500, image: ph(400, 400, "Reflector Jacket"), href: "/products/branded-apparel/reflector-jackets" },
-      { name: "Branded Apron", price: 1200, image: ph(400, 400, "Apron"), href: "/products/branded-apparel/aprons" },
-      { name: "Club Jersey", price: 1800, image: ph(400, 400, "Jersey"), href: "/products/branded-apparel/jerseys" },
+      { name: "Branded T-Shirt", price: 850, image: TShirts.src, href: "/products/branded-apparel/t-shirts" },
+      { name: "Branded Hoodie", price: 2200, image: Hoodie.src, href: "/products/branded-apparel/hoodies" },
+      { name: "Reflector Jacket", price: 3500, image: ReflectorJacket.src, href: "/products/branded-apparel/reflector-jackets" },
+      { name: "Branded Apron", price: 1200, image: Apron.src, href: "/products/branded-apparel/aprons" },
+      { name: "Club Jersey", price: 1800, image: Jersey.src, href: "/products/branded-apparel/jerseys" },
     ],
   },
   {
@@ -170,11 +191,11 @@ const productSections: ProductSection[] = [
     title: "Business Cards",
     href: "/products/business-cards",
     products: [
-      { name: "Spot UV Business Cards", price: 2500, image: ph(400, 400, "Spot UV"), href: "/products/business-cards/spot-uv" },
-      { name: "Standard Business Cards", price: 1200, image: ph(400, 400, "Standard BC"), href: "/products/business-cards/standard" },
-      { name: "Bookmark Cards", price: 900, image: ph(400, 400, "Bookmarks"), href: "/products/business-cards/bookmarks" },
-      { name: "Postcards", price: 800, image: ph(400, 400, "Postcards"), href: "/products/business-cards/postcards" },
-      { name: "Gift Vouchers", price: 1500, image: ph(400, 400, "Gift Voucher"), href: "/products/business-cards/gift-vouchers" },
+      { name: "Spot UV Business Cards", price: 2500, image: Business.src, href: "/products/business-cards/spot-uv" },
+      { name: "Standard Business Cards", price: 1200, image: Businesscard.src, href: "/products/business-cards/standard" },
+      { name: "Bookmark Cards", price: 900, image: Bookmark.src, href: "/products/business-cards/bookmarks" },
+      { name: "Postcards", price: 800, image: Postcards.src, href: "/products/business-cards/postcards" },
+      { name: "Gift Vouchers", price: 1500, image: Gift.src, href: "/products/business-cards/gift-vouchers" },
     ],
   },
   {
