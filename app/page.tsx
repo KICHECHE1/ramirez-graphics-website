@@ -14,13 +14,13 @@ import { useCart, type AddToCartInput } from "@/lib/cart-context";
 
 /* ─── Asset imports ─── */
 import BusinessCards from "@/app/assets/Business Card.jpg";
-import Buttons from "@/app/assets/button + poster.jpg";
-import Tshirts from "@/app/assets/branded tshirt.jpg";
+import Buttons from "@/app/assets/Pin_Button..jpeg";
+import Tshirts from "@/app/assets/branded tshirt.jpeg";
 import Rollup from "@/app/assets/Roll-Up Stand Banner.jpg";
-import Company from "@/app/assets/company profile.jpg";
-import Brochure from "@/app/assets/brochure.jpg";
+import Company from "@/app/assets/company profile.jpeg";
+import Brochure from "@/app/assets/flyers.jpeg";
 import Brand from "@/app/assets/brand identity.jpg";
-import Magazine from "@/app/assets/event magazine.jpg";
+import Magazine from "@/app/assets/Hard_Cover_A4.jpeg";
 import Apron from "@/app/assets/apron.jpg";
 import Banner from "@/app/assets/banner.jpg";
 import Flyers from "@/app/assets/Flyer and brochure.jpg";
@@ -38,6 +38,24 @@ import Businesscard from "@/app/assets/Business Card - official.jpg";
 import Business from "@/app/assets/Business Card 2.1.jpg";
 import Gift from "@/app/assets/gift voucher.jpg";
 import Postcards from "@/app/assets/postcards.jpg";
+import Document from "@/app/assets/document printing.jpg";
+import Photo from "@/app/assets/photo printing.jpg";
+import Buttonss from "@/app/assets/Button_Mockup_3.jpg";
+import Election from "@/app/assets/election poster.jpg";
+import NameTags from "@/app/assets/name tags.jpg";
+import Promotional from "@/app/assets/btanded items.jpeg";
+import Table from "@/app/assets/table roll up _Banner_Mockup_2.jpg";
+import BackDrop from "@/app/assets/back drop banner.jpg";
+import table from "@/app/assets/Tablecloth.jpg";
+import Kitenge from "@/app/assets/kitenge notebooks.jpg";
+import Flyer1 from "@/app/assets/A4 POSTER.jpg";
+import Flyer2 from "@/app/assets/A5 POSTER.jpg";
+import TriFold from "@/app/assets/tri fold brochure.jpg";
+import DlBrochure from "@/app/assets/dl brochure.jpg";
+
+
+
+
 
 /* ─── placeholder helper ─── */
 const ph = (w: number, h: number, label: string) =>
@@ -132,7 +150,7 @@ const heroSlides: HeroSlide[] = [
     description:
       "From branded pens to custom notebooks, our promotional items are perfect for giveaways, events, and corporate gifts. High-quality printing on a variety of products to suit your needs.",
     price: 50,
-    image: ph(600, 500, "Documents"),
+    image: Promotional.src,
     href: "/products/digital-printing/documents",
   },
   {
@@ -203,10 +221,10 @@ const productSections: ProductSection[] = [
     title: "Digital Printing",
     href: "/products/digital-printing",
     products: [
-      { name: "Document Printing (A4)", price: 50, image: ph(400, 400, "Document"), href: "/products/digital-printing/documents" },
-      { name: "Photo Printing (4×6)", price: 120, image: ph(400, 400, "Photo Print"), href: "/products/digital-printing/photos" },
-      { name: "Gift Voucher Print", price: 1500, image: ph(400, 400, "Gift Voucher"), href: "/products/digital-printing/gift-vouchers" },
-      { name: "Business Cards (Digital)", price: 1200, image: ph(400, 400, "Biz Card Digital"), href: "/products/digital-printing/business-cards" },
+      { name: "Document Printing (A4)", price: 50, image: Document.src, href: "/products/digital-printing/documents" },
+      { name: "Photo Printing (4×6)", price: 120, image: Photo.src, href: "/products/digital-printing/photos" },
+      { name: "Gift Voucher Print", price: 1500, image: Gift.src, href: "/products/digital-printing/gift-vouchers" },
+      { name: "Business Cards (Digital)", price: 1200, image: Businesscard.src, href: "/products/digital-printing/business-cards" },
     ],
   },
   {
@@ -214,10 +232,9 @@ const productSections: ProductSection[] = [
     title: "Election Printing",
     href: "/products/election-printing",
     products: [
-      { name: "Button Badges", price: 350, image: ph(400, 400, "Button Badges"), href: "/products/election-printing/button-badges" },
-      { name: "Election Posters", price: 600, image: ph(400, 400, "Election Posters"), href: "/products/election-printing/posters" },
-      { name: "Nametags", price: 250, image: ph(400, 400, "Nametags"), href: "/products/election-printing/nametags" },
-      { name: "Selfie Frames", price: 800, image: ph(400, 400, "Selfie Frames"), href: "/products/election-printing/selfie-frames" },
+      { name: "Button Badges", price: 350, image: Buttonss.src, href: "/products/election-printing/button-badges" },
+      { name: "Election Posters", price: 600, image: Election.src, href: "/products/election-printing/posters" },
+      { name: "Nametags", price: 250, image: NameTags.src, href: "/products/election-printing/nametags" },
     ],
   },
   {
@@ -225,10 +242,10 @@ const productSections: ProductSection[] = [
     title: "Events Display",
     href: "/products/events-display",
     products: [
-      { name: "Table Rollup Banner", price: 4500, image: ph(400, 400, "Rollup Banner"), href: "/products/events-display/table-rollup" },
-      { name: "Backdrop Banner", price: 6500, image: ph(400, 400, "Backdrop"), href: "/products/events-display/backdrop-banner" },
-      { name: "Table Cloth Print", price: 3200, image: ph(400, 400, "Table Cloth"), href: "/products/events-display/table-cloth" },
-      { name: "Kitenge Notebook", price: 750, image: ph(400, 400, "Kitenge Notebook"), href: "/products/events-display/kitenge-notebooks" },
+      { name: "Table Rollup Banner", price: 4500, image: Table.src, href: "/products/events-display/table-rollup" },
+      { name: "Backdrop Banner", price: 6500, image: BackDrop.src, href: "/products/events-display/backdrop-banner" },
+      { name: "Table Cloth Print", price: 3200, image: table.src, href: "/products/events-display/table-cloth" },
+      { name: "Kitenge Notebook", price: 750, image: Kitenge.src, href: "/products/events-display/kitenge-notebooks" },
     ],
   },
   {
@@ -236,10 +253,10 @@ const productSections: ProductSection[] = [
     title: "Flyers",
     href: "/products/flyers",
     products: [
-      { name: "A5 Flyers (250 pcs)", price: 1500, image: ph(400, 400, "A5 Flyers"), href: "/products/flyers/flyers" },
-      { name: "A4 Flyers (100 pcs)", price: 1200, image: ph(400, 400, "A4 Flyers"), href: "/products/flyers/flyers" },
-      { name: "Tri-fold Brochure", price: 2000, image: ph(400, 400, "Brochure"), href: "/products/flyers/brochures" },
-      { name: "DL Brochure", price: 1800, image: ph(400, 400, "DL Brochure"), href: "/products/flyers/brochures" },
+      { name: "A5 Flyers (250 pcs)", price: 1500, image: Flyer1.src, href: "/products/flyers/flyers" },
+      { name: "A4 Flyers (100 pcs)", price: 1200, image: Flyer2.src, href: "/products/flyers/flyers" },
+      { name: "Tri-fold Brochure", price: 2000, image: TriFold.src, href: "/products/flyers/brochures" },
+      { name: "DL Brochure", price: 1800, image: DlBrochure.src, href: "/products/flyers/brochures" },
     ],
   },
 ];

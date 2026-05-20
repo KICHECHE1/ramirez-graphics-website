@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ShoppingCart, Search, Menu, X, ChevronDown } from "lucide-react";
 import dynamic from "next/dynamic";
-import logo from "@/app/assets/Ramirez Logo 1.png";
+import BrandMark from "@/app/assets/Ramirez Logo 1.png";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
@@ -265,14 +265,24 @@ export default function Navbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8">
 
         {/* Logo */}
-        <Link href="/" className="flex shrink-0 items-center">
-          <Image
-            src={logo}
-            alt="Ramirez Ventures"
-            height={40}
-            className="h-10 w-auto object-contain"
-            priority
-          />
+        <Link href="/" className="flex shrink-0 items-center gap-2.5 text-brand-surface-foreground">
+          <span className="relative flex size-10 shrink-0 overflow-hidden rounded-full bg-white ring-1 ring-brand-surface-foreground/20">
+            <Image
+              src={BrandMark}
+              alt="Ramirez Ventures logo"
+              height={40}
+              className="h-10 w-auto max-w-none object-contain"
+              priority
+            />
+          </span>
+          <span className="flex flex-col leading-none">
+            <span className="text-sm font-bold uppercase text-brand-surface-foreground sm:text-base">
+              Ramirez Ventures
+            </span>
+            <span className="mt-1 text-[10px] font-medium uppercase tracking-wide text-brand-surface-foreground/70 sm:text-xs">
+              Your local printshop
+            </span>
+          </span>
         </Link>
 
         {/* Desktop nav */}

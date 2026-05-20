@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { MapPin, Phone, Mail } from "lucide-react";
+import BrandMark from "@/app/assets/Ramirez Logo 1.png";
 
 /* ── Inline brand SVGs (lucide-react doesn't ship brand icons) ── */
 const FacebookIcon = () => (
@@ -15,9 +16,9 @@ const InstagramIcon = () => (
     <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
   </svg>
 );
-const XIcon = () => (
+const TikTokIcon = () => (
   <svg viewBox="0 0 24 24" className="size-4" fill="currentColor" aria-hidden="true">
-    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    <path d="M17.5 6.3a6 6 0 0 1-3.2-3.8h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .6.1.9.2V9.3a5.8 5.8 0 1 0 4.9 5.7V8.4a9.2 9.2 0 0 0 5.2 1.7V7a6.5 6.5 0 0 1-2.1-.7z" />
   </svg>
 );
 const YoutubeIcon = () => (
@@ -26,8 +27,6 @@ const YoutubeIcon = () => (
     <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white" />
   </svg>
 );
-import logo from "@/app/assets/Ramirez Logo 1.png";
-
 const productColumns = [
   {
     heading: "Print & Branding",
@@ -63,10 +62,10 @@ const productColumns = [
 ];
 
 const socialLinks = [
-  { label: "Facebook", href: "https://facebook.com", icon: FacebookIcon },
-  { label: "Instagram", href: "https://instagram.com", icon: InstagramIcon },
-  { label: "Twitter / X", href: "https://twitter.com", icon: XIcon },
-  { label: "YouTube", href: "https://youtube.com", icon: YoutubeIcon },
+  { label: "Facebook", href: "https://www.facebook.com/people/Ramirez-Ventures", icon: FacebookIcon },
+  { label: "Instagram", href: "https://www.instagram.com/ramirezventures", icon: InstagramIcon },
+  { label: "TikTok", href: "https://www.tiktok.com/@ramirezventures0", icon: TikTokIcon },
+  { label: "YouTube", href: "https://www.youtube.com/@RAMIREZVENTURES", icon: YoutubeIcon },
 ];
 
 const addresses = [
@@ -88,13 +87,23 @@ export default function Footer() {
 
         {/* Brand column */}
         <div className="flex flex-col gap-4 sm:col-span-2 lg:col-span-1">
-          <Link href="/" className="inline-flex">
-            <Image
-              src={logo}
-              alt="Ramirez Ventures"
-              height={44}
-              className="h-11 w-auto object-contain"
-            />
+          <Link href="/" className="inline-flex items-center gap-2.5 text-brand-surface-foreground">
+            <span className="relative flex size-10 shrink-0 overflow-hidden rounded-full bg-white ring-1 ring-brand-surface-foreground/20">
+              <Image
+                src={BrandMark}
+                alt="Ramirez Ventures logo"
+                height={40}
+                className="h-10 w-auto max-w-none object-contain"
+              />
+            </span>
+            <span className="flex flex-col leading-none">
+              <span className="text-sm font-bold uppercase text-brand-surface-foreground sm:text-base">
+                Ramirez Ventures
+              </span>
+              <span className="mt-1 text-[10px] font-medium uppercase tracking-wide text-brand-surface-foreground/70 sm:text-xs">
+                Your local printshop
+              </span>
+            </span>
           </Link>
           <p className="text-sm text-brand-surface-foreground/80 leading-relaxed max-w-xs">
             Your one-stop print &amp; branding partner. Quality you can see, service you can trust.
