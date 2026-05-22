@@ -14,6 +14,12 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import Banner from "@/app/assets/banner.jpg";
+import TableRollup from "@/app/assets/table roll up _Banner_Mockup_2.jpg";
+import BackdropBanner from "@/app/assets/back drop banner.jpg";
+import TableCloth from "@/app/assets/Tablecloth.jpg";
+import SBanner from "@/app/assets/Street-Billboard-Mockup.jpg";
+import PVCWheelCover from "@/app/assets/wheelcovers.jpg";
 
 /* ─── placeholder helper ─── */
 const ph = (w: number, h: number, label: string) =>
@@ -61,7 +67,7 @@ const bannerProducts: BannerProduct[] = [
     name: "Table Rollup Printing",
     category: "table-rollup",
     price: 3500,
-    image: ph(400, 320, "Table+Rollup"),
+    image: TableRollup.src,
     href: "/products/banners/table-rollup",
     badge: "Best Seller",
   },
@@ -70,7 +76,7 @@ const bannerProducts: BannerProduct[] = [
     name: "Adjustable Backdrop Banner",
     category: "backdrop-banner",
     price: 8500,
-    image: ph(400, 320, "Backdrop+Banner"),
+    image: BackdropBanner.src,
     href: "/products/banners/backdrop-banner",
     badge: "Popular",
   },
@@ -79,7 +85,7 @@ const bannerProducts: BannerProduct[] = [
     name: "Table Cloth Printing",
     category: "table-cloth",
     price: 4200,
-    image: ph(400, 320, "Table+Cloth"),
+    image: TableCloth.src,
     href: "/products/banners/table-cloth",
   },
   {
@@ -87,7 +93,7 @@ const bannerProducts: BannerProduct[] = [
     name: "S-Banner Printing",
     category: "s-banner",
     price: 2800,
-    image: ph(400, 320, "S-Banner"),
+    image: SBanner.src,
     href: "/products/banners/s-banner",
     badge: "New",
   },
@@ -96,7 +102,7 @@ const bannerProducts: BannerProduct[] = [
     name: "PVC Wheel Cover",
     category: "pvc-wheel-cover",
     price: 1800,
-    image: ph(400, 320, "PVC+Wheel+Cover"),
+    image: PVCWheelCover.src,
     href: "/products/banners/pvc-wheel-cover",
   },
 ];
@@ -144,66 +150,74 @@ const features = [
 export default function BannersPage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* ── Hero ── */}
-      <section className="relative isolate overflow-hidden bg-gradient-to-br from-primary/90 via-primary to-primary/80">
-        {/* Background image overlay */}
-        <Image
-          src={ph(1400, 500, "Banner+Printing+Kenya")}
-          alt="Banner printing hero"
-          fill
-          className="object-cover opacity-20 mix-blend-overlay"
-          priority
-          unoptimized
-        />
+      {/* Hero */}
+  <section className="relative isolate overflow-hidden">
+  {/* Background Image */}
+  <Image
+    src={Banner.src}
+    alt="Banner printing Kenya"
+    fill
+    priority
+    unoptimized
+    className="object-cover object-center"
+  />
 
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-transparent to-primary/40" />
+      {/* Dark translucent overlay */}
+<div className="absolute inset-0 bg-black/45 z-0" />
 
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-          {/* Breadcrumb */}
-          <nav className="mb-6 flex items-center gap-1.5 text-sm text-primary-foreground/70">
-            <Link href="/" className="hover:text-primary-foreground transition-colors">
-              Home
-            </Link>
-            <ChevronRight className="size-3.5" />
-            <Link href="/products" className="hover:text-primary-foreground transition-colors">
-              Products
-            </Link>
-            <ChevronRight className="size-3.5" />
-            <span className="text-primary-foreground font-medium">Banners</span>
-          </nav>
+<div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+  {/* Breadcrumb */}
+  <nav className="mb-6 flex items-center gap-1.5 text-sm text-white/80 flex-wrap">
+    <Link href="/" className="hover:text-white transition-colors">
+      Home
+    </Link>
 
-          <div className="max-w-2xl">
-            <Badge className="mb-4 bg-white/20 text-primary-foreground border-0 backdrop-blur-sm">
-              Large-Format Printing
-            </Badge>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight tracking-tight mb-4">
-              Banner Printing in Kenya
-            </h1>
-            <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
-              High-impact, professional banners for businesses, events, churches, schools, and
-              government institutions — printed and delivered across Kenya.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Button
-                size="lg"
-                className="bg-white text-primary hover:bg-white/90 shadow-lg"
-                asChild
-              >
-                <a href="#products">Shop Banners</a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white/40 text-primary-foreground hover:bg-white/10"
-                asChild
-              >
-                <Link href="/contact">Get a Quote</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+    <ChevronRight className="size-3.5" />
+
+    <Link href="/products" className="hover:text-white transition-colors">
+      Products
+    </Link>
+
+    <ChevronRight className="size-3.5" />
+
+    <span className="text-white font-medium">Banners</span>
+  </nav>
+
+  <div className="max-w-2xl">
+    <Badge className="mb-4 bg-white/20 text-white border-0 backdrop-blur-sm">
+      Large-Format Printing
+    </Badge>
+
+    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight mb-4">
+      Banner Printing in Kenya
+    </h1>
+
+    <p className="text-lg text-white/90 leading-relaxed mb-8">
+      High-impact, professional banners for businesses, events, churches, schools, and
+      government institutions — printed and delivered across Kenya.
+    </p>
+
+    <div className="flex flex-wrap gap-3">
+      <Button
+        size="lg"
+        className="bg-white text-black hover:bg-white/90 shadow-lg"
+        asChild
+      >
+        <a href="#products">Shop Banners</a>
+      </Button>
+
+      <Button
+        size="lg"
+        variant="outline"
+        className="border-white text-black bg-white/90 hover:bg-white"
+        asChild
+      >
+        <Link href="/contact">Get a Quote</Link>
+      </Button>
+    </div>
+  </div>
+</div>
+</section>
 
       {/* ── Main content: sidebar + body ── */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">

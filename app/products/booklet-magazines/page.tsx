@@ -6,6 +6,9 @@ import { ChevronRight, Phone, MessageCircle, BookOpen, Printer, Clock, ShieldChe
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import Event from "@/app/assets/Hard_Cover_A4.jpeg";
+import FuneralPrograms from "@/app/assets/funeral program.jpg";
+import BookletMagazines from "@/app/assets/school magz.jpg";
 
 /* ─── placeholder helper ─── */
 const ph = (w: number, h: number, label: string) =>
@@ -41,7 +44,7 @@ const bookletProducts = [
   {
     id: "bm-1",
     name: "Funeral Programs Printing",
-    image: ph(500, 380, "Funeral+Programs"),
+    image: FuneralPrograms.src,
     href: "/products/booklet-magazines/funeral-programs",
     badge: "Popular",
     description:
@@ -50,7 +53,7 @@ const bookletProducts = [
   {
     id: "bm-2",
     name: "Booklet & Magazine Printing",
-    image: ph(500, 380, "Booklet+Magazines"),
+    image: BookletMagazines.src,
     href: "/products/booklet-magazines/booklets",
     badge: "Best Seller",
     description:
@@ -58,61 +61,79 @@ const bookletProducts = [
   },
 ];
 
-const PHONE = "+254 700 000 000";
+const PHONE = "+254 706 207 037";
 const WHATSAPP = "254706207037";
 
 export default function BookletMagazinesPage() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* ── Hero ── */}
-      <section className="relative isolate overflow-hidden bg-gradient-to-br from-primary/90 via-primary to-primary/80">
-        <Image
-          src={ph(1400, 480, "Booklet+%26+Magazine+Printing+Kenya")}
-          alt="Booklet and magazine printing"
-          fill
-          className="object-cover opacity-20 mix-blend-overlay"
-          priority
-          unoptimized
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-transparent to-primary/40" />
+     <div className="min-h-screen bg-background">
+      {/* Hero */}
+  <section className="relative isolate overflow-hidden">
+  {/* Background Image */}
+  <Image
+    src={Event.src}
+    alt="Event magazine printing Kenya"
+    fill
+    priority
+    unoptimized
+    className="object-cover object-center"
+  />
+       {/* Dark translucent overlay */}
+<div className="absolute inset-0 bg-black/45 z-0" />
 
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-          {/* Breadcrumb */}
-          <nav className="mb-6 flex items-center gap-1.5 text-sm text-primary-foreground/70">
-            <Link href="/" className="hover:text-primary-foreground transition-colors">Home</Link>
-            <ChevronRight className="size-3.5" />
-            <Link href="/products" className="hover:text-primary-foreground transition-colors">Products</Link>
-            <ChevronRight className="size-3.5" />
-            <span className="text-primary-foreground font-medium">Booklet Magazines</span>
-          </nav>
+<div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+  {/* Breadcrumb */}
+  <nav className="mb-6 flex items-center gap-1.5 text-sm text-white/80 flex-wrap">
+    <Link href="/" className="hover:text-white transition-colors">
+      Home
+    </Link>
 
-          <div className="max-w-2xl">
-            <Badge className="mb-4 bg-white/20 text-primary-foreground border-0 backdrop-blur-sm">
-              Booklet & Magazine Printing
-            </Badge>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight tracking-tight mb-4">
-              Booklet & Magazine Printing in Kenya
-            </h1>
-            <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
-              Professional full-colour booklets, company profiles, magazines, and funeral programs
-              — printed and delivered across Kenya with fast turnaround.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg" asChild>
-                <a href="#products">View Products</a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white/40 text-primary-foreground hover:bg-white/10"
-                asChild
-              >
-                <Link href="/contact">Get a Quote</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+    <ChevronRight className="size-3.5" />
+
+    <Link href="/products" className="hover:text-white transition-colors">
+      Products
+    </Link>
+
+    <ChevronRight className="size-3.5" />
+
+    <span className="text-white font-medium">Booklet Magazines</span>
+  </nav>
+
+  <div className="max-w-2xl">
+    <Badge className="mb-4 bg-white/20 text-white border-0 backdrop-blur-sm">
+      Booklet & Magazine Printing
+    </Badge>
+
+    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight mb-4">
+      Booklet & Magazine Printing in Kenya
+    </h1>
+
+    <p className="text-lg text-white/90 leading-relaxed mb-8">
+      Professional full-colour booklets, company profiles, magazines, and funeral programs
+      — printed and delivered across Kenya with fast turnaround.
+    </p>
+
+    <div className="flex flex-wrap gap-3">
+      <Button
+        size="lg"
+        className="bg-white text-black hover:bg-white/90 shadow-lg"
+        asChild
+      >
+        <a href="#products">View Products</a>
+      </Button>
+
+      <Button
+        size="lg"
+        variant="outline"
+        className="border-white text-black bg-white/90 hover:bg-white"
+        asChild
+      >
+        <Link href="/contact">Get a Quote</Link>
+      </Button>
+    </div>
+  </div>
+</div>
+</section>
 
       {/* ── Main content ── */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
@@ -358,57 +379,51 @@ export default function BookletMagazinesPage() {
               </div>
             </section>
 
-            {/* ── CTA section ── */}
-            <section className="rounded-2xl overflow-hidden border border-border bg-primary">
-              <div className="p-8 sm:p-10 text-primary-foreground text-center flex flex-col items-center gap-5">
-                <Badge className="bg-white/20 text-primary-foreground border-0 backdrop-blur-sm">
-                  Ready to Print?
-                </Badge>
-                <h2 className="text-2xl sm:text-3xl font-bold leading-snug max-w-xl">
-                  Let&apos;s Print Your Booklets & Magazines
-                </h2>
-                <p className="text-primary-foreground/80 max-w-lg">
-                  Fast turnaround. Bulk discounts. Delivered across Kenya. Call or WhatsApp us now
-                  and we&apos;ll send you a quote within minutes.
-                </p>
+          {/* ── CTA section ── */}
+<section className="mt-10 rounded-xl bg-primary/5 border border-primary/20 p-6">
+  <div className="flex flex-col items-center justify-center gap-5 text-center">
+    <Badge className="bg-primary/10 text-primary border-0">
+      Ready to Print?
+    </Badge>
 
-                <div className="flex flex-wrap justify-center gap-4 mt-2">
-                  <Button
-                    size="lg"
-                    className="bg-white text-primary hover:bg-white/90 gap-2 shadow-lg font-semibold"
-                    asChild
-                  >
-                    <a href={`tel:${PHONE.replace(/\s/g, "")}`}>
-                      <Phone className="size-4" />
-                      {PHONE}
-                    </a>
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-white/40 text-primary-foreground hover:bg-white/15 gap-2"
-                    asChild
-                  >
-                    <a
-                      href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hi, I'd like a quote for booklet or magazine printing.")}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <MessageCircle className="size-4" />
-                      WhatsApp Us
-                    </a>
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-white/40 text-primary-foreground hover:bg-white/15"
-                    asChild
-                  >
-                    <Link href="/contact">Get a Quote Online</Link>
-                  </Button>
-                </div>
-              </div>
-            </section>
+    <div>
+      <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
+        Let&apos;s Print Your Booklets & Magazines
+      </h2>
+
+      <p className="mt-2 text-muted-foreground max-w-2xl">
+        Fast turnaround. Bulk discounts. Delivered across Kenya. Call or WhatsApp us now
+        and we&apos;ll send you a quote within minutes.
+      </p>
+    </div>
+
+    <div className="flex flex-wrap justify-center gap-3">
+      <Button size="lg" asChild>
+        <a href={`tel:${PHONE.replace(/\s/g, "")}`}>
+          <Phone className="size-4 mr-2" />
+          {PHONE}
+        </a>
+      </Button>
+
+      <Button size="lg" variant="outline" asChild>
+        <a
+          href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
+            "Hi, I'd like a quote for booklet or magazine printing."
+          )}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <MessageCircle className="size-4 mr-2" />
+          WhatsApp Us
+        </a>
+      </Button>
+
+      <Button size="lg" variant="outline" asChild>
+        <Link href="/contact">Get a Quote Online</Link>
+      </Button>
+    </div>
+  </div>
+</section>
 
           </div>
         </div>
