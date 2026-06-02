@@ -61,7 +61,7 @@ const bookletProducts = [
   },
 ];
 
-const PHONE = "+254 706 207 037";
+const PHONE = "+254 706 207 037"; 
 const WHATSAPP = "254706207037";
 
 export default function BookletMagazinesPage() {

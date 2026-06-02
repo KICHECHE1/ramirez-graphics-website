@@ -103,7 +103,7 @@ const moreCategories = [
   { label: "Mug Printing & Branded Drinkware", href: "/products/mug-printing" },
   { label: "Packaging", href: "/products/packaging" },
   { label: "Photo Printing and Framing", href: "/products/photo-printing" },
-  { label: "Posters", href: "/products/posters" },
+  { label: "Screen Printing", href: "/products/screen-printing" },
   { label: "Promotional Items", href: "/products/promotional-items" },
   { label: "Signages", href: "/products/signages" },
   { label: "Stationary", href: "/products/stationary" },
@@ -130,7 +130,10 @@ const searchItems = [
     label: cat.label,
     href: cat.href,
     type: "Product Category",
-    keywords: cat.label,
+    keywords:
+      cat.href === "/products/screen-printing"
+        ? "screen printing pre-burn screen pre burn screens screen reclamation exposure artwork start up kit startup kit screen printing inks screen printing transfers heat transfer vinyls htv dtf transfers"
+        : cat.label,
   })),
   { label: "Services", href: "/services", type: "Service", keywords: "services courses training" },
   {
