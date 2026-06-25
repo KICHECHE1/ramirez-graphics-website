@@ -15,17 +15,23 @@ import {
 } from "@/components/ui/accordion";
 import { useCart } from "@/lib/cart-context";
 
+{/* Images */}
+import BackdropBanner from "@/app/assets/back drop banner.jpg";
+import TableCloth from "@/app/assets/Tablecloth.jpg";
+import TableRollup from "@/app/assets/table roll up _Banner_Mockup_2.jpg";
+import Kitenge from "@/app/assets/kitenge notebooks.jpg";
+
 const ph = (w: number, h: number, label: string) =>
   `https://placehold.co/${w}x${h}/e0f2fe/0284c7?text=${encodeURIComponent(label)}`;
 
 const WHATSAPP = "254706207037";
 
 const sizes = [
-  { label: "1.5 × 2 m",  dimensions: "150 × 200 cm — small backdrop",   price: 8500 },
-  { label: "2 × 2 m",    dimensions: "200 × 200 cm — standard backdrop", price: 10500 },
-  { label: "2 × 3 m",    dimensions: "200 × 300 cm — wide backdrop",     price: 14500 },
-  { label: "3 × 3 m",    dimensions: "300 × 300 cm — stage backdrop",    price: 18500 },
-  { label: "4 × 2 m",    dimensions: "400 × 200 cm — panoramic backdrop", price: 22000 },
+  { label: "1.5 x 2 m",  dimensions: "150 x 200 cm, small backdrop",   price: 8500 },
+  { label: "2 x 2 m",    dimensions: "200 x 200 cm, standard backdrop", price: 10500 },
+  { label: "2 x 3 m",    dimensions: "200 x 300 cm, wide backdrop",     price: 14500 },
+  { label: "3 x 3 m",    dimensions: "300 x 300 cm, stage backdrop",    price: 18500 },
+  { label: "4 x 2 m",    dimensions: "400 x 200 cm, panoramic backdrop", price: 22000 },
 ];
 
 const materialNote =
@@ -34,7 +40,7 @@ const materialNote =
 const faqs = [
   {
     q: "What is the difference between fabric and vinyl backdrop prints?",
-    a: "Fabric backdrops are completely wrinkle-free when hung — ideal for photo booths, media walls, and indoor press conferences where a pristine look is important. Vinyl is heavier and more robust, making it better suited for outdoor events and situations where the banner may be exposed to stronger conditions.",
+    a: "Fabric backdrops are completely wrinkle-free when hung, ideal for photo booths, media walls, and indoor press conferences where a pristine look is important. Vinyl is heavier and more robust, making it better suited for outdoor events and situations where the banner may be exposed to stronger conditions.",
   },
   {
     q: "Can I use the same frame for different print sizes?",
@@ -42,15 +48,15 @@ const faqs = [
   },
   {
     q: "What layout options are available for backdrop banners?",
-    a: "The most popular layouts are step-and-repeat (a repeating logo pattern), branded solid-colour backdrops, and custom event designs with imagery and text. We can produce any layout — just share your design brief and we will handle the rest.",
+    a: "The most popular layouts are step-and-repeat (a repeating logo pattern), branded solid-colour backdrops, and custom event designs with imagery and text. We can produce any layout, just share your design brief and we will handle the rest.",
   },
   {
     q: "How do I set up the backdrop at my event?",
-    a: "The aluminium frame clicks together in sections with no tools required. The print attaches via hook-and-loop (Velcro-style) tabs or pole pockets depending on the format. Most setups take 10–15 minutes for a two-person team.",
+    a: "The aluminium frame clicks together in sections with no tools required. The print attaches via hook-and-loop (Velcro-style) tabs or pole pockets depending on the format. Most setups take 10 to 15 minutes for a two-person team.",
   },
   {
     q: "How quickly are backdrop banners ready?",
-    a: "Standard orders are ready within 3–5 working days. Express 48-hour turnaround is available for an additional charge — contact us to confirm availability before placing your order.",
+    a: "Standard orders are ready within 3 to 5 working days. Express 48-hour turnaround is available for an additional charge, contact us to confirm availability before placing your order.",
   },
   {
     q: "Do you deliver outside Muhoroni?",
@@ -62,17 +68,17 @@ const relatedProducts = [
   {
     name: "Table Rollup Printing",
     href: "/products/events-display/table-rollup",
-    image: ph(400, 300, "Table+Rollup"),
+    image: TableRollup.src,
   },
   {
     name: "Table Cloth Printing",
     href: "/products/events-display/table-cloth",
-    image: ph(400, 300, "Table+Cloth"),
+    image: TableCloth.src,
   },
   {
     name: "Kitenge Notebooks",
     href: "/products/events-display/kitenge-notebooks",
-    image: ph(400, 300, "Kitenge+Notebooks"),
+    image: Kitenge.src,
   },
 ];
 
@@ -81,7 +87,7 @@ export default function EventsBackdropBannerPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order an Adjustable Backdrop Banner (Events Display) — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order an Adjustable Backdrop Banner (Events Display), ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -106,7 +112,7 @@ export default function EventsBackdropBannerPage() {
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
             Professional branded backdrops for press conferences, photo booths, award ceremonies,
-            and corporate events — fabric or vinyl, step-and-repeat or custom design.
+            and corporate events, fabric or vinyl, step-and-repeat or custom design.
           </p>
         </div>
 
@@ -115,7 +121,7 @@ export default function EventsBackdropBannerPage() {
           <div className="flex flex-col gap-8">
             <div className="relative aspect-4/3 rounded-2xl overflow-hidden border border-border bg-muted shadow-sm">
               <Image
-                src={ph(700, 525, "Backdrop+Banner")}
+                src={BackdropBanner.src}
                 alt="Adjustable Backdrop Banner"
                 fill
                 className="object-cover"
@@ -135,20 +141,20 @@ export default function EventsBackdropBannerPage() {
                 </p>
                 <p>
                   At Ramirez Ventures we offer backdrop banners on both wrinkle-resistant fabric
-                  and heavy-duty vinyl. Fabric is the premium indoor choice — it looks completely
+                  and heavy-duty vinyl. Fabric is the premium indoor choice, it looks completely
                   smooth when hung and photographs beautifully without glare. Vinyl is more robust
                   for outdoor events and long-term use.
                 </p>
                 <p>
                   The included adjustable aluminium frame requires no tools to assemble and fits
-                  multiple print sizes — so your frame investment grows with your event needs.
+                  multiple print sizes, so your frame investment grows with your event needs.
                   Popular design formats include step-and-repeat logo patterns, solid branded
                   colour backdrops, and fully custom event artwork.
                 </p>
                 <ul className="list-disc list-inside space-y-1.5 pl-1">
                   <li>Wrinkle-resistant fabric or 440 gsm vinyl options</li>
-                  <li>5 standard sizes from 1.5 × 2 m to 4 × 2 m panoramic</li>
-                  <li>Adjustable aluminium frame — no tools required</li>
+                  <li>5 standard sizes from 1.5 x 2 m to 4 x 2 m panoramic</li>
+                  <li>Adjustable aluminium frame, no tools required</li>
                   <li>Step-and-repeat, solid, or custom design layouts</li>
                   <li>Carry bag included for easy transport</li>
                   <li>Free design from your logo and event details</li>
@@ -216,14 +222,14 @@ export default function EventsBackdropBannerPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Backdrop Banner – ${selectedSize.label}`,
+                      name: `Backdrop Banner  to  ${selectedSize.label}`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Backdrop+Banner"),
                       href: "/products/events-display/backdrop-banner",
@@ -244,7 +250,7 @@ export default function EventsBackdropBannerPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 3–5 day turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 3 to 5 day turnaround · Free local Muhoroni delivery
               </p>
             </div>
 
@@ -252,19 +258,19 @@ export default function EventsBackdropBannerPage() {
               <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Wrinkle-free fabric — perfect for photo booths and media walls</span>
+                  <span>Wrinkle-free fabric, perfect for photo booths and media walls</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Adjustable aluminium frame — no tools, multi-size compatible</span>
+                  <span>Adjustable aluminium frame, no tools, multi-size compatible</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Free design — step-and-repeat, solid, or fully custom</span>
+                  <span>Free design, step-and-repeat, solid, or fully custom</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Replacement prints available — protect your frame investment</span>
+                  <span>Replacement prints available, protect your frame investment</span>
                 </li>
               </ul>
             </div>

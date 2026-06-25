@@ -59,42 +59,42 @@ const productDescriptions = [
   {
     name: "Standard Photo Prints",
     description:
-      "Classic photo prints in wallet, 4×6, 5×7, 6×8, 8×10, and A4 sizes — printed on professional photo paper in gloss or matte finish. Sharp, true-to-life colours for personal and commercial use.",
+      "Classic photo prints in wallet, 4x6, 5x7, 6x8, 8x10, and A4 sizes, printed on professional photo paper in gloss or matte finish. Sharp, true-to-life colours for personal and commercial use.",
   },
   {
     name: "Large Format Photo Prints",
     description:
-      "Stunning large-scale photo prints from A3 up to 1.5 m wide — ideal for exhibition displays, studio backdrops, gallery walls, office interiors, and retail visual merchandising.",
+      "Stunning large-scale photo prints from A3 up to 1.5 m wide, ideal for exhibition displays, studio backdrops, gallery walls, office interiors, and retail visual merchandising.",
   },
   {
     name: "Canvas Photo Prints",
     description:
-      "Your favourite photos transferred onto artist canvas and stretched over a sturdy wooden frame. Ready to hang straight out of the box — a timeless, premium wall art option for homes and offices.",
+      "Your favourite photos transferred onto artist canvas and stretched over a sturdy wooden frame. Ready to hang straight out of the box, a timeless, premium wall art option for homes and offices.",
   },
   {
     name: "Passport & ID Photos",
     description:
-      "Regulation-sized passport and ID photos printed to Kenyan and international passport standards. Taken and printed on-site — ready in minutes. We cater for all government, visa, and employment formats.",
+      "Regulation-sized passport and ID photos printed to Kenyan and international passport standards. Taken and printed on-site, ready in minutes. We cater for all government, visa, and employment formats.",
   },
   {
     name: "Photo Books",
     description:
-      "Professionally printed and bound photo books in hardcover or softcover — ideal for wedding albums, family portraits, corporate reports, and event memories. Fully customisable layouts.",
+      "Professionally printed and bound photo books in hardcover or softcover, ideal for wedding albums, family portraits, corporate reports, and event memories. Fully customisable layouts.",
   },
   {
     name: "Framed Photo Prints",
     description:
-      "Photo prints pre-mounted in black, white, or natural wood frames — ready to hang or stand on a shelf. Available in a range of standard sizes with glass or acrylic glazing options.",
+      "Photo prints pre-mounted in black, white, or natural wood frames, ready to hang or stand on a shelf. Available in a range of standard sizes with glass or acrylic glazing options.",
   },
   {
     name: "Panoramic Prints",
     description:
-      "Wide-format panoramic prints in ratios such as 1:3, 1:4, and custom — perfect for landscape photography, cityscapes, wedding group shots, and dramatic wall displays.",
+      "Wide-format panoramic prints in ratios such as 1:3, 1:4, and custom, perfect for landscape photography, cityscapes, wedding group shots, and dramatic wall displays.",
   },
   {
     name: "Mounted Photo Prints",
     description:
-      "Photos mounted on 3 mm or 5 mm Forex board or foam board for a clean, frameless display. Lightweight, rigid, and ready to hang — popular for exhibitions, offices, and retail spaces.",
+      "Photos mounted on 3 mm or 5 mm Forex board or foam board for a clean, frameless display. Lightweight, rigid, and ready to hang, popular for exhibitions, offices, and retail spaces.",
   },
 ];
 
@@ -103,7 +103,7 @@ const features = [
     icon: Star,
     title: "True-to-Life Colour Accuracy",
     description:
-      "We use calibrated professional photo printers and premium photo paper to ensure your prints match what you see on screen — vivid, accurate, and long-lasting.",
+      "We use calibrated professional photo printers and premium photo paper to ensure your prints match what you see on screen, vivid, accurate, and long-lasting.",
   },
   {
     icon: Clock,
@@ -115,19 +115,19 @@ const features = [
     icon: Truck,
     title: "Nationwide Delivery",
     description:
-      "We deliver across Kenya — from Muhoroni, Kenya to Mombasa, Kisumu, Nakuru, and beyond. Free local delivery for orders within Muhoroni.",
+      "We deliver across Kenya, from Muhoroni, Kenya to Mombasa, Kisumu, Nakuru, and beyond. Free local delivery for orders within Muhoroni.",
   },
   {
     icon: Palette,
     title: "Multiple Finishes",
     description:
-      "Choose from gloss, matte, or satin photo paper; stretched canvas; Forex board mounting; and framing options — we match the finish to your intended use.",
+      "Choose from gloss, matte, or satin photo paper; stretched canvas; Forex board mounting; and framing options, we match the finish to your intended use.",
   },
   {
     icon: ShieldCheck,
     title: "Archival Quality",
     description:
-      "Our inks and papers are rated for 50–100 years of display life under normal conditions — your prints will stay vibrant for generations.",
+      "Our inks and papers are rated for 50 to 100 years of display life under normal conditions, your prints will stay vibrant for generations.",
   },
   {
     icon: CheckCircle2,
@@ -143,16 +143,16 @@ export default function PhotoPrintingPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero */}
-      <section className="relative isolate overflow-hidden bg-gradient-to-br from-primary/90 via-primary to-primary/80">
+      <section className="relative isolate overflow-hidden bg-brand-surface">
         <Image
           src={ph(1400, 400, "Photo+Printing+and+Framing")}
           alt="Photo printing and framing"
           fill
-          className="object-cover opacity-20 mix-blend-overlay"
+          className="object-cover opacity-70"
           priority
           unoptimized
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-transparent to-primary/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-primary/20" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <nav className="mb-6 flex items-center gap-1.5 text-sm text-primary-foreground/70 flex-wrap">
             <Link href="/" className="hover:text-primary-foreground transition-colors">Home</Link>
@@ -169,14 +169,14 @@ export default function PhotoPrintingPage() {
               Photo Printing &amp; Framing in Kenya
             </h1>
             <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
-              Professional photo prints, canvas art, frames, and photo books — true-to-life colours,
+              Professional photo prints, canvas art, frames, and photo books, true-to-life colours,
               archival quality paper, and fast turnaround across Kenya.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg" asChild>
+              <Button size="lg" className="rv-hero-button-primary" asChild>
                 <a href="#products">See Our Services</a>
               </Button>
-              <Button size="lg" variant="outline" className="border-white/40 text-primary-foreground hover:bg-white/10" asChild>
+              <Button size="lg" variant="outline" className="rv-hero-button-secondary" asChild>
                 <Link href="/contact">Get a Quote</Link>
               </Button>
             </div>
@@ -260,7 +260,7 @@ export default function PhotoPrintingPage() {
             </div>
 
             {/* Overview */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <Badge variant="secondary" className="mb-4">About Photo Printing</Badge>
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-5 leading-snug">
                 Professional Photo Printing and Framing in Kenya
@@ -268,7 +268,7 @@ export default function PhotoPrintingPage() {
               <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
                 <p>
                   At Ramirez Ventures, we provide a complete range of professional photo printing
-                  and framing services — from pocket-sized wallet prints and regulation passport photos
+                  and framing services, from pocket-sized wallet prints and regulation passport photos
                   to large-scale canvas art and fully framed wall pieces. Whether you are a
                   professional photographer, event planner, interior designer, or simply want to
                   print a cherished family memory, we deliver accurate, vivid, archival-quality results
@@ -278,12 +278,12 @@ export default function PhotoPrintingPage() {
                   We print on professional-grade photo paper from leading manufacturers, calibrated
                   to produce true-to-life colour reproduction across a wide range of paper types and
                   surface finishes. Our large-format capability means we can print anything from a
-                  standard 10×15 cm snapshot to a 1.5-metre gallery print — all under one roof in
+                  standard 10x15 cm snapshot to a 1.5-metre gallery print, all under one roof in
                   Muhoroni, delivered nationwide.
                 </p>
                 <p>
                   Every order receives careful pre-press inspection. We check colour profiles,
-                  resolution, and crop before pressing print — so what arrives at your door is exactly
+                  resolution, and crop before pressing print, so what arrives at your door is exactly
                   what you expected. Contact us today for a free sample or quote.
                 </p>
               </div>
@@ -328,7 +328,7 @@ export default function PhotoPrintingPage() {
             </section>
 
             {/* Product descriptions */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <Badge variant="secondary" className="mb-4">What We Offer</Badge>
               <h2 className="text-2xl font-bold text-foreground mb-6">
                 Our Photo Printing Services in Detail
@@ -352,7 +352,7 @@ export default function PhotoPrintingPage() {
             </section>
 
             {/* Why Choose Ramirez */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <div className="text-center mb-10">
                 <Badge variant="secondary" className="mb-3">Why Choose Us</Badge>
                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
@@ -382,7 +382,7 @@ export default function PhotoPrintingPage() {
                   );
                 })}
               </div>
-              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 rounded-xl bg-primary/5 border border-primary/20 p-6">
+              <div className="rv-soft-cta mt-10 flex flex-col items-center justify-center gap-4 rounded-lg sm:flex-row">
                 <div className="text-center sm:text-left">
                   <p className="font-semibold text-foreground">Ready to print your memories?</p>
                   <p className="text-sm text-muted-foreground">

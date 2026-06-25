@@ -21,9 +21,6 @@ import TableCloth from "@/app/assets/Tablecloth.jpg";
 import SBanner from "@/app/assets/Street-Billboard-Mockup.jpg";
 import PVCWheelCover from "@/app/assets/wheelcovers.jpg";
 
-/* ─── placeholder helper ─── */
-const ph = (w: number, h: number, label: string) =>
-  `https://placehold.co/${w}x${h}/e0f2fe/0284c7?text=${encodeURIComponent(label)}`;
 
 /* ─── Sidebar: all 8 product categories from the navbar ─── */
 const productCategories = [
@@ -113,31 +110,31 @@ const features = [
     icon: Star,
     title: "Premium Print Quality",
     description:
-      "We use high-resolution wide-format printers with UV-resistant inks that deliver sharp, vivid colour — rain or shine.",
+      "We use high-resolution wide-format printers with UV-resistant inks that deliver sharp, vivid colour, rain or shine.",
   },
   {
     icon: Clock,
     title: "Fast Turnaround",
     description:
-      "Most orders are ready within 24–48 hours. Need it urgent? Same-day printing is available for standard sizes.",
+      "Most orders are ready within 24 to 48 hours. Need it urgent? Same-day printing is available for standard sizes.",
   },
   {
     icon: Truck,
     title: "Nationwide Delivery",
     description:
-      "We deliver across Kenya — from Muhoroni to Mombasa, Kisumu, Nakuru, and beyond. Free local delivery for orders in Muhoroni.",
+      "We deliver across Kenya, from Muhoroni to Mombasa, Kisumu, Nakuru, and beyond. Free local delivery for orders in Muhoroni.",
   },
   {
     icon: Palette,
     title: "Free Design Support",
     description:
-      "Our in-house design team will set up your artwork at no extra cost — just send us your logo and content.",
+      "Our in-house design team will set up your artwork at no extra cost, just send us your logo and content.",
   },
   {
     icon: ShieldCheck,
     title: "Durable Materials",
     description:
-      "Every banner is printed on high-quality PVC, fabric, or vinyl chosen for the intended environment — indoor or outdoor.",
+      "Every banner is printed on high-quality PVC, fabric, or vinyl chosen for the intended environment, indoor or outdoor.",
   },
   {
     icon: CheckCircle2,
@@ -163,7 +160,7 @@ export default function BannersPage() {
   />
 
       {/* Dark translucent overlay */}
-<div className="absolute inset-0 bg-black/45 z-0" />
+<div className="absolute inset-0 bg-black/30 z-0" />
 
 <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
   {/* Breadcrumb */}
@@ -194,13 +191,13 @@ export default function BannersPage() {
 
     <p className="text-lg text-white/90 leading-relaxed mb-8">
       High-impact, professional banners for businesses, events, churches, schools, and
-      government institutions — printed and delivered across Kenya.
+      government institutions, printed and delivered across Kenya.
     </p>
 
     <div className="flex flex-wrap gap-3">
       <Button
         size="lg"
-        className="bg-white text-black hover:bg-white/90 shadow-lg"
+        className="rv-hero-button-primary"
         asChild
       >
         <a href="#products">Shop Banners</a>
@@ -209,7 +206,7 @@ export default function BannersPage() {
       <Button
         size="lg"
         variant="outline"
-        className="border-white text-black bg-white/90 hover:bg-white"
+        className="rv-hero-button-primary border-white"
         asChild
       >
         <Link href="/contact">Get a Quote</Link>
@@ -297,7 +294,7 @@ export default function BannersPage() {
             </div>
 
             {/* ── About / intro section ── */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <Badge variant="secondary" className="mb-4">
                 About Our Banner Printing
               </Badge>
@@ -316,7 +313,7 @@ export default function BannersPage() {
                 <p>
                   Banner printing remains one of the most cost-effective and high-impact marketing
                   tools available in Kenya. A well-printed, correctly positioned banner can generate
-                  thousands of impressions daily — far more than digital advertising at a fraction
+                  thousands of impressions daily, far more than digital advertising at a fraction
                   of the recurring cost. From roadside vinyl banners in Muhoroni, Kenya to elegant
                   fabric media walls at KICC press conferences, Ramirez Ventures delivers the right
                   display format to make all the difference for your brand.
@@ -342,7 +339,7 @@ export default function BannersPage() {
                 {bannerProducts.map((product) => (
                   <div
                     key={product.id}
-                    className="group rounded-xl border border-border bg-card overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                    className="rv-product-card group"
                   >
                     {/* Image */}
                     <Link href={product.href} className="relative block overflow-hidden aspect-[4/3] bg-muted">
@@ -375,7 +372,7 @@ export default function BannersPage() {
             </section>
 
             {/* ── Why choose Ramirez Ventures ── */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <div className="text-center mb-10">
                 <Badge variant="secondary" className="mb-3">
                   Why Choose Us
@@ -414,11 +411,11 @@ export default function BannersPage() {
               </div>
 
               {/* CTA */}
-              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 rounded-xl bg-primary/5 border border-primary/20 p-6">
+              <div className="rv-soft-cta mt-10 flex flex-col items-center justify-center gap-4 rounded-lg sm:flex-row">
                 <div className="text-center sm:text-left">
                   <p className="font-semibold text-foreground">Ready to get started?</p>
                   <p className="text-sm text-muted-foreground">
-                    Get a free quote within minutes — no obligation.
+                    Get a free quote within minutes, no obligation.
                   </p>
                 </div>
                 <div className="flex gap-3">

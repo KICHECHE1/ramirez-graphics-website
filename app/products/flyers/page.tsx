@@ -17,9 +17,12 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 
-/* ─── placeholder helper ─── */
-const ph = (w: number, h: number, label: string) =>
-  `https://placehold.co/${w}x${h}/e0f2fe/0284c7?text=${encodeURIComponent(label)}`;
+{/*Images */}
+import Brochures from "@/app/assets/brochure.jpg";
+import Flyers from "@/app/assets/flyers.jpeg";
+import Flyer from "@/app/assets/Flyer and brochure.jpg";
+
+
 
 /* ─── Sidebar: all 8 product categories ─── */
 const productCategories = [
@@ -51,14 +54,14 @@ const flyerProducts = [
   {
     id: "fl-1",
     name: "Flyers Printing",
-    image: ph(400, 320, "Flyers+Printing"),
+    image: Flyers.src,
     href: "/products/flyers/flyers-printing",
     badge: "Most Popular",
   },
   {
     id: "fl-2",
     name: "Brochures Printing",
-    image: ph(400, 320, "Brochures+Printing"),
+    image: Brochures.src,
     href: "/products/flyers/brochures-printing",
     badge: "Best Seller",
   },
@@ -70,25 +73,25 @@ const flyerDescriptions = [
     name: "Flyers Printing",
     href: "/products/flyers/flyers-printing",
     description:
-      "Our flyers are printed in full colour on premium paper stocks — available in A6, A5, and A4 sizes to suit every campaign. Whether you need handouts for a product launch, event invitations, promotional offers, or business announcements, our flyers deliver vivid, eye-catching results every time. We offer single and double-sided printing on gloss, matte, or silk-coated paper in weights from 100gsm to 170gsm. With fast turnaround times, bulk discounts, and free design assistance, Ramirez Ventures is your go-to flyer printer in Kenya.",
+      "Our flyers are printed in full colour on premium paper stocks, available in A6, A5, and A4 sizes to suit every campaign. Whether you need handouts for a product launch, event invitations, promotional offers, or business announcements, our flyers deliver vivid, eye-catching results every time. We offer single and double-sided printing on gloss, matte, or silk-coated paper in weights from 100gsm to 170gsm. With fast turnaround times, bulk discounts, and free design assistance, Ramirez Ventures is your go-to flyer printer in Kenya.",
     sizes: [
       {
         label: "A6 Flyers",
-        dimensions: "148 × 105 mm",
+        dimensions: "148 x 105 mm",
         detail:
-          "A6 is the most compact and cost-effective flyer size — roughly the size of a postcard at 148 × 105 mm. The small footprint makes them extremely easy to hand out in high-traffic locations such as shopping malls, matatus, event entrances, and street activations. They are ideal for promotional vouchers, discount offers, event invitations, and short announcements where a punchy message is all you need. Despite the smaller canvas, our A6 flyers are printed in vibrant full colour on quality stock so your brand always looks sharp.",
+          "A6 is the most compact and cost-effective flyer size, roughly the size of a postcard at 148 x 105 mm. The small footprint makes them extremely easy to hand out in high-traffic locations such as shopping malls, matatus, event entrances, and street activations. They are ideal for promotional vouchers, discount offers, event invitations, and short announcements where a punchy message is all you need. Despite the smaller canvas, our A6 flyers are printed in vibrant full colour on quality stock so your brand always looks sharp.",
       },
       {
         label: "A5 Flyers",
-        dimensions: "210 × 148 mm",
+        dimensions: "210 x 148 mm",
         detail:
-          "At 210 × 148 mm, A5 is our most popular and versatile flyer size — exactly half an A4 sheet. It gives you enough space to include your logo, headline, key message, contact details, and supporting imagery without overwhelming the reader. A5 flyers are widely used for restaurant menus, real estate listings, church programmes, product launches, and business promotions. They work equally well as street handouts, counter-top leaflets, or inserts in packaging and mailers. Available on a range of paper weights and finishes to suit any budget.",
+          "At 210 x 148 mm, A5 is our most popular and versatile flyer size, exactly half an A4 sheet. It gives you enough space to include your logo, headline, key message, contact details, and supporting imagery without overwhelming the reader. A5 flyers are widely used for restaurant menus, real estate listings, church programmes, product launches, and business promotions. They work equally well as street handouts, counter-top leaflets, or inserts in packaging and mailers. Available on a range of paper weights and finishes to suit any budget.",
       },
       {
         label: "A4 Flyers",
-        dimensions: "297 × 210 mm",
+        dimensions: "297 x 210 mm",
         detail:
-          "A4 flyers at 297 × 210 mm offer the largest canvas in our standard flyer range, giving maximum room for detailed content, large imagery, and impactful design. They are the format of choice for corporate communications, seminar programmes, exhibition handouts, event schedules, and any situation where you need to convey rich information on a single sheet. Our A4 flyers are printed on high-quality gloss or matte paper and are available in single or double-sided print — a powerful and professional tool for any marketing campaign.",
+          "A4 flyers at 297 x 210 mm offer the largest canvas in our standard flyer range, giving maximum room for detailed content, large imagery, and impactful design. They are the format of choice for corporate communications, seminar programmes, exhibition handouts, event schedules, and any situation where you need to convey rich information on a single sheet. Our A4 flyers are printed on high-quality gloss or matte paper and are available in single or double-sided print, a powerful and professional tool for any marketing campaign.",
       },
     ],
   },
@@ -96,7 +99,7 @@ const flyerDescriptions = [
     name: "Brochures Printing",
     href: "/products/flyers/brochures-printing",
     description:
-      "A well-designed brochure is one of the most effective tools for communicating your brand story, products, and services in a compact and professional format. We print bi-fold and tri-fold brochures in A4 and A5 sizes on high-quality gloss or matte paper, with sharp full-colour imagery and text. Ideal for corporate profiles, product catalogues, service menus, trade show handouts, and real estate listings. Our in-house design team can create or adapt your brochure artwork — just send your content and brand assets and we'll handle the rest.",
+      "A well-designed brochure is one of the most effective tools for communicating your brand story, products, and services in a compact and professional format. We print bi-fold and tri-fold brochures in A4 and A5 sizes on high-quality gloss or matte paper, with sharp full-colour imagery and text. Ideal for corporate profiles, product catalogues, service menus, trade show handouts, and real estate listings. Our in-house design team can create or adapt your brochure artwork, just send your content and brand assets and we'll handle the rest.",
   },
 ];
 
@@ -118,13 +121,13 @@ const features = [
     icon: Truck,
     title: "Delivered Across Kenya",
     description:
-      "We deliver from Muhoroni, Kenya to Mombasa, Kisumu, Nakuru, Eldoret, and all major towns — fast, tracked, and reliable.",
+      "We deliver from Muhoroni, Kenya to Mombasa, Kisumu, Nakuru, Eldoret, and all major towns, fast, tracked, and reliable.",
   },
   {
     icon: Palette,
     title: "Free Design Assistance",
     description:
-      "No designer? No problem. Our creative team will design your flyer at no extra cost — just send your logo, copy, and brand colours.",
+      "No designer? No problem. Our creative team will design your flyer at no extra cost, just send your logo, copy, and brand colours.",
   },
   {
     icon: ShieldCheck,
@@ -136,7 +139,7 @@ const features = [
     icon: CheckCircle2,
     title: "Competitive Bulk Pricing",
     description:
-      "The more you print, the more you save. We offer significant discounts on bulk flyer orders — perfect for campaigns and events.",
+      "The more you print, the more you save. We offer significant discounts on bulk flyer orders, perfect for campaigns and events.",
   },
 ];
 
@@ -147,16 +150,16 @@ export default function FlyersPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* ── Hero ── */}
-      <section className="relative isolate overflow-hidden bg-gradient-to-br from-primary/90 via-primary to-primary/80">
+      <section className="relative isolate overflow-hidden bg-brand-surface">
         <Image
-          src={ph(1400, 480, "Flyers+Printing+Kenya")}
+          src={Flyer.src}
           alt="Flyer printing hero"
           fill
-          className="object-cover opacity-20 mix-blend-overlay"
+          className="object-cover opacity-70"
           priority
           unoptimized
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-transparent to-primary/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-primary/20" />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <nav className="mb-6 flex items-center gap-1.5 text-sm text-primary-foreground/70">
@@ -179,13 +182,13 @@ export default function FlyersPage() {
               Flyer Printing in Kenya
             </h1>
             <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
-              High-quality A6, A5, and A4 flyers printed in full colour on premium paper — fast
+              High-quality A6, A5, and A4 flyers printed in full colour on premium paper, fast
               turnaround, bulk discounts, and delivery across Kenya.
             </p>
             <div className="flex flex-wrap gap-3">
               <Button
                 size="lg"
-                className="bg-white text-primary hover:bg-white/90 shadow-lg"
+                className="rv-hero-button-primary"
                 asChild
               >
                 <a href="#products">View Sizes</a>
@@ -193,7 +196,7 @@ export default function FlyersPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white/40 text-primary-foreground hover:bg-white/10"
+                className="rv-hero-button-secondary"
                 asChild
               >
                 <Link href="/contact">Get a Quote</Link>
@@ -300,7 +303,7 @@ export default function FlyersPage() {
                   <Link
                     key={product.id}
                     href={product.href}
-                    className="group rounded-xl border border-border bg-card overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                    className="rv-product-card group"
                   >
                     <div className="relative aspect-[4/3] bg-muted overflow-hidden">
                       <Image
@@ -387,7 +390,7 @@ export default function FlyersPage() {
             </section>
 
             {/* ── Why Choose Ramirez Ventures ── */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <div className="text-center mb-10">
                 <Badge variant="secondary" className="mb-3">Why Choose Us</Badge>
                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
@@ -420,22 +423,22 @@ export default function FlyersPage() {
             </section>
 
             {/* ── CTA section ── */}
-            <section className="rounded-2xl overflow-hidden border border-border bg-primary">
-              <div className="p-8 sm:p-10 text-primary-foreground text-center flex flex-col items-center gap-5">
+            <section className="rv-cta">
+              <div className="rv-cta-content text-center flex flex-col items-center gap-5">
                 <Badge className="bg-white/20 text-primary-foreground border-0 backdrop-blur-sm">
                   Ready to Print?
                 </Badge>
                 <h2 className="text-2xl sm:text-3xl font-bold leading-snug max-w-xl">
-                  Print Your Flyers Today — Fast, Affordable &amp; Delivered
+                  Print Your Flyers Today, Fast, Affordable &amp; Delivered
                 </h2>
                 <p className="text-primary-foreground/80 max-w-lg">
                   Call or WhatsApp us now for a quick quote. Bulk orders and same-day printing
                   available for A6, A5, and A4 flyers across Kenya.
                 </p>
-                <div className="flex flex-wrap justify-center gap-4 mt-2">
+                <div className="rv-cta-actions mt-2">
                   <Button
                     size="lg"
-                    className="bg-white text-primary hover:bg-white/90 gap-2 shadow-lg font-semibold"
+                    className="rv-cta-button-primary gap-2 font-semibold"
                     asChild
                   >
                     <a href={`tel:${PHONE.replace(/\s/g, "")}`}>
@@ -446,7 +449,7 @@ export default function FlyersPage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-white/40 text-primary-foreground hover:bg-white/15 gap-2"
+                    className="rv-cta-button-secondary gap-2"
                     asChild
                   >
                     <a
@@ -463,7 +466,7 @@ export default function FlyersPage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-white/40 text-primary-foreground hover:bg-white/15"
+                    className="rv-cta-button-secondary"
                     asChild
                   >
                     <Link href="/contact">Get a Quote Online</Link>

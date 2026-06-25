@@ -21,21 +21,21 @@ const ph = (w: number, h: number, label: string) =>
 const WHATSAPP = "254706207037";
 
 const sizes = [
-  { label: "4R  (4×6 in)",   dimensions: "102 × 152 mm",  price: 50 },
-  { label: "5R  (5×7 in)",   dimensions: "127 × 178 mm",  price: 80 },
-  { label: "6R  (6×8 in)",   dimensions: "152 × 203 mm",  price: 120 },
-  { label: "8R  (8×10 in)",  dimensions: "203 × 254 mm",  price: 180 },
-  { label: "A4  (8×12 in)",  dimensions: "210 × 297 mm",  price: 250 },
-  { label: "A3  (12×17 in)", dimensions: "297 × 420 mm",  price: 450 },
+  { label: "4R  (4x6 in)",   dimensions: "102 x 152 mm",  price: 50 },
+  { label: "5R  (5x7 in)",   dimensions: "127 x 178 mm",  price: 80 },
+  { label: "6R  (6x8 in)",   dimensions: "152 x 203 mm",  price: 120 },
+  { label: "8R  (8x10 in)",  dimensions: "203 x 254 mm",  price: 180 },
+  { label: "A4  (8x12 in)",  dimensions: "210 x 297 mm",  price: 250 },
+  { label: "A3  (12x17 in)", dimensions: "297 x 420 mm",  price: 450 },
 ];
 
 const materialNote =
-  "Printed on 260 gsm premium gloss or lustre photo paper. Colours are calibrated for true-to-life reproduction. No minimum order — print a single photo or hundreds. Framing and canvas options available on request.";
+  "Printed on 260 gsm premium gloss or lustre photo paper. Colours are calibrated for true-to-life reproduction. No minimum order, print a single photo or hundreds. Framing and canvas options available on request.";
 
 const faqs = [
   {
     q: "What file format and resolution should I send?",
-    a: "JPEG or PNG files work best. For the sharpest results, use a file that is at least 300 dpi at the intended print size. A 4R photo needs roughly 1200 × 1800 px; an A4 needs at least 2480 × 3508 px. We will advise you if the resolution is too low before printing.",
+    a: "JPEG or PNG files work best. For the sharpest results, use a file that is at least 300 dpi at the intended print size. A 4R photo needs roughly 1200 x 1800 px; an A4 needs at least 2480 x 3508 px. We will advise you if the resolution is too low before printing.",
   },
   {
     q: "Can you print from a mobile phone?",
@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     q: "Do you offer photo editing or retouching?",
-    a: "Basic colour correction and cropping are included. More advanced retouching — skin smoothing, background removal, brightness and contrast adjustments — is available at a small editing fee.",
+    a: "Basic colour correction and cropping are included. More advanced retouching, skin smoothing, background removal, brightness and contrast adjustments, is available at a small editing fee.",
   },
   {
     q: "Can you print canvas or framed photos?",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     q: "Is there a minimum order?",
-    a: "No minimum — you can print a single photo. Bulk rates apply for 20 or more prints of the same size.",
+    a: "No minimum, you can print a single photo. Bulk rates apply for 20 or more prints of the same size.",
   },
   {
     q: "Do you deliver outside Muhoroni?",
@@ -82,7 +82,7 @@ export default function PhotoPrintingPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order Photo Printing — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order Photo Printing, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -106,8 +106,8 @@ export default function PhotoPrintingPage() {
             Photo Printing Services
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
-            True-to-life photo prints on 260 gsm premium photo paper — from wallet-size 4R up to
-            A3 poster prints — no minimum order, same-day service available in Muhoroni, Kisumu.
+            True-to-life photo prints on 260 gsm premium photo paper, from wallet-size 4R up to
+            A3 poster prints, no minimum order, same-day service available in Muhoroni, Kisumu.
           </p>
         </div>
 
@@ -131,23 +131,23 @@ export default function PhotoPrintingPage() {
                 <p>
                   Whether you are printing memories from a graduation, a family event, a wedding,
                   or a professional photoshoot, Ramirez Ventures delivers vivid, true-to-life photo
-                  prints on 260 gsm premium photo paper — available in gloss and lustre finishes.
+                  prints on 260 gsm premium photo paper, available in gloss and lustre finishes.
                 </p>
                 <p>
-                  We print standard photo sizes from 4R (4×6 in) all the way up to A3 (12×17 in),
+                  We print standard photo sizes from 4R (4x6 in) all the way up to A3 (12x17 in),
                   with no minimum order. Send your files via WhatsApp or email and we will have
                   your prints ready for collection or delivery. Basic colour correction and
                   cropping are included at no extra charge.
                 </p>
                 <p>
-                  We also offer canvas prints and framed photos on request — perfect for home
+                  We also offer canvas prints and framed photos on request, perfect for home
                   décor, office walls, gifts, or exhibition display. Contact us with your
                   requirements for a custom quote.
                 </p>
                 <ul className="list-disc list-inside space-y-1.5 pl-1">
                   <li>260 gsm premium gloss or lustre photo paper</li>
-                  <li>Sizes from 4R (4×6 in) to A3 (12×17 in)</li>
-                  <li>No minimum order — print a single photo</li>
+                  <li>Sizes from 4R (4x6 in) to A3 (12x17 in)</li>
+                  <li>No minimum order, print a single photo</li>
                   <li>Basic colour correction and cropping included</li>
                   <li>Send files via WhatsApp, email, or USB</li>
                   <li>Canvas and framed prints available on request</li>
@@ -215,14 +215,14 @@ export default function PhotoPrintingPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Photo Print – ${selectedSize.label} (${selectedSize.dimensions})`,
+                      name: `Photo Print  to  ${selectedSize.label} (${selectedSize.dimensions})`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Photo+Printing"),
                       href: "/products/digital-printing/photos",
@@ -251,7 +251,7 @@ export default function PhotoPrintingPage() {
               <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>No minimum — print a single photo or hundreds</span>
+                  <span>No minimum, print a single photo or hundreds</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>

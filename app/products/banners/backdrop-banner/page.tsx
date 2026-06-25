@@ -23,10 +23,10 @@ const WHATSAPP = "254706207037";
 
 /* ─── Size options ─── */
 const sizes = [
-  { label: "Small", dimensions: "2m × 2m", price: 7500 },
-  { label: "Medium", dimensions: "2m × 3m", price: 9500 },
-  { label: "Large", dimensions: "3m × 3m", price: 12000 },
-  { label: "Extra Large", dimensions: "4m × 3m", price: 16000 },
+  { label: "Small", dimensions: "2m x 2m", price: 7500 },
+  { label: "Medium", dimensions: "2m x 3m", price: 9500 },
+  { label: "Large", dimensions: "3m x 3m", price: 12000 },
+  { label: "Extra Large", dimensions: "4m x 3m", price: 16000 },
 ];
 
 const materialNote =
@@ -36,7 +36,7 @@ const materialNote =
 const faqs = [
   {
     q: "Can the backdrop banner be used outdoors?",
-    a: "Yes — adjustable backdrop banners are designed to work in both indoor and outdoor settings. For windy outdoor events we recommend using ground stakes or sandbag weights to secure the frame.",
+    a: "Yes, adjustable backdrop banners are designed to work in both indoor and outdoor settings. For windy outdoor events we recommend using ground stakes or sandbag weights to secure the frame.",
   },
   {
     q: "How long does installation take?",
@@ -44,7 +44,7 @@ const faqs = [
   },
   {
     q: "What resolution should artwork be submitted at?",
-    a: "For best results, supply artwork at 72–100 dpi at full print size, or send vector files (AI or EPS). Our design team can also prepare artwork from your logo and content.",
+    a: "For best results, supply artwork at 72 to 100 dpi at full print size, or send vector files (AI or EPS). Our design team can also prepare artwork from your logo and content.",
   },
   {
     q: "Can I replace the banner graphic without buying a new stand?",
@@ -52,11 +52,11 @@ const faqs = [
   },
   {
     q: "Do you offer double-sided printing?",
-    a: "Yes, double-sided fabric backdrop banners are available on request — ideal when your display will be viewed from both the front and behind.",
+    a: "Yes, double-sided fabric backdrop banners are available on request, ideal when your display will be viewed from both the front and behind.",
   },
   {
     q: "Is fabric or PVC better for my event?",
-    a: "Fabric gives a premium, wrinkle-resistant finish that photographs beautifully and reduces glare under studio lights — perfect for press conferences and photo opportunities. PVC flex is more affordable and is great for promotional events.",
+    a: "Fabric gives a premium, wrinkle-resistant finish that photographs beautifully and reduces glare under studio lights, perfect for press conferences and photo opportunities. PVC flex is more affordable and is great for promotional events.",
   },
 ];
 
@@ -84,7 +84,7 @@ export default function BackdropBannerPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order an Adjustable Backdrop Banner — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order an Adjustable Backdrop Banner, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -111,7 +111,7 @@ export default function BackdropBannerPage() {
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
             Professional branded backdrops for press conferences, product launches, photo
-            opportunities, and corporate events — printed on PVC or premium fabric.
+            opportunities, and corporate events, printed on PVC or premium fabric.
           </p>
         </div>
 
@@ -194,7 +194,7 @@ export default function BackdropBannerPage() {
                   <thead>
                     <tr className="bg-muted/60 border-b border-border">
                       <th className="text-left px-4 py-3 font-medium text-muted-foreground">Size</th>
-                      <th className="text-left px-4 py-3 font-medium text-muted-foreground">Dimensions (W × H)</th>
+                      <th className="text-left px-4 py-3 font-medium text-muted-foreground">Dimensions (W x H)</th>
                       <th className="px-4 py-3" />
                     </tr>
                   </thead>
@@ -236,7 +236,7 @@ export default function BackdropBannerPage() {
               <p className="text-sm text-muted-foreground mb-5">
                 Selected:{" "}
                 <span className="font-medium text-foreground">
-                  {selectedSize.label} — {selectedSize.dimensions}
+                  {selectedSize.label}, {selectedSize.dimensions}
                 </span>
               </p>
               <div className="flex flex-col gap-3">
@@ -244,7 +244,7 @@ export default function BackdropBannerPage() {
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Adjustable Backdrop Banner – ${selectedSize.label} (${selectedSize.dimensions})`,
+                      name: `Adjustable Backdrop Banner  to  ${selectedSize.label} (${selectedSize.dimensions})`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Backdrop+Banner"),
                       href: "/products/banners/backdrop-banner",
@@ -275,7 +275,7 @@ export default function BackdropBannerPage() {
           </div>
         </div>
 
-        {/* ── Related Products — full width ── */}
+        {/* ── Related Products, full width ── */}
         <section className="mt-16">
           <Separator className="mb-10" />
           <h2 className="text-2xl font-bold text-foreground mb-6">Related Products</h2>

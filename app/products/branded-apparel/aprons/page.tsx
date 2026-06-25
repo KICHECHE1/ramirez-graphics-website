@@ -21,14 +21,14 @@ const ph = (w: number, h: number, label: string) =>
 const WHATSAPP = "254706207037";
 
 const sizes = [
-  { label: "Bib Apron — One Size",       dimensions: "70 × 90 cm",          price: 1800 },
-  { label: "Half Apron — One Size",       dimensions: "70 × 55 cm",          price: 1400 },
-  { label: "Full-Length Apron — S/M",     dimensions: "70 × 100 cm (S/M)",   price: 2000 },
-  { label: "Full-Length Apron — L/XL",   dimensions: "70 × 105 cm (L/XL)",  price: 2000 },
+  { label: "Bib Apron, One Size",       dimensions: "70 x 90 cm",          price: 1800 },
+  { label: "Half Apron, One Size",       dimensions: "70 x 55 cm",          price: 1400 },
+  { label: "Full-Length Apron, S/M",     dimensions: "70 x 100 cm (S/M)",   price: 2000 },
+  { label: "Full-Length Apron, L/XL",   dimensions: "70 x 105 cm (L/XL)",  price: 2000 },
 ];
 
 const materialNote =
-  "Aprons are made from 200 gsm polyester/cotton blend fabric — durable, easy to clean, and comfortable for all-day wear. Custom colours available. Logo and text printed via high-resolution dye-sublimation or screen-print. Minimum order: 5 pieces.";
+  "Aprons are made from 200 gsm polyester/cotton blend fabric, durable, easy to clean, and comfortable for all-day wear. Custom colours available. Logo and text printed via high-resolution dye-sublimation or screen-print. Minimum order: 5 pieces.";
 
 const faqs = [
   {
@@ -49,7 +49,7 @@ const faqs = [
   },
   {
     q: "How long does production take?",
-    a: "Standard orders of 5–20 pieces are typically ready within 3–5 business days. Larger quantities may take up to 7 days. Rush orders can be discussed on WhatsApp.",
+    a: "Standard orders of 5 to 20 pieces are typically ready within 3 to 5 business days. Larger quantities may take up to 7 days. Rush orders can be discussed on WhatsApp.",
   },
   {
     q: "Do you deliver outside Muhoroni?",
@@ -68,7 +68,7 @@ export default function ApronsPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order Branded Aprons — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order Branded Aprons, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -93,7 +93,7 @@ export default function ApronsPage() {
             Branded Aprons
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
-            Custom-printed aprons for restaurants, salons, events, and more — sharp branding that
+            Custom-printed aprons for restaurants, salons, events, and more, sharp branding that
             your team wears proudly every day.
           </p>
         </div>
@@ -125,7 +125,7 @@ export default function ApronsPage() {
                 <p>
                   We offer bib aprons, half aprons, and full-length aprons in a range of fabric
                   colours. Printing is done via high-resolution dye-sublimation or screen-print
-                  depending on design complexity — both produce sharp, colour-fast results that will
+                  depending on design complexity, both produce sharp, colour-fast results that will
                   not crack or fade after washing. Custom fabric colours are available for larger
                   orders.
                 </p>
@@ -134,10 +134,10 @@ export default function ApronsPage() {
                   facilities, schools, craft events, market vendors, and corporate hospitality staff.
                 </p>
                 <ul className="list-disc list-inside space-y-1.5 pl-1">
-                  <li>200 gsm polyester/cotton blend — durable and comfortable</li>
+                  <li>200 gsm polyester/cotton blend, durable and comfortable</li>
                   <li>Bib, half, and full-length styles available</li>
                   <li>High-resolution dye-sublimation or screen-print</li>
-                  <li>Machine washable at 40°C — colour-fast print</li>
+                  <li>Machine washable at 40°C, colour-fast print</li>
                   <li>Multiple print placement options (bib, pocket, lower panel)</li>
                   <li>Minimum order: 5 pieces</li>
                 </ul>
@@ -203,14 +203,14 @@ export default function ApronsPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Branded Apron – ${selectedSize.label} (${selectedSize.dimensions})`,
+                      name: `Branded Apron  to  ${selectedSize.label} (${selectedSize.dimensions})`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Branded+Apron"),
                       href: "/products/branded-apparel/aprons",
@@ -231,7 +231,7 @@ export default function ApronsPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 3–5 day turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 3 to 5 day turnaround · Free local Muhoroni delivery
               </p>
             </div>
 
@@ -243,11 +243,11 @@ export default function ApronsPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Machine washable — colour-fast print that does not fade</span>
+                  <span>Machine washable, colour-fast print that does not fade</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Multiple placement options — bib, pocket, lower panel</span>
+                  <span>Multiple placement options, bib, pocket, lower panel</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>

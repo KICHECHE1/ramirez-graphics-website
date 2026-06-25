@@ -15,18 +15,24 @@ import {
 } from "@/components/ui/accordion";
 import { useCart } from "@/lib/cart-context";
 
+{/*Images */}
+import Brochures from "@/app/assets/brochure.jpg";
+import Flyers from "@/app/assets/flyers.jpeg";
+import Poster from "@/app/assets/Poster.jpg";
+import Document from "@/app/assets/document printing.jpg";
+
 const ph = (w: number, h: number, label: string) =>
   `https://placehold.co/${w}x${h}/e0f2fe/0284c7?text=${encodeURIComponent(label)}`;
 
 const WHATSAPP = "254706207037";
 
 const sizes = [
-  { label: "A6 · Single-sided",  dimensions: "148 × 105 mm, 1 side, 130 gsm gloss", price: 2500 },
-  { label: "A6 · Double-sided",  dimensions: "148 × 105 mm, 2 sides, 130 gsm gloss", price: 3200 },
-  { label: "A5 · Single-sided",  dimensions: "210 × 148 mm, 1 side, 130 gsm gloss",  price: 3500 },
-  { label: "A5 · Double-sided",  dimensions: "210 × 148 mm, 2 sides, 130 gsm gloss", price: 4500 },
-  { label: "A4 · Single-sided",  dimensions: "297 × 210 mm, 1 side, 130 gsm gloss",  price: 5500 },
-  { label: "A4 · Double-sided",  dimensions: "297 × 210 mm, 2 sides, 130 gsm gloss", price: 7000 },
+  { label: "A6 · Single-sided",  dimensions: "148 x 105 mm, 1 side, 130 gsm gloss", price: 2500 },
+  { label: "A6 · Double-sided",  dimensions: "148 x 105 mm, 2 sides, 130 gsm gloss", price: 3200 },
+  { label: "A5 · Single-sided",  dimensions: "210 x 148 mm, 1 side, 130 gsm gloss",  price: 3500 },
+  { label: "A5 · Double-sided",  dimensions: "210 x 148 mm, 2 sides, 130 gsm gloss", price: 4500 },
+  { label: "A4 · Single-sided",  dimensions: "297 x 210 mm, 1 side, 130 gsm gloss",  price: 5500 },
+  { label: "A4 · Double-sided",  dimensions: "297 x 210 mm, 2 sides, 130 gsm gloss", price: 7000 },
 ];
 
 const materialNote =
@@ -35,7 +41,7 @@ const materialNote =
 const faqs = [
   {
     q: "What size flyer should I choose?",
-    a: "A6 (postcard size) is the most cost-effective — great for discount offers, vouchers, and simple announcements. A5 is our most popular size and gives enough room for your logo, headline, key message, and contact details. A4 is ideal when you need to include detailed content, a price list, or a programme.",
+    a: "A6 (postcard size) is the most cost-effective, great for discount offers, vouchers, and simple announcements. A5 is our most popular size and gives enough room for your logo, headline, key message, and contact details. A4 is ideal when you need to include detailed content, a price list, or a programme.",
   },
   {
     q: "What paper finishes are available?",
@@ -47,7 +53,7 @@ const faqs = [
   },
   {
     q: "Can you design my flyer?",
-    a: "Yes. Our in-house design team will create your flyer from your logo, brand colours, and copy — included at no extra charge. If you already have a ready design, just send us the print-ready PDF.",
+    a: "Yes. Our in-house design team will create your flyer from your logo, brand colours, and copy, included at no extra charge. If you already have a ready design, just send us the print-ready PDF.",
   },
   {
     q: "What file format should I submit?",
@@ -55,7 +61,7 @@ const faqs = [
   },
   {
     q: "What is the minimum order quantity?",
-    a: "Our minimum order is 250 flyers. Volume discounts kick in at 500, 1,000, 2,500, and 5,000+ — the more you print, the lower the unit cost.",
+    a: "Our minimum order is 250 flyers. Volume discounts kick in at 500, 1,000, 2,500, and 5,000+, the more you print, the lower the unit cost.",
   },
   {
     q: "Do you deliver outside Muhoroni?",
@@ -67,17 +73,17 @@ const relatedProducts = [
   {
     name: "Brochures Printing",
     href: "/products/flyers/brochures",
-    image: ph(400, 300, "Brochures+Printing"),
+    image: Brochures.src,
   },
   {
     name: "Posters Printing",
     href: "/products/election-printing/posters",
-    image: ph(400, 300, "Posters"),
+    image: Poster.src,
   },
   {
     name: "Document Printing",
     href: "/products/digital-printing/documents",
-    image: ph(400, 300, "Document+Printing"),
+    image: Document.src,
   },
 ];
 
@@ -86,7 +92,7 @@ export default function FlyersPrintingPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order Flyers — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order Flyers, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -110,7 +116,7 @@ export default function FlyersPrintingPage() {
             Flyers Printing
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
-            Vibrant full-colour flyers in A6, A5, and A4 — gloss, matte, or silk finish —
+            Vibrant full-colour flyers in A6, A5, and A4, gloss, matte, or silk finish,
             same-day available, free design, delivered across Kenya from Muhoroni.
           </p>
         </div>
@@ -120,7 +126,7 @@ export default function FlyersPrintingPage() {
           <div className="flex flex-col gap-8">
             <div className="relative aspect-4/3 rounded-2xl overflow-hidden border border-border bg-muted shadow-sm">
               <Image
-                src={ph(700, 525, "Flyers+Printing")}
+                src={Flyers.src}
                 alt="Flyers Printing"
                 fill
                 className="object-cover"
@@ -134,7 +140,7 @@ export default function FlyersPrintingPage() {
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
                   Flyers are one of the most cost-effective and versatile marketing tools available
-                  — and a well-printed flyer still cuts through digital noise when placed directly
+                 , and a well-printed flyer still cuts through digital noise when placed directly
                   in the hands of your target audience. At Ramirez Ventures we print full-colour
                   flyers in A6, A5, and A4 sizes on premium coated paper stocks, with same-day
                   turnaround available for urgent campaigns.
@@ -143,7 +149,7 @@ export default function FlyersPrintingPage() {
                   Whether you are promoting a product launch, announcing an event, sharing a
                   discount offer, running a political campaign, or distributing church programmes,
                   our flyers deliver sharp, vivid results that make your message impossible to
-                  ignore. Printed using high-quality CMYK technology on 100–170 gsm paper in
+                  ignore. Printed using high-quality CMYK technology on 100 to 170 gsm paper in
                   gloss, matte, or silk-coated finishes.
                 </p>
                 <p>
@@ -152,7 +158,7 @@ export default function FlyersPrintingPage() {
                   WhatsApp and we will handle the rest.
                 </p>
                 <ul className="list-disc list-inside space-y-1.5 pl-1">
-                  <li>A6, A5, and A4 sizes — single and double-sided</li>
+                  <li>A6, A5, and A4 sizes, single and double-sided</li>
                   <li>100 gsm, 130 gsm, and 170 gsm paper options</li>
                   <li>Gloss, matte, and silk-coated finishes available</li>
                   <li>Same-day printing for A6 and A5 (order by 10 AM)</li>
@@ -222,14 +228,14 @@ export default function FlyersPrintingPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Flyers – ${selectedSize.label}`,
+                      name: `Flyers  to  ${selectedSize.label}`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Flyers+Printing"),
                       href: "/products/flyers/flyers",
@@ -258,7 +264,7 @@ export default function FlyersPrintingPage() {
               <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Same-day printing — A6 &amp; A5 orders before 10 AM</span>
+                  <span>Same-day printing, A6 &amp; A5 orders before 10 AM</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
@@ -270,7 +276,7 @@ export default function FlyersPrintingPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Volume discounts — the more you print, the less you pay</span>
+                  <span>Volume discounts, the more you print, the less you pay</span>
                 </li>
               </ul>
             </div>

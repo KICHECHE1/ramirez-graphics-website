@@ -23,9 +23,9 @@ const WHATSAPP = "254706207037";
 
 /* ─── Size options ─── */
 const sizes = [
-  { label: "Standard", dimensions: "60cm × 160cm", price: 3500 },
-  { label: "Wide", dimensions: "80cm × 200cm", price: 4500 },
-  { label: "Extra Wide", dimensions: "85cm × 200cm", price: 5500 },
+  { label: "Standard", dimensions: "60cm x 160cm", price: 3500 },
+  { label: "Wide", dimensions: "80cm x 200cm", price: 4500 },
+  { label: "Extra Wide", dimensions: "85cm x 200cm", price: 5500 },
 ];
 
 const materialNote =
@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     q: "Does the price include the stand and carry bag?",
-    a: "Yes — every table rollup comes with the retractable aluminium stand, a cassette base, and a zip carry bag at no extra cost.",
+    a: "Yes, every table rollup comes with the retractable aluminium stand, a cassette base, and a zip carry bag at no extra cost.",
   },
   {
     q: "What file format should I send for my artwork?",
@@ -83,7 +83,7 @@ export default function TableRollupPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order a Table Rollup Banner — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order a Table Rollup Banner, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -110,7 +110,7 @@ export default function TableRollupPage() {
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
             Compact, retractable display banners for trade shows, conferences, retail counters, and
-            corporate events — printed and delivered across Kenya.
+            corporate events, printed and delivered across Kenya.
           </p>
         </div>
 
@@ -135,7 +135,7 @@ export default function TableRollupPage() {
               <h2 className="text-xl font-bold text-foreground mb-4">Product Overview</h2>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  Table rollup banners — also known as tabletop retractable banners — are one of the
+                  Table rollup banners, also known as tabletop retractable banners, are one of the
                   most portable and effective display tools for any business or event. Designed to
                   sit neatly on a table or counter, they deliver a full-height branded visual in a
                   fraction of the space required by a floor-standing banner.
@@ -157,7 +157,7 @@ export default function TableRollupPage() {
                   <li>Lightweight aluminium retractable stand included</li>
                   <li>Zip carry bag for easy portability</li>
                   <li>Suitable for repeated indoor use</li>
-                  <li>Quick setup — no tools required</li>
+                  <li>Quick setup, no tools required</li>
                   <li>Free artwork set-up with every order</li>
                 </ul>
               </div>
@@ -235,7 +235,7 @@ export default function TableRollupPage() {
               <p className="text-sm text-muted-foreground mb-5">
                 Selected:{" "}
                 <span className="font-medium text-foreground">
-                  {selectedSize.label} — {selectedSize.dimensions}
+                  {selectedSize.label}, {selectedSize.dimensions}
                 </span>
               </p>
               <div className="flex flex-col gap-3">
@@ -243,7 +243,7 @@ export default function TableRollupPage() {
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Table Rollup Banner – ${selectedSize.label} (${selectedSize.dimensions})`,
+                      name: `Table Rollup Banner  to  ${selectedSize.label} (${selectedSize.dimensions})`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Table+Rollup"),
                       href: "/products/banners/table-rollup",
@@ -274,7 +274,7 @@ export default function TableRollupPage() {
           </div>
         </div>
 
-        {/* ── Related Products — full width ── */}
+        {/* ── Related Products, full width ── */}
         <section className="mt-16">
           <Separator className="mb-10" />
           <h2 className="text-2xl font-bold text-foreground mb-6">Related Products</h2>

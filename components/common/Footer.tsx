@@ -81,36 +81,35 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="w-full border-t border-brand-surface-foreground/20 bg-brand-surface text-brand-surface-foreground">
-      {/* Main footer grid */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1fr_auto]">
+    <footer className="relative overflow-hidden border-t border-white/10 bg-[oklch(0.145_0_0)] text-white">
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-primary to-transparent" />
 
-        {/* Brand column */}
-        <div className="flex flex-col gap-4 sm:col-span-2 lg:col-span-1">
-          <Link href="/" className="inline-flex items-center gap-2.5 text-brand-surface-foreground">
-            <span className="relative flex size-10 shrink-0 overflow-hidden rounded-full bg-white ring-1 ring-brand-surface-foreground/20">
+      <div className="rv-container py-12 lg:py-14">
+        <div className="grid gap-10 lg:grid-cols-[1.1fr_1.8fr_1fr]">
+          <div className="flex flex-col gap-5">
+            <Link href="/" className="inline-flex items-center gap-3 text-white">
+              <span className="relative flex size-11 shrink-0 overflow-hidden rounded-full bg-white ring-1 ring-white/20">
               <Image
                 src={BrandMark}
                 alt="Ramirez Ventures logo"
-                height={40}
-                className="h-10 w-auto max-w-none object-contain"
+                  height={44}
+                  className="h-11 w-auto max-w-none object-contain"
               />
             </span>
             <span className="flex flex-col leading-none">
-              <span className="text-sm font-bold uppercase text-brand-surface-foreground sm:text-base">
+                <span className="text-base font-bold uppercase text-white">
                 Ramirez Ventures
               </span>
-              <span className="mt-1 text-[10px] font-medium uppercase tracking-wide text-brand-surface-foreground/70 sm:text-xs">
+                <span className="mt-1 text-xs font-medium uppercase tracking-[0.18em] text-white/55">
                 Your local printshop
               </span>
             </span>
           </Link>
-          <p className="text-sm text-brand-surface-foreground/80 leading-relaxed max-w-xs">
+            <p className="max-w-sm text-sm leading-6 text-white/70">
             Your one-stop print &amp; branding partner. Quality you can see, service you can trust.
           </p>
 
-          {/* Social links */}
-          <div className="flex items-center gap-3 mt-1">
+            <div className="flex items-center gap-2">
             {socialLinks.map(({ label, href, icon: Icon }) => (
               <Link
                 key={label}
@@ -118,7 +117,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="flex size-8 items-center justify-center rounded-full border border-brand-surface-foreground/30 text-brand-surface-foreground/70 transition-colors duration-200 hover:border-primary hover:text-primary hover:bg-brand-surface-foreground/10"
+                  className="flex size-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/70 transition-colors duration-200 hover:border-primary hover:bg-primary/15 hover:text-white"
               >
                 <Icon />
               </Link>
@@ -126,40 +125,40 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Product columns */}
-        {productColumns.map((col) => (
-          <div key={col.heading}>
-            <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-brand-surface-foreground">
-              {col.heading}
-            </h3>
-            <ul className="flex flex-col gap-2">
-              {col.links.map(({ label, href }) => (
-                <li key={href}>
-                  <Link
-                    href={href}
-                    className="text-sm text-brand-surface-foreground/70 transition-colors duration-150 hover:text-primary"
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          <div className="grid gap-8 sm:grid-cols-3">
+            {productColumns.map((col) => (
+              <div key={col.heading}>
+                <h3 className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-white">
+                  {col.heading}
+                </h3>
+                <ul className="flex flex-col gap-2.5">
+                  {col.links.map(({ label, href }) => (
+                    <li key={href}>
+                      <Link
+                        href={href}
+                        className="text-sm text-white/65 transition-colors duration-150 hover:text-primary"
+                      >
+                        {label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
           </div>
         ))}
+          </div>
 
-        {/* Addresses */}
-        <div className="flex flex-col gap-6 sm:col-span-2 lg:col-span-1">
-          <h3 className="text-xs font-semibold uppercase tracking-wider text-brand-surface-foreground">
-            Find Us
-          </h3>
-          {addresses.map((addr) => (
-            <div key={addr.city} className="flex flex-col gap-1.5">
-              <p className="text-sm font-semibold text-brand-surface-foreground">{addr.city}</p>
-              <address className="not-italic flex flex-col gap-1">
+          <div className="rounded-lg border border-white/10 bg-white/5 p-5">
+            <h3 className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-white">
+              Find Us
+            </h3>
+            {addresses.map((addr) => (
+              <div key={addr.city} className="flex flex-col gap-3">
+                <p className="text-sm font-semibold text-white">{addr.city}</p>
+                <address className="flex flex-col gap-2.5 not-italic">
                 {addr.lines.map((line) => (
-                  <span key={line} className="flex items-start gap-1.5 text-xs text-brand-surface-foreground/70">
+                    <span key={line} className="flex items-start gap-2 text-xs text-white/65">
                     {addr.lines.indexOf(line) === 0 && (
-                      <MapPin className="size-3.5 mt-0.5 shrink-0 text-brand-surface-foreground" />
+                        <MapPin className="mt-0.5 size-3.5 shrink-0 text-primary" />
                     )}
                     {addr.lines.indexOf(line) !== 0 && (
                       <span className="w-3.5 shrink-0" />
@@ -169,31 +168,37 @@ export default function Footer() {
                 ))}
                 <Link
                   href={`tel:${addr.phone.replace(/\s/g, "")}`}
-                  className="flex items-center gap-1.5 text-xs text-brand-surface-foreground/70 hover:text-brand-surface-foreground transition-colors duration-150"
+                    className="flex items-center gap-2 text-xs text-white/65 transition-colors duration-150 hover:text-white"
                 >
-                  <Phone className="size-3.5 shrink-0 text-brand-surface-foreground" />
+                    <Phone className="size-3.5 shrink-0 text-primary" />
                   {addr.phone}
                 </Link>
                 <Link
                   href={`mailto:${addr.email}`}
-                  className="flex items-center gap-1.5 text-xs text-brand-surface-foreground/70 hover:text-brand-surface-foreground transition-colors duration-150"
+                    className="flex items-center gap-2 text-xs text-white/65 transition-colors duration-150 hover:text-white"
                 >
-                  <Mail className="size-3.5 shrink-0 text-brand-surface-foreground" />
+                    <Mail className="size-3.5 shrink-0 text-primary" />
                   {addr.email}
                 </Link>
               </address>
             </div>
           ))}
+            <Link
+              href="/contact"
+              className="mt-5 inline-flex w-full items-center justify-center rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+            >
+              Start a Project
+            </Link>
+          </div>
         </div>
       </div>
 
-      {/* Bottom bar */}
-      <div className="border-t border-brand-surface-foreground/20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-brand-surface-foreground/70">
+      <div className="border-t border-white/10">
+        <div className="rv-container flex flex-col items-center justify-between gap-3 py-4 text-xs text-white/55 sm:flex-row">
           <span>&copy; {year} Ramirez Ventures. All rights reserved.</span>
           <div className="flex items-center gap-4">
-            <Link href="/privacy" className="hover:text-brand-surface-foreground transition-colors duration-150">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-brand-surface-foreground transition-colors duration-150">Terms of Service</Link>
+            <Link href="/privacy" className="transition-colors duration-150 hover:text-white">Privacy Policy</Link>
+            <Link href="/terms" className="transition-colors duration-150 hover:text-white">Terms of Service</Link>
           </div>
         </div>
       </div>

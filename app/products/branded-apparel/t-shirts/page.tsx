@@ -21,11 +21,11 @@ const ph = (w: number, h: number, label: string) =>
 const WHATSAPP = "254706207037";
 
 const sizes = [
-  { label: "Small (S)",       dimensions: "Chest 34–36 in", price: 1200 },
-  { label: "Medium (M)",      dimensions: "Chest 38–40 in", price: 1200 },
-  { label: "Large (L)",       dimensions: "Chest 40–42 in", price: 1200 },
-  { label: "X-Large (XL)",    dimensions: "Chest 42–44 in", price: 1200 },
-  { label: "XX-Large (XXL)",  dimensions: "Chest 44–46 in", price: 1400 },
+  { label: "Small (S)",       dimensions: "Chest 34 to 36 in", price: 1200 },
+  { label: "Medium (M)",      dimensions: "Chest 38 to 40 in", price: 1200 },
+  { label: "Large (L)",       dimensions: "Chest 40 to 42 in", price: 1200 },
+  { label: "X-Large (XL)",    dimensions: "Chest 42 to 44 in", price: 1200 },
+  { label: "XX-Large (XXL)",  dimensions: "Chest 44 to 46 in", price: 1400 },
 ];
 
 const materialNote =
@@ -46,11 +46,11 @@ const faqs = [
   },
   {
     q: "Do you supply the T-shirts or can I provide my own?",
-    a: "We supply quality blank T-shirts as part of the order. If you already have garments you want printed, contact us first — we can print on customer-supplied garments in most cases.",
+    a: "We supply quality blank T-shirts as part of the order. If you already have garments you want printed, contact us first, we can print on customer-supplied garments in most cases.",
   },
   {
     q: "How long does production take?",
-    a: "Orders of 5–30 pieces are typically ready within 3–5 business days. Larger orders may take 5–7 days. Rush orders can be arranged — WhatsApp us to confirm availability.",
+    a: "Orders of 5 to 30 pieces are typically ready within 3 to 5 business days. Larger orders may take 5 to 7 days. Rush orders can be arranged, WhatsApp us to confirm availability.",
   },
   {
     q: "Do you deliver outside Muhoroni?",
@@ -69,7 +69,7 @@ export default function TshirtsPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order Branded T-Shirts — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order Branded T-Shirts, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -95,7 +95,7 @@ export default function TshirtsPage() {
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
             High-quality custom-printed T-shirts for corporate teams, events, schools, clubs, and
-            promotions — your brand, worn everywhere.
+            promotions, your brand, worn everywhere.
           </p>
         </div>
 
@@ -123,8 +123,8 @@ export default function TshirtsPage() {
                   your team will be proud to wear.
                 </p>
                 <p>
-                  We print on premium 180 gsm combed ringspun cotton T-shirts — softer and more
-                  durable than standard garments — in a wide range of fabric colours. Our
+                  We print on premium 180 gsm combed ringspun cotton T-shirts, softer and more
+                  durable than standard garments, in a wide range of fabric colours. Our
                   screen-printing process uses plastisol inks that bond permanently to the fabric,
                   producing bold, wash-resistant prints that stay bright after hundreds of washes.
                   For complex multi-colour or photographic designs, we offer direct-to-garment
@@ -135,7 +135,7 @@ export default function TshirtsPage() {
                   prints and all-over designs can be arranged on request.
                 </p>
                 <ul className="list-disc list-inside space-y-1.5 pl-1">
-                  <li>180 gsm combed ringspun cotton — premium soft feel</li>
+                  <li>180 gsm combed ringspun cotton, premium soft feel</li>
                   <li>Screen-print or DTG print methods available</li>
                   <li>Wide range of fabric colours in stock</li>
                   <li>Front, back, sleeve, and all-over print options</li>
@@ -204,14 +204,14 @@ export default function TshirtsPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Branded T-Shirt – ${selectedSize.label} (${selectedSize.dimensions})`,
+                      name: `Branded T-Shirt  to  ${selectedSize.label} (${selectedSize.dimensions})`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Branded+T-Shirt"),
                       href: "/products/branded-apparel/t-shirts",
@@ -232,7 +232,7 @@ export default function TshirtsPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 3–5 day turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 3 to 5 day turnaround · Free local Muhoroni delivery
               </p>
             </div>
 
@@ -244,7 +244,7 @@ export default function TshirtsPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Wash-resistant prints — colours stay bold after hundreds of washes</span>
+                  <span>Wash-resistant prints, colours stay bold after hundreds of washes</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
@@ -252,7 +252,7 @@ export default function TshirtsPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Bulk pricing — the more you order, the less per piece</span>
+                  <span>Bulk pricing, the more you order, the less per piece</span>
                 </li>
               </ul>
             </div>

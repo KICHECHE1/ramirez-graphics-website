@@ -21,15 +21,15 @@ const ph = (w: number, h: number, label: string) =>
 const WHATSAPP = "254706207037";
 
 const sizes = [
-  { label: "Small (S)",       dimensions: "Chest 34–36 in", price: 2200 },
-  { label: "Medium (M)",      dimensions: "Chest 38–40 in", price: 2200 },
-  { label: "Large (L)",       dimensions: "Chest 40–42 in", price: 2200 },
-  { label: "X-Large (XL)",    dimensions: "Chest 42–44 in", price: 2200 },
-  { label: "XX-Large (XXL)",  dimensions: "Chest 44–46 in", price: 2600 },
+  { label: "Small (S)",       dimensions: "Chest 34 to 36 in", price: 2200 },
+  { label: "Medium (M)",      dimensions: "Chest 38 to 40 in", price: 2200 },
+  { label: "Large (L)",       dimensions: "Chest 40 to 42 in", price: 2200 },
+  { label: "X-Large (XL)",    dimensions: "Chest 42 to 44 in", price: 2200 },
+  { label: "XX-Large (XXL)",  dimensions: "Chest 44 to 46 in", price: 2600 },
 ];
 
 const materialNote =
-  "280 gsm 80/20 cotton-polyester fleece blend — warm, soft, and durable. Available in a range of solid colours including black, navy, grey, and custom colours for bulk orders. Printing via high-quality screen-print or embroidery. Minimum order: 5 pieces.";
+  "280 gsm 80/20 cotton-polyester fleece blend, warm, soft, and durable. Available in a range of solid colours including black, navy, grey, and custom colours for bulk orders. Printing via high-quality screen-print or embroidery. Minimum order: 5 pieces.";
 
 const faqs = [
   {
@@ -50,7 +50,7 @@ const faqs = [
   },
   {
     q: "How long does production take?",
-    a: "Standard orders of 5–20 pieces are ready within 3–5 business days. Larger batches may take up to 7 days. Rush orders available — contact us on WhatsApp.",
+    a: "Standard orders of 5 to 20 pieces are ready within 3 to 5 business days. Larger batches may take up to 7 days. Rush orders available, contact us on WhatsApp.",
   },
   {
     q: "Do you deliver outside Muhoroni?",
@@ -69,7 +69,7 @@ export default function HoodiesPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order Branded Hoodies — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order Branded Hoodies, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -95,7 +95,7 @@ export default function HoodiesPage() {
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
             Premium custom-printed or embroidered hoodies for corporate teams, schools, clubs, and
-            events — warm, durable, and unmistakably on-brand.
+            events, warm, durable, and unmistakably on-brand.
           </p>
         </div>
 
@@ -119,11 +119,11 @@ export default function HoodiesPage() {
                 <p>
                   A well-made branded hoodie doubles as both a warm garment and a walking
                   advertisement for your organisation. At Ramirez Ventures we print and embroider
-                  hoodies that people actually want to wear — comfortable enough for everyday use,
+                  hoodies that people actually want to wear, comfortable enough for everyday use,
                   and sharp enough to represent your brand with confidence.
                 </p>
                 <p>
-                  Our hoodies are made from 280 gsm 80/20 cotton-polyester fleece — warm and soft
+                  Our hoodies are made from 280 gsm 80/20 cotton-polyester fleece, warm and soft
                   on the inside, with a smooth exterior that holds print and embroidery beautifully.
                   We offer pullover and full-zip styles, available in a wide range of solid colours.
                   Screen-printing is used for bold multi-colour designs; embroidery is offered as a
@@ -203,14 +203,14 @@ export default function HoodiesPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Branded Hoodie – ${selectedSize.label} (${selectedSize.dimensions})`,
+                      name: `Branded Hoodie  to  ${selectedSize.label} (${selectedSize.dimensions})`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Branded+Hoodie"),
                       href: "/products/branded-apparel/hoodies",
@@ -231,7 +231,7 @@ export default function HoodiesPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 3–5 day turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 3 to 5 day turnaround · Free local Muhoroni delivery
               </p>
             </div>
 
@@ -239,7 +239,7 @@ export default function HoodiesPage() {
               <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Screen-print or premium embroidery finish — your choice</span>
+                  <span>Screen-print or premium embroidery finish, your choice</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>

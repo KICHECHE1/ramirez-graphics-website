@@ -21,10 +21,10 @@ const ph = (w: number, h: number, label: string) =>
 const WHATSAPP = "254706207037";
 
 const sizes = [
-  { label: "Credit Card · Pin clip",     dimensions: "85 × 55 mm, pin clip",     price: 3000 },
-  { label: "Credit Card · Magnetic",     dimensions: "85 × 55 mm, magnet back",  price: 3800 },
-  { label: "DL · Pin clip",              dimensions: "99 × 56 mm, pin clip",     price: 3500 },
-  { label: "DL · With lanyard slot",     dimensions: "99 × 56 mm + slot, lanyard included", price: 4500 },
+  { label: "Credit Card · Pin clip",     dimensions: "85 x 55 mm, pin clip",     price: 3000 },
+  { label: "Credit Card · Magnetic",     dimensions: "85 x 55 mm, magnet back",  price: 3800 },
+  { label: "DL · Pin clip",              dimensions: "99 x 56 mm, pin clip",     price: 3500 },
+  { label: "DL · With lanyard slot",     dimensions: "99 x 56 mm + slot, lanyard included", price: 4500 },
   { label: "Custom Size · Lanyard",      dimensions: "Custom size + lanyard",    price: 5500 },
 ];
 
@@ -34,11 +34,11 @@ const materialNote =
 const faqs = [
   {
     q: "Can each nametag have a different name and role?",
-    a: "Yes. Variable data printing lets us personalise every nametag with an individual name, title, party role, or voter registration number — all from a spreadsheet you supply. Each tag is unique at no significant additional cost.",
+    a: "Yes. Variable data printing lets us personalise every nametag with an individual name, title, party role, or voter registration number, all from a spreadsheet you supply. Each tag is unique at no significant additional cost.",
   },
   {
     q: "Do you supply lanyards as well?",
-    a: "Yes. Standard woven polyester lanyards in any colour are available as an add-on. Branded lanyards with your party logo screen-printed on them are also available — contact us for pricing.",
+    a: "Yes. Standard woven polyester lanyards in any colour are available as an add-on. Branded lanyards with your party logo screen-printed on them are also available, contact us for pricing.",
   },
   {
     q: "What attachment options are available?",
@@ -50,7 +50,7 @@ const faqs = [
   },
   {
     q: "How long does production take?",
-    a: "Standard nametags without variable data are ready within 24 hours. Personalised (variable data) orders for up to 500 tags take 48 hours. Rush orders are available — contact us.",
+    a: "Standard nametags without variable data are ready within 24 hours. Personalised (variable data) orders for up to 500 tags take 48 hours. Rush orders are available, contact us.",
   },
   {
     q: "Do you deliver outside Muhoroni?",
@@ -81,7 +81,7 @@ export default function NametagsPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order Nametags — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order Nametags, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -105,7 +105,7 @@ export default function NametagsPage() {
             Nametags Printing
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
-            Full-colour personalised nametags for campaign agents, event staff, and delegates —
+            Full-colour personalised nametags for campaign agents, event staff, and delegates,
             pin clip, magnet, or lanyard options with individual name printing for every tag.
           </p>
         </div>
@@ -136,7 +136,7 @@ export default function NametagsPage() {
                 </p>
                 <p>
                   Our variable data printing capability means every tag in the batch can carry a
-                  unique name, role, or serial number — all printed in a single run from a
+                  unique name, role, or serial number, all printed in a single run from a
                   spreadsheet you supply. Ideal for campaign agents, polling agents, event
                   volunteers, and conference delegates.
                 </p>
@@ -149,10 +149,10 @@ export default function NametagsPage() {
                   <li>Full-colour print on 350 gsm laminated art board</li>
                   <li>Credit-card and DL size options</li>
                   <li>Pin clip, magnet back, and lanyard slot choices</li>
-                  <li>Variable data — unique name and role per tag</li>
+                  <li>Variable data, unique name and role per tag</li>
                   <li>Lanyards and plastic holders available as add-ons</li>
                   <li>Minimum 50 nametags per order</li>
-                  <li>Ready within 24–48 hours</li>
+                  <li>Ready within 24 to 48 hours</li>
                 </ul>
               </div>
             </div>
@@ -216,14 +216,14 @@ export default function NametagsPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Nametags – ${selectedSize.label}`,
+                      name: `Nametags  to  ${selectedSize.label}`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Nametags"),
                       href: "/products/election-printing/nametags",
@@ -244,7 +244,7 @@ export default function NametagsPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 24–48 hr turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 24 to 48 hr turnaround · Free local Muhoroni delivery
               </p>
             </div>
 
@@ -252,7 +252,7 @@ export default function NametagsPage() {
               <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Variable data — unique name and role on every tag</span>
+                  <span>Variable data, unique name and role on every tag</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
@@ -260,7 +260,7 @@ export default function NametagsPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>350 gsm laminated board — durable for multi-day events</span>
+                  <span>350 gsm laminated board, durable for multi-day events</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>

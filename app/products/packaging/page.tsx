@@ -77,12 +77,12 @@ const productDescriptions = [
   {
     name: "Pillow Boxes",
     description:
-      "Curved pillow-shaped retail boxes ideal for jewellery, accessories, and small gifts. Printed full-colour on 300–400 gsm art board, scored and pre-creased for easy assembly.",
+      "Curved pillow-shaped retail boxes ideal for jewellery, accessories, and small gifts. Printed full-colour on 300 to 400 gsm art board, scored and pre-creased for easy assembly.",
   },
   {
     name: "Product Labels & Seals",
     description:
-      "Adhesive labels for bottles, jars, tubes, and boxes — printed in full colour with QR codes, barcodes, and regulatory panels. Roll labels, sheet labels, tamper-evident seals, and peel-and-reveal formats.",
+      "Adhesive labels for bottles, jars, tubes, and boxes, printed in full colour with QR codes, barcodes, and regulatory panels. Roll labels, sheet labels, tamper-evident seals, and peel-and-reveal formats.",
   },
 ];
 
@@ -91,13 +91,13 @@ const features = [
     icon: Star,
     title: "Premium Print Finish",
     description:
-      "Gloss lamination, matte lamination, soft-touch, foil stamping, and UV spot coating — we offer the premium finishing options your packaging deserves.",
+      "Gloss lamination, matte lamination, soft-touch, foil stamping, and UV spot coating, we offer the premium finishing options your packaging deserves.",
   },
   {
     icon: Clock,
     title: "Fast Production",
     description:
-      "Standard packaging orders are produced in 5–7 working days. Rush production available for urgent retail and event deadlines.",
+      "Standard packaging orders are produced in 5 to 7 working days. Rush production available for urgent retail and event deadlines.",
   },
   {
     icon: Truck,
@@ -109,7 +109,7 @@ const features = [
     icon: Palette,
     title: "Free Design & Dieline Support",
     description:
-      "Our packaging designers will create your box dieline and artwork layout at no extra charge — ready for structural production.",
+      "Our packaging designers will create your box dieline and artwork layout at no extra charge, ready for structural production.",
   },
   {
     icon: ShieldCheck,
@@ -131,16 +131,16 @@ export default function PackagingPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* ── Hero ── */}
-      <section className="relative isolate overflow-hidden bg-gradient-to-br from-primary/90 via-primary to-primary/80">
+      <section className="relative isolate overflow-hidden bg-brand-surface">
         <Image
           src={ph(1400, 400, "Custom+Packaging+Kenya")}
           alt="Custom packaging solutions"
           fill
-          className="object-cover opacity-20 mix-blend-overlay"
+          className="object-cover opacity-70"
           priority
           unoptimized
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-transparent to-primary/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-primary/20" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <nav className="mb-6 flex items-center gap-1.5 text-sm text-primary-foreground/70 flex-wrap">
             <Link href="/" className="hover:text-primary-foreground transition-colors">Home</Link>
@@ -161,10 +161,10 @@ export default function PackagingPage() {
               and create memorable unboxing experiences for your customers.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg" asChild>
+              <Button size="lg" className="rv-hero-button-primary" asChild>
                 <a href="#products">Browse Packaging</a>
               </Button>
-              <Button size="lg" variant="outline" className="border-white/40 text-primary-foreground hover:bg-white/10" asChild>
+              <Button size="lg" variant="outline" className="rv-hero-button-secondary" asChild>
                 <Link href="/contact">Get a Quote</Link>
               </Button>
             </div>
@@ -248,14 +248,14 @@ export default function PackagingPage() {
             </div>
 
             {/* Overview */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <Badge variant="secondary" className="mb-4">About Packaging</Badge>
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-5 leading-snug">
                 Premium Custom Packaging That Sells Your Product
               </h2>
               <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
                 <p>
-                  In today&apos;s competitive retail landscape, packaging is not just a container —
+                  In today&apos;s competitive retail landscape, packaging is not just a container,
                   it is the first touchpoint between your brand and your customer. Great packaging
                   communicates your quality, builds brand recognition, and creates the memorable
                   unboxing experience that drives word-of-mouth and repeat purchases. At Ramirez
@@ -312,7 +312,7 @@ export default function PackagingPage() {
             </section>
 
             {/* Product descriptions */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <Badge variant="secondary" className="mb-4">What We Offer</Badge>
               <h2 className="text-2xl font-bold text-foreground mb-6">
                 Our Packaging Products in Detail
@@ -336,14 +336,14 @@ export default function PackagingPage() {
             </section>
 
             {/* Why Choose Ramirez */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <div className="text-center mb-10">
                 <Badge variant="secondary" className="mb-3">Why Choose Us</Badge>
                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
                   Why Choose Ramirez Ventures for Your Packaging?
                 </h2>
                 <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">
-                  From concept to carton — we handle design, production, and delivery under one
+                  From concept to carton, we handle design, production, and delivery under one
                   roof so your packaging is always on time and on brand.
                 </p>
               </div>
@@ -366,7 +366,7 @@ export default function PackagingPage() {
                   );
                 })}
               </div>
-              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 rounded-xl bg-primary/5 border border-primary/20 p-6">
+              <div className="rv-soft-cta mt-10 flex flex-col items-center justify-center gap-4 rounded-lg sm:flex-row">
                 <div className="text-center sm:text-left">
                   <p className="font-semibold text-foreground">Ready to order?</p>
                   <p className="text-sm text-muted-foreground">

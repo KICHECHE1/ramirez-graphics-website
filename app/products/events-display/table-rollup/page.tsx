@@ -15,28 +15,33 @@ import {
 } from "@/components/ui/accordion";
 import { useCart } from "@/lib/cart-context";
 
+{/* Images */}
+import BackdropBanner from "@/app/assets/back drop banner.jpg";
+import TableCloth from "@/app/assets/Tablecloth.jpg";
+import ButtonBadges from "@/app/assets/Button_Mockup_3.jpg";
+import TableRollup from "@/app/assets/table roll up _Banner_Mockup_2.jpg";
 const ph = (w: number, h: number, label: string) =>
   `https://placehold.co/${w}x${h}/e0f2fe/0284c7?text=${encodeURIComponent(label)}`;
 
 const WHATSAPP = "254706207037";
 
 const sizes = [
-  { label: "60 × 160 cm",  dimensions: "60 × 160 cm — compact table banner",  price: 4500 },
-  { label: "80 × 200 cm",  dimensions: "80 × 200 cm — standard table banner",  price: 5500 },
-  { label: "100 × 200 cm", dimensions: "100 × 200 cm — wide table banner",     price: 6500 },
+  { label: "60 x 160 cm",  dimensions: "60 x 160 cm, compact table banner",  price: 4500 },
+  { label: "80 x 200 cm",  dimensions: "80 x 200 cm, standard table banner",  price: 5500 },
+  { label: "100 x 200 cm", dimensions: "100 x 200 cm, wide table banner",     price: 6500 },
 ];
 
 const materialNote =
-  "Printed on 440 gsm premium cast-coated vinyl with UV-resistant inks. Includes retractable aluminium base and carry case. Setup in under a minute — no tools required.";
+  "Printed on 440 gsm premium cast-coated vinyl with UV-resistant inks. Includes retractable aluminium base and carry case. Setup in under a minute, no tools required.";
 
 const faqs = [
   {
     q: "How is a table rollup banner different from a standard rollup?",
-    a: "A table rollup is shorter and designed to sit on a table or counter rather than stand on the floor. It provides maximum brand visibility within a compact display footprint — ideal for exhibitions, conferences, and product demos where floor space is limited.",
+    a: "A table rollup is shorter and designed to sit on a table or counter rather than stand on the floor. It provides maximum brand visibility within a compact display footprint, ideal for exhibitions, conferences, and product demos where floor space is limited.",
   },
   {
     q: "How long does the print last?",
-    a: "Our table rollup prints use UV-resistant inks on premium cast-coated vinyl. Under normal indoor use the print will remain vibrant for 3–5 years. Avoid prolonged direct sunlight to extend lifespan.",
+    a: "Our table rollup prints use UV-resistant inks on premium cast-coated vinyl. Under normal indoor use the print will remain vibrant for 3 to 5 years. Avoid prolonged direct sunlight to extend lifespan.",
   },
   {
     q: "Can I get replacement prints for my existing base?",
@@ -44,11 +49,11 @@ const faqs = [
   },
   {
     q: "What artwork format should I use?",
-    a: "A PDF or high-resolution PNG at 72–150 dpi at full size works well. If you have a vector file (AI, EPS), that is even better. If you do not have artwork we will design it from your logo and brand details at no extra charge.",
+    a: "A PDF or high-resolution PNG at 72 to 150 dpi at full size works well. If you have a vector file (AI, EPS), that is even better. If you do not have artwork we will design it from your logo and brand details at no extra charge.",
   },
   {
     q: "How quickly are table rollup banners ready?",
-    a: "Standard orders are ready within 2–3 working days. Express 24-hour turnaround is available for an additional charge — contact us to confirm availability.",
+    a: "Standard orders are ready within 2 to 3 working days. Express 24-hour turnaround is available for an additional charge, contact us to confirm availability.",
   },
   {
     q: "Do you deliver outside Muhoroni?",
@@ -60,17 +65,17 @@ const relatedProducts = [
   {
     name: "Adjustable Backdrop Banner",
     href: "/products/events-display/backdrop-banner",
-    image: ph(400, 300, "Backdrop+Banner"),
+    image: BackdropBanner.src,
   },
   {
     name: "Table Cloth Printing",
     href: "/products/events-display/table-cloth",
-    image: ph(400, 300, "Table+Cloth"),
+    image: TableCloth.src,
   },
   {
     name: "Button Badges Printing",
     href: "/products/events-display/button-badges",
-    image: ph(400, 300, "Button+Badges"),
+    image: ButtonBadges.src,
   },
 ];
 
@@ -79,7 +84,7 @@ export default function EventsTableRollupPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order a Table Rollup Banner (Events Display) — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order a Table Rollup Banner (Events Display), ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -103,7 +108,7 @@ export default function EventsTableRollupPage() {
             Table Rollup Printing
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
-            Compact, portable table rollup banners on premium 440 gsm vinyl — perfect for
+            Compact, portable table rollup banners on premium 440 gsm vinyl, perfect for
             exhibitions, conferences, and events where floor space is precious.
           </p>
         </div>
@@ -111,16 +116,16 @@ export default function EventsTableRollupPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
           {/* LEFT */}
           <div className="flex flex-col gap-8">
-            <div className="relative aspect-4/3 rounded-2xl overflow-hidden border border-border bg-muted shadow-sm">
-              <Image
-                src={ph(700, 525, "Table+Rollup+Banner")}
-                alt="Table Rollup Banner"
-                fill
-                className="object-cover"
-                unoptimized
-                priority
-              />
-            </div>
+      <div className="relative aspect-[2/3] rounded-2xl overflow-hidden border border-border bg-muted shadow-sm">
+  <Image
+    src={TableRollup.src}
+    alt="Table Rollup Banner"
+    fill
+    className="object-cover"
+    unoptimized
+    priority
+  />
+</div>
 
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-xl font-bold text-foreground mb-4">Product Overview</h2>
@@ -129,7 +134,7 @@ export default function EventsTableRollupPage() {
                   Table rollup banners are the go-to display solution for any business that
                   exhibits at trade shows, attends conferences, or sets up branded counters at
                   activations and corporate events. Unlike full-height floor-standing rollups,
-                  table rollups are designed to sit on a table or counter — keeping your brand
+                  table rollups are designed to sit on a table or counter, keeping your brand
                   visible at eye-level without taking up floor space.
                 </p>
                 <p>
@@ -139,13 +144,13 @@ export default function EventsTableRollupPage() {
                   it travels safely to every event.
                 </p>
                 <p>
-                  Free design is included — send us your logo and event details and our team will
+                  Free design is included, send us your logo and event details and our team will
                   produce a polished layout ready for your approval before printing.
                 </p>
                 <ul className="list-disc list-inside space-y-1.5 pl-1">
                   <li>440 gsm premium cast-coated vinyl</li>
-                  <li>UV-resistant inks — vivid colour indoors and outdoors</li>
-                  <li>Retractable aluminium base — setup in under 1 minute</li>
+                  <li>UV-resistant inks, vivid colour indoors and outdoors</li>
+                  <li>Retractable aluminium base, setup in under 1 minute</li>
                   <li>Carry case included</li>
                   <li>3 standard sizes available</li>
                   <li>Free design from your logo and brand details</li>
@@ -213,14 +218,14 @@ export default function EventsTableRollupPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Table Rollup Banner – ${selectedSize.label}`,
+                      name: `Table Rollup Banner  to  ${selectedSize.label}`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Table+Rollup"),
                       href: "/products/events-display/table-rollup",
@@ -241,7 +246,7 @@ export default function EventsTableRollupPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 2–3 day turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 2 to 3 day turnaround · Free local Muhoroni delivery
               </p>
             </div>
 
@@ -249,11 +254,11 @@ export default function EventsTableRollupPage() {
               <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Sets up in under 1 minute — no tools needed</span>
+                  <span>Sets up in under 1 minute, no tools needed</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Carry case included — travels safely to every event</span>
+                  <span>Carry case included, travels safely to every event</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
@@ -261,7 +266,7 @@ export default function EventsTableRollupPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Replacement prints available — reuse your existing base</span>
+                  <span>Replacement prints available, reuse your existing base</span>
                 </li>
               </ul>
             </div>

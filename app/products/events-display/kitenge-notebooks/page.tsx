@@ -14,6 +14,11 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useCart } from "@/lib/cart-context";
+ {/* Images */}
+import BackdropBanner from "@/app/assets/back drop banner.jpg";
+import TableCloth from "@/app/assets/Tablecloth.jpg";
+import ButtonBadges from "@/app/assets/Button_Mockup_3.jpg";
+import Kitenge from "@/app/assets/kitenge notebooks.jpg";
 
 const ph = (w: number, h: number, label: string) =>
   `https://placehold.co/${w}x${h}/e0f2fe/0284c7?text=${encodeURIComponent(label)}`;
@@ -21,11 +26,11 @@ const ph = (w: number, h: number, label: string) =>
 const WHATSAPP = "254706207037";
 
 const sizes = [
-  { label: "A6 Notebook · 50 pp",   dimensions: "A6 (105 × 148 mm), 50 ruled pages",  price: 450 },
-  { label: "A6 Notebook · 100 pp",  dimensions: "A6 (105 × 148 mm), 100 ruled pages", price: 650 },
-  { label: "A5 Notebook · 50 pp",   dimensions: "A5 (148 × 210 mm), 50 ruled pages",  price: 650 },
-  { label: "A5 Notebook · 100 pp",  dimensions: "A5 (148 × 210 mm), 100 ruled pages", price: 950 },
-  { label: "A5 Notebook · 200 pp",  dimensions: "A5 (148 × 210 mm), 200 ruled pages", price: 1400 },
+  { label: "A6 Notebook · 50 pp",   dimensions: "A6 (105 x 148 mm), 50 ruled pages",  price: 450 },
+  { label: "A6 Notebook · 100 pp",  dimensions: "A6 (105 x 148 mm), 100 ruled pages", price: 650 },
+  { label: "A5 Notebook · 50 pp",   dimensions: "A5 (148 x 210 mm), 50 ruled pages",  price: 650 },
+  { label: "A5 Notebook · 100 pp",  dimensions: "A5 (148 x 210 mm), 100 ruled pages", price: 950 },
+  { label: "A5 Notebook · 200 pp",  dimensions: "A5 (148 x 210 mm), 200 ruled pages", price: 1400 },
 ];
 
 const materialNote =
@@ -38,7 +43,7 @@ const faqs = [
   },
   {
     q: "Can I choose a specific Kitenge pattern?",
-    a: "We carry a curated selection of Kitenge patterns — you can specify a preferred colour palette or pattern family when ordering. For large corporate orders (200+) we may be able to source a custom fabric on request.",
+    a: "We carry a curated selection of Kitenge patterns, you can specify a preferred colour palette or pattern family when ordering. For large corporate orders (200+) we may be able to source a custom fabric on request.",
   },
   {
     q: "Can my company logo be printed inside the notebook?",
@@ -46,11 +51,11 @@ const faqs = [
   },
   {
     q: "Are the notebooks suitable as corporate gifts?",
-    a: "Absolutely. Kitenge notebooks are one of our most popular corporate gift items. They are culturally distinctive, high-quality, and practical — delegates actually keep and use them long after an event, making them excellent brand ambassadors.",
+    a: "Absolutely. Kitenge notebooks are one of our most popular corporate gift items. They are culturally distinctive, high-quality, and practical, delegates actually keep and use them long after an event, making them excellent brand ambassadors.",
   },
   {
     q: "What is the minimum order quantity?",
-    a: "Our minimum order is 20 notebooks. Corporate bulk pricing applies at 50, 100, and 250+ units — contact us for a quote.",
+    a: "Our minimum order is 20 notebooks. Corporate bulk pricing applies at 50, 100, and 250+ units, contact us for a quote.",
   },
   {
     q: "Do you deliver outside Muhoroni?",
@@ -62,17 +67,17 @@ const relatedProducts = [
   {
     name: "Button Badges Printing",
     href: "/products/events-display/button-badges",
-    image: ph(400, 300, "Button+Badges"),
+    image: ButtonBadges.src,
   },
   {
     name: "Table Cloth Printing",
     href: "/products/events-display/table-cloth",
-    image: ph(400, 300, "Table+Cloth"),
+    image: TableCloth.src,
   },
   {
     name: "Adjustable Backdrop Banner",
     href: "/products/events-display/backdrop-banner",
-    image: ph(400, 300, "Backdrop+Banner"),
+    image: BackdropBanner.src,
   },
 ];
 
@@ -81,7 +86,7 @@ export default function KitengeNotebooksPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order Kitenge Notebooks — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order Kitenge Notebooks, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -105,7 +110,7 @@ export default function KitengeNotebooksPage() {
             Kitenge Notebooks
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
-            Authentic African Kitenge fabric-covered notebooks — a memorable corporate gift and
+            Authentic African Kitenge fabric-covered notebooks, a memorable corporate gift and
             event giveaway that delegates will actually keep and use.
           </p>
         </div>
@@ -115,7 +120,7 @@ export default function KitengeNotebooksPage() {
           <div className="flex flex-col gap-8">
             <div className="relative aspect-4/3 rounded-2xl overflow-hidden border border-border bg-muted shadow-sm">
               <Image
-                src={ph(700, 525, "Kitenge+Notebooks")}
+                src={Kitenge.src}
                 alt="Kitenge Notebooks"
                 fill
                 className="object-cover"
@@ -131,7 +136,7 @@ export default function KitengeNotebooksPage() {
                   Kitenge notebooks are where African heritage meets functional corporate branding.
                   The bold, vibrant wax-print Kitenge fabric cover elevates a simple notebook into
                   a culturally rich gift that stands out from the typical pen-and-pad event pack.
-                  Delegates remember where they received them — and your brand travels with every
+                  Delegates remember where they received them, and your brand travels with every
                   page they fill.
                 </p>
                 <p>
@@ -149,7 +154,7 @@ export default function KitengeNotebooksPage() {
                 </p>
                 <ul className="list-disc list-inside space-y-1.5 pl-1">
                   <li>Authentic Kitenge (African wax-print) fabric cover</li>
-                  <li>A6 and A5 sizes — 50, 100, or 200 ruled pages</li>
+                  <li>A6 and A5 sizes, 50, 100, or 200 ruled pages</li>
                   <li>80 gsm cream or white ruled paper</li>
                   <li>Elastic closure strap and bookmark ribbon included</li>
                   <li>Logo or custom print on inside cover available</li>
@@ -218,14 +223,14 @@ export default function KitengeNotebooksPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Kitenge Notebook – ${selectedSize.label}`,
+                      name: `Kitenge Notebook  to  ${selectedSize.label}`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Kitenge+Notebooks"),
                       href: "/products/events-display/kitenge-notebooks",
@@ -246,7 +251,7 @@ export default function KitengeNotebooksPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 3–5 day turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 3 to 5 day turnaround · Free local Muhoroni delivery
               </p>
             </div>
 
@@ -254,7 +259,7 @@ export default function KitengeNotebooksPage() {
               <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Authentic Kitenge cover — culturally distinctive, memorable gift</span>
+                  <span>Authentic Kitenge cover, culturally distinctive, memorable gift</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
@@ -262,11 +267,11 @@ export default function KitengeNotebooksPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Elastic strap and bookmark ribbon — premium feel</span>
+                  <span>Elastic strap and bookmark ribbon, premium feel</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Bulk pricing from 50 units — ideal for conferences</span>
+                  <span>Bulk pricing from 50 units, ideal for conferences</span>
                 </li>
               </ul>
             </div>

@@ -15,6 +15,12 @@ import {
 } from "@/components/ui/accordion";
 import { useCart } from "@/lib/cart-context";
 
+{/*Images */}
+import Brochures from "@/app/assets/brochure.jpg";
+import Flyers from "@/app/assets/flyers.jpeg";
+import Magazine from "@/app/assets/school magz.jpg";
+import Document from "@/app/assets/document printing.jpg";
+
 const ph = (w: number, h: number, label: string) =>
   `https://placehold.co/${w}x${h}/e0f2fe/0284c7?text=${encodeURIComponent(label)}`;
 
@@ -34,15 +40,15 @@ const materialNote =
 const faqs = [
   {
     q: "What is the difference between a bi-fold and tri-fold brochure?",
-    a: "A bi-fold brochure is an A4 or A3 sheet folded once in the middle, giving you 4 panels to work with — perfect for corporate profiles, menus, and event programmes. A tri-fold divides the sheet into three panels (6 sides) and is the most popular brochure format — ideal for product catalogues, service menus, and trade show handouts. Z-fold (also 6 panels) opens like a zigzag rather than a leaflet.",
+    a: "A bi-fold brochure is an A4 or A3 sheet folded once in the middle, giving you 4 panels to work with, perfect for corporate profiles, menus, and event programmes. A tri-fold divides the sheet into three panels (6 sides) and is the most popular brochure format, ideal for product catalogues, service menus, and trade show handouts. Z-fold (also 6 panels) opens like a zigzag rather than a leaflet.",
   },
   {
     q: "What paper weight do you recommend for brochures?",
-    a: "We recommend 170 gsm as the standard for brochures — it is heavy enough to feel premium but folds cleanly without cracking. For luxury corporate profiles and upmarket brands we offer 200 gsm and above.",
+    a: "We recommend 170 gsm as the standard for brochures, it is heavy enough to feel premium but folds cleanly without cracking. For luxury corporate profiles and upmarket brands we offer 200 gsm and above.",
   },
   {
     q: "Should I use gloss or matte paper for my brochure?",
-    a: "Gloss paper gives vibrant, high-impact colour reproduction — great for product imagery, photography, and designs with strong colour. Matte paper has a softer, more sophisticated look and is easier to read under bright lighting — preferred for text-heavy corporate profiles and services brochures.",
+    a: "Gloss paper gives vibrant, high-impact colour reproduction, great for product imagery, photography, and designs with strong colour. Matte paper has a softer, more sophisticated look and is easier to read under bright lighting, preferred for text-heavy corporate profiles and services brochures.",
   },
   {
     q: "Can you design my brochure?",
@@ -54,7 +60,7 @@ const faqs = [
   },
   {
     q: "Is there a minimum order quantity?",
-    a: "Our minimum for brochures is 250 copies. Volume discounts apply at 500, 1,000, and 2,500+ — contact us for a bulk pricing quote.",
+    a: "Our minimum for brochures is 250 copies. Volume discounts apply at 500, 1,000, and 2,500+, contact us for a bulk pricing quote.",
   },
   {
     q: "Do you deliver outside Muhoroni?",
@@ -66,17 +72,17 @@ const relatedProducts = [
   {
     name: "Flyers Printing",
     href: "/products/flyers/flyers",
-    image: ph(400, 300, "Flyers+Printing"),
+    image: Flyers.src,
   },
   {
     name: "Booklet Magazines Printing",
     href: "/products/booklet-magazines/booklets",
-    image: ph(400, 300, "Booklets"),
+    image: Magazine.src,
   },
   {
     name: "Document Printing",
     href: "/products/digital-printing/documents",
-    image: ph(400, 300, "Document+Printing"),
+    image: Document.src,
   },
 ];
 
@@ -85,7 +91,7 @@ export default function BrochuresPrintingPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order Brochures — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order Brochures, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -109,7 +115,7 @@ export default function BrochuresPrintingPage() {
             Brochures Printing
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
-            Professional bi-fold, tri-fold, and Z-fold brochures on 170 gsm premium paper —
+            Professional bi-fold, tri-fold, and Z-fold brochures on 170 gsm premium paper,
             sharp full-colour, scored and folded, free design, delivered across Kenya.
           </p>
         </div>
@@ -119,7 +125,7 @@ export default function BrochuresPrintingPage() {
           <div className="flex flex-col gap-8">
             <div className="relative aspect-4/3 rounded-2xl overflow-hidden border border-border bg-muted shadow-sm">
               <Image
-                src={ph(700, 525, "Brochures+Printing")}
+                src={Brochures.src}
                 alt="Brochures Printing"
                 fill
                 className="object-cover"
@@ -135,7 +141,7 @@ export default function BrochuresPrintingPage() {
                   A well-designed brochure remains one of the most effective tools for
                   communicating your brand story, products, and services in a compact and
                   professional format. Unlike a single-page flyer, a brochure gives you multiple
-                  panels to guide your reader through your offering — and it stays on desks and
+                  panels to guide your reader through your offering, and it stays on desks and
                   in bags far longer than a flyer does.
                 </p>
                 <p>
@@ -149,7 +155,7 @@ export default function BrochuresPrintingPage() {
                   menus for hotels and restaurants, trade show handouts, real estate property
                   listings, school and university prospectuses, and NGO programme documents. Our
                   design team can create your layout from scratch or adapt your existing artwork
-                  — just send your content and we handle the rest.
+                 , just send your content and we handle the rest.
                 </p>
                 <ul className="list-disc list-inside space-y-1.5 pl-1">
                   <li>Bi-fold (4 panels), tri-fold (6 panels), and Z-fold options</li>
@@ -222,14 +228,14 @@ export default function BrochuresPrintingPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Brochures – ${selectedSize.label}`,
+                      name: `Brochures  to  ${selectedSize.label}`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Brochures+Printing"),
                       href: "/products/flyers/brochures",
@@ -250,7 +256,7 @@ export default function BrochuresPrintingPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 2–3 day turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 2 to 3 day turnaround · Free local Muhoroni delivery
               </p>
             </div>
 
@@ -258,11 +264,11 @@ export default function BrochuresPrintingPage() {
               <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Professionally scored — crisp, crack-free fold lines</span>
+                  <span>Professionally scored, crisp, crack-free fold lines</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>170 gsm premium paper — feels substantial and professional</span>
+                  <span>170 gsm premium paper, feels substantial and professional</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>

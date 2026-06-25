@@ -149,16 +149,16 @@ export default function ScreenPrintingPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <section className="relative isolate overflow-hidden bg-gradient-to-br from-primary/90 via-primary to-primary/80">
+      <section className="relative isolate overflow-hidden bg-brand-surface">
         <Image
           src={ph(1400, 420, "Screen+Printing+Supplies+and+Transfers")}
           alt="Screen printing supplies and transfers"
           fill
-          className="object-cover opacity-20 mix-blend-overlay"
+          className="object-cover opacity-70"
           priority
           unoptimized
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-transparent to-primary/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-primary/20" />
         <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
           <nav className="mb-6 flex flex-wrap items-center gap-1.5 text-sm text-primary-foreground/70">
             <Link href="/" className="transition-colors hover:text-primary-foreground">Home</Link>
@@ -179,10 +179,10 @@ export default function ScreenPrintingPage() {
               start up kits, inks, screen transfers, heat-transfer vinyls, and DTF transfers.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Button size="lg" className="bg-white text-primary shadow-lg hover:bg-white/90" asChild>
+              <Button size="lg" className="rv-hero-button-primary" asChild>
                 <a href="#products">View Options</a>
               </Button>
-              <Button size="lg" variant="outline" className="border-white/40 text-primary-foreground hover:bg-white/10" asChild>
+              <Button size="lg" variant="outline" className="rv-hero-button-secondary" asChild>
                 <Link href="/contact">Get a Quote</Link>
               </Button>
             </div>
@@ -259,7 +259,7 @@ export default function ScreenPrintingPage() {
               ))}
             </div>
 
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <Badge variant="secondary" className="mb-4">About Screen Printing</Badge>
               <h2 className="mb-5 text-2xl font-bold leading-snug text-foreground sm:text-3xl">
                 Screen Printing Support From Artwork to Final Transfer
@@ -321,7 +321,7 @@ export default function ScreenPrintingPage() {
               </div>
             </section>
 
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <Badge variant="secondary" className="mb-4">What We Offer</Badge>
               <h2 className="mb-6 text-2xl font-bold text-foreground">
                 Screen Printing Options in Detail
@@ -344,7 +344,7 @@ export default function ScreenPrintingPage() {
               </div>
             </section>
 
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <div className="mb-10 text-center">
                 <Badge variant="secondary" className="mb-3">Why Choose Us</Badge>
                 <h2 className="text-2xl font-bold text-foreground sm:text-3xl">

@@ -89,31 +89,31 @@ const features = [
     icon: Star,
     title: "Premium Print Finishes",
     description:
-      "From Spot UV gloss to matte lamination and embossing — we offer finishes that make your cards stand out and feel luxurious.",
+      "From Spot UV gloss to matte lamination and embossing, we offer finishes that make your cards stand out and feel luxurious.",
   },
   {
     icon: Clock,
     title: "Fast Turnaround",
     description:
-      "Standard orders are ready within 24–48 hours. Same-day printing available for urgent requests — just let us know.",
+      "Standard orders are ready within 24 to 48 hours. Same-day printing available for urgent requests, just let us know.",
   },
   {
     icon: Truck,
     title: "Delivered Across Kenya",
     description:
-      "We deliver from Muhoroni, Kenya to Mombasa, Kisumu, Nakuru, and all major towns across Kenya — reliably and on time.",
+      "We deliver from Muhoroni, Kenya to Mombasa, Kisumu, Nakuru, and all major towns across Kenya, reliably and on time.",
   },
   {
     icon: Palette,
     title: "Free Design Support",
     description:
-      "Our in-house design team will set up your artwork for free. Send us your content and logo — we handle the rest.",
+      "Our in-house design team will set up your artwork for free. Send us your content and logo, we handle the rest.",
   },
   {
     icon: ShieldCheck,
     title: "High-Quality Card Stock",
     description:
-      "We print on premium 350–400gsm card stock that feels substantial and professional in the hand.",
+      "We print on premium 350 to 400gsm card stock that feels substantial and professional in the hand.",
   },
   {
     icon: CheckCircle2,
@@ -130,16 +130,16 @@ export default function BusinessCardsPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* ── Hero ── */}
-      <section className="relative isolate overflow-hidden bg-gradient-to-br from-primary/90 via-primary to-primary/80">
+      <section className="relative isolate overflow-hidden bg-brand-surface">
         <Image
           src={ph(1400, 480, "Business+Cards+Printing+Kenya")}
           alt="Business cards printing hero"
           fill
-          className="object-cover opacity-20 mix-blend-overlay"
+          className="object-cover opacity-70"
           priority
           unoptimized
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-transparent to-primary/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-primary/20" />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <nav className="mb-6 flex items-center gap-1.5 text-sm text-primary-foreground/70">
@@ -158,17 +158,17 @@ export default function BusinessCardsPage() {
               Business Cards Printing in Kenya
             </h1>
             <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
-              Premium business cards, postcards, bookmarks, and gift vouchers — printed on
+              Premium business cards, postcards, bookmarks, and gift vouchers, printed on
               high-quality card stock with stunning finishes. Make a lasting first impression.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg" asChild>
+              <Button size="lg" className="rv-hero-button-primary" asChild>
                 <a href="#products">View Products</a>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white/40 text-primary-foreground hover:bg-white/10"
+                className="rv-hero-button-secondary"
                 asChild
               >
                 <Link href="/contact">Get a Quote</Link>
@@ -275,7 +275,7 @@ export default function BusinessCardsPage() {
                   <Link
                     key={product.id}
                     href={product.href}
-                    className="group rounded-xl border border-border bg-card overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                    className="rv-product-card group"
                   >
                     <div className="relative aspect-[4/3] bg-muted overflow-hidden">
                       <Image
@@ -302,7 +302,7 @@ export default function BusinessCardsPage() {
             </section>
 
             {/* ── Why Choose Ramirez Ventures ── */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <div className="text-center mb-10">
                 <Badge variant="secondary" className="mb-3">Why Choose Us</Badge>
                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
@@ -333,8 +333,8 @@ export default function BusinessCardsPage() {
             </section>
 
             {/* ── CTA section ── */}
-            <section className="rounded-2xl overflow-hidden border border-border bg-primary">
-              <div className="p-8 sm:p-10 text-primary-foreground text-center flex flex-col items-center gap-5">
+            <section className="rv-cta">
+              <div className="rv-cta-content text-center flex flex-col items-center gap-5">
                 <Badge className="bg-white/20 text-primary-foreground border-0 backdrop-blur-sm">
                   Ready to Print?
                 </Badge>
@@ -345,10 +345,10 @@ export default function BusinessCardsPage() {
                   Fast turnaround. Premium quality. Delivered across Kenya. Call or WhatsApp us
                   now and we&apos;ll send you a quote within minutes.
                 </p>
-                <div className="flex flex-wrap justify-center gap-4 mt-2">
+                <div className="rv-cta-actions mt-2">
                   <Button
                     size="lg"
-                    className="bg-white text-primary hover:bg-white/90 gap-2 shadow-lg font-semibold"
+                    className="rv-cta-button-primary gap-2 font-semibold"
                     asChild
                   >
                     <a href={`tel:${PHONE.replace(/\s/g, "")}`}>
@@ -359,7 +359,7 @@ export default function BusinessCardsPage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-white/40 text-primary-foreground hover:bg-white/15 gap-2"
+                    className="rv-cta-button-secondary gap-2"
                     asChild
                   >
                     <a
@@ -374,7 +374,7 @@ export default function BusinessCardsPage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-white/40 text-primary-foreground hover:bg-white/15"
+                    className="rv-cta-button-secondary"
                     asChild
                   >
                     <Link href="/contact">Get a Quote Online</Link>

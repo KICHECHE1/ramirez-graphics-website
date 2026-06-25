@@ -10,9 +10,6 @@ import Event from "@/app/assets/Hard_Cover_A4.jpeg";
 import FuneralPrograms from "@/app/assets/funeral program.jpg";
 import BookletMagazines from "@/app/assets/school magz.jpg";
 
-/* ─── placeholder helper ─── */
-const ph = (w: number, h: number, label: string) =>
-  `https://placehold.co/${w}x${h}/e0f2fe/0284c7?text=${encodeURIComponent(label)}`;
 
 /* ─── Sidebar: all 8 product categories from the navbar ─── */
 const productCategories = [
@@ -57,7 +54,7 @@ const bookletProducts = [
     href: "/products/booklet-magazines/booklets",
     badge: "Best Seller",
     description:
-      "Custom booklets, company profiles, catalogues, and magazines printed in full colour. Saddle-stitched or perfect-bound — any size, any quantity.",
+      "Custom booklets, company profiles, catalogues, and magazines printed in full colour. Saddle-stitched or perfect-bound, any size, any quantity.",
   },
 ];
 
@@ -79,7 +76,7 @@ export default function BookletMagazinesPage() {
     className="object-cover object-center"
   />
        {/* Dark translucent overlay */}
-<div className="absolute inset-0 bg-black/45 z-0" />
+<div className="absolute inset-0 bg-black/30 z-0" />
 
 <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
   {/* Breadcrumb */}
@@ -110,13 +107,13 @@ export default function BookletMagazinesPage() {
 
     <p className="text-lg text-white/90 leading-relaxed mb-8">
       Professional full-colour booklets, company profiles, magazines, and funeral programs
-      — printed and delivered across Kenya with fast turnaround.
+     , printed and delivered across Kenya with fast turnaround.
     </p>
 
     <div className="flex flex-wrap gap-3">
       <Button
         size="lg"
-        className="bg-white text-black hover:bg-white/90 shadow-lg"
+        className="rv-hero-button-primary"
         asChild
       >
         <a href="#products">View Products</a>
@@ -125,7 +122,7 @@ export default function BookletMagazinesPage() {
       <Button
         size="lg"
         variant="outline"
-        className="border-white text-black bg-white/90 hover:bg-white"
+        className="rv-hero-button-primary border-white"
         asChild
       >
         <Link href="/contact">Get a Quote</Link>
@@ -215,7 +212,7 @@ export default function BookletMagazinesPage() {
             </div>
 
             {/* ── Introduction ── */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <Badge variant="secondary" className="mb-4">About This Category</Badge>
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-5 leading-snug">
                 Kenya&apos;s Go-To Booklet & Magazine Printing Company
@@ -229,8 +226,8 @@ export default function BookletMagazinesPage() {
                   our team is ready to bring your vision to print.
                 </p>
                 <p>
-                  We use premium paper stocks and professional binding — saddle-stitched for shorter
-                  runs and perfect-bound for thicker publications — ensuring your printed material
+                  We use premium paper stocks and professional binding, saddle-stitched for shorter
+                  runs and perfect-bound for thicker publications, ensuring your printed material
                   looks and feels exceptional. Bulk orders are welcome, and our in-house design team
                   can assist with layout and artwork at no extra charge.
                 </p>
@@ -276,7 +273,7 @@ export default function BookletMagazinesPage() {
                   <Link
                     key={product.id}
                     href={product.href}
-                    className="group rounded-xl border border-border bg-card overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                    className="rv-product-card group"
                   >
                     {/* Image */}
                     <div className="relative aspect-[4/3] bg-muted overflow-hidden">
@@ -312,7 +309,7 @@ export default function BookletMagazinesPage() {
             </section>
 
             {/* ── Why Choose Ramirez Ventures ── */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <div className="text-center mb-10">
                 <Badge variant="secondary" className="mb-3">Why Choose Us</Badge>
                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
@@ -336,25 +333,25 @@ export default function BookletMagazinesPage() {
                     icon: Clock,
                     title: "Fast Turnaround",
                     description:
-                      "Most orders are ready within 24–48 hours. Urgent same-day printing is available for standard runs — just let us know your deadline.",
+                      "Most orders are ready within 24 to 48 hours. Urgent same-day printing is available for standard runs, just let us know your deadline.",
                   },
                   {
                     icon: BookOpen,
                     title: "Multiple Binding Options",
                     description:
-                      "Choose from saddle-stitching for thinner booklets or perfect binding for bulkier publications — we handle both with ease.",
+                      "Choose from saddle-stitching for thinner booklets or perfect binding for bulkier publications, we handle both with ease.",
                   },
                   {
                     icon: Palette,
                     title: "Free Design Assistance",
                     description:
-                      "Our in-house design team will lay out your content and artwork at no extra cost — just send us your text, images, and logo.",
+                      "Our in-house design team will lay out your content and artwork at no extra cost, just send us your text, images, and logo.",
                   },
                   {
                     icon: ShieldCheck,
                     title: "Premium Paper & Finish",
                     description:
-                      "We stock a wide range of paper weights and finishes — gloss, matte, silk — so your booklet feels as good as it looks.",
+                      "We stock a wide range of paper weights and finishes, gloss, matte, silk, so your booklet feels as good as it looks.",
                   },
                   {
                     icon: Printer,
@@ -380,32 +377,32 @@ export default function BookletMagazinesPage() {
             </section>
 
           {/* ── CTA section ── */}
-<section className="mt-10 rounded-xl bg-primary/5 border border-primary/20 p-6">
-  <div className="flex flex-col items-center justify-center gap-5 text-center">
-    <Badge className="bg-primary/10 text-primary border-0">
+<section className="rv-cta mt-10">
+  <div className="rv-cta-content flex flex-col items-center justify-center gap-5 text-center">
+    <Badge className="border-0 bg-white/20 text-primary-foreground backdrop-blur-sm">
       Ready to Print?
     </Badge>
 
     <div>
-      <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
+      <h2 className="text-2xl sm:text-3xl font-bold text-white">
         Let&apos;s Print Your Booklets & Magazines
       </h2>
 
-      <p className="mt-2 text-muted-foreground max-w-2xl">
+      <p className="mt-2 max-w-2xl text-white/80">
         Fast turnaround. Bulk discounts. Delivered across Kenya. Call or WhatsApp us now
         and we&apos;ll send you a quote within minutes.
       </p>
     </div>
 
-    <div className="flex flex-wrap justify-center gap-3">
-      <Button size="lg" asChild>
+    <div className="rv-cta-actions">
+      <Button size="lg" className="rv-cta-button-primary" asChild>
         <a href={`tel:${PHONE.replace(/\s/g, "")}`}>
           <Phone className="size-4 mr-2" />
           {PHONE}
         </a>
       </Button>
 
-      <Button size="lg" variant="outline" asChild>
+      <Button size="lg" variant="outline" className="rv-cta-button-secondary" asChild>
         <a
           href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
             "Hi, I'd like a quote for booklet or magazine printing."
@@ -418,7 +415,7 @@ export default function BookletMagazinesPage() {
         </a>
       </Button>
 
-      <Button size="lg" variant="outline" asChild>
+      <Button size="lg" variant="outline" className="rv-cta-button-secondary" asChild>
         <Link href="/contact">Get a Quote Online</Link>
       </Button>
     </div>

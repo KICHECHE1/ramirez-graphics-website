@@ -21,10 +21,10 @@ const ph = (w: number, h: number, label: string) =>
 const WHATSAPP = "254706207037";
 
 const sizes = [
-  { label: "Standard · Single-sided",  dimensions: "85 × 55 mm, 1 side",  price: 1200 },
-  { label: "Standard · Double-sided",  dimensions: "85 × 55 mm, 2 sides", price: 1600 },
-  { label: "Folded · Double-sided",    dimensions: "170 × 55 mm folded",   price: 2400 },
-  { label: "Square",                   dimensions: "55 × 55 mm",           price: 1800 },
+  { label: "Standard · Single-sided",  dimensions: "85 x 55 mm, 1 side",  price: 1200 },
+  { label: "Standard · Double-sided",  dimensions: "85 x 55 mm, 2 sides", price: 1600 },
+  { label: "Folded · Double-sided",    dimensions: "170 x 55 mm folded",   price: 2400 },
+  { label: "Square",                   dimensions: "55 x 55 mm",           price: 1800 },
 ];
 
 const materialNote =
@@ -33,7 +33,7 @@ const materialNote =
 const faqs = [
   {
     q: "What is the difference between digital and offset business card printing?",
-    a: "Digital printing is ideal for short runs (50–500 cards) and offers fast turnaround with no plate setup costs. Offset printing suits very large quantities (1,000+) with lower unit costs. For most business card orders, digital gives the best value and speed.",
+    a: "Digital printing is ideal for short runs (50 to 500 cards) and offers fast turnaround with no plate setup costs. Offset printing suits very large quantities (1,000+) with lower unit costs. For most business card orders, digital gives the best value and speed.",
   },
   {
     q: "Do you offer design services?",
@@ -41,7 +41,7 @@ const faqs = [
   },
   {
     q: "What finish options are available?",
-    a: "We offer gloss laminate, matte laminate, and uncoated finishes. Gloss gives a vivid, shiny look while matte is more understated and allows writing on the back. Spot UV is also available — see our Spot UV Business Cards page.",
+    a: "We offer gloss laminate, matte laminate, and uncoated finishes. Gloss gives a vivid, shiny look while matte is more understated and allows writing on the back. Spot UV is also available, see our Spot UV Business Cards page.",
   },
   {
     q: "How soon will my cards be ready?",
@@ -76,7 +76,7 @@ export default function DigitalBusinessCardsPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order Business Cards (Digital Printing) — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order Business Cards (Digital Printing), ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -100,7 +100,7 @@ export default function DigitalBusinessCardsPage() {
             Business Cards Printing
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
-            Professionally printed full-colour business cards on premium 350 gsm card stock —
+            Professionally printed full-colour business cards on premium 350 gsm card stock,
             same-day turnaround, free design, delivered across Kenya.
           </p>
         </div>
@@ -130,13 +130,13 @@ export default function DigitalBusinessCardsPage() {
                 </p>
                 <p>
                   Using digital printing technology we can produce your cards quickly without
-                  plate setup costs — making it the ideal choice for quantities from 50 to 500
+                  plate setup costs, making it the ideal choice for quantities from 50 to 500
                   cards. Standard single-sided designs are ready same day for orders placed before
                   2 PM. If your design is not ready, our in-house designers will build the layout
                   from your logo and details at no extra cost.
                 </p>
                 <p>
-                  We offer standard landscape cards, square cards, and folded cards — all printed
+                  We offer standard landscape cards, square cards, and folded cards, all printed
                   full-colour front and back. For a premium tactile finish, see our Spot UV
                   Business Cards option.
                 </p>
@@ -210,14 +210,14 @@ export default function DigitalBusinessCardsPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Business Cards – ${selectedSize.label}`,
+                      name: `Business Cards  to  ${selectedSize.label}`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Business+Cards"),
                       href: "/products/digital-printing/business-cards",
@@ -254,11 +254,11 @@ export default function DigitalBusinessCardsPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>350 gsm premium card — feels substantial in hand</span>
+                  <span>350 gsm premium card, feels substantial in hand</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Minimum 50 cards — no over-ordering required</span>
+                  <span>Minimum 50 cards, no over-ordering required</span>
                 </li>
               </ul>
             </div>

@@ -23,12 +23,12 @@ const WHATSAPP = "254706207037";
 
 /* ─── Format / size options ─── */
 const sizes = [
-  { label: "A5 · 8-page booklet",    dimensions: "148 × 210 mm, 8 pp",  price: 6500 },
-  { label: "A5 · 16-page booklet",   dimensions: "148 × 210 mm, 16 pp", price: 10500 },
-  { label: "A5 · 24-page booklet",   dimensions: "148 × 210 mm, 24 pp", price: 14500 },
-  { label: "A4 · 8-page booklet",    dimensions: "210 × 297 mm, 8 pp",  price: 9500 },
-  { label: "A4 · 16-page booklet",   dimensions: "210 × 297 mm, 16 pp", price: 15500 },
-  { label: "A4 · 32-page magazine",  dimensions: "210 × 297 mm, 32 pp", price: 28000 },
+  { label: "A5 · 8-page booklet",    dimensions: "148 x 210 mm, 8 pp",  price: 6500 },
+  { label: "A5 · 16-page booklet",   dimensions: "148 x 210 mm, 16 pp", price: 10500 },
+  { label: "A5 · 24-page booklet",   dimensions: "148 x 210 mm, 24 pp", price: 14500 },
+  { label: "A4 · 8-page booklet",    dimensions: "210 x 297 mm, 8 pp",  price: 9500 },
+  { label: "A4 · 16-page booklet",   dimensions: "210 x 297 mm, 16 pp", price: 15500 },
+  { label: "A4 · 32-page magazine",  dimensions: "210 x 297 mm, 32 pp", price: 28000 },
 ];
 
 const materialNote =
@@ -38,7 +38,7 @@ const materialNote =
 const faqs = [
   {
     q: "What is the difference between saddle-stitching and perfect binding?",
-    a: "Saddle-stitching uses two staples through the spine — ideal for booklets up to about 64 pages. Perfect binding glues a flat spine, giving a more magazine-like look and allowing printed spines. We recommend perfect binding for 40+ page publications.",
+    a: "Saddle-stitching uses two staples through the spine, ideal for booklets up to about 64 pages. Perfect binding glues a flat spine, giving a more magazine-like look and allowing printed spines. We recommend perfect binding for 40+ page publications.",
   },
   {
     q: "What file format should I submit?",
@@ -86,7 +86,7 @@ export default function BookletsPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order a Booklet / Magazine — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order a Booklet / Magazine, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -112,8 +112,8 @@ export default function BookletsPage() {
             Booklet &amp; Magazine Printing
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
-            High-quality full-colour booklets, catalogues, and magazines — saddle-stitched or
-            perfect-bound — printed and delivered across Kenya from Muhoroni, Kisumu.
+            High-quality full-colour booklets, catalogues, and magazines, saddle-stitched or
+            perfect-bound, printed and delivered across Kenya from Muhoroni, Kisumu.
           </p>
         </div>
 
@@ -141,7 +141,7 @@ export default function BookletsPage() {
                   Whether you need a sleek product catalogue, a church bulletin, a school magazine,
                   or a full-colour corporate newsletter, Ramirez Ventures has the equipment and
                   expertise to deliver it. We print booklets and magazines of all sizes and page
-                  counts — from compact A5 8-page inserts to A4 32-page editions — using
+                  counts, from compact A5 8-page inserts to A4 32-page editions, using
                   professional wide-format and digital print technology.
                 </p>
                 <p>
@@ -163,7 +163,7 @@ export default function BookletsPage() {
                   <li>Saddle-stitched up to 64 pages; perfect-bound for thicker editions</li>
                   <li>In-house layout and graphic design service available</li>
                   <li>Digital soft-proof supplied before printing</li>
-                  <li>Minimum 25 copies — competitive bulk pricing available</li>
+                  <li>Minimum 25 copies, competitive bulk pricing available</li>
                 </ul>
               </div>
             </div>
@@ -240,7 +240,7 @@ export default function BookletsPage() {
               <p className="text-sm text-muted-foreground mb-5">
                 Selected:{" "}
                 <span className="font-medium text-foreground">
-                  {selectedSize.label} — {selectedSize.dimensions}
+                  {selectedSize.label}, {selectedSize.dimensions}
                 </span>
               </p>
               <div className="flex flex-col gap-3">
@@ -248,7 +248,7 @@ export default function BookletsPage() {
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Booklet / Magazine – ${selectedSize.label} (${selectedSize.dimensions})`,
+                      name: `Booklet / Magazine  to  ${selectedSize.label} (${selectedSize.dimensions})`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Booklet+Magazine"),
                       href: "/products/booklet-magazines/booklets",
@@ -273,7 +273,7 @@ export default function BookletsPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 3–5 day turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 3 to 5 day turnaround · Free local Muhoroni delivery
               </p>
             </div>
 
@@ -282,7 +282,7 @@ export default function BookletsPage() {
               <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Digital proof supplied before printing — approve before we press</span>
+                  <span>Digital proof supplied before printing, approve before we press</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
@@ -294,7 +294,7 @@ export default function BookletsPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Competitive bulk pricing — the more you print, the less per copy</span>
+                  <span>Competitive bulk pricing, the more you print, the less per copy</span>
                 </li>
               </ul>
             </div>

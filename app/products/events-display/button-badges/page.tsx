@@ -15,6 +15,12 @@ import {
 } from "@/components/ui/accordion";
 import { useCart } from "@/lib/cart-context";
 
+{/* Images */}
+import BackdropBanner from "@/app/assets/back drop banner.jpg";
+import TableCloth from "@/app/assets/Tablecloth.jpg";
+import ButtonBadges from "@/app/assets/Button_Mockup_3.jpg";
+import Kitenge from "@/app/assets/kitenge notebooks.jpg";
+
 const ph = (w: number, h: number, label: string) =>
   `https://placehold.co/${w}x${h}/e0f2fe/0284c7?text=${encodeURIComponent(label)}`;
 
@@ -34,7 +40,7 @@ const materialNote =
 const faqs = [
   {
     q: "What is the minimum order quantity for button badges?",
-    a: "Our minimum order is 50 badges per size. Volume pricing kicks in at 100, 250, and 500+ — contact us for a bulk quote.",
+    a: "Our minimum order is 50 badges per size. Volume pricing kicks in at 100, 250, and 500+, contact us for a bulk quote.",
   },
   {
     q: "Can I mix different designs in one order?",
@@ -50,7 +56,7 @@ const faqs = [
   },
   {
     q: "Can you print name badges for delegates?",
-    a: "Yes. We can print personalised name badges for conferences and corporate events. Individual names can be printed on each badge — ideal for delegate packs. Contact us with your delegate list.",
+    a: "Yes. We can print personalised name badges for conferences and corporate events. Individual names can be printed on each badge, ideal for delegate packs. Contact us with your delegate list.",
   },
   {
     q: "Do you deliver outside Muhoroni?",
@@ -62,17 +68,17 @@ const relatedProducts = [
   {
     name: "Kitenge Notebooks",
     href: "/products/events-display/kitenge-notebooks",
-    image: ph(400, 300, "Kitenge+Notebooks"),
+    image: Kitenge.src
   },
   {
     name: "Table Cloth Printing",
     href: "/products/events-display/table-cloth",
-    image: ph(400, 300, "Table+Cloth"),
+    image: TableCloth.src,
   },
   {
     name: "Adjustable Backdrop Banner",
     href: "/products/events-display/backdrop-banner",
-    image: ph(400, 300, "Backdrop+Banner"),
+    image: BackdropBanner.src,
   },
 ];
 
@@ -81,7 +87,7 @@ export default function EventsButtonBadgesPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order Button Badges (Events Display) — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order Button Badges (Events Display), ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -106,7 +112,7 @@ export default function EventsButtonBadgesPage() {
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
             Full-colour custom button badges for corporate events, expos, conferences, and branded
-            activations — sizes from 25 mm lapel pins to 75 mm promotional badges.
+            activations, sizes from 25 mm lapel pins to 75 mm promotional badges.
           </p>
         </div>
 
@@ -115,7 +121,7 @@ export default function EventsButtonBadgesPage() {
           <div className="flex flex-col gap-8">
             <div className="relative aspect-4/3 rounded-2xl overflow-hidden border border-border bg-muted shadow-sm">
               <Image
-                src={ph(700, 525, "Button+Badges+Printing")}
+                src={ButtonBadges.src}
                 alt="Button Badges Printing"
                 fill
                 className="object-cover"
@@ -128,7 +134,7 @@ export default function EventsButtonBadgesPage() {
               <h2 className="text-xl font-bold text-foreground mb-4">Product Overview</h2>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  Button badges are a timeless event branding tool — versatile, affordable, and
+                  Button badges are a timeless event branding tool, versatile, affordable, and
                   a guaranteed conversation starter. At Ramirez Ventures we press full-colour
                   custom badges in five standard sizes, from the discreet 25 mm lapel pin to the
                   bold 75 mm promotional badge. Each badge is printed under a scratch-resistant
@@ -137,7 +143,7 @@ export default function EventsButtonBadgesPage() {
                 <p>
                   Ideal for corporate events, trade shows, product launches, fundraisers, school
                   functions, and branded giveaways. We can print a single design across an entire
-                  batch or personalise individual badges with delegate names — perfect for
+                  batch or personalise individual badges with delegate names, perfect for
                   conference packs and employee ID purposes.
                 </p>
                 <p>
@@ -216,14 +222,14 @@ export default function EventsButtonBadgesPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Button Badges – ${selectedSize.label}`,
+                      name: `Button Badges  to  ${selectedSize.label}`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Button+Badges"),
                       href: "/products/events-display/button-badges",
@@ -244,7 +250,7 @@ export default function EventsButtonBadgesPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 2–3 day turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 2 to 3 day turnaround · Free local Muhoroni delivery
               </p>
             </div>
 
@@ -252,7 +258,7 @@ export default function EventsButtonBadgesPage() {
               <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>5 standard sizes — from lapel pin to promo badge</span>
+                  <span>5 standard sizes, from lapel pin to promo badge</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>

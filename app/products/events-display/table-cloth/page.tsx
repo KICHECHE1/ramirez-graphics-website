@@ -14,26 +14,32 @@ import {
 } from "@/components/ui/accordion";
 import { useCart } from "@/lib/cart-context";
 
+{/* Images */}
+import BackdropBanner from "@/app/assets/back drop banner.jpg";
+import TableCloth from "@/app/assets/Tablecloth.jpg";
+import ButtonBadges from "@/app/assets/Button_Mockup_3.jpg";
+import TableRollup from "@/app/assets/table roll up _Banner_Mockup_2.jpg";
+
 const ph = (w: number, h: number, label: string) =>
   `https://placehold.co/${w}x${h}/e0f2fe/0284c7?text=${encodeURIComponent(label)}`;
 
 const WHATSAPP = "254706207037";
 
 const sizes = [
-  { label: "4 ft · Draped",   dimensions: "122 × 183 cm — 4 ft table, draped",  price: 4500 },
-  { label: "6 ft · Draped",   dimensions: "183 × 183 cm — 6 ft table, draped",  price: 5500 },
-  { label: "8 ft · Draped",   dimensions: "244 × 183 cm — 8 ft table, draped",  price: 6500 },
-  { label: "6 ft · Fitted",   dimensions: "183 cm — 6 ft table, fitted stretch", price: 7000 },
-  { label: "8 ft · Fitted",   dimensions: "244 cm — 8 ft table, fitted stretch", price: 8500 },
+  { label: "4 ft · Draped",   dimensions: "122 x 183 cm, 4 ft table, draped",  price: 4500 },
+  { label: "6 ft · Draped",   dimensions: "183 x 183 cm, 6 ft table, draped",  price: 5500 },
+  { label: "8 ft · Draped",   dimensions: "244 x 183 cm, 8 ft table, draped",  price: 6500 },
+  { label: "6 ft · Fitted",   dimensions: "183 cm, 6 ft table, fitted stretch", price: 7000 },
+  { label: "8 ft · Fitted",   dimensions: "244 cm, 8 ft table, fitted stretch", price: 8500 },
 ];
 
 const materialNote =
-  "Made from durable 200 gsm polyester fabric — machine washable and crease-resistant. Full-colour dye-sublimation printing ensures vivid, fade-resistant branding. Available in draped and fitted (stretch) styles.";
+  "Made from durable 200 gsm polyester fabric, machine washable and crease-resistant. Full-colour dye-sublimation printing ensures vivid, fade-resistant branding. Available in draped and fitted (stretch) styles.";
 
 const faqs = [
   {
     q: "What is the difference between a draped and fitted table cloth?",
-    a: "A draped table cloth hangs loosely over the table and falls to the ground on all sides like a traditional tablecloth. A fitted (stretch) table cloth has sewn edges that hug the table tightly for a sleek, professional display look — popular at trade shows and exhibitions.",
+    a: "A draped table cloth hangs loosely over the table and falls to the ground on all sides like a traditional tablecloth. A fitted (stretch) table cloth has sewn edges that hug the table tightly for a sleek, professional display look, popular at trade shows and exhibitions.",
   },
   {
     q: "Can I print my logo and brand colours on the table cloth?",
@@ -49,7 +55,7 @@ const faqs = [
   },
   {
     q: "How long does production take?",
-    a: "Standard orders are ready within 3–5 working days. Express 48-hour turnaround is available for an additional charge — contact us to confirm before placing your order.",
+    a: "Standard orders are ready within 3 to 5 working days. Express 48-hour turnaround is available for an additional charge, contact us to confirm before placing your order.",
   },
   {
     q: "Do you deliver outside Muhoroni?",
@@ -61,17 +67,17 @@ const relatedProducts = [
   {
     name: "Adjustable Backdrop Banner",
     href: "/products/events-display/backdrop-banner",
-    image: ph(400, 300, "Backdrop+Banner"),
+   image: BackdropBanner.src,
   },
   {
     name: "Table Rollup Printing",
     href: "/products/events-display/table-rollup",
-    image: ph(400, 300, "Table+Rollup"),
+    image: TableRollup.src,
   },
   {
     name: "Button Badges Printing",
     href: "/products/events-display/button-badges",
-    image: ph(400, 300, "Button+Badges"),
+    image: ButtonBadges.src,
   },
 ];
 
@@ -80,7 +86,7 @@ export default function EventsTableClothPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order a Table Cloth (Events Display) — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order a Table Cloth (Events Display), ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -103,7 +109,7 @@ export default function EventsTableClothPage() {
             Table Cloth Printing
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
-            Custom branded table covers on durable 200 gsm polyester — draped and stretch-fitted
+            Custom branded table covers on durable 200 gsm polyester, draped and stretch-fitted
             styles, full dye-sublimation print, machine washable.
           </p>
         </div>
@@ -113,7 +119,7 @@ export default function EventsTableClothPage() {
           <div className="flex flex-col gap-8">
             <div className="relative aspect-4/3 rounded-2xl overflow-hidden border border-border bg-muted shadow-sm">
               <Image
-                src={ph(700, 525, "Table+Cloth+Printing")}
+                src={TableCloth.src}
                 alt="Table Cloth Printing"
                 fill
                 className="object-cover"
@@ -133,7 +139,7 @@ export default function EventsTableClothPage() {
                 </p>
                 <p>
                   At Ramirez Ventures we print table cloths using dye-sublimation technology on
-                  200 gsm polyester fabric — meaning your logo, colours, and artwork are
+                  200 gsm polyester fabric, meaning your logo, colours, and artwork are
                   permanently bonded into the fabric for fade-resistant, wash-safe results.
                   Draped covers hang elegantly to the floor on all sides, while fitted stretch
                   covers snap snugly to the table contours for a polished trade-show look.
@@ -143,8 +149,8 @@ export default function EventsTableClothPage() {
                   repeated event use without losing their colour or shape.
                 </p>
                 <ul className="list-disc list-inside space-y-1.5 pl-1">
-                  <li>200 gsm durable polyester — crease-resistant and machine washable</li>
-                  <li>Full dye-sublimation print — unlimited colours, no fading</li>
+                  <li>200 gsm durable polyester, crease-resistant and machine washable</li>
+                  <li>Full dye-sublimation print, unlimited colours, no fading</li>
                   <li>Draped and fitted (stretch) styles available</li>
                   <li>Fits 4 ft, 6 ft, and 8 ft standard event tables</li>
                   <li>Full-wrap printing (all four sides) available on request</li>
@@ -212,14 +218,14 @@ export default function EventsTableClothPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Branded Table Cloth – ${selectedSize.label}`,
+                      name: `Branded Table Cloth  to  ${selectedSize.label}`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Table+Cloth"),
                       href: "/products/events-display/table-cloth",
@@ -240,7 +246,7 @@ export default function EventsTableClothPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 3–5 day turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 3 to 5 day turnaround · Free local Muhoroni delivery
               </p>
             </div>
 
@@ -248,11 +254,11 @@ export default function EventsTableClothPage() {
               <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Machine washable — reuse at every event</span>
+                  <span>Machine washable, reuse at every event</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Dye-sublimation print — colours survive washing without fading</span>
+                  <span>Dye-sublimation print, colours survive washing without fading</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>

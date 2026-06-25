@@ -59,7 +59,7 @@ const productDescriptions = [
   {
     name: "Logo Design",
     description:
-      "A professional logo is the cornerstone of your brand. We design unique, scalable vector logos delivered as AI, EPS, SVG, PNG, and PDF — ready for both print and digital use across all sizes.",
+      "A professional logo is the cornerstone of your brand. We design unique, scalable vector logos delivered as AI, EPS, SVG, PNG, and PDF, ready for both print and digital use across all sizes.",
   },
   {
     name: "Flyer Design",
@@ -69,32 +69,32 @@ const productDescriptions = [
   {
     name: "Brochure Design",
     description:
-      "We design bi-fold, tri-fold, and custom-format brochures for company profiles, product catalogues, and service menus — any size, any industry, ready to send straight to print.",
+      "We design bi-fold, tri-fold, and custom-format brochures for company profiles, product catalogues, and service menus, any size, any industry, ready to send straight to print.",
   },
   {
     name: "Business Card Design",
     description:
-      "Stand out with a well-designed business card. We create classic, minimalist, and bold layouts — print-ready at 90×55 mm with crop marks and bleed, matched to your brand style.",
+      "Stand out with a well-designed business card. We create classic, minimalist, and bold layouts, print-ready at 90x55 mm with crop marks and bleed, matched to your brand style.",
   },
   {
     name: "Social Media Graphics",
     description:
-      "Consistent, on-brand graphics for Facebook, Instagram, LinkedIn, and X — posts, cover photos, story templates, and ad creatives, supplied in all required platform dimensions.",
+      "Consistent, on-brand graphics for Facebook, Instagram, LinkedIn, and X, posts, cover photos, story templates, and ad creatives, supplied in all required platform dimensions.",
   },
   {
     name: "Brand Identity Package",
     description:
-      "A complete brand starter pack: primary and secondary logos, colour palette, typography guide, letterhead, business card, and brand usage guidelines — delivered as a single comprehensive file.",
+      "A complete brand starter pack: primary and secondary logos, colour palette, typography guide, letterhead, business card, and brand usage guidelines, delivered as a single comprehensive file.",
   },
   {
     name: "Poster Design",
     description:
-      "A3, A2, and A1 poster layouts designed for maximum visual impact — event announcements, product promotions, church programmes, political campaigns, and motivational wall displays.",
+      "A3, A2, and A1 poster layouts designed for maximum visual impact, event announcements, product promotions, church programmes, political campaigns, and motivational wall displays.",
   },
   {
     name: "Exhibition Backdrop Design",
     description:
-      "Large-format backdrop and media wall designs for trade shows, press conferences, product launches, award ceremonies, and church events — sized precisely to your banner hardware.",
+      "Large-format backdrop and media wall designs for trade shows, press conferences, product launches, award ceremonies, and church events, sized precisely to your banner hardware.",
   },
 ];
 
@@ -103,7 +103,7 @@ const features = [
     icon: Star,
     title: "Professional Creative Team",
     description:
-      "Our in-house designers bring years of experience across brand identity, print, and digital — delivering polished, market-ready work every time.",
+      "Our in-house designers bring years of experience across brand identity, print, and digital, delivering polished, market-ready work every time.",
   },
   {
     icon: Clock,
@@ -115,13 +115,13 @@ const features = [
     icon: Truck,
     title: "Design-to-Print Under One Roof",
     description:
-      "Because we design and print in-house, your files are already production-optimised — no rework, no delays, no extra cost.",
+      "Because we design and print in-house, your files are already production-optimised, no rework, no delays, no extra cost.",
   },
   {
     icon: Palette,
     title: "Unlimited Revisions",
     description:
-      "We iterate until you are 100% satisfied. Your approval matters more to us than a quick sign-off — your brand deserves to be right.",
+      "We iterate until you are 100% satisfied. Your approval matters more to us than a quick sign-off, your brand deserves to be right.",
   },
   {
     icon: ShieldCheck,
@@ -143,16 +143,16 @@ export default function GraphicDesignPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* ── Hero ── */}
-      <section className="relative isolate overflow-hidden bg-gradient-to-br from-primary/90 via-primary to-primary/80">
+      <section className="relative isolate overflow-hidden bg-brand-surface">
         <Image
           src={ph(1400, 400, "Graphic+Design+Services")}
           alt="Graphic design services"
           fill
-          className="object-cover opacity-20 mix-blend-overlay"
+          className="object-cover opacity-70"
           priority
           unoptimized
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-transparent to-primary/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-primary/20" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <nav className="mb-6 flex items-center gap-1.5 text-sm text-primary-foreground/70 flex-wrap">
             <Link href="/" className="hover:text-primary-foreground transition-colors">Home</Link>
@@ -169,14 +169,14 @@ export default function GraphicDesignPage() {
               Professional Graphic Design Services
             </h1>
             <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
-              Beautiful, on-brand designs for print and digital — from logos to full brand
+              Beautiful, on-brand designs for print and digital, from logos to full brand
               identity packages, we create work that represents you at your best.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg" asChild>
+              <Button size="lg" className="rv-hero-button-primary" asChild>
                 <a href="#products">See Our Services</a>
               </Button>
-              <Button size="lg" variant="outline" className="border-white/40 text-primary-foreground hover:bg-white/10" asChild>
+              <Button size="lg" variant="outline" className="rv-hero-button-secondary" asChild>
                 <Link href="/contact">Get a Quote</Link>
               </Button>
             </div>
@@ -260,7 +260,7 @@ export default function GraphicDesignPage() {
             </div>
 
             {/* Overview */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <Badge variant="secondary" className="mb-4">About Graphic Design</Badge>
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-5 leading-snug">
                 Professional Graphic Design for Print and Digital
@@ -274,12 +274,12 @@ export default function GraphicDesignPage() {
                   launch, we provide end-to-end creative solutions backed by expert in-house printing.
                 </p>
                 <p>
-                  We believe great design should be accessible to every business — not just large
+                  We believe great design should be accessible to every business, not just large
                   corporations with big budgets. That is why we offer clear pricing, fast turnaround
                   times, and personal design consultations to ensure you get exactly the look and feel
                   your brand deserves. Every design we create is production-ready and optimised for
                   our printing processes, meaning what you approve on screen is what you receive in
-                  print — no surprises.
+                  print, no surprises.
                 </p>
                 <p>
                   From a single-colour one-colour logo to a fully animated social media brand kit,
@@ -328,7 +328,7 @@ export default function GraphicDesignPage() {
             </section>
 
             {/* Product descriptions */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <Badge variant="secondary" className="mb-4">What We Offer</Badge>
               <h2 className="text-2xl font-bold text-foreground mb-6">
                 Our Design Services in Detail
@@ -352,7 +352,7 @@ export default function GraphicDesignPage() {
             </section>
 
             {/* Why Choose Ramirez */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <div className="text-center mb-10">
                 <Badge variant="secondary" className="mb-3">Why Choose Us</Badge>
                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
@@ -382,11 +382,11 @@ export default function GraphicDesignPage() {
                   );
                 })}
               </div>
-              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 rounded-xl bg-primary/5 border border-primary/20 p-6">
+              <div className="rv-soft-cta mt-10 flex flex-col items-center justify-center gap-4 rounded-lg sm:flex-row">
                 <div className="text-center sm:text-left">
                   <p className="font-semibold text-foreground">Ready to get started?</p>
                   <p className="text-sm text-muted-foreground">
-                    Get a free design consultation today — no obligation.
+                    Get a free design consultation today, no obligation.
                   </p>
                 </div>
                 <div className="flex gap-3">

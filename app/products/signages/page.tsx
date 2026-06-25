@@ -59,7 +59,7 @@ const productDescriptions = [
   {
     name: "Acrylic Signage",
     description:
-      "Premium 3 mm and 5 mm clear or coloured acrylic signs with UV-printed or vinyl-applied graphics — ideal for reception areas, conference rooms, retail displays, and brand walls. Clean, modern, and instantly professional.",
+      "Premium 3 mm and 5 mm clear or coloured acrylic signs with UV-printed or vinyl-applied graphics, ideal for reception areas, conference rooms, retail displays, and brand walls. Clean, modern, and instantly professional.",
   },
   {
     name: "ACP Aluminium Composite Signage",
@@ -74,27 +74,27 @@ const productDescriptions = [
   {
     name: "Directional & Wayfinding Signs",
     description:
-      "Indoor and outdoor directional signage systems for hospitals, schools, malls, office parks, and events — arrow signs, overhead hanging signs, floor graphics, and freestanding display stands.",
+      "Indoor and outdoor directional signage systems for hospitals, schools, malls, office parks, and events, arrow signs, overhead hanging signs, floor graphics, and freestanding display stands.",
   },
   {
     name: "Window Graphics & Frosting",
     description:
-      "Vinyl window graphics, frosted privacy film, one-way vision film, and full-colour window displays — used by retailers, restaurants, banks, and offices to brand glass surfaces without permanent alteration.",
+      "Vinyl window graphics, frosted privacy film, one-way vision film, and full-colour window displays, used by retailers, restaurants, banks, and offices to brand glass surfaces without permanent alteration.",
   },
   {
     name: "Vehicle Branding & Wraps",
     description:
-      "Full and partial vehicle wraps, fleet branding, van livery, and car door panels — turning your company vehicles into moving billboards that deliver thousands of impressions every day across Kenya.",
+      "Full and partial vehicle wraps, fleet branding, van livery, and car door panels, turning your company vehicles into moving billboards that deliver thousands of impressions every day across Kenya.",
   },
   {
     name: "Wall Graphics & Murals",
     description:
-      "Large-scale printed wall murals, vinyl wall graphics, and branded feature walls for offices, retail spaces, schools, hospitals, and event venues — transforming blank walls into brand statements.",
+      "Large-scale printed wall murals, vinyl wall graphics, and branded feature walls for offices, retail spaces, schools, hospitals, and event venues, transforming blank walls into brand statements.",
   },
   {
     name: "Illuminated LED Signage",
     description:
-      "Backlit LED signage, lightbox displays, and illuminated channel letters for shopfronts, malls, hotels, and reception areas — maximum visibility day and night with energy-efficient LED technology.",
+      "Backlit LED signage, lightbox displays, and illuminated channel letters for shopfronts, malls, hotels, and reception areas, maximum visibility day and night with energy-efficient LED technology.",
   },
 ];
 
@@ -103,19 +103,19 @@ const features = [
     icon: Star,
     title: "Premium Fabrication Quality",
     description:
-      "We use commercial-grade materials — acrylic, ACP, vinyl, and LED components — fabricated to precise specifications so your signage looks sharp and lasts for years.",
+      "We use commercial-grade materials, acrylic, ACP, vinyl, and LED components, fabricated to precise specifications so your signage looks sharp and lasts for years.",
   },
   {
     icon: Clock,
     title: "Fast Project Timelines",
     description:
-      "Most signage projects are completed within 3–7 business days. We provide a detailed timeline upfront and keep you updated at every stage from design approval to installation.",
+      "Most signage projects are completed within 3 to 7 business days. We provide a detailed timeline upfront and keep you updated at every stage from design approval to installation.",
   },
   {
     icon: Truck,
     title: "Nationwide Delivery & Installation",
     description:
-      "We deliver and install signage across Kenya — from Muhoroni, Kenya to Mombasa, Kisumu, and beyond. Our installation team handles mounting, cabling, and finishing.",
+      "We deliver and install signage across Kenya, from Muhoroni, Kenya to Mombasa, Kisumu, and beyond. Our installation team handles mounting, cabling, and finishing.",
   },
   {
     icon: Palette,
@@ -143,16 +143,16 @@ export default function SignagesPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero */}
-      <section className="relative isolate overflow-hidden bg-gradient-to-br from-primary/90 via-primary to-primary/80">
+      <section className="relative isolate overflow-hidden bg-brand-surface">
         <Image
           src={ph(1400, 400, "Signage+Kenya")}
           alt="Signage Kenya"
           fill
-          className="object-cover opacity-20 mix-blend-overlay"
+          className="object-cover opacity-70"
           priority
           unoptimized
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-transparent to-primary/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-primary/20" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <nav className="mb-6 flex items-center gap-1.5 text-sm text-primary-foreground/70 flex-wrap">
             <Link href="/" className="hover:text-primary-foreground transition-colors">Home</Link>
@@ -170,13 +170,13 @@ export default function SignagesPage() {
             </h1>
             <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
               Acrylic signs, ACP fascias, vehicle wraps, window graphics, wall murals, and LED
-              displays — high-quality signage fabricated and installed across Kenya.
+              displays, high-quality signage fabricated and installed across Kenya.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg" asChild>
+              <Button size="lg" className="rv-hero-button-primary" asChild>
                 <a href="#products">See Our Signage</a>
               </Button>
-              <Button size="lg" variant="outline" className="border-white/40 text-primary-foreground hover:bg-white/10" asChild>
+              <Button size="lg" variant="outline" className="rv-hero-button-secondary" asChild>
                 <Link href="/contact">Get a Quote</Link>
               </Button>
             </div>
@@ -260,7 +260,7 @@ export default function SignagesPage() {
             </div>
 
             {/* Overview */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <Badge variant="secondary" className="mb-4">About Signage</Badge>
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-5 leading-snug">
                 Commercial Signage That Commands Attention
@@ -270,7 +270,7 @@ export default function SignagesPage() {
                   Great signage tells your customers who you are before they even walk through
                   the door. At Ramirez Ventures we design, fabricate, and install a comprehensive
                   range of commercial signage for businesses, retail chains, hotels, hospitals,
-                  schools, offices, and government institutions across Kenya — from sleek acrylic
+                  schools, offices, and government institutions across Kenya, from sleek acrylic
                   reception signs to large-scale LED-illuminated shopfront fascias and full
                   vehicle wrap liveries.
                 </p>
@@ -278,9 +278,9 @@ export default function SignagesPage() {
                   Every signage project begins with a design consultation where we understand
                   your brand identity, installation environment, and visibility requirements.
                   Our team then produces a detailed proof for your approval before fabrication
-                  begins — so there are no surprises when the sign goes up. We use
+                  begins, so there are no surprises when the sign goes up. We use
                   commercial-grade materials chosen for the specific demands of indoor or
-                  outdoor Kenya environments — UV-stable, weather-resistant, and built to last.
+                  outdoor Kenya environments, UV-stable, weather-resistant, and built to last.
                 </p>
                 <p>
                   Whether you need a single reception nameplate or a complete multi-site
@@ -329,7 +329,7 @@ export default function SignagesPage() {
             </section>
 
             {/* Product descriptions */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <Badge variant="secondary" className="mb-4">What We Offer</Badge>
               <h2 className="text-2xl font-bold text-foreground mb-6">
                 Our Signage Products in Detail
@@ -353,7 +353,7 @@ export default function SignagesPage() {
             </section>
 
             {/* Why Choose Ramirez */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <div className="text-center mb-10">
                 <Badge variant="secondary" className="mb-3">Why Choose Us</Badge>
                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
@@ -361,7 +361,7 @@ export default function SignagesPage() {
                 </h2>
                 <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">
                   From concept and design to fabrication and installation, we manage your
-                  signage project end-to-end — on time and to specification.
+                  signage project end-to-end, on time and to specification.
                 </p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -383,7 +383,7 @@ export default function SignagesPage() {
                   );
                 })}
               </div>
-              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 rounded-xl bg-primary/5 border border-primary/20 p-6">
+              <div className="rv-soft-cta mt-10 flex flex-col items-center justify-center gap-4 rounded-lg sm:flex-row">
                 <div className="text-center sm:text-left">
                   <p className="font-semibold text-foreground">Ready to upgrade your signage?</p>
                   <p className="text-sm text-muted-foreground">

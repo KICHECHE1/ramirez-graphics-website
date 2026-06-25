@@ -21,20 +21,20 @@ const ph = (w: number, h: number, label: string) =>
 const WHATSAPP = "254706207037";
 
 const sizes = [
-  { label: "Spot UV Gloss — 50 cards",  dimensions: "90 × 55 mm, 50 pcs",  price: 1800 },
-  { label: "Spot UV Gloss — 100 cards", dimensions: "90 × 55 mm, 100 pcs", price: 2800 },
-  { label: "Spot UV Gloss — 250 cards", dimensions: "90 × 55 mm, 250 pcs", price: 5500 },
-  { label: "Spot UV Matte — 100 cards", dimensions: "90 × 55 mm, 100 pcs", price: 3200 },
-  { label: "Spot UV Matte — 250 cards", dimensions: "90 × 55 mm, 250 pcs", price: 6200 },
+  { label: "Spot UV Gloss, 50 cards",  dimensions: "90 x 55 mm, 50 pcs",  price: 1800 },
+  { label: "Spot UV Gloss, 100 cards", dimensions: "90 x 55 mm, 100 pcs", price: 2800 },
+  { label: "Spot UV Gloss, 250 cards", dimensions: "90 x 55 mm, 250 pcs", price: 5500 },
+  { label: "Spot UV Matte, 100 cards", dimensions: "90 x 55 mm, 100 pcs", price: 3200 },
+  { label: "Spot UV Matte, 250 cards", dimensions: "90 x 55 mm, 250 pcs", price: 6200 },
 ];
 
 const materialNote =
-  "Printed on 400 gsm premium art board with full-colour double-sided printing. Spot UV varnish is applied selectively over chosen design elements — logo, text, or patterns — creating a striking gloss-on-matte or gloss-on-gloss contrast effect.";
+  "Printed on 400 gsm premium art board with full-colour double-sided printing. Spot UV varnish is applied selectively over chosen design elements, logo, text, or patterns, creating a striking gloss-on-matte or gloss-on-gloss contrast effect.";
 
 const faqs = [
   {
     q: "What is Spot UV printing?",
-    a: "Spot UV (ultraviolet) varnish is a clear, high-gloss coating applied to specific areas of the card — such as your logo or name — while the rest of the card retains a matte or gloss finish. The contrast between the two textures creates a premium, tactile effect that immediately stands out.",
+    a: "Spot UV (ultraviolet) varnish is a clear, high-gloss coating applied to specific areas of the card, such as your logo or name, while the rest of the card retains a matte or gloss finish. The contrast between the two textures creates a premium, tactile effect that immediately stands out.",
   },
   {
     q: "How do I specify which areas get the Spot UV treatment?",
@@ -42,15 +42,15 @@ const faqs = [
   },
   {
     q: "What base finish pairs best with Spot UV?",
-    a: "Spot UV on a matte laminate base gives the most dramatic contrast — the coated areas appear to glow against the flat matte background. Spot UV on gloss is subtler but still creates a luxury feel.",
+    a: "Spot UV on a matte laminate base gives the most dramatic contrast, the coated areas appear to glow against the flat matte background. Spot UV on gloss is subtler but still creates a luxury feel.",
   },
   {
     q: "Are these thicker than standard business cards?",
-    a: "Yes. Spot UV cards are printed on 400 gsm board — slightly thicker than our standard 350 gsm cards — giving them a noticeably weighty, premium feel.",
+    a: "Yes. Spot UV cards are printed on 400 gsm board, slightly thicker than our standard 350 gsm cards, giving them a noticeably weighty, premium feel.",
   },
   {
     q: "How quickly can I get my order?",
-    a: "Spot UV cards take 48–72 hours due to the additional coating and curing process. Rush orders can be discussed — contact us on WhatsApp to confirm availability.",
+    a: "Spot UV cards take 48 to 72 hours due to the additional coating and curing process. Rush orders can be discussed, contact us on WhatsApp to confirm availability.",
   },
   {
     q: "Do you deliver outside Muhoroni?",
@@ -69,7 +69,7 @@ export default function SpotUVPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order Spot UV Business Cards — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order Spot UV Business Cards, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -94,7 +94,7 @@ export default function SpotUVPage() {
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
             Premium 400 gsm business cards with selective gloss UV varnish on your logo or key
-            design elements — for a tactile, luxury first impression.
+            design elements, for a tactile, luxury first impression.
           </p>
         </div>
 
@@ -110,13 +110,13 @@ export default function SpotUVPage() {
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
                   Spot UV business cards take your brand identity to the next level. By applying a
-                  clear, high-gloss ultraviolet varnish selectively over chosen elements — your logo,
-                  company name, a pattern, or a die-cut shape — we create a striking contrast that
+                  clear, high-gloss ultraviolet varnish selectively over chosen elements, your logo,
+                  company name, a pattern, or a die-cut shape, we create a striking contrast that
                   makes the card demand attention the moment it is picked up.
                 </p>
                 <p>
                   We print Spot UV cards on heavyweight 400 gsm art board for a premium, substantial
-                  feel. The base finish can be matte laminate (for maximum contrast — the UV elements
+                  feel. The base finish can be matte laminate (for maximum contrast, the UV elements
                   appear to glow against the flat background) or gloss laminate (for a subtler
                   luxury effect). Both options produce a card that signals quality and
                   professionalism at first touch.
@@ -127,12 +127,12 @@ export default function SpotUVPage() {
                   meetings, and anywhere a standard card simply isn&aquot;t enough.
                 </p>
                 <ul className="list-disc list-inside space-y-1.5 pl-1">
-                  <li>400 gsm premium art board — heavier than standard cards</li>
+                  <li>400 gsm premium art board, heavier than standard cards</li>
                   <li>Selective Spot UV gloss coating on chosen design elements</li>
                   <li>Matte laminate or gloss laminate base finish</li>
                   <li>Full-colour double-sided printing included</li>
                   <li>In-house Spot UV mask creation available</li>
-                  <li>48–72 hr turnaround; rush orders available</li>
+                  <li>48 to 72 hr turnaround; rush orders available</li>
                 </ul>
               </div>
             </div>
@@ -183,11 +183,11 @@ export default function SpotUVPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button className="w-full h-12 text-base gap-2"
-                  onClick={() => addToCart({ name: `Spot UV Business Cards – ${selectedSize.label}`, price: selectedSize.price, image: ph(400, 300, "Spot+UV+Cards"), href: "/products/business-cards/spot-uv" })}>
+                  onClick={() => addToCart({ name: `Spot UV Business Cards  to  ${selectedSize.label}`, price: selectedSize.price, image: ph(400, 300, "Spot+UV+Cards"), href: "/products/business-cards/spot-uv" })}>
                   <ShoppingCart className="size-5" />Add to Cart
                 </Button>
                 <Button className="w-full h-12 text-base gap-2 bg-[#25D366] hover:bg-[#1ebe57] text-white" asChild>
@@ -197,16 +197,16 @@ export default function SpotUVPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 48–72 hr turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 48 to 72 hr turnaround · Free local Muhoroni delivery
               </p>
             </div>
 
             <div className="rounded-xl border border-border bg-card p-5 shadow-sm">
               <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
                 {[
-                  "400 gsm board — noticeably heavier and more premium than standard cards",
+                  "400 gsm board, noticeably heavier and more premium than standard cards",
                   "Tactile Spot UV gloss contrasts beautifully against matte base",
-                  "Spot UV mask created in-house — no specialist files needed",
+                  "Spot UV mask created in-house, no specialist files needed",
                   "Perfect for executives, creatives, and premium brands",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">

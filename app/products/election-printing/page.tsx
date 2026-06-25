@@ -109,15 +109,15 @@ export default function ElectionPrintingPage() {
         <div className="flex flex-col gap-14">
 
           {/* ── Brief intro ── */}
-          <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+          <section className="rv-card rounded-lg p-6 sm:p-8">
               <Badge variant="secondary" className="mb-4">Election & Campaign Printing</Badge>
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 leading-snug">
                 Win Your Campaign with Ramirez Ventures
               </h2>
               <p className="text-muted-foreground leading-relaxed max-w-2xl mb-6">
                 At Ramirez Ventures, we understand that every campaign is time-sensitive and every
-                impression counts. We produce vibrant, durable election materials — from button
-                badges and posters to branded aprons — that put your face and message in front of
+                impression counts. We produce vibrant, durable election materials, from button
+                badges and posters to branded aprons, that put your face and message in front of
                 voters. Fast turnaround, bulk pricing, and delivery across Kenya.
               </p>
               <Button asChild>
@@ -174,8 +174,8 @@ export default function ElectionPrintingPage() {
             </section>
 
           {/* ── CTA section ── */}
-          <section className="rounded-2xl overflow-hidden border border-border bg-primary">
-            <div className="p-8 sm:p-10 text-primary-foreground text-center flex flex-col items-center gap-5">
+          <section className="rv-cta">
+            <div className="rv-cta-content text-center flex flex-col items-center gap-5">
               <Badge className="bg-white/20 text-primary-foreground border-0 backdrop-blur-sm">
                 Ready to Order?
               </Badge>
@@ -187,10 +187,10 @@ export default function ElectionPrintingPage() {
                 and we&apos;ll send you a quote within minutes.
               </p>
 
-              <div className="flex flex-wrap justify-center gap-4 mt-2">
+              <div className="rv-cta-actions mt-2">
                 <Button
                   size="lg"
-                  className="bg-white text-primary hover:bg-white/90 gap-2 shadow-lg font-semibold"
+                  className="rv-cta-button-primary gap-2 font-semibold"
                   asChild
                 >
                   <a href={`tel:${PHONE.replace(/\s/g, "")}`}>
@@ -201,7 +201,7 @@ export default function ElectionPrintingPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white/40 text-primary-foreground hover:bg-white/15 gap-2"
+                  className="rv-cta-button-secondary gap-2"
                   asChild
                 >
                   <a
@@ -216,7 +216,7 @@ export default function ElectionPrintingPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white/40 text-primary-foreground hover:bg-white/15"
+                  className="rv-cta-button-secondary"
                   asChild
                 >
                   <Link href="/contact">Get a Quote Online</Link>

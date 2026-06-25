@@ -21,11 +21,11 @@ const ph = (w: number, h: number, label: string) =>
 const WHATSAPP = "254706207037";
 
 const sizes = [
-  { label: "Standard — 50 cards",  dimensions: "90 × 55 mm, 50 pcs",  price: 800 },
-  { label: "Standard — 100 cards", dimensions: "90 × 55 mm, 100 pcs", price: 1200 },
-  { label: "Standard — 250 cards", dimensions: "90 × 55 mm, 250 pcs", price: 2200 },
-  { label: "Standard — 500 cards", dimensions: "90 × 55 mm, 500 pcs", price: 3500 },
-  { label: "Slim — 100 cards",     dimensions: "85 × 55 mm, 100 pcs", price: 1400 },
+  { label: "Standard, 50 cards",  dimensions: "90 x 55 mm, 50 pcs",  price: 800 },
+  { label: "Standard, 100 cards", dimensions: "90 x 55 mm, 100 pcs", price: 1200 },
+  { label: "Standard, 250 cards", dimensions: "90 x 55 mm, 250 pcs", price: 2200 },
+  { label: "Standard, 500 cards", dimensions: "90 x 55 mm, 500 pcs", price: 3500 },
+  { label: "Slim, 100 cards",     dimensions: "85 x 55 mm, 100 pcs", price: 1400 },
 ];
 
 const materialNote =
@@ -46,7 +46,7 @@ const faqs = [
   },
   {
     q: "How quickly can I get my cards?",
-    a: "Standard orders are ready within 24–48 hours once artwork is approved. Same-day printing is available for orders placed before 10 AM.",
+    a: "Standard orders are ready within 24 to 48 hours once artwork is approved. Same-day printing is available for orders placed before 10 AM.",
   },
   {
     q: "Can I order different designs in the same batch?",
@@ -69,7 +69,7 @@ export default function StandardBusinessCardsPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order Business Cards — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order Business Cards, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -93,7 +93,7 @@ export default function StandardBusinessCardsPage() {
             Business Cards Printing
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
-            Full-colour, double-sided business cards on premium 350 gsm art board — available in
+            Full-colour, double-sided business cards on premium 350 gsm art board, available in
             gloss, matte, or uncoated finish. Fast turnaround from Muhoroni, Kisumu.
           </p>
         </div>
@@ -111,11 +111,11 @@ export default function StandardBusinessCardsPage() {
                 <p>
                   Your business card is often the first physical impression a potential client, partner,
                   or employer has of you. At Ramirez Ventures we print full-colour business cards on
-                  heavyweight 350 gsm premium art board — thick, crisp, and professional — so your
+                  heavyweight 350 gsm premium art board, thick, crisp, and professional, so your
                   first impression always counts.
                 </p>
                 <p>
-                  We offer the standard 90 × 55 mm size as well as a slimmer 85 × 55 mm format. Both
+                  We offer the standard 90 x 55 mm size as well as a slimmer 85 x 55 mm format. Both
                   sides are printed in vibrant full colour at no extra charge. Choose from gloss
                   laminate for a high-sheen finish, matte laminate for an understated premium feel, or
                   plain uncoated for a natural look that writes easily.
@@ -126,12 +126,12 @@ export default function StandardBusinessCardsPage() {
                   and we will go straight to print after a quick proof check.
                 </p>
                 <ul className="list-disc list-inside space-y-1.5 pl-1">
-                  <li>350 gsm premium art board — thick and substantial</li>
+                  <li>350 gsm premium art board, thick and substantial</li>
                   <li>Full-colour double-sided printing included</li>
                   <li>Gloss laminate, matte laminate, or uncoated finish</li>
                   <li>Rounded corners available on request</li>
                   <li>In-house design service available</li>
-                  <li>24–48 hr turnaround; same-day for urgent orders</li>
+                  <li>24 to 48 hr turnaround; same-day for urgent orders</li>
                 </ul>
               </div>
             </div>
@@ -182,11 +182,11 @@ export default function StandardBusinessCardsPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button className="w-full h-12 text-base gap-2"
-                  onClick={() => addToCart({ name: `Business Cards – ${selectedSize.label}`, price: selectedSize.price, image: ph(400, 300, "Business+Cards"), href: "/products/business-cards/standard" })}>
+                  onClick={() => addToCart({ name: `Business Cards  to  ${selectedSize.label}`, price: selectedSize.price, image: ph(400, 300, "Business+Cards"), href: "/products/business-cards/standard" })}>
                   <ShoppingCart className="size-5" />Add to Cart
                 </Button>
                 <Button className="w-full h-12 text-base gap-2 bg-[#25D366] hover:bg-[#1ebe57] text-white" asChild>
@@ -196,16 +196,16 @@ export default function StandardBusinessCardsPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 24–48 hr turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 24 to 48 hr turnaround · Free local Muhoroni delivery
               </p>
             </div>
 
             <div className="rounded-xl border border-border bg-card p-5 shadow-sm">
               <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
                 {[
-                  "350 gsm art board — thick, premium, professional",
+                  "350 gsm art board, thick, premium, professional",
                   "Double-sided full-colour printing at no extra charge",
-                  "Design service available — send us your logo and we handle the rest",
+                  "Design service available, send us your logo and we handle the rest",
                   "Same-day printing for orders placed before 10 AM",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">

@@ -17,9 +17,13 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 
-/* ─── placeholder helper ─── */
-const ph = (w: number, h: number, label: string) =>
-  `https://placehold.co/${w}x${h}/e0f2fe/0284c7?text=${encodeURIComponent(label)}`;
+{/* Images */}
+import BackdropBanner from "@/app/assets/back drop banner.jpg";
+import TableCloth from "@/app/assets/Tablecloth.jpg";
+import TableRollup from "@/app/assets/table roll up _Banner_Mockup_2.jpg";
+import Kitenge from "@/app/assets/kitenge notebooks.jpg";
+import ButtonBadges from "@/app/assets/Button_Mockup_3.jpg";
+
 
 /* ─── Sidebar: all 8 product categories ─── */
 const productCategories = [
@@ -51,16 +55,16 @@ const eventsProducts = [
   {
     id: "ed-1",
     name: "Button Badges Printing",
-    image: ph(400, 320, "Button+Badges"),
+    image: ButtonBadges.src,
     href: "/products/events-display/button-badges",
     badge: "Popular",
     description:
-      "Custom button badges are a staple at corporate events, expos, and branded activations. We print full-colour badges in a range of sizes — from 25mm lapel pins to 75mm promotional badges — on durable metal backs with scratch-resistant fronts. Ideal for name badges, branding, fundraisers, and giveaways.",
+      "Custom button badges are a staple at corporate events, expos, and branded activations. We print full-colour badges in a range of sizes, from 25mm lapel pins to 75mm promotional badges, on durable metal backs with scratch-resistant fronts. Ideal for name badges, branding, fundraisers, and giveaways.",
   },
   {
     id: "ed-2",
     name: "Table Rollup Printing",
-    image: ph(400, 320, "Table+Rollup"),
+    image: TableRollup.src,
     href: "/products/events-display/table-rollup",
     badge: "Best Seller",
     description:
@@ -69,16 +73,16 @@ const eventsProducts = [
   {
     id: "ed-3",
     name: "Adjustable Backdrop Banner",
-    image: ph(400, 320, "Backdrop+Banner"),
+    image: BackdropBanner.src,
     href: "/products/events-display/backdrop-banner",
     badge: "Popular",
     description:
-      "Our adjustable backdrop banners create a professional branded backdrop for press conferences, photo booths, award ceremonies, and corporate events. Available in step-and-repeat, solid, and custom layouts — printed on wrinkle-free fabric or vinyl with an adjustable aluminium frame.",
+      "Our adjustable backdrop banners create a professional branded backdrop for press conferences, photo booths, award ceremonies, and corporate events. Available in step-and-repeat, solid, and custom layouts, printed on wrinkle-free fabric or vinyl with an adjustable aluminium frame.",
   },
   {
     id: "ed-4",
     name: "Table Cloth Printing",
-    image: ph(400, 320, "Table+Cloth"),
+    image: TableCloth.src,
     href: "/products/events-display/table-cloth",
     description:
       "Branded table cloths transform an ordinary display table into a professional brand experience. Our custom-printed table covers are made from durable polyester fabric, available in fitted, draped, or stretch styles. Perfect for trade shows, exhibitions, buffet tables, and outdoor events.",
@@ -86,11 +90,11 @@ const eventsProducts = [
   {
     id: "ed-5",
     name: "Kitenge Notebooks",
-    image: ph(400, 320, "Kitenge+Notebooks"),
+    image: Kitenge.src,
     href: "/products/events-display/kitenge-notebooks",
     badge: "New",
     description:
-      "Our Kitenge-covered notebooks blend African heritage with practical event branding. Each notebook features a distinctive Kitenge fabric cover with your logo or custom design — making them a memorable and culturally rich corporate gift or event giveaway that delegates will actually keep and use.",
+      "Our Kitenge-covered notebooks blend African heritage with practical event branding. Each notebook features a distinctive Kitenge fabric cover with your logo or custom design, making them a memorable and culturally rich corporate gift or event giveaway that delegates will actually keep and use.",
   },
 ];
 
@@ -106,7 +110,7 @@ const features = [
     icon: Clock,
     title: "Fast Turnaround",
     description:
-      "Event deadlines wait for no one. Most orders are ready within 24–48 hours — same-day printing available for standard sizes.",
+      "Event deadlines wait for no one. Most orders are ready within 24 to 48 hours, same-day printing available for standard sizes.",
   },
   {
     icon: Truck,
@@ -118,13 +122,13 @@ const features = [
     icon: Palette,
     title: "Free Design Support",
     description:
-      "Our in-house design team will create or adapt your artwork for each display format at no extra cost — just send your brand assets.",
+      "Our in-house design team will create or adapt your artwork for each display format at no extra cost, just send your brand assets.",
   },
   {
     icon: ShieldCheck,
     title: "Durable Materials",
     description:
-      "Every display is produced with materials chosen for longevity — whether it's a one-day pop-up or a multi-day conference stand.",
+      "Every display is produced with materials chosen for longevity, whether it's a one-day pop-up or a multi-day conference stand.",
   },
   {
     icon: CheckCircle2,
@@ -141,16 +145,16 @@ export default function EventsDisplayPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* ── Hero ── */}
-      <section className="relative isolate overflow-hidden bg-gradient-to-br from-primary/90 via-primary to-primary/80">
+      <section className="relative isolate overflow-hidden bg-brand-surface">
         <Image
-          src={ph(1400, 480, "Events+Display+Printing+Kenya")}
+          src={TableCloth.src}
           alt="Events display printing hero"
           fill
-          className="object-cover opacity-20 mix-blend-overlay"
+          className="object-cover opacity-70"
           priority
           unoptimized
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-transparent to-primary/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-primary/20" />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <nav className="mb-6 flex items-center gap-1.5 text-sm text-primary-foreground/70">
@@ -169,17 +173,17 @@ export default function EventsDisplayPage() {
               Events Display Printing in Kenya
             </h1>
             <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
-              Professional event branding solutions — backdrops, rollup banners, table cloths,
-              button badges, and Kitenge notebooks — printed and delivered across Kenya.
+              Professional event branding solutions, backdrops, rollup banners, table cloths,
+              button badges, and Kitenge notebooks, printed and delivered across Kenya.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg" asChild>
+              <Button size="lg" className="rv-hero-button-primary" asChild>
                 <a href="#products">View Products</a>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white/40 text-primary-foreground hover:bg-white/10"
+                className="rv-hero-button-secondary"
                 asChild
               >
                 <Link href="/contact">Get a Quote</Link>
@@ -286,7 +290,7 @@ export default function EventsDisplayPage() {
                   <Link
                     key={product.id}
                     href={product.href}
-                    className="group rounded-xl border border-border bg-card overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                    className="rv-product-card group"
                   >
                     <div className="relative aspect-[4/3] bg-muted overflow-hidden">
                       <Image
@@ -348,7 +352,7 @@ export default function EventsDisplayPage() {
             </section>
 
             {/* ── Why Choose Ramirez Ventures ── */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <div className="text-center mb-10">
                 <Badge variant="secondary" className="mb-3">Why Choose Us</Badge>
                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
@@ -379,8 +383,8 @@ export default function EventsDisplayPage() {
             </section>
 
             {/* ── CTA section ── */}
-            <section className="rounded-2xl overflow-hidden border border-border bg-primary">
-              <div className="p-8 sm:p-10 text-primary-foreground text-center flex flex-col items-center gap-5">
+            <section className="rv-cta">
+              <div className="rv-cta-content text-center flex flex-col items-center gap-5">
                 <Badge className="bg-white/20 text-primary-foreground border-0 backdrop-blur-sm">
                   Ready to Order?
                 </Badge>
@@ -391,10 +395,10 @@ export default function EventsDisplayPage() {
                   Fast turnaround. Bulk discounts. Delivered across Kenya. Call or WhatsApp us now
                   and we&apos;ll send you a quote within minutes.
                 </p>
-                <div className="flex flex-wrap justify-center gap-4 mt-2">
+                <div className="rv-cta-actions mt-2">
                   <Button
                     size="lg"
-                    className="bg-white text-primary hover:bg-white/90 gap-2 shadow-lg font-semibold"
+                    className="rv-cta-button-primary gap-2 font-semibold"
                     asChild
                   >
                     <a href={`tel:${PHONE.replace(/\s/g, "")}`}>
@@ -405,7 +409,7 @@ export default function EventsDisplayPage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-white/40 text-primary-foreground hover:bg-white/15 gap-2"
+                    className="rv-cta-button-secondary gap-2"
                     asChild
                   >
                     <a
@@ -420,7 +424,7 @@ export default function EventsDisplayPage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-white/40 text-primary-foreground hover:bg-white/15"
+                    className="rv-cta-button-secondary"
                     asChild
                   >
                     <Link href="/contact">Get a Quote Online</Link>

@@ -59,12 +59,12 @@ const productDescriptions = [
   {
     name: "Branded Pens",
     description:
-      "One of the most cost-effective giveaways available — a branded pen puts your logo in your client's hand multiple times a day. Available in ballpoint, rollerball, and stylus options in a wide range of colours.",
+      "One of the most cost-effective giveaways available, a branded pen puts your logo in your client's hand multiple times a day. Available in ballpoint, rollerball, and stylus options in a wide range of colours.",
   },
   {
     name: "Branded Caps & Hats",
     description:
-      "Custom embroidered or printed caps — baseball, dad, and bucket hat styles — branded with your logo for staff uniforms, events, sports teams, and corporate giveaways.",
+      "Custom embroidered or printed caps, baseball, dad, and bucket hat styles, branded with your logo for staff uniforms, events, sports teams, and corporate giveaways.",
   },
   {
     name: "Branded Tote Bags",
@@ -74,12 +74,12 @@ const productDescriptions = [
   {
     name: "Branded Notebooks",
     description:
-      "Softcover and hardcover branded notebooks with your logo on the cover — ideal for corporate gifts, training seminars, school programmes, and event welcome packs.",
+      "Softcover and hardcover branded notebooks with your logo on the cover, ideal for corporate gifts, training seminars, school programmes, and event welcome packs.",
   },
   {
     name: "Branded USB Drives",
     description:
-      "Custom USB drives pre-loaded with your content and branded with your logo — a practical, premium gift for clients, employees, and delegates at conferences and product launches.",
+      "Custom USB drives pre-loaded with your content and branded with your logo, a practical, premium gift for clients, employees, and delegates at conferences and product launches.",
   },
   {
     name: "Branded Keychains",
@@ -94,7 +94,7 @@ const productDescriptions = [
   {
     name: "Branded Umbrellas",
     description:
-      "Large-canopy auto-open umbrellas printed with your brand across the panels — maximum visibility in all weather. Ideal for election campaigns, corporate giveaways, and retail promotions.",
+      "Large-canopy auto-open umbrellas printed with your brand across the panels, maximum visibility in all weather. Ideal for election campaigns, corporate giveaways, and retail promotions.",
   },
 ];
 
@@ -109,25 +109,25 @@ const features = [
     icon: Clock,
     title: "Fast Turnaround",
     description:
-      "Most branded items are ready within 3–5 business days. Larger orders and custom items are quoted with lead times upfront — no surprises.",
+      "Most branded items are ready within 3 to 5 business days. Larger orders and custom items are quoted with lead times upfront, no surprises.",
   },
   {
     icon: Truck,
     title: "Nationwide Delivery",
     description:
-      "We deliver promotional items across Kenya — from Muhoroni, Kenya to Mombasa, Kisumu, Nakuru, and beyond. Free local delivery for orders within Muhoroni.",
+      "We deliver promotional items across Kenya, from Muhoroni, Kenya to Mombasa, Kisumu, Nakuru, and beyond. Free local delivery for orders within Muhoroni.",
   },
   {
     icon: Palette,
     title: "Full Branding Service",
     description:
-      "From concept to finished branded product, our team handles design, sourcing, printing, and packaging — so you receive everything you need in one order.",
+      "From concept to finished branded product, our team handles design, sourcing, printing, and packaging, so you receive everything you need in one order.",
   },
   {
     icon: ShieldCheck,
     title: "High MOQ Flexibility",
     description:
-      "We cater to small businesses and large corporates alike — with competitive unit costs from low minimum order quantities up to large-volume bulk orders.",
+      "We cater to small businesses and large corporates alike, with competitive unit costs from low minimum order quantities up to large-volume bulk orders.",
   },
   {
     icon: CheckCircle2,
@@ -143,16 +143,16 @@ export default function PromotionalItemsPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero */}
-      <section className="relative isolate overflow-hidden bg-gradient-to-br from-primary/90 via-primary to-primary/80">
+      <section className="relative isolate overflow-hidden bg-brand-surface">
         <Image
           src={ph(1400, 400, "Promotional+Items+Kenya")}
           alt="Promotional items Kenya"
           fill
-          className="object-cover opacity-20 mix-blend-overlay"
+          className="object-cover opacity-70"
           priority
           unoptimized
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-transparent to-primary/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-primary/20" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <nav className="mb-6 flex items-center gap-1.5 text-sm text-primary-foreground/70 flex-wrap">
             <Link href="/" className="hover:text-primary-foreground transition-colors">Home</Link>
@@ -169,14 +169,14 @@ export default function PromotionalItemsPage() {
               Promotional Items &amp; Branded Merchandise
             </h1>
             <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
-              Put your brand in your customers&apos; hands every day — pens, caps, bags,
+              Put your brand in your customers&apos; hands every day, pens, caps, bags,
               notebooks, USB drives, and more, branded with your logo and delivered across Kenya.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg" asChild>
+              <Button size="lg" className="rv-hero-button-primary" asChild>
                 <a href="#products">Shop Merchandise</a>
               </Button>
-              <Button size="lg" variant="outline" className="border-white/40 text-primary-foreground hover:bg-white/10" asChild>
+              <Button size="lg" variant="outline" className="rv-hero-button-secondary" asChild>
                 <Link href="/contact">Get a Quote</Link>
               </Button>
             </div>
@@ -260,7 +260,7 @@ export default function PromotionalItemsPage() {
             </div>
 
             {/* Overview */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <Badge variant="secondary" className="mb-4">About Promotional Items</Badge>
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-5 leading-snug">
                 Branded Promotional Merchandise That Keeps Working for You
@@ -270,14 +270,14 @@ export default function PromotionalItemsPage() {
                   Promotional merchandise is one of the highest-return marketing investments
                   available. Unlike digital advertising that disappears when the budget runs out,
                   a branded pen, cap, or tote bag continues to put your logo in front of potential
-                  customers every single day — often for months or years. At Ramirez Ventures we
+                  customers every single day, often for months or years. At Ramirez Ventures we
                   supply and brand a comprehensive range of promotional items for businesses,
                   event organisers, NGOs, schools, churches, and political campaigns across Kenya.
                 </p>
                 <p>
                   Whether you need 100 branded pens for a trade show, 500 corporate caps for a
                   staff event, or 2,000 printed tote bags for a product launch, we source
-                  quality items, brand them with your logo, and deliver them to your door — all
+                  quality items, brand them with your logo, and deliver them to your door, all
                   under one roof. Our in-house team handles design, proofing, and production,
                   giving you full control over how your brand is represented on every item.
                 </p>
@@ -295,7 +295,7 @@ export default function PromotionalItemsPage() {
                 <div>
                   <h2 className="text-2xl font-bold text-foreground">Our Promotional Products</h2>
                   <p className="text-muted-foreground text-sm mt-1">
-                    Explore our range of branded merchandise — contact us to order
+                    Explore our range of branded merchandise, contact us to order
                   </p>
                 </div>
                 <Badge variant="outline" className="hidden sm:inline-flex">
@@ -328,7 +328,7 @@ export default function PromotionalItemsPage() {
             </section>
 
             {/* Product descriptions */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <Badge variant="secondary" className="mb-4">What We Offer</Badge>
               <h2 className="text-2xl font-bold text-foreground mb-6">
                 Our Promotional Products in Detail
@@ -352,14 +352,14 @@ export default function PromotionalItemsPage() {
             </section>
 
             {/* Why Choose Ramirez */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <div className="text-center mb-10">
                 <Badge variant="secondary" className="mb-3">Why Choose Us</Badge>
                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
                   Why Choose Ramirez Ventures for Promotional Items?
                 </h2>
                 <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">
-                  We handle everything from sourcing and design to branding and delivery —
+                  We handle everything from sourcing and design to branding and delivery,
                   so you receive polished, on-brand merchandise without the hassle.
                 </p>
               </div>
@@ -382,11 +382,11 @@ export default function PromotionalItemsPage() {
                   );
                 })}
               </div>
-              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 rounded-xl bg-primary/5 border border-primary/20 p-6">
+              <div className="rv-soft-cta mt-10 flex flex-col items-center justify-center gap-4 rounded-lg sm:flex-row">
                 <div className="text-center sm:text-left">
                   <p className="font-semibold text-foreground">Ready to brand your merchandise?</p>
                   <p className="text-sm text-muted-foreground">
-                    Get a free quote — we respond within the hour.
+                    Get a free quote, we respond within the hour.
                   </p>
                 </div>
                 <div className="flex gap-3">

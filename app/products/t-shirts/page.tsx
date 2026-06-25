@@ -59,42 +59,42 @@ const productDescriptions = [
   {
     name: "Branded Round Neck T-shirts",
     description:
-      "Classic crew-neck cotton T-shirts in a wide range of colours and sizes (XS–4XL), branded with your logo via heat transfer vinyl, screen printing, or direct-to-garment (DTG) printing. The most popular choice for events, staff uniforms, and promotions.",
+      "Classic crew-neck cotton T-shirts in a wide range of colours and sizes (XS to 4XL), branded with your logo via heat transfer vinyl, screen printing, or direct-to-garment (DTG) printing. The most popular choice for events, staff uniforms, and promotions.",
   },
   {
     name: "Branded Polo T-shirts",
     description:
-      "Smart piqué cotton polo shirts embroidered or heat-pressed with your logo — the go-to choice for corporate uniforms, schools, sports clubs, and customer-facing staff. Available in a broad colour range and all sizes.",
+      "Smart piqué cotton polo shirts embroidered or heat-pressed with your logo, the go-to choice for corporate uniforms, schools, sports clubs, and customer-facing staff. Available in a broad colour range and all sizes.",
   },
   {
     name: "Sublimation T-shirts",
     description:
-      "All-over full-colour sublimation printing on 100% polyester T-shirts — edge-to-edge designs with vivid, wash-fast colour that will never peel or crack. Perfect for sports teams, entertainment brands, and bold promotional campaigns.",
+      "All-over full-colour sublimation printing on 100% polyester T-shirts, edge-to-edge designs with vivid, wash-fast colour that will never peel or crack. Perfect for sports teams, entertainment brands, and bold promotional campaigns.",
   },
   {
     name: "Long Sleeve Branded Shirts",
     description:
-      "Long sleeve cotton or polyester shirts branded with your logo — suitable for staff uniforms in cooler environments, church groups, community programmes, and branded merchandise for colder seasons.",
+      "Long sleeve cotton or polyester shirts branded with your logo, suitable for staff uniforms in cooler environments, church groups, community programmes, and branded merchandise for colder seasons.",
   },
   {
     name: "Sports & Performance Jerseys",
     description:
-      "Moisture-wicking sublimation basketball, football, volleyball, and athletics jerseys with fully custom player names, numbers, and team branding — produced in small MOQs from single player kits to full-squad sets.",
+      "Moisture-wicking sublimation basketball, football, volleyball, and athletics jerseys with fully custom player names, numbers, and team branding, produced in small MOQs from single player kits to full-squad sets.",
   },
   {
     name: "V-Neck T-shirts",
     description:
-      "V-neck cotton T-shirts with a modern, slightly dressier silhouette — popular for spa and salon uniforms, hospitality staff, and branded apparel that needs a clean, professional edge beyond the standard crew neck.",
+      "V-neck cotton T-shirts with a modern, slightly dressier silhouette, popular for spa and salon uniforms, hospitality staff, and branded apparel that needs a clean, professional edge beyond the standard crew neck.",
   },
   {
     name: "Screen Print T-shirts",
     description:
-      "High-volume screen-printed T-shirts for large campaigns, events, and bulk uniform orders — delivering consistent, durable, cost-effective results at quantity. Ideal for runs of 50 pieces and above.",
+      "High-volume screen-printed T-shirts for large campaigns, events, and bulk uniform orders, delivering consistent, durable, cost-effective results at quantity. Ideal for runs of 50 pieces and above.",
   },
   {
     name: "Embroidered Polo Shirts",
     description:
-      "Precision embroidered logos on premium polo shirts — a premium finish that elevates corporate uniforms, school wear, and branded hospitality apparel. Raised, textured, and built to last hundreds of washes.",
+      "Precision embroidered logos on premium polo shirts, a premium finish that elevates corporate uniforms, school wear, and branded hospitality apparel. Raised, textured, and built to last hundreds of washes.",
   },
 ];
 
@@ -103,31 +103,31 @@ const features = [
     icon: Star,
     title: "Premium Garment Quality",
     description:
-      "We source high-quality cotton, polyester, and blended fabrics that look great, feel comfortable, and hold their shape wash after wash — because the shirt is a reflection of your brand too.",
+      "We source high-quality cotton, polyester, and blended fabrics that look great, feel comfortable, and hold their shape wash after wash, because the shirt is a reflection of your brand too.",
   },
   {
     icon: Clock,
     title: "Fast Turnaround",
     description:
-      "Most T-shirt orders for standard logos are ready within 3–5 business days. Large bulk orders and sublimation runs are quoted with lead times upfront. Rush service available.",
+      "Most T-shirt orders for standard logos are ready within 3 to 5 business days. Large bulk orders and sublimation runs are quoted with lead times upfront. Rush service available.",
   },
   {
     icon: Truck,
     title: "Nationwide Delivery",
     description:
-      "We deliver T-shirt and apparel orders across Kenya — from Muhoroni, Kenya to Mombasa, Kisumu, and beyond. Free local delivery for orders within Muhoroni.",
+      "We deliver T-shirt and apparel orders across Kenya, from Muhoroni, Kenya to Mombasa, Kisumu, and beyond. Free local delivery for orders within Muhoroni.",
   },
   {
     icon: Palette,
     title: "Multiple Branding Techniques",
     description:
-      "We offer heat transfer vinyl, screen printing, DTG (direct-to-garment), full-colour sublimation, and embroidery — so we match the branding method to your design and garment for the best possible result.",
+      "We offer heat transfer vinyl, screen printing, DTG (direct-to-garment), full-colour sublimation, and embroidery, so we match the branding method to your design and garment for the best possible result.",
   },
   {
     icon: ShieldCheck,
     title: "Wash-Fast, Long-Lasting Prints",
     description:
-      "Our printing and embroidery techniques are optimised for durability — prints that do not crack, peel, or fade after washing, and embroidery that looks as sharp after 100 washes as it did on day one.",
+      "Our printing and embroidery techniques are optimised for durability, prints that do not crack, peel, or fade after washing, and embroidery that looks as sharp after 100 washes as it did on day one.",
   },
   {
     icon: CheckCircle2,
@@ -143,16 +143,16 @@ export default function TshirtsPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero */}
-      <section className="relative isolate overflow-hidden bg-gradient-to-br from-primary/90 via-primary to-primary/80">
+      <section className="relative isolate overflow-hidden bg-brand-surface">
         <Image
           src={ph(1400, 400, "T-shirt+Printing+Kenya")}
           alt="T-shirt printing Kenya"
           fill
-          className="object-cover opacity-20 mix-blend-overlay"
+          className="object-cover opacity-70"
           priority
           unoptimized
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-transparent to-primary/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-primary/20" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <nav className="mb-6 flex items-center gap-1.5 text-sm text-primary-foreground/70 flex-wrap">
             <Link href="/" className="hover:text-primary-foreground transition-colors">Home</Link>
@@ -169,14 +169,14 @@ export default function TshirtsPage() {
               Custom T-shirt Printing in Kenya
             </h1>
             <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
-              Round neck, polo, sublimation, screen print, and embroidered T-shirts — branded
+              Round neck, polo, sublimation, screen print, and embroidered T-shirts, branded
               with your logo, cut to your size, delivered across Kenya from Muhoroni.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg" asChild>
+              <Button size="lg" className="rv-hero-button-primary" asChild>
                 <a href="#products">Shop T-shirts</a>
               </Button>
-              <Button size="lg" variant="outline" className="border-white/40 text-primary-foreground hover:bg-white/10" asChild>
+              <Button size="lg" variant="outline" className="rv-hero-button-secondary" asChild>
                 <Link href="/contact">Get a Quote</Link>
               </Button>
             </div>
@@ -260,18 +260,18 @@ export default function TshirtsPage() {
             </div>
 
             {/* Overview */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <Badge variant="secondary" className="mb-4">About T-shirt Printing</Badge>
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-5 leading-snug">
                 Custom T-shirt Printing for Every Occasion and Organisation
               </h2>
               <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
                 <p>
-                  A well-printed T-shirt does more than cover skin — it tells a story, builds
+                  A well-printed T-shirt does more than cover skin, it tells a story, builds
                   team identity, and carries your brand into every room, event, and street it
                   enters. At Ramirez Ventures we produce custom branded T-shirts for businesses,
                   schools, churches, sports clubs, NGOs, political campaigns, and events across
-                  Kenya — in any style, any colour, and any size from XS right through to 4XL.
+                  Kenya, in any style, any colour, and any size from XS right through to 4XL.
                 </p>
                 <p>
                   We offer multiple branding techniques depending on your design and garment
@@ -284,7 +284,7 @@ export default function TshirtsPage() {
                 <p>
                   Not sure which style or method is right for your order? Our team will gladly
                   advise you. Send us your logo and requirements via WhatsApp and we will provide
-                  a fast, accurate quote — usually within the hour.
+                  a fast, accurate quote, usually within the hour.
                 </p>
               </div>
             </section>
@@ -295,7 +295,7 @@ export default function TshirtsPage() {
                 <div>
                   <h2 className="text-2xl font-bold text-foreground">Our T-shirt Products</h2>
                   <p className="text-muted-foreground text-sm mt-1">
-                    Explore our range — contact us to place your order
+                    Explore our range, contact us to place your order
                   </p>
                 </div>
                 <Badge variant="outline" className="hidden sm:inline-flex">
@@ -328,7 +328,7 @@ export default function TshirtsPage() {
             </section>
 
             {/* Product descriptions */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <Badge variant="secondary" className="mb-4">What We Offer</Badge>
               <h2 className="text-2xl font-bold text-foreground mb-6">
                 Our T-shirt Products in Detail
@@ -352,7 +352,7 @@ export default function TshirtsPage() {
             </section>
 
             {/* Why Choose Ramirez */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <div className="text-center mb-10">
                 <Badge variant="secondary" className="mb-3">Why Choose Us</Badge>
                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
@@ -360,7 +360,7 @@ export default function TshirtsPage() {
                 </h2>
                 <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">
                   Quality garments, multiple branding methods, competitive pricing, and fast
-                  turnaround — everything you need for a successful T-shirt order.
+                  turnaround, everything you need for a successful T-shirt order.
                 </p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -382,7 +382,7 @@ export default function TshirtsPage() {
                   );
                 })}
               </div>
-              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 rounded-xl bg-primary/5 border border-primary/20 p-6">
+              <div className="rv-soft-cta mt-10 flex flex-col items-center justify-center gap-4 rounded-lg sm:flex-row">
                 <div className="text-center sm:text-left">
                   <p className="font-semibold text-foreground">Ready to order your T-shirts?</p>
                   <p className="text-sm text-muted-foreground">

@@ -24,8 +24,6 @@ import Clear from "@/app/assets/Clear Transparent Stickers.jpg";
 import CustomCut from "@/app/assets/Custom Cut Stickers.jpg";
 import Sticker from "@/app/assets/Custom Sticker Printing.jpg";
 
-const ph = (w: number, h: number, label: string) =>
-  `https://placehold.co/${w}x${h}/e0f2fe/0284c7?text=${encodeURIComponent(label)}`;
 
 const THIS_HREF = "/products/stickers";
 
@@ -68,27 +66,27 @@ const productDescriptions = [
   {
     name: "Custom Cut Stickers",
     description:
-      "Stickers cut to any custom shape — round, square, rectangle, or die-cut to your exact artwork outline. Printed on gloss or matte vinyl with a permanent or removable adhesive, ideal for branding products, laptops, gear, and giveaways.",
+      "Stickers cut to any custom shape, round, square, rectangle, or die-cut to your exact artwork outline. Printed on gloss or matte vinyl with a permanent or removable adhesive, ideal for branding products, laptops, gear, and giveaways.",
   },
   {
     name: "Roll Stickers & Labels",
     description:
-      "High-volume stickers and labels supplied on rolls for fast automated or manual application — used for product labelling, price tags, barcodes, promotional seals, and packaging labels across retail and manufacturing operations.",
+      "High-volume stickers and labels supplied on rolls for fast automated or manual application, used for product labelling, price tags, barcodes, promotional seals, and packaging labels across retail and manufacturing operations.",
   },
   {
     name: "Clear Transparent Stickers",
     description:
-      "Printed on crystal-clear vinyl with a no-label look — your design appears to float on the surface. Popular for glass bottles, packaging, laptop lids, windows, and anywhere a clean, minimal application is desired.",
+      "Printed on crystal-clear vinyl with a no-label look, your design appears to float on the surface. Popular for glass bottles, packaging, laptop lids, windows, and anywhere a clean, minimal application is desired.",
   },
   {
     name: "Bumper Stickers",
     description:
-      "Durable, weatherproof bumper stickers on thick, UV-resistant vinyl — for vehicle branding, political campaigns, NGO awareness, and promotional giveaways. Long-lasting adhesive that stays put in the Kenyan sun and rain.",
+      "Durable, weatherproof bumper stickers on thick, UV-resistant vinyl, for vehicle branding, political campaigns, NGO awareness, and promotional giveaways. Long-lasting adhesive that stays put in the Kenyan sun and rain.",
   },
   {
     name: "Security & Void Stickers",
     description:
-      "Tamper-evident stickers that leave a VOID pattern when removed — used for sealing product packaging, labelling assets, certifying documents, and preventing unauthorised product opening or warranty tampering.",
+      "Tamper-evident stickers that leave a VOID pattern when removed, used for sealing product packaging, labelling assets, certifying documents, and preventing unauthorised product opening or warranty tampering.",
   },
   {
     name: "QR Code Stickers",
@@ -112,31 +110,31 @@ const features = [
     icon: Star,
     title: "Sharp Full-Colour Printing",
     description:
-      "We print stickers at up to 1440 dpi on premium vinyl — delivering vivid, sharp results whether your design is a simple logo or a complex full-colour illustration.",
+      "We print stickers at up to 1440 dpi on premium vinyl, delivering vivid, sharp results whether your design is a simple logo or a complex full-colour illustration.",
   },
   {
     icon: Clock,
     title: "Fast Turnaround",
     description:
-      "Most sticker orders are printed and ready within 1–3 business days. Rush same-day printing is available for simple designs and small quantities.",
+      "Most sticker orders are printed and ready within 1 to 3 business days. Rush same-day printing is available for simple designs and small quantities.",
   },
   {
     icon: Truck,
     title: "Nationwide Delivery",
     description:
-      "We deliver sticker and label orders across Kenya — from Muhoroni, Kenya to Mombasa, Kisumu, and beyond. Free local delivery for orders within Muhoroni.",
+      "We deliver sticker and label orders across Kenya, from Muhoroni, Kenya to Mombasa, Kisumu, and beyond. Free local delivery for orders within Muhoroni.",
   },
   {
     icon: Palette,
     title: "Any Shape, Any Size",
     description:
-      "Round, square, rectangular, oval, or die-cut to your custom shape — we can produce stickers in virtually any shape and size, from tiny 20 mm labels to large 300 mm promotional stickers.",
+      "Round, square, rectangular, oval, or die-cut to your custom shape, we can produce stickers in virtually any shape and size, from tiny 20 mm labels to large 300 mm promotional stickers.",
   },
   {
     icon: ShieldCheck,
     title: "Weatherproof & Durable",
     description:
-      "Our stickers are printed on UV-resistant, waterproof vinyl with permanent or removable adhesives — built to last outdoors on vehicles, equipment, and product packaging.",
+      "Our stickers are printed on UV-resistant, waterproof vinyl with permanent or removable adhesives, built to last outdoors on vehicles, equipment, and product packaging.",
   },
   {
     icon: CheckCircle2,
@@ -164,7 +162,7 @@ export default function StickersPage() {
   />
 
   {/* Dark translucent overlay */}
-  <div className="absolute inset-0 bg-black/45 z-0" />
+  <div className="absolute inset-0 bg-black/30 z-0" />
 
   {/* Content */}
   <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
@@ -194,14 +192,14 @@ export default function StickersPage() {
       </h1>
 
       <p className="text-lg text-white/90 leading-relaxed mb-8">
-        Die-cut, roll, clear, bumper, security, and QR code stickers — any
+        Die-cut, roll, clear, bumper, security, and QR code stickers, any
         shape, any size, full colour, weatherproof, delivered across Kenya.
       </p>
 
       <div className="flex flex-wrap gap-3">
         <Button
           size="lg"
-          className="bg-white text-black hover:bg-white/90 shadow-lg"
+          className="rv-hero-button-primary"
           asChild
         >
           <a href="#products">Shop Stickers</a>
@@ -210,7 +208,7 @@ export default function StickersPage() {
         <Button
           size="lg"
           variant="outline"
-          className="border-white text-black bg-white/90 hover:bg-white"
+          className="rv-hero-button-primary border-white"
           asChild
         >
           <Link href="/contact">Get a Quote</Link>
@@ -296,7 +294,7 @@ export default function StickersPage() {
             </div>
 
             {/* Overview */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <Badge variant="secondary" className="mb-4">About Stickers</Badge>
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-5 leading-snug">
                 Custom Sticker &amp; Label Printing for Every Need
@@ -304,14 +302,14 @@ export default function StickersPage() {
               <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
                 <p>
                   Stickers are one of the most versatile and cost-effective branding and
-                  labelling tools available to any business — and at Ramirez Ventures we produce
+                  labelling tools available to any business, and at Ramirez Ventures we produce
                   them in virtually every format, shape, size, and material. From tiny barcode
                   labels on roll to large full-colour promotional stickers for an election
                   campaign, we deliver sharp, durable, professional results every time.
                 </p>
                 <p>
                   Our stickers are printed on premium self-adhesive vinyl using UV-resistant,
-                  waterproof inks — making them suitable for vehicles, outdoor equipment,
+                  waterproof inks, making them suitable for vehicles, outdoor equipment,
                   product packaging, glass, and any other demanding application. We offer gloss,
                   matte, and clear (transparent) finishes, with permanent, removable, or
                   tamper-evident adhesive options depending on your intended use.
@@ -364,7 +362,7 @@ export default function StickersPage() {
             </section>
 
             {/* Product descriptions */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <Badge variant="secondary" className="mb-4">What We Offer</Badge>
               <h2 className="text-2xl font-bold text-foreground mb-6">
                 Our Sticker Products in Detail
@@ -388,14 +386,14 @@ export default function StickersPage() {
             </section>
 
             {/* Why Choose Ramirez */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <div className="text-center mb-10">
                 <Badge variant="secondary" className="mb-3">Why Choose Us</Badge>
                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
                   Why Choose Ramirez Ventures for Stickers?
                 </h2>
                 <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">
-                  Sharp printing, durable materials, fast turnaround, and any shape or size —
+                  Sharp printing, durable materials, fast turnaround, and any shape or size,
                   we make sticker ordering simple and the results impressive.
                 </p>
               </div>
@@ -418,11 +416,11 @@ export default function StickersPage() {
                   );
                 })}
               </div>
-              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 rounded-xl bg-primary/5 border border-primary/20 p-6">
+              <div className="rv-soft-cta mt-10 flex flex-col items-center justify-center gap-4 rounded-lg sm:flex-row">
                 <div className="text-center sm:text-left">
                   <p className="font-semibold text-foreground">Ready to order your stickers?</p>
                   <p className="text-sm text-muted-foreground">
-                    Get a fast quote — we respond within the hour.
+                    Get a fast quote, we respond within the hour.
                   </p>
                 </div>
                 <div className="flex gap-3">

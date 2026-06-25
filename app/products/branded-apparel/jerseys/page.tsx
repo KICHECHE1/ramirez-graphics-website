@@ -23,15 +23,15 @@ const WHATSAPP = "254706207037";
 
 /* ─── Size options ─── */
 const sizes = [
-  { label: "Small (S)",       dimensions: "Chest 34–36 in", price: 1800 },
-  { label: "Medium (M)",      dimensions: "Chest 38–40 in", price: 1800 },
-  { label: "Large (L)",       dimensions: "Chest 40–42 in", price: 1800 },
-  { label: "X-Large (XL)",    dimensions: "Chest 42–44 in", price: 1800 },
-  { label: "XX-Large (XXL)",  dimensions: "Chest 44–46 in", price: 2000 },
+  { label: "Small (S)",       dimensions: "Chest 34 to 36 in", price: 1800 },
+  { label: "Medium (M)",      dimensions: "Chest 38 to 40 in", price: 1800 },
+  { label: "Large (L)",       dimensions: "Chest 40 to 42 in", price: 1800 },
+  { label: "X-Large (XL)",    dimensions: "Chest 42 to 44 in", price: 1800 },
+  { label: "XX-Large (XXL)",  dimensions: "Chest 44 to 46 in", price: 2000 },
 ];
 
 const materialNote =
-  "Printed using dye-sublimation on 100% polyester performance fabric (150–160 gsm). Fully sublimated all-over print — no peel, no crack, no fade. Rounded neck or V-neck available. Numbers and names can be added front and back. Minimum order: 10 pieces per design.";
+  "Printed using dye-sublimation on 100% polyester performance fabric (150 to 160 gsm). Fully sublimated all-over print, no peel, no crack, no fade. Rounded neck or V-neck available. Numbers and names can be added front and back. Minimum order: 10 pieces per design.";
 
 /* ─── FAQs ─── */
 const faqs = [
@@ -45,11 +45,11 @@ const faqs = [
   },
   {
     q: "What printing method do you use?",
-    a: "We use dye-sublimation printing, which infuses the ink directly into the polyester fibres. The result is a fully all-over, vibrant print that will not peel, crack, or fade — even after repeated washing and play.",
+    a: "We use dye-sublimation printing, which infuses the ink directly into the polyester fibres. The result is a fully all-over, vibrant print that will not peel, crack, or fade, even after repeated washing and play.",
   },
   {
     q: "Can I supply my own design or logo?",
-    a: "Absolutely. You can send your own complete design or just a logo and club colours — our in-house design team will build the full jersey layout at no extra charge. We send a digital mock-up for your approval before production.",
+    a: "Absolutely. You can send your own complete design or just a logo and club colours, our in-house design team will build the full jersey layout at no extra charge. We send a digital mock-up for your approval before production.",
   },
   {
     q: "What collar styles are available?",
@@ -57,7 +57,7 @@ const faqs = [
   },
   {
     q: "How long does production take?",
-    a: "Standard orders of 10–50 pieces are ready within 5–7 working days. Larger orders (50+ pieces) may take 7–10 days. Rush production is available for an extra fee — contact us to confirm availability.",
+    a: "Standard orders of 10 to 50 pieces are ready within 5 to 7 working days. Larger orders (50+ pieces) may take 7 to 10 days. Rush production is available for an extra fee, contact us to confirm availability.",
   },
   {
     q: "Do you deliver outside Muhoroni?",
@@ -89,7 +89,7 @@ export default function JerseysPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order Branded Jerseys — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order Branded Jerseys, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -116,7 +116,7 @@ export default function JerseysPage() {
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
             Fully sublimated all-over print jerseys for football, volleyball, netball, basketball,
-            and any team sport — custom names, numbers, and logos included.
+            and any team sport, custom names, numbers, and logos included.
           </p>
         </div>
 
@@ -144,13 +144,13 @@ export default function JerseysPage() {
                   Give your club, school team, or sports organisation a professional identity with
                   fully customised branded jerseys from Ramirez Ventures. We produce high-quality
                   sublimation-printed jerseys for football, volleyball, netball, basketball,
-                  athletics, and any other team sport — with your colours, crest, sponsor logos,
+                  athletics, and any other team sport, with your colours, crest, sponsor logos,
                   player names, and squad numbers all included.
                 </p>
                 <p>
                   Our jerseys are printed using dye-sublimation technology onto 100% polyester
                   performance fabric. Unlike screen-printed or heat-transfer designs, sublimation
-                  infuses the ink into the fibres themselves — so the print is permanent, fully
+                  infuses the ink into the fibres themselves, so the print is permanent, fully
                   breathable, and will not peel, crack, or fade after repeated washing and
                   hard use on the pitch.
                 </p>
@@ -161,12 +161,12 @@ export default function JerseysPage() {
                   so you always know exactly what you are getting.
                 </p>
                 <ul className="list-disc list-inside space-y-1.5 pl-1">
-                  <li>All-over dye-sublimation print — no peel, no crack, no fade</li>
-                  <li>100% polyester breathable performance fabric (150–160 gsm)</li>
+                  <li>All-over dye-sublimation print, no peel, no crack, no fade</li>
+                  <li>100% polyester breathable performance fabric (150 to 160 gsm)</li>
                   <li>Player names and squad numbers included at no extra charge</li>
                   <li>Round-neck, V-neck, or polo-collar options</li>
                   <li>Front and back number/name printing available</li>
-                  <li>In-house design — send us your logo and we handle the rest</li>
+                  <li>In-house design, send us your logo and we handle the rest</li>
                   <li>Digital mock-up approval before production</li>
                   <li>Minimum 10 pieces per design</li>
                 </ul>
@@ -245,7 +245,7 @@ export default function JerseysPage() {
               <p className="text-sm text-muted-foreground mb-5">
                 Selected:{" "}
                 <span className="font-medium text-foreground">
-                  {selectedSize.label} — {selectedSize.dimensions}
+                  {selectedSize.label}, {selectedSize.dimensions}
                 </span>
               </p>
               <div className="flex flex-col gap-3">
@@ -253,7 +253,7 @@ export default function JerseysPage() {
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Branded Jersey – ${selectedSize.label} (${selectedSize.dimensions})`,
+                      name: `Branded Jersey  to  ${selectedSize.label} (${selectedSize.dimensions})`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Branded+Jersey"),
                       href: "/products/branded-apparel/jerseys",
@@ -278,7 +278,7 @@ export default function JerseysPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 5–7 day turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 5 to 7 day turnaround · Free local Muhoroni delivery
               </p>
             </div>
 
@@ -291,11 +291,11 @@ export default function JerseysPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Names &amp; numbers included — no hidden charges</span>
+                  <span>Names &amp; numbers included, no hidden charges</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>All-over sublimation — breathable, durable, wash-proof</span>
+                  <span>All-over sublimation, breathable, durable, wash-proof</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>

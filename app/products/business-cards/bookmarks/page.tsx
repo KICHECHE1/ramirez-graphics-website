@@ -21,11 +21,11 @@ const ph = (w: number, h: number, label: string) =>
 const WHATSAPP = "254706207037";
 
 const sizes = [
-  { label: "Standard — 50 bookmarks",  dimensions: "55 × 180 mm, 50 pcs",  price: 1200 },
-  { label: "Standard — 100 bookmarks", dimensions: "55 × 180 mm, 100 pcs", price: 1800 },
-  { label: "Standard — 250 bookmarks", dimensions: "55 × 180 mm, 250 pcs", price: 3200 },
-  { label: "Wide — 100 bookmarks",     dimensions: "70 × 200 mm, 100 pcs", price: 2200 },
-  { label: "Wide — 250 bookmarks",     dimensions: "70 × 200 mm, 250 pcs", price: 3800 },
+  { label: "Standard, 50 bookmarks",  dimensions: "55 x 180 mm, 50 pcs",  price: 1200 },
+  { label: "Standard, 100 bookmarks", dimensions: "55 x 180 mm, 100 pcs", price: 1800 },
+  { label: "Standard, 250 bookmarks", dimensions: "55 x 180 mm, 250 pcs", price: 3200 },
+  { label: "Wide, 100 bookmarks",     dimensions: "70 x 200 mm, 100 pcs", price: 2200 },
+  { label: "Wide, 250 bookmarks",     dimensions: "70 x 200 mm, 250 pcs", price: 3800 },
 ];
 
 const materialNote =
@@ -50,7 +50,7 @@ const faqs = [
   },
   {
     q: "How soon will my order be ready?",
-    a: "Standard bookmark orders are produced within 24–48 hours. Same-day printing is available for orders placed before 10 AM.",
+    a: "Standard bookmark orders are produced within 24 to 48 hours. Same-day printing is available for orders placed before 10 AM.",
   },
   {
     q: "Do you deliver outside Muhoroni?",
@@ -69,7 +69,7 @@ export default function BookmarksPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order Bookmarks — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order Bookmarks, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -93,7 +93,7 @@ export default function BookmarksPage() {
             Bookmarks Printing
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
-            Custom full-colour bookmarks on 300 gsm art board — gloss or matte laminate, with
+            Custom full-colour bookmarks on 300 gsm art board, gloss or matte laminate, with
             optional hole punch and ribbon. A practical branded keepsake that keeps your name in hand.
           </p>
         </div>
@@ -111,14 +111,14 @@ export default function BookmarksPage() {
                 <p>
                   A well-designed bookmark is one of the most cost-effective and practical branded
                   items you can produce. Unlike a flyer that gets discarded, a bookmark stays with
-                  the recipient every time they pick up a book — keeping your brand, message, or
+                  the recipient every time they pick up a book, keeping your brand, message, or
                   contact details in front of them for months or years.
                 </p>
                 <p>
                   At Ramirez Ventures, we print bookmarks in full colour on 300 gsm premium art
-                  board — thick enough to hold its shape and feel substantial, while being slim
-                  enough to fit neatly between any pages. We offer two standard sizes (55 × 180 mm
-                  and 70 × 200 mm) plus custom dimensions on request.
+                  board, thick enough to hold its shape and feel substantial, while being slim
+                  enough to fit neatly between any pages. We offer two standard sizes (55 x 180 mm
+                  and 70 x 200 mm) plus custom dimensions on request.
                 </p>
                 <p>
                   Choose from gloss laminate for a vivid, eye-catching finish or matte laminate for
@@ -133,7 +133,7 @@ export default function BookmarksPage() {
                   <li>Hole punch with ribbon or tassel on request</li>
                   <li>Multiple designs combinable in one order</li>
                   <li>In-house design service available</li>
-                  <li>24–48 hr turnaround</li>
+                  <li>24 to 48 hr turnaround</li>
                 </ul>
               </div>
             </div>
@@ -184,11 +184,11 @@ export default function BookmarksPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button className="w-full h-12 text-base gap-2"
-                  onClick={() => addToCart({ name: `Bookmarks – ${selectedSize.label}`, price: selectedSize.price, image: ph(400, 300, "Bookmarks"), href: "/products/business-cards/bookmarks" })}>
+                  onClick={() => addToCart({ name: `Bookmarks  to  ${selectedSize.label}`, price: selectedSize.price, image: ph(400, 300, "Bookmarks"), href: "/products/business-cards/bookmarks" })}>
                   <ShoppingCart className="size-5" />Add to Cart
                 </Button>
                 <Button className="w-full h-12 text-base gap-2 bg-[#25D366] hover:bg-[#1ebe57] text-white" asChild>
@@ -198,17 +198,17 @@ export default function BookmarksPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 24–48 hr turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 24 to 48 hr turnaround · Free local Muhoroni delivery
               </p>
             </div>
 
             <div className="rounded-xl border border-border bg-card p-5 shadow-sm">
               <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
                 {[
-                  "300 gsm art board — thick, premium, practical",
+                  "300 gsm art board, thick, premium, practical",
                   "Hole punch with ribbon or tassel available on request",
                   "Mix multiple designs in one order at the same price",
-                  "Design service available — we build your layout from your logo",
+                  "Design service available, we build your layout from your logo",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">
                     <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>

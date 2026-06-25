@@ -21,11 +21,11 @@ const ph = (w: number, h: number, label: string) =>
 const WHATSAPP = "254706207037";
 
 const sizes = [
-  { label: "A3 Poster",    dimensions: "297 × 420 mm",  price: 4500 },
-  { label: "A2 Poster",    dimensions: "420 × 594 mm",  price: 8000 },
-  { label: "A1 Poster",    dimensions: "594 × 841 mm",  price: 14000 },
-  { label: "A0 Poster",    dimensions: "841 × 1189 mm", price: 22000 },
-  { label: "Custom Size",  dimensions: "Any dimension — contact us", price: 0 },
+  { label: "A3 Poster",    dimensions: "297 x 420 mm",  price: 4500 },
+  { label: "A2 Poster",    dimensions: "420 x 594 mm",  price: 8000 },
+  { label: "A1 Poster",    dimensions: "594 x 841 mm",  price: 14000 },
+  { label: "A0 Poster",    dimensions: "841 x 1189 mm", price: 22000 },
+  { label: "Custom Size",  dimensions: "Any dimension, contact us", price: 0 },
 ];
 
 const materialNote =
@@ -34,11 +34,11 @@ const materialNote =
 const faqs = [
   {
     q: "What paper weight do you use for campaign posters?",
-    a: "Standard campaign posters are printed on 150 gsm gloss art paper — vivid colours with a professional sheen. For premium feel, 200 gsm is available. For outdoor use we recommend our vinyl banner option which is fully weatherproof.",
+    a: "Standard campaign posters are printed on 150 gsm gloss art paper, vivid colours with a professional sheen. For premium feel, 200 gsm is available. For outdoor use we recommend our vinyl banner option which is fully weatherproof.",
   },
   {
     q: "Can I get posters printed double-sided?",
-    a: "Yes. Double-sided printing is available for A3 and A2 posters — ideal for poster boards and hanging displays where both sides are visible.",
+    a: "Yes. Double-sided printing is available for A3 and A2 posters, ideal for poster boards and hanging displays where both sides are visible.",
   },
   {
     q: "Do you offer design services for campaign posters?",
@@ -50,7 +50,7 @@ const faqs = [
   },
   {
     q: "Can posters be laminated for durability?",
-    a: "Yes. Gloss or matte laminate is available for all poster sizes and adds significant tear and moisture resistance — highly recommended for high-traffic outdoor display.",
+    a: "Yes. Gloss or matte laminate is available for all poster sizes and adds significant tear and moisture resistance, highly recommended for high-traffic outdoor display.",
   },
   {
     q: "Do you deliver outside Muhoroni?",
@@ -81,7 +81,7 @@ export default function PostersPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order Campaign Posters — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order Campaign Posters, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -105,7 +105,7 @@ export default function PostersPage() {
             Campaign Posters Printing
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
-            Bold, vibrant campaign posters from A3 to A0 — fast bulk printing, free design,
+            Bold, vibrant campaign posters from A3 to A0, fast bulk printing, free design,
             and rapid delivery across Kenya for election season and beyond.
           </p>
         </div>
@@ -132,18 +132,18 @@ export default function PostersPage() {
                   presence. At Ramirez Ventures we print striking full-colour campaign posters on
                   150 gsm gloss art paper that hold vivid colours under the Kenyan sun. From A3
                   hand-held posters to large A0 statement pieces, we handle any size and any
-                  quantity — with fast bulk turnaround.
+                  quantity, with fast bulk turnaround.
                 </p>
                 <p>
                   Our in-house designers can build a professional campaign poster layout from your
-                  photo, party colours, name, and slogan — delivered back to you for approval
+                  photo, party colours, name, and slogan, delivered back to you for approval
                   before printing. We offer single-sided and double-sided options, as well as
                   gloss and matte lamination for extra durability.
                 </p>
                 <p>
                   Campaign posters are also widely used for events, product launches, school
                   notices, community announcements, and business promotions. Whatever your
-                  message — we&apos;ll print it boldly.
+                  message, we&apos;ll print it boldly.
                 </p>
                 <ul className="list-disc list-inside space-y-1.5 pl-1">
                   <li>Full-colour print on 150 gsm gloss art paper</li>
@@ -152,7 +152,7 @@ export default function PostersPage() {
                   <li>Gloss or matte lamination available</li>
                   <li>Free campaign poster design from your photo and details</li>
                   <li>Minimum 50 posters per order</li>
-                  <li>Bulk orders of 500+ ready within 24–48 hours</li>
+                  <li>Bulk orders of 500+ ready within 24 to 48 hours</li>
                 </ul>
               </div>
             </div>
@@ -216,14 +216,14 @@ export default function PostersPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Campaign Posters – ${selectedSize.label}`,
+                      name: `Campaign Posters  to  ${selectedSize.label}`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Campaign+Posters"),
                       href: "/products/election-printing/posters",
@@ -244,7 +244,7 @@ export default function PostersPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · Bulk 500+ in 24–48 hrs · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · Bulk 500+ in 24 to 48 hrs · Free local Muhoroni delivery
               </p>
             </div>
 
@@ -264,7 +264,7 @@ export default function PostersPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Nationwide delivery — every constituency served</span>
+                  <span>Nationwide delivery, every constituency served</span>
                 </li>
               </ul>
             </div>

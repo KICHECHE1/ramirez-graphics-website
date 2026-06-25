@@ -22,10 +22,10 @@ const WHATSAPP = "254706207037";
 
 /* ─── Size options ─── */
 const sizes = [
-  { label: "4 ft Table", dimensions: "120cm × 75cm × 75cm drop", price: 4200 },
-  { label: "6 ft Table", dimensions: "150cm × 75cm × 75cm drop", price: 5500 },
-  { label: "6 ft Full Cover", dimensions: "180cm × 75cm × 75cm drop", price: 6500 },
-  { label: "8 ft Table", dimensions: "240cm × 75cm × 75cm drop", price: 7800 },
+  { label: "4 ft Table", dimensions: "120cm x 75cm x 75cm drop", price: 4200 },
+  { label: "6 ft Table", dimensions: "150cm x 75cm x 75cm drop", price: 5500 },
+  { label: "6 ft Full Cover", dimensions: "180cm x 75cm x 75cm drop", price: 6500 },
+  { label: "8 ft Table", dimensions: "240cm x 75cm x 75cm drop", price: 7800 },
 ];
 
 const materialNote =
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     q: "How soon will my order be ready?",
-    a: "Standard table cloths are ready within 3–5 working days. Rush orders can be accommodated depending on current production schedules — contact us to confirm availability.",
+    a: "Standard table cloths are ready within 3 to 5 working days. Rush orders can be accommodated depending on current production schedules, contact us to confirm availability.",
   },
   {
     q: "Do you deliver outside Muhoroni?",
@@ -83,7 +83,7 @@ export default function TableClothPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order a Branded Table Cloth — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order a Branded Table Cloth, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -109,7 +109,7 @@ export default function TableClothPage() {
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
             Custom branded table covers for exhibitions, trade shows, corporate events, and retail
-            displays — printed on premium stretch polyester for a sleek, professional finish.
+            displays, printed on premium stretch polyester for a sleek, professional finish.
           </p>
         </div>
 
@@ -136,7 +136,7 @@ export default function TableClothPage() {
                 <p>
                   A branded table cloth is one of the simplest and most effective ways to upgrade
                   your presence at any exhibition, trade fair, conference, or retail activation.
-                  Instead of a plain white cover, your table becomes a full advertising surface —
+                  Instead of a plain white cover, your table becomes a full advertising surface,
                   displaying your logo, brand colours, and key messages at eye level.
                 </p>
                 <p>
@@ -147,12 +147,12 @@ export default function TableClothPage() {
                 </p>
                 <p>
                   Available in 3-sided (open back for easy access) and 4-sided (fully enclosed)
-                  configurations. Custom sizes are welcomed — simply provide your table measurements
+                  configurations. Custom sizes are welcomed, simply provide your table measurements
                   and we will cut and print to fit perfectly.
                 </p>
                 <ul className="list-disc list-inside space-y-1.5 pl-1">
-                  <li>Dye-sublimation print — full-colour, edge to edge</li>
-                  <li>220gsm stretch polyester — tailored fit, no bunching</li>
+                  <li>Dye-sublimation print, full-colour, edge to edge</li>
+                  <li>220gsm stretch polyester, tailored fit, no bunching</li>
                   <li>Machine washable at 30°C without colour loss</li>
                   <li>3-sided or 4-sided coverage options</li>
                   <li>Custom sizes available for non-standard tables</li>
@@ -233,7 +233,7 @@ export default function TableClothPage() {
               <p className="text-sm text-muted-foreground mb-5">
                 Selected:{" "}
                 <span className="font-medium text-foreground">
-                  {selectedSize.label} — {selectedSize.dimensions}
+                  {selectedSize.label}, {selectedSize.dimensions}
                 </span>
               </p>
               <div className="flex flex-col gap-3">
@@ -241,7 +241,7 @@ export default function TableClothPage() {
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Branded Table Cloth – ${selectedSize.label} (${selectedSize.dimensions})`,
+                      name: `Branded Table Cloth  to  ${selectedSize.label} (${selectedSize.dimensions})`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Table+Cloth"),
                       href: "/products/banners/table-cloth",
@@ -266,13 +266,13 @@ export default function TableClothPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 3–5 day turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 3 to 5 day turnaround · Free local Muhoroni delivery
               </p>
             </div>
           </div>
         </div>
 
-        {/* ── Related Products — full width ── */}
+        {/* ── Related Products, full width ── */}
         <section className="mt-16">
           <Separator className="mb-10" />
           <h2 className="text-2xl font-bold text-foreground mb-6">Related Products</h2>

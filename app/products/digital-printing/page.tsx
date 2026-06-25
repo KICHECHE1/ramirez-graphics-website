@@ -83,19 +83,19 @@ const features = [
     icon: Star,
     title: "Sharp, Vibrant Outputs",
     description:
-      "Our digital presses produce crisp text and vivid colour at high resolution — every print looks exactly as designed.",
+      "Our digital presses produce crisp text and vivid colour at high resolution, every print looks exactly as designed.",
   },
   {
     icon: Clock,
     title: "Same-Day Printing",
     description:
-      "Need it fast? We offer same-day and next-day printing for most digital orders — just get in touch early.",
+      "Need it fast? We offer same-day and next-day printing for most digital orders, just get in touch early.",
   },
   {
     icon: Truck,
     title: "Delivered Across Kenya",
     description:
-      "We deliver from Muhoroni, Kenya to Mombasa, Kisumu, Nakuru, and all major towns across Kenya — quickly and reliably.",
+      "We deliver from Muhoroni, Kenya to Mombasa, Kisumu, Nakuru, and all major towns across Kenya, quickly and reliably.",
   },
   {
     icon: Palette,
@@ -107,7 +107,7 @@ const features = [
     icon: ShieldCheck,
     title: "Premium Paper Options",
     description:
-      "Choose from a wide range of paper weights and finishes — gloss, matte, silk — to suit your exact needs.",
+      "Choose from a wide range of paper weights and finishes, gloss, matte, silk, to suit your exact needs.",
   },
   {
     icon: CheckCircle2,
@@ -124,16 +124,16 @@ export default function DigitalPrintingPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* ── Hero ── */}
-      <section className="relative isolate overflow-hidden bg-gradient-to-br from-primary/90 via-primary to-primary/80">
+      <section className="relative isolate overflow-hidden bg-brand-surface">
         <Image
           src={ph(1400, 480, "Digital+Printing+Kenya")}
           alt="Digital printing hero"
           fill
-          className="object-cover opacity-20 mix-blend-overlay"
+          className="object-cover opacity-70"
           priority
           unoptimized
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-transparent to-primary/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-primary/20" />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <nav className="mb-6 flex items-center gap-1.5 text-sm text-primary-foreground/70">
@@ -153,16 +153,16 @@ export default function DigitalPrintingPage() {
             </h1>
             <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
               High-quality digital printing for documents, business cards, photos, and gift
-              vouchers — fast turnaround, no minimum order, delivered across Kenya.
+              vouchers, fast turnaround, no minimum order, delivered across Kenya.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg" asChild>
+              <Button size="lg" className="rv-hero-button-primary" asChild>
                 <a href="#products">View Products</a>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white/40 text-primary-foreground hover:bg-white/10"
+                className="rv-hero-button-secondary"
                 asChild
               >
                 <Link href="/contact">Get a Quote</Link>
@@ -269,7 +269,7 @@ export default function DigitalPrintingPage() {
                   <Link
                     key={product.id}
                     href={product.href}
-                    className="group rounded-xl border border-border bg-card overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                    className="rv-product-card group"
                   >
                     <div className="relative aspect-[4/3] bg-muted overflow-hidden">
                       <Image
@@ -296,14 +296,14 @@ export default function DigitalPrintingPage() {
             </section>
 
             {/* ── Why Choose Ramirez Ventures ── */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <div className="text-center mb-10">
                 <Badge variant="secondary" className="mb-3">Why Choose Us</Badge>
                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
                   Why Choose Ramirez Ventures for Digital Printing?
                 </h2>
                 <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">
-                  Fast, flexible, and affordable — our digital printing service is built around
+                  Fast, flexible, and affordable, our digital printing service is built around
                   your deadlines and your budget.
                 </p>
               </div>
@@ -327,8 +327,8 @@ export default function DigitalPrintingPage() {
             </section>
 
             {/* ── CTA section ── */}
-            <section className="rounded-2xl overflow-hidden border border-border bg-primary">
-              <div className="p-8 sm:p-10 text-primary-foreground text-center flex flex-col items-center gap-5">
+            <section className="rv-cta">
+              <div className="rv-cta-content text-center flex flex-col items-center gap-5">
                 <Badge className="bg-white/20 text-primary-foreground border-0 backdrop-blur-sm">
                   Ready to Print?
                 </Badge>
@@ -339,10 +339,10 @@ export default function DigitalPrintingPage() {
                   Fast turnaround. No minimum order. Delivered across Kenya. Call or WhatsApp us
                   now and we&apos;ll send you a quote within minutes.
                 </p>
-                <div className="flex flex-wrap justify-center gap-4 mt-2">
+                <div className="rv-cta-actions mt-2">
                   <Button
                     size="lg"
-                    className="bg-white text-primary hover:bg-white/90 gap-2 shadow-lg font-semibold"
+                    className="rv-cta-button-primary gap-2 font-semibold"
                     asChild
                   >
                     <a href={`tel:${PHONE.replace(/\s/g, "")}`}>
@@ -353,7 +353,7 @@ export default function DigitalPrintingPage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-white/40 text-primary-foreground hover:bg-white/15 gap-2"
+                    className="rv-cta-button-secondary gap-2"
                     asChild
                   >
                     <a
@@ -368,7 +368,7 @@ export default function DigitalPrintingPage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-white/40 text-primary-foreground hover:bg-white/15"
+                    className="rv-cta-button-secondary"
                     asChild
                   >
                     <Link href="/contact">Get a Quote Online</Link>

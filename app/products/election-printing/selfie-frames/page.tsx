@@ -21,11 +21,11 @@ const ph = (w: number, h: number, label: string) =>
 const WHATSAPP = "254706207037";
 
 const sizes = [
-  { label: "A3 Selfie Frame",   dimensions: "297 × 420 mm, rigid foam board",   price: 2500 },
-  { label: "A2 Selfie Frame",   dimensions: "420 × 594 mm, rigid foam board",   price: 4000 },
-  { label: "A1 Selfie Frame",   dimensions: "594 × 841 mm, rigid foam board",   price: 7000 },
-  { label: "Foldable A2",       dimensions: "420 × 594 mm, foldable cardboard", price: 3200 },
-  { label: "Custom Size",       dimensions: "Any dimension — contact us",       price: 0    },
+  { label: "A3 Selfie Frame",   dimensions: "297 x 420 mm, rigid foam board",   price: 2500 },
+  { label: "A2 Selfie Frame",   dimensions: "420 x 594 mm, rigid foam board",   price: 4000 },
+  { label: "A1 Selfie Frame",   dimensions: "594 x 841 mm, rigid foam board",   price: 7000 },
+  { label: "Foldable A2",       dimensions: "420 x 594 mm, foldable cardboard", price: 3200 },
+  { label: "Custom Size",       dimensions: "Any dimension, contact us",       price: 0    },
 ];
 
 const materialNote =
@@ -34,23 +34,23 @@ const materialNote =
 const faqs = [
   {
     q: "What is a selfie frame?",
-    a: "A selfie frame is a printed board with a face-shaped cut-out. Supporters hold it up and take selfies with the candidate's poster — creating hundreds of organic social media posts with the candidate's branding. It is one of the most cost-effective viral campaign tools.",
+    a: "A selfie frame is a printed board with a face-shaped cut-out. Supporters hold it up and take selfies with the candidate's poster, creating hundreds of organic social media posts with the candidate's branding. It is one of the most cost-effective viral campaign tools.",
   },
   {
     q: "Can the face hole be any size or shape?",
-    a: "We offer standard oval and round face holes sized for comfortable framing. Custom shapes — heart, star, or free-form — are available on request at the same price.",
+    a: "We offer standard oval and round face holes sized for comfortable framing. Custom shapes, heart, star, or free-form, are available on request at the same price.",
   },
   {
     q: "What material do you print on?",
-    a: "Standard selfie frames use 5 mm foam board — rigid and lightweight. A foldable corrugated board option is available for easy transport and outdoor distribution at campaign events.",
+    a: "Standard selfie frames use 5 mm foam board, rigid and lightweight. A foldable corrugated board option is available for easy transport and outdoor distribution at campaign events.",
   },
   {
     q: "How long does production take?",
-    a: "A3 and A2 selfie frames are ready within 24 hours for standard designs. A1 frames and custom sizes take 48 hours. Rush production available — contact us.",
+    a: "A3 and A2 selfie frames are ready within 24 hours for standard designs. A1 frames and custom sizes take 48 hours. Rush production available, contact us.",
   },
   {
     q: "Can I get handles or sticks attached?",
-    a: "Yes. Wooden or plastic hand-holding sticks can be attached to any selfie frame — ideal for crowd use at rallies and events. Mention this when placing your order.",
+    a: "Yes. Wooden or plastic hand-holding sticks can be attached to any selfie frame, ideal for crowd use at rallies and events. Mention this when placing your order.",
   },
   {
     q: "Do you deliver outside Muhoroni?",
@@ -81,7 +81,7 @@ export default function SelfieFramesPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order Selfie Frames — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order Selfie Frames, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -105,7 +105,7 @@ export default function SelfieFramesPage() {
             Selfie Frames
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
-            Branded selfie frames that turn every supporter into a campaign promoter — viral
+            Branded selfie frames that turn every supporter into a campaign promoter, viral
             social media reach from A3 to A1 foam board, same-day turnaround in Muhoroni, Kisumu.
           </p>
         </div>
@@ -131,13 +131,13 @@ export default function SelfieFramesPage() {
                   Selfie frames are one of the most powerful and affordable viral campaign tools
                   in modern elections. Supporters hold the frame at a rally or event, take a
                   selfie through the face cut-out, and share across WhatsApp, Facebook, and
-                  TikTok — each post carrying your candidate&apos;s branding to hundreds more people
+                  TikTok, each post carrying your candidate&apos;s branding to hundreds more people
                   at zero media cost.
                 </p>
                 <p>
                   At Ramirez Ventures we print sharp full-colour selfie frames on 5 mm rigid
                   foam board (standard) or foldable corrugated board (for easy distribution).
-                  Sizes from A3 handheld frames to large A1 rally pieces — with face cut‐outs
+                  Sizes from A3 handheld frames to large A1 rally pieces, with face cut‐outs
                   finished to smooth round edges for comfortable use.
                 </p>
                 <p>
@@ -152,7 +152,7 @@ export default function SelfieFramesPage() {
                   <li>Optional hand-holding sticks for rally use</li>
                   <li>Free design from your candidate photo and brand colours</li>
                   <li>Minimum 10 frames per order</li>
-                  <li>Ready within 24–48 hours</li>
+                  <li>Ready within 24 to 48 hours</li>
                 </ul>
               </div>
             </div>
@@ -216,14 +216,14 @@ export default function SelfieFramesPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Selfie Frame – ${selectedSize.label}`,
+                      name: `Selfie Frame  to  ${selectedSize.label}`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Selfie+Frames"),
                       href: "/products/election-printing/selfie-frames",
@@ -244,7 +244,7 @@ export default function SelfieFramesPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 24–48 hr turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 24 to 48 hr turnaround · Free local Muhoroni delivery
               </p>
             </div>
 

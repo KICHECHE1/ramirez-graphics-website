@@ -23,9 +23,9 @@ const WHATSAPP = "254706207037";
 
 /* ─── Size options ─── */
 const sizes = [
-  { label: "Standard", dimensions: "60cm × 160cm", price: 2800 },
-  { label: "Wide", dimensions: "80cm × 160cm", price: 3500 },
-  { label: "Extra Wide", dimensions: "85cm × 200cm", price: 4200 },
+  { label: "Standard", dimensions: "60cm x 160cm", price: 2800 },
+  { label: "Wide", dimensions: "80cm x 160cm", price: 3500 },
+  { label: "Extra Wide", dimensions: "85cm x 200cm", price: 4200 },
 ];
 
 const materialNote =
@@ -35,7 +35,7 @@ const materialNote =
 const faqs = [
   {
     q: "What makes an S-Banner different from a regular rollup?",
-    a: "The S-Banner features an S-shaped curved aluminium frame that holds two panels — one facing forward and one facing back — giving you double-sided visibility. It stands out in crowds and hallways where you need to attract attention from multiple directions.",
+    a: "The S-Banner features an S-shaped curved aluminium frame that holds two panels, one facing forward and one facing back, giving you double-sided visibility. It stands out in crowds and hallways where you need to attract attention from multiple directions.",
   },
   {
     q: "Is double-sided printing included in the price?",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     q: "How long does production take?",
-    a: "Standard orders are ready within 24–48 hours. Same-day turnaround is available for orders placed before 10 AM subject to production availability.",
+    a: "Standard orders are ready within 24 to 48 hours. Same-day turnaround is available for orders placed before 10 AM subject to production availability.",
   },
   {
     q: "Do you offer delivery outside Muhoroni?",
@@ -83,7 +83,7 @@ export default function SBannerPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order an S-Banner — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order an S-Banner, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -110,7 +110,7 @@ export default function SBannerPage() {
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
             Double-sided S-shaped display banners for trade shows, shopping malls, aisle displays,
-            and outdoor activations — grab attention from every direction.
+            and outdoor activations, grab attention from every direction.
           </p>
         </div>
 
@@ -135,7 +135,7 @@ export default function SBannerPage() {
               <h2 className="text-xl font-bold text-foreground mb-4">Product Overview</h2>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  The S-Banner — also called a double-sided retractable banner or serpentine banner —
+                  The S-Banner, also called a double-sided retractable banner or serpentine banner,
                   uses a uniquely shaped S-curve aluminium frame to hold two printed panels back to
                   back. This means your brand message is visible to people approaching from either
                   direction, making it ideal for busy walkways, exhibition aisles, shopping centre
@@ -149,11 +149,11 @@ export default function SBannerPage() {
                 </p>
                 <p>
                   Choose from three width and height combinations to match your display requirements.
-                  Both sides are printed as standard — you can use the same artwork on each side or
+                  Both sides are printed as standard, you can use the same artwork on each side or
                   two entirely different designs to maximise the impact of a single stand.
                 </p>
                 <ul className="list-disc list-inside space-y-1.5 pl-1">
-                  <li>Double-sided print — visible from front and back</li>
+                  <li>Double-sided print, visible from front and back</li>
                   <li>S-curve aluminium frame for enhanced stability</li>
                   <li>UV-resistant inks on 500-micron PVC vinyl</li>
                   <li>Three size options to suit any space</li>
@@ -193,7 +193,7 @@ export default function SBannerPage() {
                   <thead>
                     <tr className="bg-muted/60 border-b border-border">
                       <th className="text-left px-4 py-3 font-medium text-muted-foreground">Size</th>
-                      <th className="text-left px-4 py-3 font-medium text-muted-foreground">Dimensions (W × H)</th>
+                      <th className="text-left px-4 py-3 font-medium text-muted-foreground">Dimensions (W x H)</th>
                       <th className="px-4 py-3" />
                     </tr>
                   </thead>
@@ -235,7 +235,7 @@ export default function SBannerPage() {
               <p className="text-sm text-muted-foreground mb-5">
                 Selected:{" "}
                 <span className="font-medium text-foreground">
-                  {selectedSize.label} — {selectedSize.dimensions}
+                  {selectedSize.label}, {selectedSize.dimensions}
                 </span>
               </p>
               <div className="flex flex-col gap-3">
@@ -243,7 +243,7 @@ export default function SBannerPage() {
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `S-Banner – ${selectedSize.label} (${selectedSize.dimensions})`,
+                      name: `S-Banner  to  ${selectedSize.label} (${selectedSize.dimensions})`,
                       price: selectedSize.price,
                       image: ph(400, 300, "S-Banner"),
                       href: "/products/banners/s-banner",
@@ -268,13 +268,13 @@ export default function SBannerPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 24–48 hr turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 24 to 48 hr turnaround · Free local Muhoroni delivery
               </p>
             </div>
           </div>
         </div>
 
-        {/* ── Related Products — full width ── */}
+        {/* ── Related Products, full width ── */}
         <section className="mt-16">
           <Separator className="mb-10" />
           <h2 className="text-2xl font-bold text-foreground mb-6">Related Products</h2>

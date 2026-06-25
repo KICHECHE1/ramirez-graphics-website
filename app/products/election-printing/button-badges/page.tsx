@@ -21,11 +21,11 @@ const ph = (w: number, h: number, label: string) =>
 const WHATSAPP = "254706207037";
 
 const sizes = [
-  { label: '25 mm — Small',   dimensions: "25 mm diameter, safety-pin back",  price: 3500 },
-  { label: '32 mm — Medium',  dimensions: "32 mm diameter, safety-pin back",  price: 4500 },
-  { label: '38 mm — Standard',dimensions: "38 mm diameter, safety-pin back",  price: 5500 },
-  { label: '44 mm — Large',   dimensions: "44 mm diameter, safety-pin back",  price: 7000 },
-  { label: '58 mm — XL',      dimensions: "58 mm diameter, safety-pin back",  price: 9000 },
+  { label: '25 mm, Small',   dimensions: "25 mm diameter, safety-pin back",  price: 3500 },
+  { label: '32 mm, Medium',  dimensions: "32 mm diameter, safety-pin back",  price: 4500 },
+  { label: '38 mm, Standard',dimensions: "38 mm diameter, safety-pin back",  price: 5500 },
+  { label: '44 mm, Large',   dimensions: "44 mm diameter, safety-pin back",  price: 7000 },
+  { label: '58 mm, XL',      dimensions: "58 mm diameter, safety-pin back",  price: 9000 },
 ];
 
 const materialNote =
@@ -34,11 +34,11 @@ const materialNote =
 const faqs = [
   {
     q: "What is the minimum order quantity?",
-    a: "Our minimum is 100 badges per design. If you need multiple designs, each design requires a minimum of 100 pieces. Mixing sizes in one order is welcome — contact us for combined pricing.",
+    a: "Our minimum is 100 badges per design. If you need multiple designs, each design requires a minimum of 100 pieces. Mixing sizes in one order is welcome, contact us for combined pricing.",
   },
   {
     q: "How long does production take?",
-    a: "Standard orders are ready within 24–48 hours. Rush same-day production is available for orders placed before 10 AM — contact us to confirm slot availability.",
+    a: "Standard orders are ready within 24 to 48 hours. Rush same-day production is available for orders placed before 10 AM, contact us to confirm slot availability.",
   },
   {
     q: "Can I submit my own artwork?",
@@ -50,7 +50,7 @@ const faqs = [
   },
   {
     q: "Can I get a magnetic back instead of a pin?",
-    a: "Yes. Magnet-back badges are available on request — ideal for clothing that you do not want to puncture. Magnet backs carry a small additional cost per badge.",
+    a: "Yes. Magnet-back badges are available on request, ideal for clothing that you do not want to puncture. Magnet backs carry a small additional cost per badge.",
   },
   {
     q: "Do you deliver outside Muhoroni?",
@@ -81,7 +81,7 @@ export default function ButtonBadgesPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order Button Badges — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order Button Badges, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -105,7 +105,7 @@ export default function ButtonBadgesPage() {
             Button Badges Printing
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
-            Full-colour custom button badges for campaigns, events, schools, and promotions —
+            Full-colour custom button badges for campaigns, events, schools, and promotions,
             fast 24-hour turnaround, bulk pricing, delivered anywhere in Kenya.
           </p>
         </div>
@@ -128,7 +128,7 @@ export default function ButtonBadgesPage() {
               <h2 className="text-xl font-bold text-foreground mb-4">Product Overview</h2>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  Button badges are the most visible, wearable campaign accessory — worn by
+                  Button badges are the most visible, wearable campaign accessory, worn by
                   supporters, volunteers, and agents, they carry your face and message to every
                   corner of the constituency. At Ramirez Ventures we print sharp, vivid
                   full-colour badges on 0.45 mm tin plate with a durable mylar protective film
@@ -143,7 +143,7 @@ export default function ButtonBadgesPage() {
                 <p>
                   Beyond elections, button badges are popular for school prefects, corporate
                   events, product launches, fundraisers, and team-building activities. Rush
-                  same-day production is available — contact us to confirm slot availability.
+                  same-day production is available, contact us to confirm slot availability.
                 </p>
                 <ul className="list-disc list-inside space-y-1.5 pl-1">
                   <li>Full-colour print on 0.45 mm tin plate with mylar film</li>
@@ -152,7 +152,7 @@ export default function ButtonBadgesPage() {
                   <li>Water-resistant surface finish</li>
                   <li>Free artwork design from your photo and details</li>
                   <li>Minimum 100 badges per design</li>
-                  <li>24–48 hour turnaround; same-day available</li>
+                  <li>24 to 48 hour turnaround; same-day available</li>
                 </ul>
               </div>
             </div>
@@ -216,14 +216,14 @@ export default function ButtonBadgesPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Button Badges – ${selectedSize.label}`,
+                      name: `Button Badges  to  ${selectedSize.label}`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Button+Badges"),
                       href: "/products/election-printing/button-badges",
@@ -244,7 +244,7 @@ export default function ButtonBadgesPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 24–48 hr turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 24 to 48 hr turnaround · Free local Muhoroni delivery
               </p>
             </div>
 

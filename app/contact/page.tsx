@@ -126,16 +126,16 @@ export default function ContactPage() {
               <h3 className="font-semibold text-foreground mb-4">Business Hours</h3>
               <ul className="flex flex-col gap-2 text-sm text-muted-foreground">
                 <li className="flex justify-between">
-                  <span>Monday – Friday</span>
-                  <span className="font-medium text-foreground">8:00 AM – 6:30 PM</span>
+                  <span>Monday  to  Friday</span>
+                  <span className="font-medium text-foreground">8:00 AM  to  6:30 PM</span>
                 </li>
                 <li className="flex justify-between">
                   <span>Saturday</span>
-                  <span className="font-medium text-foreground">9:00 AM – 4:00 PM</span>
+                  <span className="font-medium text-foreground">9:00 AM  to  4:00 PM</span>
                 </li>
                 <li className="flex justify-between">
                   <span>Sunday</span>
-                  <span className="font-medium text-foreground">9:00 AM – 4:00 PM</span>
+                  <span className="font-medium text-foreground">9:00 AM  to  4:00 PM</span>
                 </li>
               </ul>
             </div>
@@ -226,7 +226,7 @@ export default function ContactPage() {
                   <Textarea
                     id="message"
                     name="message"
-                    placeholder="Tell us about your project or inquiry…"
+                    placeholder="Tell us about your project or inquiry..."
                     rows={6}
                     value={form.message}
                     onChange={handleChange}

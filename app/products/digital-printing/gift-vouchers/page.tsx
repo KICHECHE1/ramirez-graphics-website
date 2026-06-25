@@ -21,11 +21,11 @@ const ph = (w: number, h: number, label: string) =>
 const WHATSAPP = "254706207037";
 
 const sizes = [
-  { label: "DL · Single-sided",   dimensions: "99 × 210 mm, 1 side",  price: 1500 },
-  { label: "DL · Double-sided",   dimensions: "99 × 210 mm, 2 sides", price: 2000 },
-  { label: "A6 · Single-sided",   dimensions: "148 × 105 mm, 1 side", price: 1800 },
-  { label: "A6 · Double-sided",   dimensions: "148 × 105 mm, 2 sides", price: 2400 },
-  { label: "Business Card Size",  dimensions: "85 × 55 mm, 2 sides",  price: 1200 },
+  { label: "DL · Single-sided",   dimensions: "99 x 210 mm, 1 side",  price: 1500 },
+  { label: "DL · Double-sided",   dimensions: "99 x 210 mm, 2 sides", price: 2000 },
+  { label: "A6 · Single-sided",   dimensions: "148 x 105 mm, 1 side", price: 1800 },
+  { label: "A6 · Double-sided",   dimensions: "148 x 105 mm, 2 sides", price: 2400 },
+  { label: "Business Card Size",  dimensions: "85 x 55 mm, 2 sides",  price: 1200 },
 ];
 
 const materialNote =
@@ -34,7 +34,7 @@ const materialNote =
 const faqs = [
   {
     q: "Can you add a scratch-off panel to hide the voucher code?",
-    a: "Yes. Scratch-off panels are a popular addition for vouchers and loyalty cards — they add a sense of reveal and prevent the code being copied before redemption. Just request it when ordering.",
+    a: "Yes. Scratch-off panels are a popular addition for vouchers and loyalty cards, they add a sense of reveal and prevent the code being copied before redemption. Just request it when ordering.",
   },
   {
     q: "Can each voucher have a unique serial number or barcode?",
@@ -50,7 +50,7 @@ const faqs = [
   },
   {
     q: "How long does production take?",
-    a: "Standard gift vouchers without variable data are ready within 24 hours. Orders requiring unique serial numbers or barcodes take 2–3 working days.",
+    a: "Standard gift vouchers without variable data are ready within 24 hours. Orders requiring unique serial numbers or barcodes take 2 to 3 working days.",
   },
   {
     q: "Do you deliver outside Muhoroni?",
@@ -81,7 +81,7 @@ export default function DigitalGiftVouchersPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order Gift Vouchers (Digital Printing) — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order Gift Vouchers (Digital Printing), ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -106,7 +106,7 @@ export default function DigitalGiftVouchersPage() {
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
             Premium full-colour gift vouchers with optional scratch-off panels, unique serial
-            numbers, and QR codes — printed fast from Muhoroni, Kisumu.
+            numbers, and QR codes, printed fast from Muhoroni, Kisumu.
           </p>
         </div>
 
@@ -130,20 +130,20 @@ export default function DigitalGiftVouchersPage() {
                 <p>
                   Gift vouchers are a powerful sales and loyalty tool for restaurants, salons,
                   spas, retail shops, hotels, and any service business. A beautifully printed
-                  voucher feels like a real gift — and drives repeat customers back through your
+                  voucher feels like a real gift, and drives repeat customers back through your
                   door. At Ramirez Ventures we print full-colour gift vouchers on heavy 350 gsm
                   card stock in DL, A6, or business-card sizes.
                 </p>
                 <p>
                   We offer optional scratch-off panels to hide redemption codes, unique sequential
                   serial numbers, and barcodes or QR codes for easy scanning at point of sale.
-                  All vouchers include free design from your logo and brand colours — no artwork
+                  All vouchers include free design from your logo and brand colours, no artwork
                   experience needed on your end.
                 </p>
                 <p>
                   Popular use cases include promotional discount vouchers, birthday gift cards,
                   referral rewards, and loyalty bonuses. We can print a single value per batch or
-                  mix multiple values in one order — just specify when ordering.
+                  mix multiple values in one order, just specify when ordering.
                 </p>
                 <ul className="list-disc list-inside space-y-1.5 pl-1">
                   <li>Full-colour print on 350 gsm gloss or matte art board</li>
@@ -215,14 +215,14 @@ export default function DigitalGiftVouchersPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Gift Vouchers – ${selectedSize.label}`,
+                      name: `Gift Vouchers  to  ${selectedSize.label}`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Gift+Vouchers"),
                       href: "/products/digital-printing/gift-vouchers",
@@ -243,7 +243,7 @@ export default function DigitalGiftVouchersPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 24–48 hr turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 24 to 48 hr turnaround · Free local Muhoroni delivery
               </p>
             </div>
 
@@ -251,7 +251,7 @@ export default function DigitalGiftVouchersPage() {
               <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Scratch-off panels available — protect codes until redemption</span>
+                  <span>Scratch-off panels available, protect codes until redemption</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
@@ -259,11 +259,11 @@ export default function DigitalGiftVouchersPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Free design from your brand — no artwork needed</span>
+                  <span>Free design from your brand, no artwork needed</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>350 gsm heavy card — a gift that feels premium</span>
+                  <span>350 gsm heavy card, a gift that feels premium</span>
                 </li>
               </ul>
             </div>

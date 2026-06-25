@@ -23,11 +23,11 @@ const WHATSAPP = "254706207037";
 
 /* ─── Size / format options ─── */
 const sizes = [
-  { label: "A5 · 4-page folded card", dimensions: "148 × 210 mm, 4 pp", price: 3500 },
-  { label: "A5 · 8-page booklet",     dimensions: "148 × 210 mm, 8 pp", price: 5500 },
-  { label: "A5 · 12-page booklet",    dimensions: "148 × 210 mm, 12 pp", price: 7500 },
-  { label: "A4 · 8-page booklet",     dimensions: "210 × 297 mm, 8 pp", price: 8500 },
-  { label: "A4 · 16-page booklet",    dimensions: "210 × 297 mm, 16 pp", price: 13500 },
+  { label: "A5 · 4-page folded card", dimensions: "148 x 210 mm, 4 pp", price: 3500 },
+  { label: "A5 · 8-page booklet",     dimensions: "148 x 210 mm, 8 pp", price: 5500 },
+  { label: "A5 · 12-page booklet",    dimensions: "148 x 210 mm, 12 pp", price: 7500 },
+  { label: "A4 · 8-page booklet",     dimensions: "210 x 297 mm, 8 pp", price: 8500 },
+  { label: "A4 · 16-page booklet",    dimensions: "210 x 297 mm, 16 pp", price: 13500 },
 ];
 
 const materialNote =
@@ -57,7 +57,7 @@ const faqs = [
   },
   {
     q: "What is the minimum order quantity?",
-    a: "Our minimum is 25 copies per order. We can produce higher quantities at significantly reduced unit costs — contact us for a bulk quote.",
+    a: "Our minimum is 25 copies per order. We can produce higher quantities at significantly reduced unit costs, contact us for a bulk quote.",
   },
 ];
 
@@ -85,7 +85,7 @@ export default function FuneralProgramsPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order Funeral Programs — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order Funeral Programs, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -111,7 +111,7 @@ export default function FuneralProgramsPage() {
             Funeral Programs Printing
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
-            Dignified, professionally printed order-of-service booklets and memorial programs —
+            Dignified, professionally printed order-of-service booklets and memorial programs,
             designed with care and delivered same day when needed.
           </p>
         </div>
@@ -137,7 +137,7 @@ export default function FuneralProgramsPage() {
               <h2 className="text-xl font-bold text-foreground mb-4">Product Overview</h2>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  A funeral program is a lasting tribute — the printed keepsake that mourners take
+                  A funeral program is a lasting tribute, the printed keepsake that mourners take
                   home long after the service. At Ramirez Ventures we understand the weight of this
                   moment, which is why we treat every funeral program order with the same precision
                   and care we apply to our highest-end corporate work.
@@ -145,7 +145,7 @@ export default function FuneralProgramsPage() {
                 <p>
                   We print full-colour order-of-service booklets and memorial programs on premium
                   coated paper, saddle-stitched for a clean, professional finish. Our in-house
-                  design team can lay out the program from your supplied photos and text — or we can
+                  design team can lay out the program from your supplied photos and text, or we can
                   print from a ready file you provide. We work quickly and discreetly to meet your
                   timeline.
                 </p>
@@ -161,7 +161,7 @@ export default function FuneralProgramsPage() {
                   <li>Gloss, matte, or uncoated finish options</li>
                   <li>In-house design and layout service available</li>
                   <li>Same-day production for urgent orders (artwork by 10 AM)</li>
-                  <li>Minimum 25 copies — bulk rates for larger quantities</li>
+                  <li>Minimum 25 copies, bulk rates for larger quantities</li>
                 </ul>
               </div>
             </div>
@@ -238,7 +238,7 @@ export default function FuneralProgramsPage() {
               <p className="text-sm text-muted-foreground mb-5">
                 Selected:{" "}
                 <span className="font-medium text-foreground">
-                  {selectedSize.label} — {selectedSize.dimensions}
+                  {selectedSize.label}, {selectedSize.dimensions}
                 </span>
               </p>
               <div className="flex flex-col gap-3">
@@ -246,7 +246,7 @@ export default function FuneralProgramsPage() {
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Funeral Programs – ${selectedSize.label} (${selectedSize.dimensions})`,
+                      name: `Funeral Programs  to  ${selectedSize.label} (${selectedSize.dimensions})`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Funeral+Programs"),
                       href: "/products/booklet-magazines/funeral-programs",

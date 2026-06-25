@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /* ─────────────────────────────────────────────────────────────
-   PALETTE — single source of truth for all colour values.
+   PALETTE, single source of truth for all colour values.
    Semantic tokens below must reference these vars only.
    ───────────────────────────────────────────────────────────── */
 
@@ -172,6 +172,7 @@
     }
     body {
         @apply bg-background text-foreground;
+        text-rendering: optimizeLegibility;
     }
     h1,
     h2,
@@ -183,5 +184,126 @@
     }
     html {
         @apply font-sans;
+    }
+}
+
+@layer utilities {
+    .rv-container {
+        @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+    }
+
+    .rv-section {
+        @apply py-14 sm:py-16 lg:py-20;
+    }
+
+    .rv-section-muted {
+        @apply border-y border-border bg-muted/30;
+    }
+
+    .rv-card {
+        @apply border border-border/80 bg-card shadow-[0_18px_60px_-42px_oklch(0.145_0_0_/_55%)] transition-all duration-300;
+    }
+
+    .rv-card-hover {
+        @apply hover:-translate-y-1 hover:border-primary/35 hover:shadow-[0_24px_70px_-44px_oklch(0.145_0_0_/_65%)];
+    }
+
+    .rv-kicker {
+        @apply text-xs font-semibold uppercase tracking-[0.22em] text-primary;
+    }
+
+    .rv-product-card {
+        @apply overflow-hidden rounded-lg border border-border/80 bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/35 hover:shadow-xl;
+    }
+
+    .rv-hero-surface {
+        background:
+            linear-gradient(135deg, oklch(0.145 0 0 / 82%), oklch(0.145 0 0 / 36%)),
+            radial-gradient(circle at 16% 18%, oklch(0.62 0.26 328 / 28%), transparent 34%),
+            radial-gradient(circle at 84% 16%, oklch(0.71 0.145 203 / 24%), transparent 34%),
+            var(--background);
+    }
+
+    .rv-cta {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        border-radius: var(--radius-xl);
+        border: 1px solid oklch(1 0 0 / 16%);
+        color: var(--primary-foreground);
+        background:
+            linear-gradient(135deg, var(--palette-magenta), var(--palette-cyan-dark) 56%, var(--palette-black)),
+            var(--primary);
+        box-shadow: 0 28px 90px -48px oklch(0.145 0 0 / 75%);
+    }
+
+    .rv-cta::before {
+        content: "";
+        position: absolute;
+        inset: -35% auto -35% -55%;
+        width: 42%;
+        transform: rotate(14deg);
+        background: linear-gradient(90deg, transparent, oklch(1 0 0 / 26%), transparent);
+        animation: rv-cta-sheen 7s ease-in-out infinite;
+        z-index: -1;
+    }
+
+    .rv-cta::after {
+        content: "";
+        position: absolute;
+        inset: 1px;
+        border-radius: inherit;
+        background:
+            radial-gradient(circle at 18% 20%, oklch(1 0 0 / 18%), transparent 28%),
+            radial-gradient(circle at 90% 16%, oklch(0.82 0.17 85 / 20%), transparent 24%);
+        opacity: 0.9;
+        z-index: -1;
+    }
+
+    .rv-cta-content {
+        position: relative;
+        padding: clamp(2rem, 5vw, 4.25rem);
+    }
+
+    .rv-cta-actions {
+        display: grid;
+        width: 100%;
+        max-width: 48rem;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+        gap: 0.75rem;
+        align-items: center;
+        justify-content: center;
+        margin-inline: auto;
+    }
+
+    .rv-soft-cta {
+        @apply border border-primary/20 bg-primary/5 p-6 shadow-[0_18px_50px_-38px_oklch(0.145_0_0_/_55%)];
+    }
+
+    .rv-hero-button-primary,
+    .rv-cta-button-primary {
+        @apply min-h-11 w-full bg-white px-5 text-black shadow-lg hover:bg-white/90 hover:text-black dark:bg-white dark:text-black dark:hover:bg-white/90 dark:hover:text-black;
+    }
+
+    .rv-hero-button-secondary,
+    .rv-cta-button-secondary {
+        @apply min-h-11 w-full border-white/45 bg-black/20 px-5 text-white shadow-sm backdrop-blur-sm hover:bg-white/20 hover:text-white dark:border-white/45 dark:bg-black/20 dark:text-white dark:hover:bg-white/20 dark:hover:text-white;
+    }
+
+    @keyframes rv-cta-sheen {
+        0%,
+        44% {
+            transform: translateX(0) rotate(14deg);
+        }
+        72%,
+        100% {
+            transform: translateX(410%) rotate(14deg);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .rv-cta::before {
+            animation: none;
+        }
     }
 }

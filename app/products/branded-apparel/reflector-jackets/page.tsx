@@ -21,11 +21,11 @@ const ph = (w: number, h: number, label: string) =>
 const WHATSAPP = "254706207037";
 
 const sizes = [
-  { label: "Small (S)",        dimensions: "Chest 36–38 in",  price: 2800 },
-  { label: "Medium (M)",       dimensions: "Chest 38–40 in",  price: 2800 },
-  { label: "Large (L)",        dimensions: "Chest 40–42 in",  price: 2800 },
-  { label: "X-Large (XL)",     dimensions: "Chest 42–44 in",  price: 2800 },
-  { label: "XX-Large (XXL)",   dimensions: "Chest 44–46 in",  price: 3200 },
+  { label: "Small (S)",        dimensions: "Chest 36 to 38 in",  price: 2800 },
+  { label: "Medium (M)",       dimensions: "Chest 38 to 40 in",  price: 2800 },
+  { label: "Large (L)",        dimensions: "Chest 40 to 42 in",  price: 2800 },
+  { label: "X-Large (XL)",     dimensions: "Chest 42 to 44 in",  price: 2800 },
+  { label: "XX-Large (XXL)",   dimensions: "Chest 44 to 46 in",  price: 3200 },
 ];
 
 const materialNote =
@@ -50,7 +50,7 @@ const faqs = [
   },
   {
     q: "How long does production take?",
-    a: "Standard orders of 5–20 pieces are ready within 3–5 business days. Larger bulk orders may take 5–7 days. Rush production is available — contact us on WhatsApp.",
+    a: "Standard orders of 5 to 20 pieces are ready within 3 to 5 business days. Larger bulk orders may take 5 to 7 days. Rush production is available, contact us on WhatsApp.",
   },
   {
     q: "Do you deliver outside Muhoroni?",
@@ -69,7 +69,7 @@ export default function ReflectorJacketsPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order Reflector Jackets — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order Reflector Jackets, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -95,7 +95,7 @@ export default function ReflectorJacketsPage() {
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
             High-visibility reflector jackets custom-printed with your logo, name, or company
-            branding — for construction crews, security teams, event marshals, and NGO field staff.
+            branding, for construction crews, security teams, event marshals, and NGO field staff.
           </p>
         </div>
 
@@ -117,7 +117,7 @@ export default function ReflectorJacketsPage() {
               <h2 className="text-xl font-bold text-foreground mb-4">Product Overview</h2>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  Reflector jackets are an essential safety garment across many industries — and at
+                  Reflector jackets are an essential safety garment across many industries, and at
                   Ramirez Ventures we turn them into powerful branding tools. Every jacket we
                   produce combines mandatory high-visibility fabric and EN ISO 20471 compliant
                   reflective tape with crisp, full-colour custom printing of your logo, name,
@@ -139,7 +139,7 @@ export default function ReflectorJacketsPage() {
                   <li>EN ISO 20471 compliant 360° reflective tape strips</li>
                   <li>Front chest logo + full back-panel print as standard</li>
                   <li>Heat-transfer vinyl or screen-print methods available</li>
-                  <li>Sizes S to XXL — custom sizing available for teams</li>
+                  <li>Sizes S to XXL, custom sizing available for teams</li>
                   <li>Minimum order: 5 pieces</li>
                 </ul>
               </div>
@@ -204,14 +204,14 @@ export default function ReflectorJacketsPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Reflector Jacket – ${selectedSize.label} (${selectedSize.dimensions})`,
+                      name: `Reflector Jacket  to  ${selectedSize.label} (${selectedSize.dimensions})`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Reflector+Jacket"),
                       href: "/products/branded-apparel/reflector-jackets",
@@ -232,7 +232,7 @@ export default function ReflectorJacketsPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 3–5 day turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 3 to 5 day turnaround · Free local Muhoroni delivery
               </p>
             </div>
 
@@ -240,7 +240,7 @@ export default function ReflectorJacketsPage() {
               <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>EN ISO 20471 compliant reflective tape — meets site safety requirements</span>
+                  <span>EN ISO 20471 compliant reflective tape, meets site safety requirements</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>

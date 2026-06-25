@@ -21,11 +21,11 @@ const ph = (w: number, h: number, label: string) =>
 const WHATSAPP = "254706207037";
 
 const sizes = [
-  { label: "Credit-Card Size — 50 vouchers",  dimensions: "85 × 55 mm, 50 pcs",  price: 2000 },
-  { label: "Credit-Card Size — 100 vouchers", dimensions: "85 × 55 mm, 100 pcs", price: 3200 },
-  { label: "Credit-Card Size — 250 vouchers", dimensions: "85 × 55 mm, 250 pcs", price: 6000 },
-  { label: "DL Voucher — 50 vouchers",        dimensions: "210 × 99 mm, 50 pcs",  price: 2800 },
-  { label: "DL Voucher — 100 vouchers",       dimensions: "210 × 99 mm, 100 pcs", price: 4500 },
+  { label: "Credit-Card Size, 50 vouchers",  dimensions: "85 x 55 mm, 50 pcs",  price: 2000 },
+  { label: "Credit-Card Size, 100 vouchers", dimensions: "85 x 55 mm, 100 pcs", price: 3200 },
+  { label: "Credit-Card Size, 250 vouchers", dimensions: "85 x 55 mm, 250 pcs", price: 6000 },
+  { label: "DL Voucher, 50 vouchers",        dimensions: "210 x 99 mm, 50 pcs",  price: 2800 },
+  { label: "DL Voucher, 100 vouchers",       dimensions: "210 x 99 mm, 100 pcs", price: 4500 },
 ];
 
 const materialNote =
@@ -46,11 +46,11 @@ const faqs = [
   },
   {
     q: "What finish looks best for gift vouchers?",
-    a: "Gloss laminate is the most popular choice — it makes colours pop and gives the voucher a premium, gift-worthy feel. Matte laminate is a good alternative if your brand uses muted or neutral tones.",
+    a: "Gloss laminate is the most popular choice, it makes colours pop and gives the voucher a premium, gift-worthy feel. Matte laminate is a good alternative if your brand uses muted or neutral tones.",
   },
   {
     q: "How quickly can I get my vouchers?",
-    a: "Standard gift voucher orders are ready within 24–48 hours. Orders with sequential numbering or unique codes may take an additional 24 hours.",
+    a: "Standard gift voucher orders are ready within 24 to 48 hours. Orders with sequential numbering or unique codes may take an additional 24 hours.",
   },
   {
     q: "Do you deliver outside Muhoroni?",
@@ -69,7 +69,7 @@ export default function GiftVouchersPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order Gift Vouchers — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order Gift Vouchers, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -93,7 +93,7 @@ export default function GiftVouchersPage() {
             Gift Voucher Printing
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
-            Full-colour gift vouchers on 350 gsm premium art board — with optional sequential
+            Full-colour gift vouchers on 350 gsm premium art board, with optional sequential
             numbering, unique codes, and perforated stubs. Credit-card and DL sizes available.
           </p>
         </div>
@@ -116,9 +116,9 @@ export default function GiftVouchersPage() {
                 </p>
                 <p>
                   At Ramirez Ventures we print gift vouchers on heavyweight 350 gsm premium art
-                  board in full colour — the same quality as our premium business cards. We offer
-                  two standard formats: the credit-card size (85 × 55 mm) for a wallet-friendly
-                  keepsake, and the DL format (210 × 99 mm) for a more spacious layout that can
+                  board in full colour, the same quality as our premium business cards. We offer
+                  two standard formats: the credit-card size (85 x 55 mm) for a wallet-friendly
+                  keepsake, and the DL format (210 x 99 mm) for a more spacious layout that can
                   include detailed terms, offer descriptions, or a map.
                 </p>
                 <p>
@@ -128,12 +128,12 @@ export default function GiftVouchersPage() {
                   the customer retain a portion of the transaction record.
                 </p>
                 <ul className="list-disc list-inside space-y-1.5 pl-1">
-                  <li>350 gsm premium art board — thick, premium, gift-ready</li>
+                  <li>350 gsm premium art board, thick, premium, gift-ready</li>
                   <li>Full-colour double-sided printing included</li>
                   <li>Gloss or matte laminate finish</li>
                   <li>Sequential numbering or unique codes available</li>
                   <li>Perforated tear-off stub option</li>
-                  <li>Credit-card size (85 × 55 mm) and DL size (210 × 99 mm)</li>
+                  <li>Credit-card size (85 x 55 mm) and DL size (210 x 99 mm)</li>
                   <li>In-house design service available</li>
                 </ul>
               </div>
@@ -185,11 +185,11 @@ export default function GiftVouchersPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button className="w-full h-12 text-base gap-2"
-                  onClick={() => addToCart({ name: `Gift Vouchers – ${selectedSize.label}`, price: selectedSize.price, image: ph(400, 300, "Gift+Vouchers"), href: "/products/business-cards/gift-vouchers" })}>
+                  onClick={() => addToCart({ name: `Gift Vouchers  to  ${selectedSize.label}`, price: selectedSize.price, image: ph(400, 300, "Gift+Vouchers"), href: "/products/business-cards/gift-vouchers" })}>
                   <ShoppingCart className="size-5" />Add to Cart
                 </Button>
                 <Button className="w-full h-12 text-base gap-2 bg-[#25D366] hover:bg-[#1ebe57] text-white" asChild>
@@ -199,7 +199,7 @@ export default function GiftVouchersPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 24–48 hr turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 24 to 48 hr turnaround · Free local Muhoroni delivery
               </p>
             </div>
 
@@ -207,9 +207,9 @@ export default function GiftVouchersPage() {
               <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
                 {[
                   "Sequential numbering and unique codes for fraud-proof redemption",
-                  "Perforated stub option — both parties keep a record",
-                  "350 gsm art board — gift-worthy thickness and feel",
-                  "Design service available — we lay out your voucher professionally",
+                  "Perforated stub option, both parties keep a record",
+                  "350 gsm art board, gift-worthy thickness and feel",
+                  "Design service available, we lay out your voucher professionally",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">
                     <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>

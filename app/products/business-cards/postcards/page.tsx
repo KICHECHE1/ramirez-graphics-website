@@ -21,12 +21,12 @@ const ph = (w: number, h: number, label: string) =>
 const WHATSAPP = "254706207037";
 
 const sizes = [
-  { label: "A6 — 50 postcards",   dimensions: "148 × 105 mm, 50 pcs",  price: 1000 },
-  { label: "A6 — 100 postcards",  dimensions: "148 × 105 mm, 100 pcs", price: 1600 },
-  { label: "A6 — 250 postcards",  dimensions: "148 × 105 mm, 250 pcs", price: 3000 },
-  { label: "A5 — 50 postcards",   dimensions: "148 × 210 mm, 50 pcs",  price: 1600 },
-  { label: "A5 — 100 postcards",  dimensions: "148 × 210 mm, 100 pcs", price: 2500 },
-  { label: "A5 — 250 postcards",  dimensions: "148 × 210 mm, 250 pcs", price: 4500 },
+  { label: "A6, 50 postcards",   dimensions: "148 x 105 mm, 50 pcs",  price: 1000 },
+  { label: "A6, 100 postcards",  dimensions: "148 x 105 mm, 100 pcs", price: 1600 },
+  { label: "A6, 250 postcards",  dimensions: "148 x 105 mm, 250 pcs", price: 3000 },
+  { label: "A5, 50 postcards",   dimensions: "148 x 210 mm, 50 pcs",  price: 1600 },
+  { label: "A5, 100 postcards",  dimensions: "148 x 210 mm, 100 pcs", price: 2500 },
+  { label: "A5, 250 postcards",  dimensions: "148 x 210 mm, 250 pcs", price: 4500 },
 ];
 
 const materialNote =
@@ -35,15 +35,15 @@ const materialNote =
 const faqs = [
   {
     q: "What are postcards commonly used for?",
-    a: "Postcards are used as promotional mailers, loyalty cards, event invitations, thank-you cards, product launch announcements, coupon inserts, and greeting cards — any situation where you need a compact, high-impact printed piece.",
+    a: "Postcards are used as promotional mailers, loyalty cards, event invitations, thank-you cards, product launch announcements, coupon inserts, and greeting cards, any situation where you need a compact, high-impact printed piece.",
   },
   {
     q: "Can I have a writing area on the back?",
-    a: "Yes. We can include a lined writing space, a message area, and an address block on the reverse side — making your postcards suitable for actual mailing.",
+    a: "Yes. We can include a lined writing space, a message area, and an address block on the reverse side, making your postcards suitable for actual mailing.",
   },
   {
     q: "What finish should I choose?",
-    a: "Gloss laminate gives bold, vivid colour reproduction — ideal for photos and bright designs. Matte laminate gives a softer, premium finish that is easy to write on and reduces glare.",
+    a: "Gloss laminate gives bold, vivid colour reproduction, ideal for photos and bright designs. Matte laminate gives a softer, premium finish that is easy to write on and reduces glare.",
   },
   {
     q: "Can I order different designs in the same batch?",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     q: "How quickly can I get my postcards?",
-    a: "Standard postcard orders are ready within 24–48 hours. Same-day printing is available for orders placed before 10 AM.",
+    a: "Standard postcard orders are ready within 24 to 48 hours. Same-day printing is available for orders placed before 10 AM.",
   },
   {
     q: "Do you deliver outside Muhoroni?",
@@ -70,7 +70,7 @@ export default function PostcardsPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order Postcards — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order Postcards, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -94,7 +94,7 @@ export default function PostcardsPage() {
             Postcards Printing
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
-            Full-colour A6 and A5 postcards on 300 gsm art board — perfect for promotions,
+            Full-colour A6 and A5 postcards on 300 gsm art board, perfect for promotions,
             mailers, event invitations, and branded inserts. Gloss or matte finish.
           </p>
         </div>
@@ -113,12 +113,12 @@ export default function PostcardsPage() {
                   Postcards punch well above their weight as a marketing tool. They are compact
                   enough to hand out in bulk, sturdy enough to mail, and visually impactful enough
                   to stand out in any pile of post. At Ramirez Ventures we print postcards in
-                  vivid full colour on 300 gsm premium art board — thick, professional, and built
+                  vivid full colour on 300 gsm premium art board, thick, professional, and built
                   to make an impression.
                 </p>
                 <p>
-                  We offer two standard sizes: A6 (148 × 105 mm) for a compact, easy-to-carry
-                  format, and A5 (148 × 210 mm) for more visual space — ideal for product
+                  We offer two standard sizes: A6 (148 x 105 mm) for a compact, easy-to-carry
+                  format, and A5 (148 x 210 mm) for more visual space, ideal for product
                   showcases, detailed event information, or premium brand campaigns. Both sizes
                   can be produced single-sided or double-sided.
                 </p>
@@ -134,7 +134,7 @@ export default function PostcardsPage() {
                   <li>Single-sided or double-sided printing</li>
                   <li>Writing area and address block on reverse available</li>
                   <li>Multiple designs combinable in one batch</li>
-                  <li>24–48 hr turnaround; same-day available</li>
+                  <li>24 to 48 hr turnaround; same-day available</li>
                 </ul>
               </div>
             </div>
@@ -185,11 +185,11 @@ export default function PostcardsPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button className="w-full h-12 text-base gap-2"
-                  onClick={() => addToCart({ name: `Postcards – ${selectedSize.label}`, price: selectedSize.price, image: ph(400, 300, "Postcards"), href: "/products/business-cards/postcards" })}>
+                  onClick={() => addToCart({ name: `Postcards  to  ${selectedSize.label}`, price: selectedSize.price, image: ph(400, 300, "Postcards"), href: "/products/business-cards/postcards" })}>
                   <ShoppingCart className="size-5" />Add to Cart
                 </Button>
                 <Button className="w-full h-12 text-base gap-2 bg-[#25D366] hover:bg-[#1ebe57] text-white" asChild>
@@ -199,14 +199,14 @@ export default function PostcardsPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 24–48 hr turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 24 to 48 hr turnaround · Free local Muhoroni delivery
               </p>
             </div>
 
             <div className="rounded-xl border border-border bg-card p-5 shadow-sm">
               <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
                 {[
-                  "300 gsm art board — thick, professional, and mail-ready",
+                  "300 gsm art board, thick, professional, and mail-ready",
                   "Writing area and address block available on reverse",
                   "Mix multiple designs in one order at the same price",
                   "Same-day printing for urgent campaigns or events",

@@ -33,7 +33,7 @@ const materialNote =
 const faqs = [
   {
     q: "What print method do you use for branded aprons?",
-    a: "We use heat transfer vinyl (HTV) for sharp, durable single and multi-colour logos and text. For photographic or full-colour all-over prints, dye-sublimation is used on polyester-face aprons — producing vivid, wash-resistant colour across the entire surface.",
+    a: "We use heat transfer vinyl (HTV) for sharp, durable single and multi-colour logos and text. For photographic or full-colour all-over prints, dye-sublimation is used on polyester-face aprons, producing vivid, wash-resistant colour across the entire surface.",
   },
   {
     q: "Can I choose the base fabric colour?",
@@ -41,7 +41,7 @@ const faqs = [
   },
   {
     q: "What is the minimum order quantity?",
-    a: "Our minimum is 20 aprons per order. Volume pricing steps apply at 50, 100, and 250 pieces — contact us for a bulk quote.",
+    a: "Our minimum is 20 aprons per order. Volume pricing steps apply at 50, 100, and 250 pieces, contact us for a bulk quote.",
   },
   {
     q: "How do I submit my design?",
@@ -49,7 +49,7 @@ const faqs = [
   },
   {
     q: "How long does production take?",
-    a: "Standard apron printing orders are ready in 3–5 working days. Rush orders may be possible depending on current capacity — contact us to confirm.",
+    a: "Standard apron printing orders are ready in 3 to 5 working days. Rush orders may be possible depending on current capacity, contact us to confirm.",
   },
   {
     q: "Are the aprons suitable for outdoor campaign use?",
@@ -84,7 +84,7 @@ export default function ElectionApronsPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order Branded Campaign Aprons — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order Branded Campaign Aprons, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -108,7 +108,7 @@ export default function ElectionApronsPage() {
             Branded Campaign Aprons
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
-            Custom-printed campaign aprons for agents, volunteers, and community mobilisers —
+            Custom-printed campaign aprons for agents, volunteers, and community mobilisers,
             bold logo printing on 240 gsm poly-cotton, MOQ 20, delivered across Kenya.
           </p>
         </div>
@@ -131,7 +131,7 @@ export default function ElectionApronsPage() {
               <h2 className="text-xl font-bold text-foreground mb-4">Product Overview</h2>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  Campaign aprons are a highly visible, practical branding tool — worn by agents,
+                  Campaign aprons are a highly visible, practical branding tool, worn by agents,
                   volunteers, community kitchens, and ward committee members, they carry your
                   candidate&apos;s face and party colours throughout the constituency every day leading up
                   to the election. At Ramirez Ventures we print sharp logos and full-colour
@@ -140,7 +140,7 @@ export default function ElectionApronsPage() {
                 </p>
                 <p>
                   We stock plain adult aprons, bib aprons, and waist aprons in multiple base
-                  colours — white, black, navy, red, green, and khaki. Front print, full print,
+                  colours, white, black, navy, red, green, and khaki. Front print, full print,
                   and chest-and-waist prints are all available. Minimum 20 pieces per order.
                 </p>
                 <p>
@@ -155,7 +155,7 @@ export default function ElectionApronsPage() {
                   <li>Front, full, and bib/waist print areas available</li>
                   <li>Minimum 20 aprons per order</li>
                   <li>Free artwork from your logo and brand colours</li>
-                  <li>3–5 working day turnaround</li>
+                  <li>3 to 5 working day turnaround</li>
                 </ul>
               </div>
             </div>
@@ -219,14 +219,14 @@ export default function ElectionApronsPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Campaign Aprons – ${selectedSize.label}`,
+                      name: `Campaign Aprons  to  ${selectedSize.label}`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Branded+Aprons"),
                       href: "/products/election-printing/aprons",
@@ -247,7 +247,7 @@ export default function ElectionApronsPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 3–5 day turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 3 to 5 day turnaround · Free local Muhoroni delivery
               </p>
             </div>
 
@@ -255,15 +255,15 @@ export default function ElectionApronsPage() {
               <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Multiple base colours — white, black, navy, red, green, khaki</span>
+                  <span>Multiple base colours, white, black, navy, red, green, khaki</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>HTV or dye-sublimation — sharp logos and vivid full-colour prints</span>
+                  <span>HTV or dye-sublimation, sharp logos and vivid full-colour prints</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>MOQ just 20 aprons — no massive bulk commitment needed</span>
+                  <span>MOQ just 20 aprons, no massive bulk commitment needed</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>

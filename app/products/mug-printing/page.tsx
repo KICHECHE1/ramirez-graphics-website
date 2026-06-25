@@ -62,7 +62,7 @@ const productDescriptions = [
   {
     name: "Travel Mug Printing",
     description:
-      "Double-walled stainless steel travel mugs with leak-proof lids, custom printed with your logo or full-colour design. Keeps drinks hot for 8 hours, cold for 12 — a premium daily-use corporate gift.",
+      "Double-walled stainless steel travel mugs with leak-proof lids, custom printed with your logo or full-colour design. Keeps drinks hot for 8 hours, cold for 12, a premium daily-use corporate gift.",
   },
   {
     name: "Enamel Mug Printing",
@@ -77,7 +77,7 @@ const productDescriptions = [
   {
     name: "Tumbler Printing",
     description:
-      "20oz insulated stainless steel tumblers with full-colour wrap printing. A premium and highly functional corporate gift — popular for conferences, VIP client packs, and staff recognition awards.",
+      "20oz insulated stainless steel tumblers with full-colour wrap printing. A premium and highly functional corporate gift, popular for conferences, VIP client packs, and staff recognition awards.",
   },
   {
     name: "Corporate Mug Gift Sets",
@@ -91,13 +91,13 @@ const features = [
     icon: Star,
     title: "Vivid Sublimation Printing",
     description:
-      "Our dye-sublimation process delivers photographic-quality, full-wrap colour prints that will not fade or peel with regular washing — guaranteed durable results.",
+      "Our dye-sublimation process delivers photographic-quality, full-wrap colour prints that will not fade or peel with regular washing, guaranteed durable results.",
   },
   {
     icon: Clock,
     title: "Fast Turnaround",
     description:
-      "Standard orders are typically ready within 3–5 working days. Express production available for urgent corporate gift deadlines.",
+      "Standard orders are typically ready within 3 to 5 working days. Express production available for urgent corporate gift deadlines.",
   },
   {
     icon: Truck,
@@ -109,7 +109,7 @@ const features = [
     icon: Palette,
     title: "Free Design Support",
     description:
-      "Send us your logo and brand colours and we will mock up your mug design for approval before production — at no extra charge.",
+      "Send us your logo and brand colours and we will mock up your mug design for approval before production, at no extra charge.",
   },
   {
     icon: ShieldCheck,
@@ -131,16 +131,16 @@ export default function MugPrintingPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* ── Hero ── */}
-      <section className="relative isolate overflow-hidden bg-gradient-to-br from-primary/90 via-primary to-primary/80">
+      <section className="relative isolate overflow-hidden bg-brand-surface">
         <Image
           src={ph(1400, 400, "Mug+Printing+Kenya")}
           alt="Mug printing and branded drinkware"
           fill
-          className="object-cover opacity-20 mix-blend-overlay"
+          className="object-cover opacity-70"
           priority
           unoptimized
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-transparent to-primary/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-primary/20" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <nav className="mb-6 flex items-center gap-1.5 text-sm text-primary-foreground/70 flex-wrap">
             <Link href="/" className="hover:text-primary-foreground transition-colors">Home</Link>
@@ -158,13 +158,13 @@ export default function MugPrintingPage() {
             </h1>
             <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
               Custom branded mugs, tumblers, and bottles for corporate gifts, events,
-              and promotions — full-colour sublimation, delivered across Kenya.
+              and promotions, full-colour sublimation, delivered across Kenya.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg" asChild>
+              <Button size="lg" className="rv-hero-button-primary" asChild>
                 <a href="#products">Browse Drinkware</a>
               </Button>
-              <Button size="lg" variant="outline" className="border-white/40 text-primary-foreground hover:bg-white/10" asChild>
+              <Button size="lg" variant="outline" className="rv-hero-button-secondary" asChild>
                 <Link href="/contact">Get a Quote</Link>
               </Button>
             </div>
@@ -248,7 +248,7 @@ export default function MugPrintingPage() {
             </div>
 
             {/* Overview */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <Badge variant="secondary" className="mb-4">About Mug Printing</Badge>
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-5 leading-snug">
                 Premium Branded Drinkware for Every Occasion
@@ -257,7 +257,7 @@ export default function MugPrintingPage() {
                 <p>
                   Branded mugs and drinkware are among the most effective and appreciated
                   promotional products available. Unlike a business card or flyer that gets filed
-                  away, a well-designed mug stays on a desk, in a kitchen, or at a workstation —
+                  away, a well-designed mug stays on a desk, in a kitchen, or at a workstation,
                   delivering your brand impression multiple times a day, every day. At Ramirez
                   Ventures we print on a wide range of drinkware, from classic ceramic mugs to
                   premium insulated tumblers and stainless steel travel mugs.
@@ -312,7 +312,7 @@ export default function MugPrintingPage() {
             </section>
 
             {/* Product descriptions */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <Badge variant="secondary" className="mb-4">What We Offer</Badge>
               <h2 className="text-2xl font-bold text-foreground mb-6">
                 Our Drinkware Products in Detail
@@ -336,14 +336,14 @@ export default function MugPrintingPage() {
             </section>
 
             {/* Why Choose Ramirez */}
-            <section className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+            <section className="rv-card rounded-lg p-6 sm:p-8">
               <div className="text-center mb-10">
                 <Badge variant="secondary" className="mb-3">Why Choose Us</Badge>
                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
                   Why Choose Ramirez Ventures for Branded Drinkware?
                 </h2>
                 <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">
-                  Quality prints, premium products, and reliable delivery — everything your
+                  Quality prints, premium products, and reliable delivery, everything your
                   corporate gifting programme needs in one place.
                 </p>
               </div>
@@ -366,11 +366,11 @@ export default function MugPrintingPage() {
                   );
                 })}
               </div>
-              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 rounded-xl bg-primary/5 border border-primary/20 p-6">
+              <div className="rv-soft-cta mt-10 flex flex-col items-center justify-center gap-4 rounded-lg sm:flex-row">
                 <div className="text-center sm:text-left">
                   <p className="font-semibold text-foreground">Ready to order?</p>
                   <p className="text-sm text-muted-foreground">
-                    Get a free quote and mockup today — no obligation.
+                    Get a free quote and mockup today, no obligation.
                   </p>
                 </div>
                 <div className="flex gap-3">

@@ -48,7 +48,7 @@ const faqs = [
   },
   {
     q: "Can I put my business name and logo on it?",
-    a: "Absolutely — that is exactly what PVC wheel covers are for. Send us your logo and any text you want printed and our design team will lay it out across the circular panel at no extra charge.",
+    a: "Absolutely, that is exactly what PVC wheel covers are for. Send us your logo and any text you want printed and our design team will lay it out across the circular panel at no extra charge.",
   },
   {
     q: "What artwork format should I provide?",
@@ -56,7 +56,7 @@ const faqs = [
   },
   {
     q: "How long does production take?",
-    a: "Most PVC wheel cover orders are ready within 48–72 hours. Rush orders can be discussed — contact us on WhatsApp to confirm availability.",
+    a: "Most PVC wheel cover orders are ready within 48 to 72 hours. Rush orders can be discussed, contact us on WhatsApp to confirm availability.",
   },
 ];
 
@@ -84,7 +84,7 @@ export default function PVCWheelCoverPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order a PVC Wheel Cover — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order a PVC Wheel Cover, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -109,7 +109,7 @@ export default function PVCWheelCoverPage() {
             PVC Wheel Cover
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
-            Custom-printed spare tyre covers for vehicles, vans, and SUVs — turn your spare wheel
+            Custom-printed spare tyre covers for vehicles, vans, and SUVs, turn your spare wheel
             into a moving billboard for your brand wherever you go.
           </p>
         </div>
@@ -138,12 +138,12 @@ export default function PVCWheelCoverPage() {
                   Every vehicle with an external spare tyre is a mobile advertising surface waiting
                   to be activated. A custom PVC wheel cover turns a plain black spare tyre into a
                   bold, professionally branded display that travels with your vehicle wherever it
-                  goes — city streets, highways, car parks, and beyond.
+                  goes, city streets, highways, car parks, and beyond.
                 </p>
                 <p>
                   At Ramirez Ventures, PVC wheel covers are printed on heavyweight 440gsm PVC flex
                   using UV-resistant, weatherproof inks. The material is built to survive Kenya&apos;s
-                  harsh sun, dust, and occasional rain without fading, cracking, or peeling — a
+                  harsh sun, dust, and occasional rain without fading, cracking, or peeling, a
                   long-lasting investment in mobile brand visibility.
                 </p>
                 <p>
@@ -153,12 +153,12 @@ export default function PVCWheelCoverPage() {
                   are available on request.
                 </p>
                 <ul className="list-disc list-inside space-y-1.5 pl-1">
-                  <li>440gsm heavyweight PVC flex — built for outdoor durability</li>
+                  <li>440gsm heavyweight PVC flex, built for outdoor durability</li>
                   <li>UV-resistant and waterproof print</li>
                   <li>Reinforced eyelets and elastic drawstring for secure fit</li>
                   <li>Available in 13&quot;, 14&quot;, 15&quot;, 16&quot;, and 17&quot; sizes</li>
                   <li>Custom non-standard sizes available on request</li>
-                  <li>Full-colour print — logo, text, and graphics</li>
+                  <li>Full-colour print, logo, text, and graphics</li>
                 </ul>
               </div>
             </div>
@@ -235,7 +235,7 @@ export default function PVCWheelCoverPage() {
               <p className="text-sm text-muted-foreground mb-5">
                 Selected:{" "}
                 <span className="font-medium text-foreground">
-                  {selectedSize.label} — {selectedSize.dimensions}
+                  {selectedSize.label}, {selectedSize.dimensions}
                 </span>
               </p>
               <div className="flex flex-col gap-3">
@@ -243,7 +243,7 @@ export default function PVCWheelCoverPage() {
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `PVC Wheel Cover – ${selectedSize.label} (${selectedSize.dimensions})`,
+                      name: `PVC Wheel Cover  to  ${selectedSize.label} (${selectedSize.dimensions})`,
                       price: selectedSize.price,
                       image: ph(400, 300, "PVC+Wheel+Cover"),
                       href: "/products/banners/pvc-wheel-cover",
@@ -268,13 +268,13 @@ export default function PVCWheelCoverPage() {
                 </Button>
               </div>
               <p className="mt-4 text-xs text-muted-foreground text-center">
-                Orders confirmed within 1 hour · 48–72 hr turnaround · Free local Muhoroni delivery
+                Orders confirmed within 1 hour · 48 to 72 hr turnaround · Free local Muhoroni delivery
               </p>
             </div>
           </div>
         </div>
 
-        {/* ── Related Products — full width ── */}
+        {/* ── Related Products, full width ── */}
         <section className="mt-16">
           <Separator className="mb-10" />
           <h2 className="text-2xl font-bold text-foreground mb-6">Related Products</h2>

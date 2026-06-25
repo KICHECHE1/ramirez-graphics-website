@@ -21,15 +21,15 @@ const ph = (w: number, h: number, label: string) =>
 const WHATSAPP = "254706207037";
 
 const sizes = [
-  { label: "A4 · Black & White",    dimensions: "210 × 297 mm, B&W",      price: 10 },
-  { label: "A4 · Full Colour",       dimensions: "210 × 297 mm, Colour",   price: 30 },
-  { label: "A3 · Black & White",    dimensions: "297 × 420 mm, B&W",      price: 20 },
-  { label: "A3 · Full Colour",       dimensions: "297 × 420 mm, Colour",   price: 60 },
+  { label: "A4 · Black & White",    dimensions: "210 x 297 mm, B&W",      price: 10 },
+  { label: "A4 · Full Colour",       dimensions: "210 x 297 mm, Colour",   price: 30 },
+  { label: "A3 · Black & White",    dimensions: "297 x 420 mm, B&W",      price: 20 },
+  { label: "A3 · Full Colour",       dimensions: "297 x 420 mm, Colour",   price: 60 },
   { label: "A4 · Binding (up to 50 pp)", dimensions: "Spiral or comb bound", price: 250 },
 ];
 
 const materialNote =
-  "Printed on 80 gsm bond paper (standard) or 90–100 gsm premium paper on request. Binding options include spiral, comb, and thermal binding. Laminated covers available. Double-sided rates available on request.";
+  "Printed on 80 gsm bond paper (standard) or 90 to 100 gsm premium paper on request. Binding options include spiral, comb, and thermal binding. Laminated covers available. Double-sided rates available on request.";
 
 const faqs = [
   {
@@ -46,11 +46,11 @@ const faqs = [
   },
   {
     q: "How quickly can I get my documents printed?",
-    a: "Most document print jobs are ready within the hour for orders placed before 3 PM. Same-day binding is also available for most quantities — contact us to confirm.",
+    a: "Most document print jobs are ready within the hour for orders placed before 3 PM. Same-day binding is also available for most quantities, contact us to confirm.",
   },
   {
     q: "Is there a minimum order?",
-    a: "No minimum — you can print a single page. Volume discounts apply for orders of 100+ pages; contact us for a bulk quote.",
+    a: "No minimum, you can print a single page. Volume discounts apply for orders of 100+ pages; contact us for a bulk quote.",
   },
   {
     q: "Do you deliver outside Muhoroni?",
@@ -81,7 +81,7 @@ export default function DocumentPrintingPage() {
   const { addToCart } = useCart();
 
   const waMessage = encodeURIComponent(
-    `Hi Ramirez Ventures, I'd like to order Document Printing — ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
+    `Hi Ramirez Ventures, I'd like to order Document Printing, ${selectedSize.label} (${selectedSize.dimensions}). Please confirm availability and pricing.`
   );
 
   return (
@@ -105,8 +105,8 @@ export default function DocumentPrintingPage() {
             Document Printing
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
-            Fast, high-quality black-and-white and colour document printing — single pages to bound
-            reports — ready same day in Muhoroni, Kisumu.
+            Fast, high-quality black-and-white and colour document printing, single pages to bound
+            reports, ready same day in Muhoroni, Kisumu.
           </p>
         </div>
 
@@ -133,23 +133,23 @@ export default function DocumentPrintingPage() {
                   organisations, and individuals in Muhoroni and across Kenya.
                 </p>
                 <p>
-                  We print on high-quality 80 gsm bond paper as standard, with 90–100 gsm premium
+                  We print on high-quality 80 gsm bond paper as standard, with 90 to 100 gsm premium
                   paper available on request for presentations and client-facing documents. Both
                   black-and-white and full-colour options are available in A4 and A3 formats,
                   single-sided or double-sided.
                 </p>
                 <p>
                   Need your documents bound? We offer spiral binding, comb binding, and thermal
-                  (perfect) binding with clear PVC or printed card covers — giving your reports,
+                  (perfect) binding with clear PVC or printed card covers, giving your reports,
                   proposals, and manuals a professional, finished look.
                 </p>
                 <ul className="list-disc list-inside space-y-1.5 pl-1">
                   <li>Black-and-white and full-colour printing, A4 and A3</li>
                   <li>Single-sided and double-sided (duplex) options</li>
-                  <li>80 gsm standard or 90–100 gsm premium paper</li>
+                  <li>80 gsm standard or 90 to 100 gsm premium paper</li>
                   <li>Spiral, comb, and thermal binding available</li>
                   <li>Clear PVC or printed card cover options</li>
-                  <li>No minimum order — print from a single page</li>
+                  <li>No minimum order, print from a single page</li>
                   <li>Same-day turnaround for most orders</li>
                 </ul>
               </div>
@@ -214,14 +214,14 @@ export default function DocumentPrintingPage() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-foreground mb-1">Order Now</h2>
               <p className="text-sm text-muted-foreground mb-5">
-                Selected: <span className="font-medium text-foreground">{selectedSize.label} — {selectedSize.dimensions}</span>
+                Selected: <span className="font-medium text-foreground">{selectedSize.label}, {selectedSize.dimensions}</span>
               </p>
               <div className="flex flex-col gap-3">
                 <Button
                   className="w-full h-12 text-base gap-2"
                   onClick={() =>
                     addToCart({
-                      name: `Document Printing – ${selectedSize.label}`,
+                      name: `Document Printing  to  ${selectedSize.label}`,
                       price: selectedSize.price,
                       image: ph(400, 300, "Document+Printing"),
                       href: "/products/digital-printing/documents",
@@ -250,7 +250,7 @@ export default function DocumentPrintingPage() {
               <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>No minimum order — single pages welcome</span>
+                  <span>No minimum order, single pages welcome</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
@@ -262,7 +262,7 @@ export default function DocumentPrintingPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 size-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 text-[10px] font-bold">✓</span>
-                  <span>Walk-in or send files via WhatsApp — your choice</span>
+                  <span>Walk-in or send files via WhatsApp, your choice</span>
                 </li>
               </ul>
             </div>
